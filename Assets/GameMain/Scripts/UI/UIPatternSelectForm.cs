@@ -12,6 +12,8 @@ namespace Suture
         public Button backButton;
         public Button PveButton;
         public Button PetButton;
+
+        public GameMode GameMode = GameMode.GameStop;
         
         
         protected override void OnInit(object userData)
@@ -39,14 +41,14 @@ namespace Suture
 
         void OnPveButtonClick()
         {
-            GameEntry.Event.Fire(this, LoadPatternEventArgs.Create(GameMode.Pve));
+            GameMode = GameMode.Pve;
             GameEntry.UI.OpenUIForm(UIFormId.UIPetSelectForm, this);
             Close(true);
         }
 
         void OnPetButtonClick()
         {
-            GameEntry.Event.Fire(this, LoadPatternEventArgs.Create(GameMode.Pet));
+            GameMode = GameMode.Pet;
             GameEntry.UI.OpenUIForm(UIFormId.UIPetSelectForm, this);
             Close(true);
         }

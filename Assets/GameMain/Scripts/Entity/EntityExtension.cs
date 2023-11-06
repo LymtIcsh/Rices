@@ -63,6 +63,11 @@ namespace Suture
                 priority, data);
         }
 
+        public static void ShowMyPet(this EntityComponent entityComponent, MyPetData data)
+        {
+            entityComponent.ShowEntity(typeof(MyPet), "Pet", Constant.AssetPriority.ArmorAsset, data);
+        }
+
         public static void ShowWeapon(this EntityComponent entityComponent, WeaponData weaponData)
         {
             entityComponent.ShowEntity(typeof(Weapon), "Weapon", Constant.AssetPriority.WeaponAsset, weaponData);

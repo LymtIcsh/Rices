@@ -8,10 +8,13 @@ namespace Suture
         public Button backButton;
         public Button YaSuoButton;
         public Button TeemoButton;
+        
+        public GameMode GameMode = GameMode.GameStop;
 
         protected override void OnInit(object userData)
         {
             base.OnInit(userData);
+            
             backButton.onClick.AddListener(OnBackButtonClick);
             YaSuoButton.onClick.AddListener(OnYaSuoButtonClick);
             TeemoButton.onClick.AddListener(OnTeemoButtonClick);
@@ -20,6 +23,9 @@ namespace Suture
         protected override void OnOpen(object userData)
         {
             base.OnOpen(userData);
+            
+            GameMode = (userData as UIPatternSelectForm).GameMode;
+            Debug.Log(GameMode);
         }
 
         protected override void OnClose(bool isShutdown, object userData)
@@ -29,17 +35,19 @@ namespace Suture
         
         void OnBackButtonClick()
         {
-            Close();
+          Close();
         }
 
 
         void OnYaSuoButtonClick()
         {
+            GameEntry.Event.Fire(this, LoadPatternEventArgs.Create(GameMode));
             Close(true);
         }
         
         void OnTeemoButtonClick()
         {
+            GameEntry.Event.Fire(this, LoadPatternEventArgs.Create(GameMode));
             Close(true);
         }
     }

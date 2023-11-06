@@ -68,6 +68,10 @@ namespace Suture
             }
         }
 
+        /// <summary>
+        /// 隐藏实体
+        /// </summary>
+        /// <param name="attacker"></param>
         protected virtual void OnDead(Entity attacker)
         {
             GameEntry.Entity.HideEntity(this);

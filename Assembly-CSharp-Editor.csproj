@@ -12,7 +12,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{548b6a66-3822-88e0-c2f4-86dd69bee87c}</ProjectGuid>
+    <ProjectGuid>{a6b7a9ff-6adb-618b-adef-bcb370ef5686}</ProjectGuid>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -333,46 +333,46 @@
      <HintPath>D:\Software\Unity\2021.3.4f1c1\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Plastic.Newtonsoft.Json">
-     <HintPath>D:\ProjectEngineering\Game Framework\Library\PackageCache\com.unity.collab-proxy@1.15.17\Lib\Editor\PlasticSCM\Unity.Plastic.Newtonsoft.Json.dll</HintPath>
+     <HintPath>D:\ProjectEngineering\Rices\Library\PackageCache\com.unity.collab-proxy@1.15.17\Lib\Editor\PlasticSCM\Unity.Plastic.Newtonsoft.Json.dll</HintPath>
      </Reference>
      <Reference Include="LitJson">
-     <HintPath>D:\ProjectEngineering\Game Framework\Assets\GameMain\Plugins\LitJson.dll</HintPath>
+     <HintPath>D:\ProjectEngineering\Rices\Assets\GameMain\Plugins\LitJson.dll</HintPath>
      </Reference>
      <Reference Include="GameFramework">
-     <HintPath>D:\ProjectEngineering\Game Framework\Assets\GameFramework\Libraries\GameFramework.dll</HintPath>
+     <HintPath>D:\ProjectEngineering\Rices\Assets\GameFramework\Libraries\GameFramework.dll</HintPath>
      </Reference>
      <Reference Include="ICSharpCode.SharpZipLib">
-     <HintPath>D:\ProjectEngineering\Game Framework\Assets\GameFramework\Libraries\ICSharpCode.SharpZipLib.dll</HintPath>
+     <HintPath>D:\ProjectEngineering\Rices\Assets\GameFramework\Libraries\ICSharpCode.SharpZipLib.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Plastic.Antlr3.Runtime">
-     <HintPath>D:\ProjectEngineering\Game Framework\Library\PackageCache\com.unity.collab-proxy@1.15.17\Lib\Editor\PlasticSCM\Unity.Plastic.Antlr3.Runtime.dll</HintPath>
+     <HintPath>D:\ProjectEngineering\Rices\Library\PackageCache\com.unity.collab-proxy@1.15.17\Lib\Editor\PlasticSCM\Unity.Plastic.Antlr3.Runtime.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.YamlDotNet">
-     <HintPath>D:\ProjectEngineering\Game Framework\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll</HintPath>
+     <HintPath>D:\ProjectEngineering\Rices\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.TextureAssets">
-     <HintPath>D:\ProjectEngineering\Game Framework\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\EditorAssetResources\Unity.VisualScripting.TextureAssets.dll</HintPath>
+     <HintPath>D:\ProjectEngineering\Rices\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\EditorAssetResources\Unity.VisualScripting.TextureAssets.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.IonicZip">
-     <HintPath>D:\ProjectEngineering\Game Framework\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll</HintPath>
+     <HintPath>D:\ProjectEngineering\Rices\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll</HintPath>
      </Reference>
      <Reference Include="log4netPlastic">
-     <HintPath>D:\ProjectEngineering\Game Framework\Library\PackageCache\com.unity.collab-proxy@1.15.17\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
+     <HintPath>D:\ProjectEngineering\Rices\Library\PackageCache\com.unity.collab-proxy@1.15.17\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
-     <HintPath>D:\ProjectEngineering\Game Framework\Library\PackageCache\com.unity.visualscripting@1.7.8\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
+     <HintPath>D:\ProjectEngineering\Rices\Library\PackageCache\com.unity.visualscripting@1.7.8\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
      </Reference>
      <Reference Include="ReportGeneratorMerged">
-     <HintPath>D:\ProjectEngineering\Game Framework\Library\PackageCache\com.unity.testtools.codecoverage@1.0.1\lib\ReportGenerator\ReportGeneratorMerged.dll</HintPath>
+     <HintPath>D:\ProjectEngineering\Rices\Library\PackageCache\com.unity.testtools.codecoverage@1.0.1\lib\ReportGenerator\ReportGeneratorMerged.dll</HintPath>
      </Reference>
      <Reference Include="Newtonsoft.Json">
-     <HintPath>D:\ProjectEngineering\Game Framework\Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2\Runtime\Newtonsoft.Json.dll</HintPath>
+     <HintPath>D:\ProjectEngineering\Rices\Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2\Runtime\Newtonsoft.Json.dll</HintPath>
      </Reference>
      <Reference Include="unityplastic">
-     <HintPath>D:\ProjectEngineering\Game Framework\Library\PackageCache\com.unity.collab-proxy@1.15.17\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
+     <HintPath>D:\ProjectEngineering\Rices\Library\PackageCache\com.unity.collab-proxy@1.15.17\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
      </Reference>
      <Reference Include="nunit.framework">
-     <HintPath>D:\ProjectEngineering\Game Framework\Library\PackageCache\com.unity.ext.nunit@1.0.6\net35\unity-custom\nunit.framework.dll</HintPath>
+     <HintPath>D:\ProjectEngineering\Rices\Library\PackageCache\com.unity.ext.nunit@1.0.6\net35\unity-custom\nunit.framework.dll</HintPath>
      </Reference>
      <Reference Include="mscorlib">
      <HintPath>D:\Software\Unity\2021.3.4f1c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\mscorlib.dll</HintPath>
@@ -752,151 +752,151 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp.csproj">
-      <Project>{b26b566b-9df4-3a4b-9561-3237e9e3e673}</Project>
+      <Project>{d5c506aa-87a6-2521-501a-30507c74c5c8}</Project>
       <Name>Assembly-CSharp</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.TestRunner.csproj">
-      <Project>{f19abf0b-7ee3-42de-54d7-d35395284ea4}</Project>
+      <Project>{97f3f34c-6cc2-3529-f56f-bc8311123d24}</Project>
       <Name>UnityEngine.TestRunner</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEditor.TestRunner.csproj">
-      <Project>{a47891ca-9400-a817-45bf-4ff5e5476331}</Project>
+      <Project>{277410ab-f0f3-753f-a52c-8e00a9f9eba4}</Project>
       <Name>UnityEditor.TestRunner</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.VisualScripting.Flow.Editor.csproj">
-      <Project>{5b4d4b56-812f-ac70-1bf9-ba33427d1c2e}</Project>
+      <Project>{e5d7da9e-040c-e131-a6f7-c605795d2bd3}</Project>
       <Name>Unity.VisualScripting.Flow.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.VSCode.Editor.csproj">
-      <Project>{72face7e-4ec8-dcc8-16fa-1dfdc36fd113}</Project>
+      <Project>{427c2218-a3dd-a4ed-b370-f3688a54af3e}</Project>
       <Name>Unity.VSCode.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.TextMeshPro.Editor.csproj">
-      <Project>{864771e1-a86c-6663-e331-a510a87ec485}</Project>
+      <Project>{388e6a2c-c6fa-d9e0-dd15-858b28c20963}</Project>
       <Name>Unity.TextMeshPro.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Performance.Profile-Analyzer.Editor.csproj">
-      <Project>{13fc2008-8665-c5f9-6ef4-b7b9bba37b1e}</Project>
+      <Project>{3c5bf0e4-8a40-47ed-922f-d78cc8c93253}</Project>
       <Name>Unity.Performance.Profile-Analyzer.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.csproj">
-      <Project>{12ce03c1-60fc-fd21-93d0-ee3a6c31735e}</Project>
+      <Project>{3c3ce41d-1f08-bf41-455b-302721d17038}</Project>
       <Name>Unity.TestTools.CodeCoverage.Editor.OpenCover.Model</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.VisualStudio.Editor.csproj">
-      <Project>{f163e772-2184-045f-a399-a3dbdbb16d73}</Project>
+      <Project>{7a20816d-53c7-8594-c0d4-d0206ae1056e}</Project>
       <Name>Unity.VisualStudio.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Timeline.csproj">
-      <Project>{278e3026-ffa2-5777-9385-7641ff6ec4c3}</Project>
+      <Project>{f71d5ded-96af-78fa-e5d8-559a4c97668e}</Project>
       <Name>Unity.Timeline</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.VisualScripting.Core.Editor.csproj">
-      <Project>{e6509981-8c1f-2faa-a66b-1920fda8f204}</Project>
+      <Project>{848a75e6-5ff8-42a1-fc7a-6567a57d6faf}</Project>
       <Name>Unity.VisualScripting.Core.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.TextMeshPro.csproj">
-      <Project>{a9bcf4d9-5bb9-9086-25cb-fe983b895dfc}</Project>
+      <Project>{e8d251e7-8f5a-fae0-9955-5295292347b6}</Project>
       <Name>Unity.TextMeshPro</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.VisualScripting.State.Editor.csproj">
-      <Project>{dad71180-6e62-7a45-3613-cc520a4d1ee0}</Project>
+      <Project>{0b9c8746-b400-39e9-cf25-e932b8079743}</Project>
       <Name>Unity.VisualScripting.State.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="UnityGameFramework.Editor.csproj">
-      <Project>{f2039655-1cb5-de71-54e3-e3fe15fe685a}</Project>
+      <Project>{cf8e72c1-e277-7111-d7d4-bb9af4072b70}</Project>
       <Name>UnityGameFramework.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.VisualScripting.SettingsProvider.Editor.csproj">
-      <Project>{00f6ce8d-b449-9f65-2819-99e0d4f86374}</Project>
+      <Project>{f6ae024f-006c-d2f4-5651-f145653608f4}</Project>
       <Name>Unity.VisualScripting.SettingsProvider.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.2D.Sprite.Editor.csproj">
-      <Project>{cd43affe-dde5-314e-6222-793cc936720f}</Project>
+      <Project>{262483d1-ba09-2e2b-a321-070f24157a57}</Project>
       <Name>Unity.2D.Sprite.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.csproj">
-      <Project>{1b59292e-78cc-7883-7514-7d39305f7a77}</Project>
+      <Project>{0c9284ef-f6d1-9fe3-19fc-f3c6b61363ed}</Project>
       <Name>Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection</Name>
     </ProjectReference>
     <ProjectReference Include="UniTask.DOTween.csproj">
-      <Project>{429c65c3-7665-27f1-e14f-9eef243a7b13}</Project>
+      <Project>{ffc91e27-5ada-40e8-9e1a-89fb73326496}</Project>
       <Name>UniTask.DOTween</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.VisualScripting.Flow.csproj">
-      <Project>{b5b7608c-0b62-bd40-ac08-cb7118d7985b}</Project>
+      <Project>{862a5bac-15f8-f9fe-679e-a93dbfe75167}</Project>
       <Name>Unity.VisualScripting.Flow</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEditor.UI.csproj">
-      <Project>{09256af0-80d9-c1aa-6546-0215244a1177}</Project>
+      <Project>{d6c06d41-b168-2081-59ed-c5b53673aa8d}</Project>
       <Name>UnityEditor.UI</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.PlasticSCM.Editor.csproj">
-      <Project>{b67d77be-25fc-9446-c653-915ef3754f97}</Project>
+      <Project>{89d4812f-d15f-c14c-2f09-47d9c9e43e55}</Project>
       <Name>Unity.PlasticSCM.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Rider.Editor.csproj">
-      <Project>{18afbe75-d7fb-06e6-4f3f-25f0a622ebbd}</Project>
+      <Project>{02cceed5-bbe1-87f6-4ef4-2ba4f58baaa5}</Project>
       <Name>Unity.Rider.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="UniTask.Linq.csproj">
-      <Project>{069f0a11-665e-2248-c6a8-1761022bfcd6}</Project>
+      <Project>{f1e63947-0f51-a384-6dce-0edaf4a77035}</Project>
       <Name>UniTask.Linq</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.UI.csproj">
-      <Project>{15bd1df8-de8c-c156-4eb4-c34c0e0710b0}</Project>
+      <Project>{65d90a2e-2e4e-5029-7f5c-46703dd75d87}</Project>
       <Name>UnityEngine.UI</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Services.Core.csproj">
-      <Project>{3f3e26d6-2abc-8ce2-7549-aa3160a18c72}</Project>
+      <Project>{06ae2942-e2d7-12d2-3f3a-291513d3f762}</Project>
       <Name>Unity.Services.Core</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.VisualScripting.Core.csproj">
-      <Project>{5a68d186-1223-1fee-479e-1bef28008810}</Project>
+      <Project>{e378429e-9b72-de4a-a4d9-6fabb3a30d4b}</Project>
       <Name>Unity.VisualScripting.Core</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.EditorCoroutines.Editor.csproj">
-      <Project>{6fc07ae1-61ea-ec30-de59-46f626334de1}</Project>
+      <Project>{b5b9f76f-e263-84d2-78eb-0248ef93bfe5}</Project>
       <Name>Unity.EditorCoroutines.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="UniTask.TextMeshPro.csproj">
-      <Project>{13965a4a-013d-fc82-64f1-60c5d4f72ca0}</Project>
+      <Project>{7601619a-cf9a-38dd-1834-d70d17f634cc}</Project>
       <Name>UniTask.TextMeshPro</Name>
     </ProjectReference>
     <ProjectReference Include="UnityGameFramework.Runtime.csproj">
-      <Project>{4f1a6dce-2999-0aad-a8ac-d25b435a1196}</Project>
+      <Project>{9c451850-9bf3-4deb-bb81-89c967717521}</Project>
       <Name>UnityGameFramework.Runtime</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Services.Core.Analytics.csproj">
-      <Project>{2ddd5d7a-166d-3b30-e66e-1f2220ca3c68}</Project>
+      <Project>{be634ee7-6873-973f-4c00-5e2c5d0d6fca}</Project>
       <Name>Unity.Services.Core.Analytics</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.VisualScripting.Shared.Editor.csproj">
-      <Project>{6ea89535-c933-3bed-a11e-ab61384bfb7b}</Project>
+      <Project>{4545d498-e2b7-f13f-fe7d-5062683ce793}</Project>
       <Name>Unity.VisualScripting.Shared.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Services.Core.Environments.csproj">
-      <Project>{3103bfcf-44eb-da17-6000-033d15d3d185}</Project>
+      <Project>{37b66651-1303-ceed-4546-ee6259d6da8e}</Project>
       <Name>Unity.Services.Core.Environments</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Timeline.Editor.csproj">
-      <Project>{e321353b-1ef5-8a3f-acda-f653a1a6c08f}</Project>
+      <Project>{c9e1540c-1db0-0204-425a-ad35e539982c}</Project>
       <Name>Unity.Timeline.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="UniTask.csproj">
-      <Project>{e88c7b1c-334d-88fa-be45-78c6f6596f5d}</Project>
+      <Project>{fda4bf0f-6c3b-b35e-de9a-020dc5b8233b}</Project>
       <Name>UniTask</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.TestTools.CodeCoverage.Editor.csproj">
-      <Project>{9db390d9-f851-446c-9a3d-87e6647fdebb}</Project>
+      <Project>{57ed7338-35a6-f90f-28cc-4fe818b8dd55}</Project>
       <Name>Unity.TestTools.CodeCoverage.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="UniTask.Addressables.csproj">
-      <Project>{8f844644-e863-c67b-dd3a-067976858980}</Project>
+      <Project>{966c7a28-531c-425f-156e-9bc0ea8207b8}</Project>
       <Name>UniTask.Addressables</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.VisualScripting.State.csproj">
-      <Project>{dde0cf7b-3493-a5b2-0305-759b3ed34dd8}</Project>
+      <Project>{6a4c7347-e9a9-81d0-0881-8daa94c6c7c4}</Project>
       <Name>Unity.VisualScripting.State</Name>
     </ProjectReference>
   </ItemGroup>

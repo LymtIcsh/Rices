@@ -54,7 +54,6 @@ namespace Suture
             {
                 
                 // procedureOwner.SetData<VarInt32>("NextSceneId", GameEntry.Config.GetInt("Scene.Pve"));
-                // procedureOwner.SetData<VarByte>("GameMode", (byte)GameMode.Pve);
                 
                 ChangeState<ProcedureChangeScene>(procedureOwner);
                 
@@ -110,6 +109,7 @@ namespace Suture
                 return;
             changeScene = true;
             procedureOwner.SetData<VarInt32>("NextSceneId", (int)ne.GameMode);
+            procedureOwner.SetData<VarByte>("GameMode", (byte)ne.GameMode);
         }
     }
 }
