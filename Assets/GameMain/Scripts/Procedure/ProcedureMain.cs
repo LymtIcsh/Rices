@@ -11,7 +11,7 @@ namespace Suture
         /// <summary>
         /// 游戏延迟秒数
         /// </summary>
-        private const float GameOverDelayedSeconds = 2f;
+        private const float GameOverDelayedSeconds = 3f;
         
         private readonly Dictionary<GameMode, GameBase> m_Games = new Dictionary<GameMode, GameBase>();
         private GameBase m_CurrentGame = null;
@@ -52,22 +52,22 @@ namespace Suture
         {
             base.OnUpdate(procedureOwner, elapseSeconds, realElapseSeconds);
 
-            if (m_CurrentGame!=null&&!m_CurrentGame.GameOver)
+            if (m_CurrentGame != null && !m_CurrentGame.GameOver)
             {
-                m_CurrentGame.Update(elapseSeconds,realElapseSeconds);
+                m_CurrentGame.Update(elapseSeconds, realElapseSeconds);
                 return;
             }
-            
+
             if (!m_GotoMenu)
             {
                 m_GotoMenu = true;
                 m_GotoMenuDelaySeconds = 0;
             }
-            
-            m_GotoMenuDelaySeconds += GameOverDelayedSeconds;
-            if (m_GotoMenuDelaySeconds>=GameOverDelayedSeconds)
+
+            m_GotoMenuDelaySeconds += elapseSeconds;
+            if (m_GotoMenuDelaySeconds >= GameOverDelayedSeconds)
             {
-                procedureOwner.SetData<VarInt32>("NextSceneId",GameEntry.Config.GetInt("Scene.Menu"));
+                procedureOwner.SetData<VarInt32>("NextSceneId", GameEntry.Config.GetInt("Scene.Menu"));
                 ChangeState<ProcedureChangeScene>(procedureOwner);
             }
         }

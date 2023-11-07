@@ -21,9 +21,10 @@ namespace Suture
         {
             base.OnShow(userData);
 
+            _petData = userData as PetData;
             if (_petData == null)
             {
-                Log.Error("Aircraft data is invalid.");
+                Log.Error("petData data is invalid.");
                 return;
             }
 
@@ -102,7 +103,7 @@ namespace Suture
 
         public override ImpactData GetImpactData()
         {
-            return new ImpactData(_petData.Camp, _petData.HP, 0, _petData.Defense);
+            return new ImpactData(_petData.Camp, _petData.HP, _petData.ASK, _petData.Defense);
         }
     }
 }

@@ -16,7 +16,13 @@ namespace Suture
         public static readonly string[] DataTableNames = new string[]
         {
         "Scene",
-        "UIForm"
+        "UIForm",
+        "Pet",
+        "Entity",
+        "Armor",
+        "Weapon",
+        "Wave",
+        "WaveElement"
         };
 
         /// <summary>

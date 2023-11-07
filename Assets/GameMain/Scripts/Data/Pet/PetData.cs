@@ -11,33 +11,28 @@ namespace Suture
     [Serializable]
     public abstract class PetData : TargetableObjectData
     {
-        [SerializeField]
-        private List<WeaponData> m_WeaponDatas = new List<WeaponData>();
+        [SerializeField] private List<WeaponData> m_WeaponDatas = new List<WeaponData>();
 
-        [SerializeField]
-        private List<ArmorData> m_ArmorDatas = new List<ArmorData>();
+        [SerializeField] private List<ArmorData> m_ArmorDatas = new List<ArmorData>();
 
-        [SerializeField]
-        private int m_MaxHP = 0;
+        [SerializeField] private int m_MaxHP = 0;
+        
+        [SerializeField] private int m_Ask = 0;
 
-        [SerializeField]
-        private int m_Defense = 0;
+        [SerializeField] private int m_Defense = 0;
 
         protected PetData(int entityId, int typeId, CampType camp) : base(entityId, typeId, camp)
         {
             IDataTable<DRPet> dtPets = GameEntry.DataTable.GetDataTable<DRPet>();
             DRPet drPets = dtPets.GetDataRow(TypeId);
-            if(drPets == null)
+            if (drPets == null)
             {
                 return;
             }
 
-            // for (int index = 0,weaponId=0; (weaponId =drPets); index++)
-            // {
-            //     
-            // }
-
-
+            m_MaxHP = drPets.InitHp;
+            m_Defense = drPets.InitDefense;
+            ASK = drPets.InitAsk;
             HP = m_MaxHP;
         }
 
@@ -46,10 +41,7 @@ namespace Suture
         /// </summary>
         public override int MaxHP
         {
-            get
-            {
-                return m_MaxHP;
-            }
+            get { return m_MaxHP; }
         }
 
         /// <summary>
@@ -57,10 +49,7 @@ namespace Suture
         /// </summary>
         public int Defense
         {
-            get
-            {
-                return m_Defense;
-            }
+            get { return m_Defense; }
         }
 
         public List<WeaponData> GetAllWeaponDatas()
@@ -70,7 +59,7 @@ namespace Suture
 
         public void AttachWeaponData(WeaponData weaponData)
         {
-            if(weaponData == null)
+            if (weaponData == null)
             {
                 return;
             }
@@ -135,6 +124,7 @@ namespace Suture
             m_Defense = 0;
             for (int i = 0; i < m_ArmorDatas.Count; i++)
             {
+
                 m_MaxHP += m_ArmorDatas[i].MaxHP;
                 m_Defense += m_ArmorDatas[i].Defense;
             }

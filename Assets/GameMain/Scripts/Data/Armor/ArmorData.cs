@@ -15,6 +15,9 @@ namespace Suture
 
         [SerializeField]
         private int m_Defense = 0;
+        
+        [SerializeField]
+        private int m_Ask = 0;
 
         public ArmorData(int entityId, int typeId, int ownerId, CampType ownerCamp)
             : base(entityId, typeId, ownerId, ownerCamp)
@@ -25,7 +28,7 @@ namespace Suture
             {
                 return;
             }
-
+  
             m_MaxHP = drArmor.MaxHP;
             m_Defense = drArmor.Defense;
         }

@@ -28,7 +28,7 @@ namespace Suture
                 float randomPositionX = (float)Utility.Random.GetRandomDouble();
                 float randomPositionZ = (float)Utility.Random.GetRandomDouble();
                 
-                
+                //添加怪物
             }
         }
     }

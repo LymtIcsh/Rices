@@ -5,7 +5,7 @@
 // Feedback: mailto:ellan@gameframework.cn
 //------------------------------------------------------------
 // 此文件由工具自动生成，请勿直接修改。
-// 生成时间：2023-11-06 23:58:51.668
+// 生成时间：2023-11-07 18:17:31.749
 //------------------------------------------------------------
 
 using GameFramework;
@@ -37,9 +37,27 @@ namespace Suture
         }
 
         /// <summary>
-        /// 获取武器编号。
+        /// 获取初始血量。
         /// </summary>
-        public int WeaponId
+        public int InitHp
+        {
+            get;
+            private set;
+        }
+
+        /// <summary>
+        /// 获取初始攻击。
+        /// </summary>
+        public int InitAsk
+        {
+            get;
+            private set;
+        }
+
+        /// <summary>
+        /// 获取初始防御。
+        /// </summary>
+        public int InitDefense
         {
             get;
             private set;
@@ -93,7 +111,9 @@ namespace Suture
             index++;
             m_Id = int.Parse(columnStrings[index++]);
             index++;
-            WeaponId = int.Parse(columnStrings[index++]);
+            InitHp = int.Parse(columnStrings[index++]);
+            InitAsk = int.Parse(columnStrings[index++]);
+            InitDefense = int.Parse(columnStrings[index++]);
             Skill_Q = columnStrings[index++];
             Skill_W = columnStrings[index++];
             Skill_E = columnStrings[index++];
@@ -110,7 +130,9 @@ namespace Suture
                 using (BinaryReader binaryReader = new BinaryReader(memoryStream, Encoding.UTF8))
                 {
                     m_Id = binaryReader.Read7BitEncodedInt32();
-                    WeaponId = binaryReader.Read7BitEncodedInt32();
+                    InitHp = binaryReader.Read7BitEncodedInt32();
+                    InitAsk = binaryReader.Read7BitEncodedInt32();
+                    InitDefense = binaryReader.Read7BitEncodedInt32();
                     Skill_Q = binaryReader.ReadString();
                     Skill_W = binaryReader.ReadString();
                     Skill_E = binaryReader.ReadString();
