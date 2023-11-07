@@ -19,8 +19,7 @@ namespace Suture
         "UIForm",
         "Pet",
         "Entity",
-        "Armor",
-        "Weapon",
+        "Equip",
         "Wave",
         "WaveElement"
         };

@@ -1,6 +1,8 @@
 ﻿
+using System;
 using System.Collections.Generic;
 using Unity.VisualScripting;
+using UnityEngine;
 using UnityGameFramework.Runtime;
 using ProcedureOwner = GameFramework.Fsm.IFsm<GameFramework.Procedure.IProcedureManager>;
 
@@ -45,7 +47,8 @@ namespace Suture
             m_GotoMenu = false;
             GameMode gameMode = (GameMode)procedureOwner.GetData<VarByte>("GameMode").Value;
             m_CurrentGame = m_Games[gameMode];
-            m_CurrentGame.Initialize();
+            // (int, string, Vector3) m_InitPetData = (ValueTuple)procedureOwner.GetData<VarByte>("InitPetData").Value;
+            // m_CurrentGame.Initialize();
         }
 
         protected override void OnUpdate(ProcedureOwner procedureOwner, float elapseSeconds, float realElapseSeconds)

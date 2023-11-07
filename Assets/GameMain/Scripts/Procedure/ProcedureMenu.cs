@@ -110,6 +110,7 @@ namespace Suture
             changeScene = true;
             procedureOwner.SetData<VarInt32>("NextSceneId", (int)ne.GameMode);
             procedureOwner.SetData<VarByte>("GameMode", (byte)ne.GameMode);
+            procedureOwner.SetData("InitPetData",(VarByte)ne.InitPetData);
         }
     }
 }

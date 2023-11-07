@@ -67,15 +67,10 @@ namespace Suture
         {
             entityComponent.ShowEntity(typeof(MyPet), "Pet", Constant.AssetPriority.ArmorAsset, data);
         }
-
-        public static void ShowWeapon(this EntityComponent entityComponent, WeaponData weaponData)
+        
+        public static void ShowArmor(this EntityComponent entityComponent, EquipData equipData)
         {
-            entityComponent.ShowEntity(typeof(Weapon), "Weapon", Constant.AssetPriority.WeaponAsset, weaponData);
-        }
-
-        public static void ShowArmor(this EntityComponent entityComponent, ArmorData armorData)
-        {
-            entityComponent.ShowEntity(typeof(Armor), "Armor", Constant.AssetPriority.ArmorAsset, armorData);
+            entityComponent.ShowEntity(typeof(Equip), "Equip", Constant.AssetPriority.ArmorAsset, equipData);
         }
 
         /// <summary>

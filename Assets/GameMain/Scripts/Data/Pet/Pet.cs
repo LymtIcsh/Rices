@@ -9,9 +9,9 @@ namespace Suture
     {
         [SerializeField] private PetData _petData = null;
 
-        [SerializeField] protected List<Weapon> _weapons = new List<Weapon>();
 
-        [SerializeField] protected List<Armor> _armors = new List<Armor>();
+
+        [SerializeField] protected List<Equip> _armors = new List<Equip>();
 
 #if UNITY_2017_3_OR_NEWER
         protected override void OnShow(object userData)
@@ -30,13 +30,8 @@ namespace Suture
 
             Name = Utility.Text.Format("Rices", Id);
 
-            List<WeaponData> weaponDatas = _petData.GetAllWeaponDatas();
-            foreach (var t in weaponDatas)
-            {
-                GameEntry.Entity.ShowWeapon(t);
-            }
 
-            List<ArmorData> armorDatas = _petData.GetAllArmorDatas();
+            List<EquipData> armorDatas = _petData.GetAllArmorDatas();
             foreach (var t in armorDatas)
             {
                 GameEntry.Entity.ShowArmor(t);
@@ -59,14 +54,9 @@ namespace Suture
 #endif
         {
             base.OnAttached(childEntity,parentTransform,userData);
+            
 
-            if (childEntity is Weapon weapon)
-            {
-                _weapons.Add(weapon);
-                return;
-            }
-
-            if (childEntity is Armor armor)
+            if (childEntity is Equip armor)
             {
                 _armors.Add(armor);
                 return;
@@ -81,13 +71,8 @@ namespace Suture
         {
             base.OnDetached(childEntity,userData);
             
-            if (childEntity is Weapon weapon)
-            {
-                _weapons.Remove(weapon);
-                return;
-            }
 
-            if (childEntity is Armor armor)
+            if (childEntity is Equip armor)
             {
                 _armors.Remove(armor);
                 return;

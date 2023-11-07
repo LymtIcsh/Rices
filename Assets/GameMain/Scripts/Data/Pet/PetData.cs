@@ -11,16 +11,13 @@ namespace Suture
     [Serializable]
     public abstract class PetData : TargetableObjectData
     {
-        [SerializeField] private List<WeaponData> m_WeaponDatas = new List<WeaponData>();
 
-        [SerializeField] private List<ArmorData> m_ArmorDatas = new List<ArmorData>();
+        [SerializeField] private List<EquipData> m_ArmorDatas = new List<EquipData>();
 
         [SerializeField] private int m_MaxHP = 0;
         
-        [SerializeField] private int m_Ask = 0;
-
-        [SerializeField] private int m_Defense = 0;
-
+        [SerializeField] private int m_Money = 0;
+        
         protected PetData(int entityId, int typeId, CampType camp) : base(entityId, typeId, camp)
         {
             IDataTable<DRPet> dtPets = GameEntry.DataTable.GetDataTable<DRPet>();
@@ -29,11 +26,10 @@ namespace Suture
             {
                 return;
             }
-
-            m_MaxHP = drPets.InitHp;
-            m_Defense = drPets.InitDefense;
+            
+            Defense = drPets.InitDefense;
             ASK = drPets.InitAsk;
-            HP = m_MaxHP;
+            HP = m_MaxHP = drPets.InitHp;
         }
 
         /// <summary>
@@ -43,75 +39,38 @@ namespace Suture
         {
             get { return m_MaxHP; }
         }
-
-        /// <summary>
-        /// 防御。
-        /// </summary>
-        public int Defense
-        {
-            get { return m_Defense; }
-        }
-
-        public List<WeaponData> GetAllWeaponDatas()
-        {
-            return m_WeaponDatas;
-        }
-
-        public void AttachWeaponData(WeaponData weaponData)
-        {
-            if (weaponData == null)
-            {
-                return;
-            }
-
-            if (m_WeaponDatas.Contains(weaponData))
-            {
-                return;
-            }
-
-            m_WeaponDatas.Add(weaponData);
-        }
-
-        public void DetachWeaponData(WeaponData weaponData)
-        {
-            if (weaponData == null)
-            {
-                return;
-            }
-
-            m_WeaponDatas.Remove(weaponData);
-        }
+        
 
 
-        public List<ArmorData> GetAllArmorDatas()
+        public List<EquipData> GetAllArmorDatas()
         {
             return m_ArmorDatas;
         }
 
-        public void AttachArmorData(ArmorData armorData)
+        public void AttachArmorData(EquipData equipData)
         {
-            if (armorData == null)
+            if (equipData == null)
             {
                 return;
             }
 
-            if (m_ArmorDatas.Contains(armorData))
+            if (m_ArmorDatas.Contains(equipData))
             {
                 return;
             }
 
-            m_ArmorDatas.Add(armorData);
+            m_ArmorDatas.Add(equipData);
             RefreshData();
         }
 
-        public void DetachArmorData(ArmorData armorData)
+        public void DetachArmorData(EquipData equipData)
         {
-            if (armorData == null)
+            if (equipData == null)
             {
                 return;
             }
 
-            m_ArmorDatas.Remove(armorData);
+            m_ArmorDatas.Remove(equipData);
             RefreshData();
         }
 
@@ -120,13 +79,15 @@ namespace Suture
         /// </summary>
         private void RefreshData()
         {
-            m_MaxHP = 0;
-            m_Defense = 0;
+            // m_MaxHP = 0;
+            // Defense = 0;
+            
             for (int i = 0; i < m_ArmorDatas.Count; i++)
             {
-
+                ASK += m_ArmorDatas[i].Ask;
                 m_MaxHP += m_ArmorDatas[i].MaxHP;
-                m_Defense += m_ArmorDatas[i].Defense;
+                Defense += m_ArmorDatas[i].Defense;
+                
             }
 
             if (HP > m_MaxHP)

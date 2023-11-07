@@ -20,15 +20,15 @@ namespace Suture
 
         private MyPet m_myPet = null;
 
-        public virtual void Initialize()
+        public virtual void Initialize(int typeId,string name,Vector3 InitPos)
         {
             GameEntry.Event.Subscribe(ShowEntitySuccessEventArgs.EventId, OnShowEntitySuccess);
             GameEntry.Event.Subscribe(ShowEntityFailureEventArgs.EventId, OnShowEntityFailure);
 
-            GameEntry.Entity.ShowMyPet(new MyPetData(GameEntry.Entity.GenerateSerialId(), 10000)
+            GameEntry.Entity.ShowMyPet(new MyPetData(GameEntry.Entity.GenerateSerialId(), typeId)
             {
-                Name = "111",
-                Position = Vector3.zero
+                Name = name,
+                Position =InitPos
             });
 
 

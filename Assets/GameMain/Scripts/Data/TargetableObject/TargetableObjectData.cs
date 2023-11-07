@@ -12,11 +12,11 @@ namespace Suture
     {
         [SerializeField] private CampType m_Camp = CampType.Unknown;
 
-        [SerializeField] private int m_HP = 0;
+        [SerializeField]   private int m_HP = 0;
 
-        [SerializeField] private int m_ASK = 0;
+        [SerializeField]   private int m_ASK = 0;
         
-        [SerializeField] private int m_Defense = 0;
+        [SerializeField]  private int m_Defense = 0;
 
         protected TargetableObjectData(int entityId, int typeId, CampType camp) : base(entityId, typeId)
         {
@@ -52,7 +52,7 @@ namespace Suture
         }
         
         /// <summary>
-        /// 当前攻击力
+        /// 当前防御力
         /// </summary>
         public int Defense
         {
