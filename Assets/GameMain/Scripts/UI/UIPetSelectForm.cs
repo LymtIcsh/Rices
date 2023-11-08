@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using UnityGameFramework.Runtime;
 
 namespace Suture
 {
@@ -11,7 +12,7 @@ namespace Suture
 
         public GameMode GameMode = GameMode.GameStop;
 
-        public object InitPetData;
+        public (int, string, Vector3) InitPetData;
 
         protected override void OnInit(object userData)
         {
@@ -42,7 +43,7 @@ namespace Suture
 
         void OnYaSuoButtonClick()
         {
-            InitPetData = (1000, "YaSuo", Vector3.zero);
+            InitPetData = (10002, "YaSuo", Vector3.zero);
 
             GameEntry.Event.Fire(this, LoadPatternEventArgs.Create(GameMode,InitPetData));
             Close(true);
@@ -50,7 +51,7 @@ namespace Suture
 
         void OnTeemoButtonClick()
         {
-            InitPetData = (1001, "Teemo", Vector3.zero);
+            InitPetData = (10003, "Teemo", Vector3.zero);
             GameEntry.Event.Fire(this, LoadPatternEventArgs.Create(GameMode,InitPetData));
             Close(true);
         }

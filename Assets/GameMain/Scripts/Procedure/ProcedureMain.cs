@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -8,13 +7,13 @@ using ProcedureOwner = GameFramework.Fsm.IFsm<GameFramework.Procedure.IProcedure
 
 namespace Suture
 {
-    public class ProcedureMain :ProcedureBase
+    public class ProcedureMain : ProcedureBase
     {
         /// <summary>
         /// 游戏延迟秒数
         /// </summary>
         private const float GameOverDelayedSeconds = 3f;
-        
+
         private readonly Dictionary<GameMode, GameBase> m_Games = new Dictionary<GameMode, GameBase>();
         private GameBase m_CurrentGame = null;
         private float m_GotoMenuDelaySeconds = 0f;
@@ -22,10 +21,7 @@ namespace Suture
 
         public override bool UseNativeDialog
         {
-            get
-            {
-                return false;
-            }
+            get { return false; }
         }
 
         public void GotoMenu()
@@ -47,8 +43,8 @@ namespace Suture
             m_GotoMenu = false;
             GameMode gameMode = (GameMode)procedureOwner.GetData<VarByte>("GameMode").Value;
             m_CurrentGame = m_Games[gameMode];
-            // (int, string, Vector3) m_InitPetData = (ValueTuple)procedureOwner.GetData<VarByte>("InitPetData").Value;
-            // m_CurrentGame.Initialize();
+            (int typeId, string name, Vector3 petPos) = procedureOwner.GetData<VarValueTuple>("InitPetData").Value;
+            m_CurrentGame.Initialize(typeId, name, petPos);
         }
 
         protected override void OnUpdate(ProcedureOwner procedureOwner, float elapseSeconds, float realElapseSeconds)
@@ -77,19 +73,19 @@ namespace Suture
 
         protected override void OnLeave(ProcedureOwner procedureOwner, bool isShutdown)
         {
-            if (m_CurrentGame!=null)
+            if (m_CurrentGame != null)
             {
                 m_CurrentGame.Shutdown();
                 m_CurrentGame = null;
-            } 
-            
+            }
+
             base.OnLeave(procedureOwner, isShutdown);
         }
 
         protected override void OnDestroy(ProcedureOwner procedureOwner)
         {
             base.OnDestroy(procedureOwner);
-            
+
             m_Games.Clear();
         }
     }

@@ -21,7 +21,7 @@ namespace Suture
             private set;
         }
 
-        public object InitPetData
+        public (int, string, Vector3) InitPetData
         {
             get;
             private set;
@@ -41,7 +41,7 @@ namespace Suture
             private set;
         }
 
-        public static LoadPatternEventArgs Create(GameMode gameMode, object InitPetData,object userData = null)
+        public static LoadPatternEventArgs Create(GameMode gameMode, (int, string, Vector3) InitPetData,object userData = null)
         {
             LoadPatternEventArgs ne = ReferencePool.Acquire<LoadPatternEventArgs>();
             ne.GameMode = gameMode;

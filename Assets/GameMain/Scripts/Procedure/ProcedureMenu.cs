@@ -1,6 +1,4 @@
-﻿
-
-using GameFramework.Event;
+﻿using GameFramework.Event;
 using GameFramework.Fsm;
 using System;
 using UnityGameFramework.Runtime;
@@ -8,7 +6,7 @@ using ProcedureOwner = GameFramework.Fsm.IFsm<GameFramework.Procedure.IProcedure
 
 namespace Suture
 {
-    public class ProcedureMenu:ProcedureBase
+    public class ProcedureMenu : ProcedureBase
     {
         /// <summary>
         /// 是否切换场景
@@ -17,17 +15,12 @@ namespace Suture
 
         private ProcedureOwner procedureOwner;
 
-        private UIMainMenuForm m_MenuForm =null;
+        private UIMainMenuForm m_MenuForm = null;
 
         public override bool UseNativeDialog
         {
-            get
-            {
-                return false;
-            }
+            get { return false; }
         }
-
-
 
 
         protected override void OnEnter(ProcedureOwner procedureOwner)
@@ -52,11 +45,10 @@ namespace Suture
 
             if (changeScene)
             {
-                
                 // procedureOwner.SetData<VarInt32>("NextSceneId", GameEntry.Config.GetInt("Scene.Pve"));
-                
+
                 ChangeState<ProcedureChangeScene>(procedureOwner);
-                
+
                 // GameEntry.UI.CloseUIForm((int)UIFormId.UIPatternSelectForm);
             }
         }
@@ -95,7 +87,7 @@ namespace Suture
         private void OnChangeScene(object sender, GameEventArgs e)
         {
             ChangeSceneEventArgs ne = (ChangeSceneEventArgs)e;
-            if (ne==null)
+            if (ne == null)
                 return;
 
             changeScene = true;
@@ -110,7 +102,7 @@ namespace Suture
             changeScene = true;
             procedureOwner.SetData<VarInt32>("NextSceneId", (int)ne.GameMode);
             procedureOwner.SetData<VarByte>("GameMode", (byte)ne.GameMode);
-            procedureOwner.SetData("InitPetData",(VarByte)ne.InitPetData);
+            procedureOwner.SetData("InitPetData", (VarValueTuple)ne.InitPetData);
         }
     }
 }

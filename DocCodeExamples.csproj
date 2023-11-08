@@ -44,13 +44,13 @@
      <Folder Include="Library\PackageCache\com.unity.timeline@1.6.4\DocCodeExamples" />
      <None Include="Library\PackageCache\com.unity.timeline@1.6.4\DocCodeExamples\DocCodeExamples.asmdef" />
      <Reference Include="UnityEngine">
-     <HintPath>D:\Software\Unity\2021.3.4f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
+     <HintPath>D:\Software\UnityHub\Install\2021.3.4f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
      </Reference>
      <Reference Include="UnityEngine.CoreModule">
-     <HintPath>D:\Software\Unity\2021.3.4f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.CoreModule.dll</HintPath>
+     <HintPath>D:\Software\UnityHub\Install\2021.3.4f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.CoreModule.dll</HintPath>
      </Reference>
      <Reference Include="UnityEditor">
-     <HintPath>D:\Software\Unity\2021.3.4f1c1\Editor\Data\Managed\UnityEngine\UnityEditor.dll</HintPath>
+     <HintPath>D:\Software\UnityHub\Install\2021.3.4f1c1\Editor\Data\Managed\UnityEngine\UnityEditor.dll</HintPath>
      </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
