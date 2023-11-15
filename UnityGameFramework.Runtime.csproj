@@ -76,6 +76,7 @@
      <Compile Include="Assets\GameFramework\Scripts\Runtime\Debugger\DebuggerComponent.FpsCounter.cs" />
      <Compile Include="Assets\GameFramework\Scripts\Runtime\Config\ConfigComponent.cs" />
      <Compile Include="Assets\GameFramework\Scripts\Runtime\Debugger\DebuggerComponent.SystemInformationWindow.cs" />
+     <Compile Include="Assets\GameFramework\Scripts\Runtime\Variable\VarValueTuple.cs" />
      <Compile Include="Assets\GameFramework\Scripts\Runtime\Entity\ShowEntityUpdateEventArgs.cs" />
      <Compile Include="Assets\GameFramework\Scripts\Runtime\Sound\DefaultSoundAgentHelper.cs" />
      <Compile Include="Assets\GameFramework\Scripts\Runtime\Network\NetworkErrorEventArgs.cs" />
@@ -253,7 +254,6 @@
      <Compile Include="Assets\GameFramework\Scripts\Runtime\Download\UnityWebRequestDownloadAgentHelper.cs" />
      <Compile Include="Assets\GameFramework\Scripts\Runtime\Utility\BinaryExtension.cs" />
      <Compile Include="Assets\GameFramework\Scripts\Runtime\Utility\DefaultJsonHelper.cs" />
-     <Compile Include="Assets\GameFramework\Scripts\Runtime\Variable\VarValueTuple.cs" />
      <Folder Include="Assets\GameFramework\Scripts\Runtime\Fsm" />
      <Folder Include="Assets\GameFramework\Scripts\Runtime\ObjectPool" />
      <Folder Include="Assets\GameFramework\Scripts\Runtime\Setting" />

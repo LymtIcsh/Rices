@@ -76,6 +76,7 @@
      <Compile Include="Assets\GameMain\Scripts\Editor\DataTableGenerator\DataTableProcessor.ColorProcessor.cs" />
      <Compile Include="Assets\GameMain\Scripts\Editor\DataTableGenerator\DataTableProcessor.DataProcessor.cs" />
      <Folder Include="Assets\GameMain\Scripts\Editor" />
+     <Folder Include="Assets\GameMain\Res\Polyart\PolyartStudio\SharedResources\CritiasFoliage\Code\Editor" />
      <Folder Include="Assets\GameMain\Scripts\Editor\DataTableGenerator" />
      <Reference Include="UnityEngine">
      <HintPath>D:\Software\UnityHub\Install\2021.3.4f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>

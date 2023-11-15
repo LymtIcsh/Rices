@@ -20,7 +20,7 @@ namespace Suture
 
         private MyPet m_myPet = null;
 
-        public virtual void Initialize(int typeId,string name,Vector3 InitPos)
+        public virtual void Initialize(int typeId, string name, Vector3 InitPos)
         {
             GameEntry.Event.Subscribe(ShowEntitySuccessEventArgs.EventId, OnShowEntitySuccess);
             GameEntry.Event.Subscribe(ShowEntityFailureEventArgs.EventId, OnShowEntityFailure);
@@ -28,7 +28,8 @@ namespace Suture
             GameEntry.Entity.ShowMyPet(new MyPetData(GameEntry.Entity.GenerateSerialId(), typeId)
             {
                 Name = name,
-                Position =InitPos
+                Position = InitPos,
+                Scale = new Vector3(0.01f, 0.01f, 0.01f)
             });
 
 
