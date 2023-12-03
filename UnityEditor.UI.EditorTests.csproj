@@ -44,21 +44,24 @@
      <Folder Include="Library\PackageCache\com.unity.ugui@1.0.0\Tests\Editor\RectMask2D" />
      <Folder Include="Library\PackageCache\com.unity.ugui@1.0.0\Tests\Editor\InputField" />
      <Folder Include="Library\PackageCache\com.unity.ugui@1.0.0\Tests\Editor" />
+     <Folder Include="Library\PackageCache\com.unity.ugui@1.0.0\Tests\Editor\UI\PropertyDrawers" />
+     <Folder Include="Library\PackageCache\com.unity.ugui@1.0.0\Tests\Editor\UI" />
      <Folder Include="Library\PackageCache\com.unity.ugui@1.0.0\Tests\Editor\EventSystem" />
      <Folder Include="Library\PackageCache\com.unity.ugui@1.0.0\Tests\Editor\Canvas" />
      <Folder Include="Library\PackageCache\com.unity.ugui@1.0.0\Tests\Editor\UnityEvent" />
      <Folder Include="Library\PackageCache\com.unity.ugui@1.0.0\Tests\Editor\Slider" />
      <None Include="Library\PackageCache\com.unity.ugui@1.0.0\Tests\Editor\UnityEditor.UI.EditorTests.asmdef" />
      <Folder Include="Library\PackageCache\com.unity.ugui@1.0.0\Tests\Editor\CanvasRenderer" />
+     <Folder Include="Library\PackageCache\com.unity.ugui@1.0.0\Tests\Editor\Dropdown" />
      <Folder Include="Library\PackageCache\com.unity.ugui@1.0.0\Tests\Editor\Text" />
      <Reference Include="UnityEngine">
-     <HintPath>D:\Software\Unity\2021.3.4f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
+     <HintPath>D:\Software\Unity\2022.3.13f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
      </Reference>
      <Reference Include="UnityEngine.CoreModule">
-     <HintPath>D:\Software\Unity\2021.3.4f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.CoreModule.dll</HintPath>
+     <HintPath>D:\Software\Unity\2022.3.13f1c1\Editor\Data\Managed\UnityEngine\UnityEngine.CoreModule.dll</HintPath>
      </Reference>
      <Reference Include="UnityEditor">
-     <HintPath>D:\Software\Unity\2021.3.4f1c1\Editor\Data\Managed\UnityEngine\UnityEditor.dll</HintPath>
+     <HintPath>D:\Software\Unity\2022.3.13f1c1\Editor\Data\Managed\UnityEngine\UnityEditor.dll</HintPath>
      </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
