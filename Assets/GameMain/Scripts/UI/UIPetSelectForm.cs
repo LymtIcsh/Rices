@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 using UnityGameFramework.Runtime;
 
@@ -7,8 +8,8 @@ namespace Suture
     public class UIPetSelectForm : UGuiForm
     {
         public Button backButton;
-        public Button YaSuoButton;
-        public Button TeemoButton;
+        public Button NingGuangButton;
+         public Button YingButton;
 
         public GameMode GameMode = GameMode.GameStop;
 
@@ -19,8 +20,8 @@ namespace Suture
             base.OnInit(userData);
 
             backButton.onClick.AddListener(OnBackButtonClick);
-            YaSuoButton.onClick.AddListener(OnYaSuoButtonClick);
-            TeemoButton.onClick.AddListener(OnTeemoButtonClick);
+            NingGuangButton.onClick.AddListener(OnNingGuangButtonClick);
+            YingButton.onClick.AddListener(OnYingoButtonClick);
         }
 
         protected override void OnOpen(object userData)
@@ -41,17 +42,17 @@ namespace Suture
         }
 
 
-        void OnYaSuoButtonClick()
+        void OnNingGuangButtonClick()
         {
-            InitPetData = (10002, "YaSuo", Vector3.zero);
+            InitPetData = (10002, "NingGuang", Vector3.zero);
 
             GameEntry.Event.Fire(this, LoadPatternEventArgs.Create(GameMode,InitPetData));
             Close(true);
         }
 
-        void OnTeemoButtonClick()
+        void OnYingoButtonClick()
         {
-            InitPetData = (10003, "Teemo", Vector3.zero);
+            InitPetData = (10003, "Ying", Vector3.zero);
             GameEntry.Event.Fire(this, LoadPatternEventArgs.Create(GameMode,InitPetData));
             Close(true);
         }

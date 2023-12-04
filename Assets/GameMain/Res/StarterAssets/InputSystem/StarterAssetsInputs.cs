@@ -7,16 +7,16 @@ namespace StarterAssets
 {
 	public class StarterAssetsInputs : MonoBehaviour
 	{
-		[Header("Character Input Values")]
+		[Header("Character Input Values 【字符输入值】")]
 		public Vector2 move;
 		public Vector2 look;
 		public bool jump;
 		public bool sprint;
 
-		[Header("Movement Settings")]
+		[Header("Movement Settings 【运动设置】")]
 		public bool analogMovement;
 
-		[Header("Mouse Cursor Settings")]
+		[Header("Mouse Cursor Settings 【滑鼠光标设定】")]
 		public bool cursorLocked = true;
 		public bool cursorInputForLook = true;
 
