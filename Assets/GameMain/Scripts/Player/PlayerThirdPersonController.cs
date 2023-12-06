@@ -7,6 +7,7 @@ using Cysharp.Threading.Tasks.Triggers;
 using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using Random = UnityEngine.Random;
 
 namespace Suture
 {
@@ -22,6 +23,10 @@ namespace Suture
         [Tooltip("角色的冲刺速度，单位为m/s")] public float SprintSpeed = 5.335f;
 
         [Tooltip("加速和减速")] public float SpeedChangeRate = 10.0f;
+        
+        public AudioClip LandingAudioClip;
+        public AudioClip[] FootstepAudioClips;
+        [Range(0, 1)] public float FootstepAudioVolume = 0.5f;
 
         [Tooltip("角色转向面部移动方向的速度有多快")] [Range(0.0f, 0.3f)]
         public float RotationSmoothTime = 0.12f;
@@ -132,12 +137,18 @@ namespace Suture
 #endif
 
             AssignAnimationIDs();
+
+            //重新设置开始时的超时时间
+            _jumpTimeoutDelta = JumpTimeout;
+            _fallTimeoutDelta = FallTimeout;
         }
 
 
         // Update is called once per frame
         void Update()
         {
+            _hasAnimator = TryGetComponent(out _animator);
+
             JumpAndGravity();
             GroundedCheck();
             Move();
@@ -153,6 +164,11 @@ namespace Suture
         /// </summary>
         private void AssignAnimationIDs()
         {
+            _animIDSpeed = Animator.StringToHash("Speed");
+            _animIDGrounded = Animator.StringToHash("Grounded");
+            _animIDJump = Animator.StringToHash("Jump");
+            _animIDFreeFall = Animator.StringToHash("FreeFall");
+            _animIDMotionSpeed = Animator.StringToHash("MotionSpeed");
         }
 
         /// <summary>
@@ -171,10 +187,14 @@ namespace Suture
             int raycastAll =
                 Physics.OverlapBoxNonAlloc(transform.position, new Vector3(0.15f, 0.1f, 0.15f), physicsColliders,
                     quaternion.identity, GroundLayers);
-            
+
             Grounded = raycastAll > 0;
 
             //如果使用动画状态机，更新落地
+            if (_hasAnimator)
+            {
+                _animator.SetBool(_animIDGrounded, Grounded);
+            }
         }
 
         void CameraRotation()
@@ -278,6 +298,11 @@ namespace Suture
                              new Vector3(0.0f, _verticalVelocity, 0.0f) * Time.deltaTime);
 
             //如果使用动画状态机，更新速度 和 移动速率
+            if (_hasAnimator)
+            {
+                _animator.SetFloat(_animIDSpeed, _animationBlend);
+                _animator.SetFloat(_animIDMotionSpeed, inputMagnitude);
+            }
         }
 
         /// <summary>
@@ -291,7 +316,11 @@ namespace Suture
                 _fallTimeoutDelta = FallTimeout;
 
                 //如果使用动画状态机，更新跳跃和自由落体
-
+                if (_hasAnimator)
+                {
+                    _animator.SetBool(_animIDJump, false);
+                    _animator.SetBool(_animIDFreeFall, false);
+                }
 
                 //停止我们的速度在着陆时无限下降
                 if (_verticalVelocity < 0.0f)
@@ -304,6 +333,10 @@ namespace Suture
                     _verticalVelocity = Mathf.Sqrt(JumpHeight * -2 * Gravity);
 
                     //如果使用动画状态机，更新跳跃
+                    if (_hasAnimator)
+                    {
+                        _animator.SetBool(_animIDJump, true);
+                    }
                 }
 
                 //跳跃超时
@@ -325,6 +358,10 @@ namespace Suture
                 else
                 {
                     //如果使用动画状态机，更新自由落体
+                    if (_hasAnimator)
+                    {
+                        _animator.SetBool(_animIDFreeFall, true);
+                    }
                 }
 
                 //如果我们没有落地，就不要跳
@@ -338,6 +375,31 @@ namespace Suture
                 _verticalVelocity += Gravity * Time.deltaTime;
             }
         }
+
+        #region 动画事件
+
+        void OnFootstep(AnimationEvent animationEvent)
+        {
+            if (animationEvent.animatorClipInfo.weight > 0.5f)
+            {
+                if (FootstepAudioClips.Length>0)
+                {
+                    var index = Random.Range(0, FootstepAudioClips.Length);
+                    AudioSource.PlayClipAtPoint(FootstepAudioClips[index],transform.TransformPoint(_controller.center),FootstepAudioVolume);
+                }
+            }
+ 
+        }
+
+        
+        private void OnLand(AnimationEvent animationEvent)
+        {
+            if (animationEvent.animatorClipInfo.weight > 0.5f)
+            {
+                AudioSource.PlayClipAtPoint(LandingAudioClip, transform.TransformPoint(_controller.center), FootstepAudioVolume);
+            }
+        }
+        #endregion
 
 
         // private void OnDrawGizmosSelected()

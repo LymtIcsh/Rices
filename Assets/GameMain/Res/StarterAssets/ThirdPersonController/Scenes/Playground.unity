@@ -141,12 +141,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8932604571860594319, guid: 9de8b1b5ff6254144a084198b44a186a, type: 3}
       propertyPath: m_Center.y
-      value: 0.82
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 4417795340308229811, guid: 9de8b1b5ff6254144a084198b44a186a, type: 3}
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: c644b0687353abd4294c8f418bc5d7ca, type: 2}
+    - target: {fileID: 4417795340308229811, guid: 9de8b1b5ff6254144a084198b44a186a, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4417795340308229811, guid: 9de8b1b5ff6254144a084198b44a186a, type: 3}
+      propertyPath: m_HasTransformHierarchy
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5760591901959202823, guid: 9de8b1b5ff6254144a084198b44a186a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -342,6 +350,10 @@ PrefabInstance:
       propertyPath: m_Actions
       value: 
       objectReference: {fileID: -944628639613478452, guid: 0cd91d037bc3c434abcdddbd7daead39, type: 3}
+    - target: {fileID: 6982812146204527121, guid: 64dce48905ffd9b4293e595fa6941544, type: 3}
+      propertyPath: m_AllowConstantClipSamplingOptimization
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -845,6 +857,19 @@ MonoBehaviour:
   MoveSpeed: 2
   SprintSpeed: 5.335
   SpeedChangeRate: 10
+  LandingAudioClip: {fileID: 0}
+  FootstepAudioClips:
+  - {fileID: 8300000, guid: 72f526a6a9890f643a88e85a61c86c8a, type: 3}
+  - {fileID: 8300000, guid: 85016e0f2b01da248b9663dd49a161b0, type: 3}
+  - {fileID: 8300000, guid: 186de84b3207156479abe98f4958fed0, type: 3}
+  - {fileID: 8300000, guid: 1a91fcd19acf1e54bba0945d9f390849, type: 3}
+  - {fileID: 8300000, guid: 14e8a8d2158bec840b56c54f5266e692, type: 3}
+  - {fileID: 8300000, guid: 29841e7d5bbfb5b419c9ad16ca8bc4c1, type: 3}
+  - {fileID: 8300000, guid: dd1af302b8902684d9381de1f2d3a5af, type: 3}
+  - {fileID: 8300000, guid: 67c8b33e424ccdc4486edf538ab91c5a, type: 3}
+  - {fileID: 8300000, guid: 274649b0e221539409070ebf6c18918b, type: 3}
+  - {fileID: 8300000, guid: a3194b8bbc96ef84fab1f98f4b7dae3e, type: 3}
+  FootstepAudioVolume: 0.5
   RotationSmoothTime: 0.12
   JumpHeight: 1.2
   Gravity: -15
