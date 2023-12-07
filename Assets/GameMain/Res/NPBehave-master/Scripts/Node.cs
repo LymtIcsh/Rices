@@ -10,7 +10,8 @@ namespace NPBehave
             ACTIVE,
             STOP_REQUESTED,
         }
-
+        
+        
         protected State currentState = State.INACTIVE;
 
         public State CurrentState
