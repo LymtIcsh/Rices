@@ -198,8 +198,8 @@ MonoBehaviour:
     title: New Sticky Note
     content: Write your text here
   nodeInspectorReference: {fileID: 0}
-  position: {x: 5, y: 380, z: 0}
-  scale: {x: 0.7561437, y: 0.7561437, z: 1}
+  position: {x: 303, y: 254, z: 0}
+  scale: {x: 0.43232757, y: 0.43232757, z: 1}
   references:
     version: 2
     RefIds:
@@ -231,7 +231,7 @@ MonoBehaviour:
       type: {class: FloatParameter/FloatSettings, ns: GraphProcessor, asm: com.alelievr.NodeGraphProcessor.Runtime}
       data:
         isHidden: 0
-        expanded: 0
+        expanded: 1
         guid: eb80df62-f248-4ec9-afd4-f9ed08bfaa16
         mode: 0
         min: 0
