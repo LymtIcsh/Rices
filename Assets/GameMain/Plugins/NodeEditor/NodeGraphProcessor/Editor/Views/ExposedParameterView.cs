@@ -195,7 +195,6 @@ namespace GraphProcessor
 
             if (updateList)
             {
-                graphView.graph.NotifyExposedParameterListChanged();
                 evt.StopImmediatePropagation();
                 UpdateParameterList();
             }

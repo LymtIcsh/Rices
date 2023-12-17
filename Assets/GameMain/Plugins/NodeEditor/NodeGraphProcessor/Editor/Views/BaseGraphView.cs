@@ -114,17 +114,8 @@ namespace GraphProcessor
 		/// <summary>
 		/// Object to handle nodes that shows their UI in the inspector.
 		/// </summary>
-		[SerializeField]
-		protected NodeInspectorObject		nodeInspector
-		{
-			get
-			{
-
-				if (graph.nodeInspectorReference == null)
-					graph.nodeInspectorReference = CreateNodeInspectorObject();
-				return graph.nodeInspectorReference as NodeInspectorObject;
-			}
-		}
+		[NonSerialized]
+		protected NodeInspectorObject		nodeInspector;
 
 		/// <summary>
 		/// Workaround object for creating exposed parameter property fields.
@@ -158,6 +149,9 @@ namespace GraphProcessor
 
 			createNodeMenu = ScriptableObject.CreateInstance< CreateNodeMenuWindow >();
 			createNodeMenu.Initialize(this, window);
+
+			if (nodeInspector == null)
+				nodeInspector = CreateNodeInspectorObject();
 
 			this.StretchToParentSize();
 		}
@@ -366,8 +360,6 @@ namespace GraphProcessor
 							RemoveElement(nodeView);
 							if (Selection.activeObject == nodeInspector)
 								UpdateNodeInspectorSelection();
-
-							SyncSerializedPropertyPathes();
 							return true;
 						case GroupView group:
 							graph.RemoveGroup(group.group);
@@ -602,8 +594,10 @@ namespace GraphProcessor
 			var selectedNodes = selection.Where(s => s is BaseNodeView).ToList();
 			var selectedNodesNotInInspector = selectedNodes.Except(nodeInspector.selectedNodes).ToList();
 			var nodeInInspectorWithoutSelectedNodes = nodeInspector.selectedNodes.Except(selectedNodes).ToList();
-
-			return selectedNodesNotInInspector.Any() || nodeInInspectorWithoutSelectedNodes.Any();
+			//有另外一种可能，先选中其中一个节点A，然后选中Assets面板中一个资产，当前激活object就为这个新选中的资产，
+			//此时再回来节点编辑器选择节点A将不会再Inspector面板显示，这不太行，所以需要最后再加一种判断
+			return selectedNodesNotInInspector.Any() || nodeInInspectorWithoutSelectedNodes.Any() || 
+			       Selection.activeObject != nodeInspector;
 		}
 
 		void DragPerformedCallback(DragPerformEvent e)
@@ -643,10 +637,9 @@ namespace GraphProcessor
 							{
 								var node = BaseNode.CreateFromType(kp.Value.nodeType, mousePos);
 								if ((bool)kp.Value.initalizeNodeFromObject.Invoke(node, new []{obj}))
-								{
 									AddNode(node);
-									break;
-								}
+								else
+									break;	
 							}
 							catch (Exception exception)
 							{
@@ -736,7 +729,6 @@ namespace GraphProcessor
 		{
 			if (this.graph != null)
 			{
-				SaveGraphToDisk();
 				// Close pinned windows from old graph:
 				ClearGraphElements();
 				NodeProvider.UnloadGraph(graph);
@@ -914,20 +906,17 @@ namespace GraphProcessor
 
 		public void UpdateNodeInspectorSelection()
 		{
-			if (nodeInspector.previouslySelectedObject != Selection.activeObject)
-				nodeInspector.previouslySelectedObject = Selection.activeObject;
-
-			HashSet<BaseNodeView> selectedNodeViews = new HashSet<BaseNodeView>();
 			nodeInspector.selectedNodes.Clear();
 			foreach (var e in selection)
 			{
 				if (e is BaseNodeView v && this.Contains(v) && v.nodeTarget.needsInspector)
-					selectedNodeViews.Add(v);
+					nodeInspector.selectedNodes.Add(v);
 			}
 
-			nodeInspector.UpdateSelectedNodes(selectedNodeViews);
-			if (Selection.activeObject != nodeInspector && selectedNodeViews.Count > 0)
+			if (nodeInspector.selectedNodes.Count > 0)
+			{
 				Selection.activeObject = nodeInspector;
+			}
 		}
 
 		public BaseNodeView AddNode(BaseNode node)
@@ -1275,7 +1264,7 @@ namespace GraphProcessor
 			if (graph == null)
 				return ;
 
-			EditorUtility.SetDirty(graph);
+			GraphCreateAndSaveHelper.SaveGraphToDisk(graph);
 		}
 
 		public void ToggleView< T >() where T : PinnedElementView
@@ -1384,16 +1373,6 @@ namespace GraphProcessor
 				Connect(inputPort, view.outputPortViews[0]);
 
 			return view;
-		}
-
-		/// <summary>
-		/// Update all the serialized property bindings (in case a node was deleted / added, the property pathes needs to be updated)
-		/// </summary>
-		public void SyncSerializedPropertyPathes()
-		{
-			foreach (var nodeView in nodeViews)
-				nodeView.SyncSerializedPropertyPathes();
-			nodeInspector.RefreshNodes();
 		}
 
 		/// <summary>
