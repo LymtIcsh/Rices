@@ -92,11 +92,11 @@ namespace Suture
             //排序
             m_AllNodes.Sort((x, y) => -x.position.y.CompareTo(y.position.y));
 
-            // //配置每个节点Id
-            // foreach (var node in m_AllNodes)
-            // {
-            //     node.NP_GetNodeData().id = IdGenerater.Instance.GenerateId();
-            // }
+            //配置每个节点Id
+            foreach (var node in m_AllNodes)
+            {
+                node.NP_GetNodeData().id = IdGenerater.Instance.GenerateId();
+            }
         }
 
         private void AutoSetCanvasDatas(bool isServer)

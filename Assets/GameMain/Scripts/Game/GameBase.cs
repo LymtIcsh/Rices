@@ -44,12 +44,16 @@ namespace Suture
                 GameOver = true;
                 return;
             }
+            
+            TimeInfo.Instance.Update();
         }
 
         public virtual void Shutdown()
         {
             GameEntry.Event.Unsubscribe(ShowEntitySuccessEventArgs.EventId, OnShowEntitySuccess);
             GameEntry.Event.Unsubscribe(ShowEntityFailureEventArgs.EventId, OnShowEntityFailure);
+            
+            IdGenerater.Instance.Dispose();
         }
 
         private void OnShowEntityFailure(object sender, GameEventArgs e)
