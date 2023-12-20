@@ -7,7 +7,7 @@ namespace Suture
     /// NP选择节点
     /// </summary>
     [NodeMenuItem("NPBehave行为树/Composite/Selector",typeof(NPBehaveGraph))]
-    // [NodeMenuItem("NPBehave行为树/Composite/Selector",typeof(SkillGraph))]
+    [NodeMenuItem("NPBehave行为树/Composite/Selector",typeof(SkillGraph))]
     public class NP_SelectorNode:NP_CompositeNodeBase
     {
         public override string name => "选择结点";

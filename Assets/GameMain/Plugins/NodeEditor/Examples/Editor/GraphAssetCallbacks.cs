@@ -35,6 +35,16 @@ namespace Suture
             ProjectWindowUtil.CreateAsset(graph, "NPBehaveGraph.asset");
         }
 
+        /// <summary>
+        /// 创建技能图形处理器
+        /// </summary>
+        [MenuItem("Assets/Create/GraphProcessor_Skill",false,10)]
+        public static void CreateGraphPorcessor_Skill()
+        {
+            var graph = ScriptableObject.CreateInstance<SkillGraph>();
+            ProjectWindowUtil.CreateAsset(graph,"SkillGraph.asset");
+        }
+
 
         /// <summary>
         /// 打开BaseGraph
@@ -65,18 +75,18 @@ namespace Suture
 
             switch (baseGraph)
             {
-                // case SkillGraph skillGraph:
-                // 	NodeGraphWindowHelper.GetAndShowNodeGraphWindow<SkillGraphWindow>(skillGraph)
-                // 		.InitializeGraph(skillGraph);
-                // 	break;
+                case SkillGraph skillGraph:
+                	NodeGraphWindowHelper.GetAndShowNodeGraphWindow<SkillGraphWindow>(skillGraph)
+                		.InitializeGraph(skillGraph);
+                	break;
                 case NPBehaveGraph npBehaveGraph:
                     NodeGraphWindowHelper.GetAndShowNodeGraphWindow<NPBehaveGraphWindow>(npBehaveGraph)
                         .InitializeGraph(npBehaveGraph);
                     break;
-                // default:
-                // 	NodeGraphWindowHelper.GetAndShowNodeGraphWindow<FallbackGraphWindow>(baseGraph)
-                // 		.InitializeGraph(baseGraph);
-                // 	break;
+                default:
+                	NodeGraphWindowHelper.GetAndShowNodeGraphWindow<FallbackGraphWindow>(baseGraph)
+                		.InitializeGraph(baseGraph);
+                	break;
             }
 
             return true;

@@ -3,6 +3,9 @@ using Sirenix.OdinInspector;
 
 namespace Suture
 {
+    /// <summary>
+    /// Buff归属技能的Id
+    /// </summary>
     [HideReferenceObjectPicker]
     public struct VTD_Id
     {

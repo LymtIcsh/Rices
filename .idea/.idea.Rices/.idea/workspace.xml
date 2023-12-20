@@ -5,32 +5,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="842b7725-6adb-41b7-92ba-1e022023bc23" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/FallbackGraph.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/FallbackGraph/FallbackGraphWindow.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/FallbackGraph/FallbackGraphWindow.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/SkillGraph.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/SkillGraph/Nodes.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/SkillGraph/Nodes/BuffNodeBase.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/SkillGraph/Nodes/BuffNodeBase.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/SkillGraph/SkillAssetsOverViewEditor.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/SkillGraph/SkillGraph.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/SkillGraph/SkillGraph.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/SkillGraph/SkillGraphWindow.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/SkillGraph/SkillGraphWindow.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/SkillGraph/SkillToolbarView.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/SkillGraph/SkillToolbarView.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/CoreObject/TimeInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/CoreObject/TimeInfo.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/SkillSystem/BuffData.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/SkillSystem/BuffData/SkillBuffDataBase.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/SkillSystem/BuffData/SkillBuffDataBase/BuffDataBase.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/SkillSystem/BuffData/SkillBuffDataBase/BuffDataBase.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/SkillSystem/Others/NormalBuffNodeData.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/SkillSystem/Others/NormalBuffNodeData.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/NPBehaveGraph/Nodes/Decorator/NP_BlackboardConditionNode.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/NPBehaveGraph/Nodes/Decorator/NP_BlackboardConditionNode.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/SkillSystem/BuffData/BuffEnums.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/SkillSystem/BuffData/BuffEnums/BuffAdditionTypes.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/SkillSystem/BuffData/BuffEnums/BuffAdditionTypes.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/SkillSystem/BuffData/BuffEnums/BuffBaseDataEffectTypes.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/SkillSystem/BuffData/BuffEnums/BuffBaseDataEffectTypes.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/SkillSystem/BuffData/BuffEnums/BuffBaseType.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/SkillSystem/BuffData/BuffEnums/BuffBaseType.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/SkillSystem/BuffData/BuffEnums/BuffTargetTypes.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/SkillSystem/BuffData/BuffEnums/BuffTargetTypes.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/SkillSystem/BuffData/BuffEnums/BuffWorkTypes.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/SkillSystem/BuffData/BuffEnums/BuffWorkTypes.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/SkillSystem/Others/ValueTypeDecideByCanvasData/VTD_EventId.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/SkillSystem/Others/ValueTypeDecideByCanvasData/VTD_EventId.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Rices/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Rices/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/NPBehaveGraph/NPBehaveGraph.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/NPBehaveGraph/NPBehaveGraph.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Game/GameBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Game/GameBase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/GraphAssetCallbacks.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/GraphAssetCallbacks.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/NPBehaveGraph/Nodes/Composite/NP_ParallelNode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/NPBehaveGraph/Nodes/Composite/NP_ParallelNode.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/NPBehaveGraph/Nodes/Composite/NP_SelectorNode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/NPBehaveGraph/Nodes/Composite/NP_SelectorNode.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/NPBehaveGraph/Nodes/Composite/NP_SequenceNode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/NPBehaveGraph/Nodes/Composite/NP_SequenceNode.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/SkillGraph/SkillGraph.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/SkillGraph/SkillGraph.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/SkillSystem/BuffData/SkillBuffDataBase/BuffDataBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/SkillSystem/BuffData/SkillBuffDataBase/BuffDataBase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/SkillSystem/Others/ValueTypeDecideByCanvasData/VTD_Id.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/SkillSystem/Others/ValueTypeDecideByCanvasData/VTD_Id.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,6 +144,7 @@
       <workItem from="1702828032540" duration="1691000" />
       <workItem from="1702906634346" duration="5934000" />
       <workItem from="1702991216214" duration="5424000" />
+      <workItem from="1703080154231" duration="4010000" />
     </task>
     <servers />
   </component>

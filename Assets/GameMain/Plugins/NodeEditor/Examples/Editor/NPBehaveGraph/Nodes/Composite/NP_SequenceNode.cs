@@ -7,7 +7,7 @@ namespace Suture
     /// NP序列节点
     /// </summary>
       [NodeMenuItem("NPBehave行为树/Composite/Sequence",typeof(NPBehaveGraph))]
-    // [NodeMenuItem("NPBehave行为树/Composite/Sequence",typeof(SkillGraph))]
+    [NodeMenuItem("NPBehave行为树/Composite/Sequence",typeof(SkillGraph))]
     public class NP_SequenceNode:NP_CompositeNodeBase
     {
         public override string name  => "序列结点";

@@ -46,10 +46,13 @@ namespace Suture
                 {
                     mNode.AutoAddLinkedBuffs();
                     BuffNodeDataBase buffNodeDataBase = mNode.GetBuffNodeData();
-                    if (buffNodeDataBase is NormalBuffNodeData )
+                    if (buffNodeDataBase is NormalBuffNodeData normalBuffNodeData)
                     {
-                        
+                        normalBuffNodeData.BuffData.BelongToBuffDataSupportorId =
+                            npDataSupportor.NpDataSupportorBase.NPBehaveTreeDataId;
                     }
+
+                    npDataSupportor.BuffNodeDataDic.Add(buffNodeDataBase.NodeId.Value, buffNodeDataBase);
                 }
             }
         }
