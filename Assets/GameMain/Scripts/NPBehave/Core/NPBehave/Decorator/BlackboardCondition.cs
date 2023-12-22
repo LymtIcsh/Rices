@@ -2,6 +2,9 @@
 
 namespace NPBehave
 {
+    /// <summary>
+    /// 黑板上的条件
+    /// </summary>
     public class BlackboardCondition : ObservingDecorator
     {
         private string key;

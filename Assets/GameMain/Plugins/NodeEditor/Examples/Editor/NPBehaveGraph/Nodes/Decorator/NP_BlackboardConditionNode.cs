@@ -10,6 +10,7 @@ namespace Suture
     public class NP_BlackboardConditionNode:NP_DecoratorNodeBase
     {
         public override string name => "黑板条件结点";
-        //8，NP_BlackboardConditionNode （NP黑板条件节点）
+        
+        public 
     }
 }
