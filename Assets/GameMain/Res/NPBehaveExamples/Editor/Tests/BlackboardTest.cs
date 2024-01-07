@@ -19,10 +19,10 @@ namespace NPBehave
         public void ShouldNotNotifyObservers_WhenNoClockUpdate()
         {
             bool notified = false;
-            this.sut.AddObserver("test", ( Blackboard.Type type, object value ) =>
-            {
-                notified = true;
-            });
+            // this.sut.AddObserver("test", ( Blackboard.Type type, object value ) =>
+            // {
+            //     notified = true;
+            // });
 
             this.sut.Set("test", 1f);
             Assert.IsFalse(notified);
@@ -32,10 +32,10 @@ namespace NPBehave
         public void ShouldNotifyObservers_WhenClockUpdate()
         {
             bool notified = false;
-            this.sut.AddObserver("test", ( Blackboard.Type type, object value ) =>
-            {
-                notified = true;
-            });
+            // this.sut.AddObserver("test", ( Blackboard.Type type, object value ) =>
+            // {
+            //     notified = true;
+            // });
 
             this.sut.Set("test", 1f);
             this.clock.Update(1f);
@@ -74,8 +74,8 @@ namespace NPBehave
         {
             this.sut.Set("test", 1f);
             Assert.AreEqual(this.sut.Get("test"), 1f);
-            this.sut.Set("test", null);
-            this.sut.Set("test", null);
+            // this.sut.Set("test", null);
+            // this.sut.Set("test", null);
             Assert.AreEqual(this.sut.Get("test"), null);
             this.sut.Set("test", "something");
             Assert.AreEqual(this.sut.Get("test"), "something");

@@ -137,25 +137,25 @@
         </member>
         <member name="P:Sirenix.OdinInspector.Editor.ActionResolvers.ActionResolverContext.ParentType">
             <summary>
-            The type that is the parent of the action resolution, ie, the type that is the context. This is the same as <see cref="P:Sirenix.OdinInspector.Editor.ActionResolvers.ActionResolverContext.ContextProperty"/>.ValueEntry.TypeOfValue.
+            The type that is the mParent of the action resolution, ie, the type that is the context. This is the same as <see cref="P:Sirenix.OdinInspector.Editor.ActionResolvers.ActionResolverContext.ContextProperty"/>.ValueEntry.TypeOfValue.
             </summary>
         </member>
         <member name="P:Sirenix.OdinInspector.Editor.ActionResolvers.ActionResolverContext.ContextProperty">
             <summary>
-            The property that *is* the context for the action resolution. This is not the instance that was passed to the resolver when it was created, but this value is based on that instance. This is the property that provides the actual context - for example, if <see cref="F:Sirenix.OdinInspector.Editor.ActionResolvers.ActionResolverContext.Property"/> is for a member of a type - or for an element in a collection contained by a member - this value will be the parent property for the type that contains that member. Only if <see cref="F:Sirenix.OdinInspector.Editor.ActionResolvers.ActionResolverContext.Property"/> is the tree's root property is <see cref="P:Sirenix.OdinInspector.Editor.ActionResolvers.ActionResolverContext.ContextProperty"/> the same as <see cref="F:Sirenix.OdinInspector.Editor.ActionResolvers.ActionResolverContext.Property"/>.
+            The property that *is* the context for the action resolution. This is not the instance that was passed to the resolver when it was created, but this value is based on that instance. This is the property that provides the actual context - for example, if <see cref="F:Sirenix.OdinInspector.Editor.ActionResolvers.ActionResolverContext.Property"/> is for a member of a type - or for an element in a collection contained by a member - this value will be the mParent property for the type that contains that member. Only if <see cref="F:Sirenix.OdinInspector.Editor.ActionResolvers.ActionResolverContext.Property"/> is the tree's root property is <see cref="P:Sirenix.OdinInspector.Editor.ActionResolvers.ActionResolverContext.ContextProperty"/> the same as <see cref="F:Sirenix.OdinInspector.Editor.ActionResolvers.ActionResolverContext.Property"/>.
             </summary>
         </member>
         <member name="M:Sirenix.OdinInspector.Editor.ActionResolvers.ActionResolverContext.GetParentValue(System.Int32)">
             <summary>
-            Gets the parent value which provides the context of the resolver.
+            Gets the mParent value which provides the context of the resolver.
             </summary>
-            <param name="selectionIndex">The selection index of the parent value to get.</param>
+            <param name="selectionIndex">The selection index of the mParent value to get.</param>
         </member>
         <member name="M:Sirenix.OdinInspector.Editor.ActionResolvers.ActionResolverContext.SetParentValue(System.Int32,System.Object)">
             <summary>
-            Sets the parent value which provides the context of the resolver.
+            Sets the mParent value which provides the context of the resolver.
             </summary>
-            <param name="selectionIndex">The selection index of the parent value to set.</param>
+            <param name="selectionIndex">The selection index of the mParent value to set.</param>
             <param name="value">The value to set.</param>
         </member>
         <member name="M:Sirenix.OdinInspector.Editor.ActionResolvers.ActionResolverContext.AddDefaultContextValues">
@@ -1079,7 +1079,7 @@
             <summary>
             Gets all <see cref="T:Sirenix.OdinInspector.Editor.InspectorPropertyInfo" />s for a given type.
             </summary>
-            <param name="parentProperty">The parent property.</param>
+            <param name="parentProperty">The mParent property.</param>
             <param name="type">The type to get infos for.</param>
             <param name="includeSpeciallySerializedMembers">if set to true members that are serialized by Odin will be included.</param>
         </member>
@@ -1176,7 +1176,7 @@
         </member>
         <member name="P:Sirenix.OdinInspector.Editor.InspectorProperty.Parent">
             <summary>
-            The parent of the property. If null, this property is a root-level property in the <see cref="T:Sirenix.OdinInspector.Editor.PropertyTree"/>.
+            The mParent of the property. If null, this property is a root-level property in the <see cref="T:Sirenix.OdinInspector.Editor.PropertyTree"/>.
             </summary>
         </member>
         <member name="P:Sirenix.OdinInspector.Editor.InspectorProperty.Info">
@@ -1211,7 +1211,7 @@
         </member>
         <member name="P:Sirenix.OdinInspector.Editor.InspectorProperty.ParentValues">
             <summary>
-            The parent values of this property, by selection index; this represents the values that 'own' this property, on which it is declared.
+            The mParent values of this property, by selection index; this represents the values that 'own' this property, on which it is declared.
             </summary>
         </member>
         <member name="P:Sirenix.OdinInspector.Editor.InspectorProperty.UnityPropertyPath">
@@ -1308,7 +1308,7 @@
         </member>
         <member name="M:Sirenix.OdinInspector.Editor.InspectorProperty.FindParent(System.Func{Sirenix.OdinInspector.Editor.InspectorProperty,System.Boolean},System.Boolean)">
             <summary>
-            Finds the first parent property that matches a given predicate.
+            Finds the first mParent property that matches a given predicate.
             </summary>
         </member>
         <member name="M:Sirenix.OdinInspector.Editor.InspectorProperty.FindChild(System.Func{Sirenix.OdinInspector.Editor.InspectorProperty,System.Boolean},System.Boolean)">
@@ -1336,9 +1336,9 @@
         </member>
         <member name="M:Sirenix.OdinInspector.Editor.InspectorProperty.IsParentOf(Sirenix.OdinInspector.Editor.InspectorProperty)">
             <summary>
-            Determines whether this property is a parent of another property in the hierarchy.
+            Determines whether this property is a mParent of another property in the hierarchy.
             </summary>
-            <param name="other">The property to check whether this property is the parent of.</param>
+            <param name="other">The property to check whether this property is the mParent of.</param>
             <exception cref="T:System.ArgumentNullException">other is null</exception>
         </member>
         <member name="T:Sirenix.OdinInspector.Editor.PrefabModificationHandler">
@@ -2327,7 +2327,7 @@
             <summary>
             Looks for attributes in the attributes list with a <see cref="T:Sirenix.OdinInspector.IncludeMyAttributesAttribute"/> applied, and adds the attribute from those attributes to the property.
             </summary>
-            <param name="parentProperty">The parent of the member.</param>
+            <param name="parentProperty">The mParent of the member.</param>
             <param name="member">The member that is being processed.</param>
             <param name="attributes">The list of attributes currently applied to the property.</param>
         </member>
@@ -2347,7 +2347,7 @@
             <summary>
             Finds all attributes attached to the specified member and adds to them to the attributes list.
             </summary>
-            <param name="parentProperty">The parent property of the specified member.</param>
+            <param name="parentProperty">The mParent property of the specified member.</param>
             <param name="member">The member to process attributes for.</param>
             <param name="attributes">The current attributes applied to the property.</param>
         </member>
@@ -2367,7 +2367,7 @@
             <summary>
             Checks if the processor can process attributes for the specified member.
             </summary>
-            <param name="parentProperty">The parent property of the member.</param>
+            <param name="parentProperty">The mParent property of the member.</param>
             <param name="member">The member to be processed.</param>
             <returns><c>true</c> if the processor can process for the specified member. Otherwise <c>false</c>.</returns>
         </member>
@@ -2382,7 +2382,7 @@
             <summary>
             Processes attributes for the specified member.
             </summary>
-            <param name="parentProperty">The parent property of the specified member.</param>
+            <param name="parentProperty">The mParent property of the specified member.</param>
             <param name="member">The member to process attributes for.</param>
             <param name="attributes">The current attributes applied to the property.</param>
         </member>
@@ -2407,7 +2407,7 @@
             <summary>
             This attribute processor can only process for properties.
             </summary>
-            <param name="parentProperty">The parent of the specified member.</param>
+            <param name="parentProperty">The mParent of the specified member.</param>
             <param name="member">The member to process.</param>
             <returns><c>false</c>.</returns>
         </member>
@@ -2443,10 +2443,10 @@
         </member>
         <member name="M:Sirenix.OdinInspector.Editor.DefaultOdinAttributeProcessorLocator.GetChildProcessors(Sirenix.OdinInspector.Editor.InspectorProperty,System.Reflection.MemberInfo)">
             <summary>
-            Gets a list of <see cref="T:Sirenix.OdinInspector.Editor.OdinAttributeProcessor"/> to process attributes for the specified child member of the parent property.
+            Gets a list of <see cref="T:Sirenix.OdinInspector.Editor.OdinAttributeProcessor"/> to process attributes for the specified child member of the mParent property.
             </summary>
-            <param name="parentProperty">The parent of the member.</param>
-            <param name="member">Child member of the parent property.</param>
+            <param name="parentProperty">The mParent of the member.</param>
+            <param name="member">Child member of the mParent property.</param>
             <returns>List of <see cref="T:Sirenix.OdinInspector.Editor.OdinAttributeProcessor"/> to process attributes for the specified member.</returns>
         </member>
         <member name="M:Sirenix.OdinInspector.Editor.DefaultOdinAttributeProcessorLocator.GetSelfProcessors(Sirenix.OdinInspector.Editor.InspectorProperty)">
@@ -2481,10 +2481,10 @@
         </member>
         <member name="M:Sirenix.OdinInspector.Editor.OdinAttributeProcessorLocator.GetChildProcessors(Sirenix.OdinInspector.Editor.InspectorProperty,System.Reflection.MemberInfo)">
             <summary>
-            Gets a list of <see cref="T:Sirenix.OdinInspector.Editor.OdinAttributeProcessor"/> to process attributes for the specified child member of the parent property.
+            Gets a list of <see cref="T:Sirenix.OdinInspector.Editor.OdinAttributeProcessor"/> to process attributes for the specified child member of the mParent property.
             </summary>
-            <param name="parentProperty">The parent of the member.</param>
-            <param name="member">Child member of the parent property.</param>
+            <param name="parentProperty">The mParent of the member.</param>
+            <param name="member">Child member of the mParent property.</param>
             <returns>List of <see cref="T:Sirenix.OdinInspector.Editor.OdinAttributeProcessor"/> to process attributes for the specified member.</returns>
         </member>
         <member name="M:Sirenix.OdinInspector.Editor.OdinAttributeProcessorLocator.GetSelfProcessors(Sirenix.OdinInspector.Editor.InspectorProperty)">
@@ -2655,7 +2655,7 @@
         <member name="M:Sirenix.OdinInspector.Editor.IPropertyValueCollection.ForceSetValue(System.Int32,System.Object)">
             <summary>
             <para>Force sets the value, ignoring whether it is editable or not.</para>
-            <para>Note that this will fail on list element value entries where <see cref="!:IPropertyValueEntry.ListIsReadOnly"/> is true on the parent value entry.</para>
+            <para>Note that this will fail on list element value entries where <see cref="!:IPropertyValueEntry.ListIsReadOnly"/> is true on the mParent value entry.</para>
             </summary>
             <param name="index">The selection index of the value.</param>
             <param name="value">The value to be set.</param>
@@ -2688,7 +2688,7 @@
         <member name="M:Sirenix.OdinInspector.Editor.IPropertyValueCollection`1.ForceSetValue(System.Int32,`0)">
             <summary>
             <para>Force sets the value, ignoring whether it is editable or not.</para>
-            <para>Note that this will fail on list element value entries where <see cref="!:IPropertyValueEntry.ListIsReadOnly"/> is true on the parent value entry.</para>
+            <para>Note that this will fail on list element value entries where <see cref="!:IPropertyValueEntry.ListIsReadOnly"/> is true on the mParent value entry.</para>
             </summary>
             <param name="index">The selection index of the value.</param>
             <param name="value">The value to be set.</param>
@@ -2980,7 +2980,7 @@
         <member name="M:Sirenix.OdinInspector.Editor.PropertyValueCollection.ForceSetValue(System.Int32,System.Object)">
             <summary>
             <para>Force sets the value, ignoring whether it is editable or not.</para>
-            <para>Note that this will fail on list element value entries where <see cref="!:IPropertyValueEntry.ListIsReadOnly" /> is true on the parent value entry.</para>
+            <para>Note that this will fail on list element value entries where <see cref="!:IPropertyValueEntry.ListIsReadOnly" /> is true on the mParent value entry.</para>
             </summary>
             <param name="index">The selection index of the value.</param>
             <param name="value">The value to be set.</param>
@@ -3107,7 +3107,7 @@
         <member name="M:Sirenix.OdinInspector.Editor.PropertyValueCollection`1.ForceSetValue(System.Int32,System.Object)">
             <summary>
             <para>Force sets the value, ignoring whether it is editable or not.</para>
-            <para>Note that this will fail on list element value entries where <see cref="!:IPropertyValueEntry.ListIsReadOnly" /> is true on the parent value entry.</para>
+            <para>Note that this will fail on list element value entries where <see cref="!:IPropertyValueEntry.ListIsReadOnly" /> is true on the mParent value entry.</para>
             </summary>
             <param name="index">The selection index of the value.</param>
             <param name="value">The value to be set.</param>
@@ -3115,7 +3115,7 @@
         <member name="M:Sirenix.OdinInspector.Editor.PropertyValueCollection`1.ForceSetValue(System.Int32,`0)">
             <summary>
             <para>Force sets the value, ignoring whether it is editable or not.</para>
-            <para>Note that this will fail on list element value entries where <see cref="!:IPropertyValueEntry.ListIsReadOnly" /> is true on the parent value entry.</para>
+            <para>Note that this will fail on list element value entries where <see cref="!:IPropertyValueEntry.ListIsReadOnly" /> is true on the mParent value entry.</para>
             </summary>
             <param name="index">The selection index of the value.</param>
             <param name="value">The value to be set.</param>
@@ -3252,7 +3252,7 @@
         <member name="M:Sirenix.OdinInspector.Editor.PropertyValueCollectionAlias`2.ForceSetValue(System.Int32,`1)">
             <summary>
             <para>Force sets the value, ignoring whether it is editable or not.</para>
-            <para>Note that this will fail on list element value entries where <see cref="M:Sirenix.OdinInspector.Editor.IPropertyValueEntry.ListIsReadOnly" /> is true on the parent value entry.</para>
+            <para>Note that this will fail on list element value entries where <see cref="M:Sirenix.OdinInspector.Editor.IPropertyValueEntry.ListIsReadOnly" /> is true on the mParent value entry.</para>
             </summary>
             <param name="index">The selection index of the value.</param>
             <param name="value">The value to be set.</param>
@@ -3260,7 +3260,7 @@
         <member name="M:Sirenix.OdinInspector.Editor.PropertyValueCollectionAlias`2.ForceSetValue(System.Int32,System.Object)">
             <summary>
             <para>Force sets the value, ignoring whether it is editable or not.</para>
-            <para>Note that this will fail on list element value entries where <see cref="!:IPropertyValueEntry.ListIsReadOnly" /> is true on the parent value entry.</para>
+            <para>Note that this will fail on list element value entries where <see cref="!:IPropertyValueEntry.ListIsReadOnly" /> is true on the mParent value entry.</para>
             </summary>
             <param name="index">The selection index of the value.</param>
             <param name="value">The value to be set.</param>
@@ -3283,7 +3283,7 @@
         </member>
         <member name="P:Sirenix.OdinInspector.Editor.PropertyValueEntry.ParentValueProperty">
              <summary>
-             <para>The nearest parent property that has a value.
+             <para>The nearest mParent property that has a value.
              That is, the property from which this value
              entry will fetch its parentvalues from in order
              to extract its own values.</para>
@@ -3580,7 +3580,7 @@
             <summary>
             Represents the values of an <see cref="T:Sirenix.OdinInspector.Editor.InspectorProperty" />, and contains utilities for querying the values' type and getting and setting them.
             </summary>
-            <typeparam name="TParent">The type of the parent.</typeparam>
+            <typeparam name="TParent">The type of the mParent.</typeparam>
             <typeparam name="TValue">The type of the value.</typeparam>
             <seealso cref="T:Sirenix.OdinInspector.Editor.IPropertyValueEntry" />
         </member>
@@ -3619,7 +3619,7 @@
         </member>
         <member name="M:Sirenix.OdinInspector.Editor.PropertyValueEntry`2.GetParent(System.Int32)">
             <summary>
-            Gets the parent value at the given index.
+            Gets the mParent value at the given index.
             </summary>
         </member>
         <member name="T:Sirenix.OdinInspector.Editor.PropertyValueEntryAlias">
@@ -8601,7 +8601,7 @@
         </member>
         <member name="P:Sirenix.OdinInspector.Editor.OdinMenuItem.Parent">
             <summary>
-            Gets the parent menu item.
+            Gets the mParent menu item.
             </summary>
         </member>
         <member name="P:Sirenix.OdinInspector.Editor.OdinMenuItem.PrevVisualMenuItem">
@@ -10727,25 +10727,25 @@
         </member>
         <member name="P:Sirenix.OdinInspector.Editor.ValueResolvers.ValueResolverContext.ParentType">
             <summary>
-            The type that is the parent of the value resolution, ie, the type that is the context. This is the same as <see cref="P:Sirenix.OdinInspector.Editor.ValueResolvers.ValueResolverContext.ContextProperty"/>.ValueEntry.TypeOfValue.
+            The type that is the mParent of the value resolution, ie, the type that is the context. This is the same as <see cref="P:Sirenix.OdinInspector.Editor.ValueResolvers.ValueResolverContext.ContextProperty"/>.ValueEntry.TypeOfValue.
             </summary>
         </member>
         <member name="P:Sirenix.OdinInspector.Editor.ValueResolvers.ValueResolverContext.ContextProperty">
             <summary>
-            The property that *is* the context for the value resolution. This is not the instance that was passed to the resolver when it was created, but this value is based on that instance. This is the property that provides the actual context - for example, if <see cref="F:Sirenix.OdinInspector.Editor.ValueResolvers.ValueResolverContext.Property"/> is for a member of a type - or for an element in a collection contained by a member - this value will be the parent property for the type that contains that member. Only if <see cref="F:Sirenix.OdinInspector.Editor.ValueResolvers.ValueResolverContext.Property"/> is the tree's root property is <see cref="P:Sirenix.OdinInspector.Editor.ValueResolvers.ValueResolverContext.ContextProperty"/> the same as <see cref="F:Sirenix.OdinInspector.Editor.ValueResolvers.ValueResolverContext.Property"/>.
+            The property that *is* the context for the value resolution. This is not the instance that was passed to the resolver when it was created, but this value is based on that instance. This is the property that provides the actual context - for example, if <see cref="F:Sirenix.OdinInspector.Editor.ValueResolvers.ValueResolverContext.Property"/> is for a member of a type - or for an element in a collection contained by a member - this value will be the mParent property for the type that contains that member. Only if <see cref="F:Sirenix.OdinInspector.Editor.ValueResolvers.ValueResolverContext.Property"/> is the tree's root property is <see cref="P:Sirenix.OdinInspector.Editor.ValueResolvers.ValueResolverContext.ContextProperty"/> the same as <see cref="F:Sirenix.OdinInspector.Editor.ValueResolvers.ValueResolverContext.Property"/>.
             </summary>
         </member>
         <member name="M:Sirenix.OdinInspector.Editor.ValueResolvers.ValueResolverContext.GetParentValue(System.Int32)">
             <summary>
-            Gets the parent value which provides the context of the resolver.
+            Gets the mParent value which provides the context of the resolver.
             </summary>
-            <param name="selectionIndex">The selection index of the parent value to get.</param>
+            <param name="selectionIndex">The selection index of the mParent value to get.</param>
         </member>
         <member name="M:Sirenix.OdinInspector.Editor.ValueResolvers.ValueResolverContext.SetParentValue(System.Int32,System.Object)">
             <summary>
-            Sets the parent value which provides the context of the resolver.
+            Sets the mParent value which provides the context of the resolver.
             </summary>
-            <param name="selectionIndex">The selection index of the parent value to set.</param>
+            <param name="selectionIndex">The selection index of the mParent value to set.</param>
             <param name="value">The value to set.</param>
         </member>
         <member name="M:Sirenix.OdinInspector.Editor.ValueResolvers.ValueResolverContext.AddDefaultContextValues">

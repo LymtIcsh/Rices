@@ -1399,11 +1399,11 @@
             		[FilePath]
             		public string UnityProjectPath;
             
-            		// It is possible to provide custom parent path. Parent paths can be relative to the Unity project, or absolute.
+            		// It is possible to provide custom mParent path. Parent paths can be relative to the Unity project, or absolute.
             		[FilePath(ParentFolder = "Assets/Plugins/Sirenix")]
             		public string RelativeToParentPath;
             
-            		// Using parent path, FilePath can also provide a path relative to a resources folder.
+            		// Using mParent path, FilePath can also provide a path relative to a resources folder.
             		[FilePath(ParentFolder = "Assets/Resources")]
             		public string ResourcePath;
             
@@ -1492,7 +1492,7 @@
             	[FolderPath]
             	public string UnityProjectPath;
             
-            	// It is possible to provide custom parent patn. ParentFolder paths can be relative to the Unity project, or absolute.
+            	// It is possible to provide custom mParent patn. ParentFolder paths can be relative to the Unity project, or absolute.
             	[FolderPath(ParentFolder = "Assets/Plugins/Sirenix")]
             	public string RelativeToParentPath;
             
@@ -3352,7 +3352,7 @@
         </member>
         <member name="F:Sirenix.OdinInspector.OnValueChangedAttribute.InvokeOnInitialize">
             <summary>
-            Whether to perform the action when the property is initialized. This will generally happen when the property is first viewed/queried (IE when the inspector is first opened, or when its containing foldout is first expanded, etc), and whenever its type or a parent type changes, or it is otherwise forced to rebuild.
+            Whether to perform the action when the property is initialized. This will generally happen when the property is first viewed/queried (IE when the inspector is first opened, or when its containing foldout is first expanded, etc), and whenever its type or a mParent type changes, or it is otherwise forced to rebuild.
             </summary>
         </member>
         <member name="M:Sirenix.OdinInspector.OnValueChangedAttribute.#ctor(System.String,System.Boolean)">

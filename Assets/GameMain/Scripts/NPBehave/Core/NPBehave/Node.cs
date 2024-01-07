@@ -140,6 +140,16 @@ namespace NPBehave
             DoStop();
         }
 
+        /// <summary>
+        /// 取消当前节点的执行，但并不返回状态结果
+        /// </summary>
+        public void CancelWithoutReturnResult()
+        {
+            Assert.AreEqual(this.currentState,State.ACTIVE, $"can only stop active nodes, tried to stop  PATH: {GetPath()}");
+            this.currentState = State.STOP_REQUESTED;
+            DoStop();
+        }
+
         protected virtual void DoStart()
         {
 
@@ -153,6 +163,7 @@ namespace NPBehave
 
         /// THIS ABSOLUTLY HAS TO BE THE LAST CALL IN YOUR FUNCTION, NEVER MODIFY
         /// ANY STATE AFTER CALLING Stopped !!!!
+        ///节点被终止，内含状态，成功或失败
         protected virtual void Stopped(bool success)
         {
             // Assert.AreNotEqual(this.currentState, State.INACTIVE, "The Node " + this + " called 'Stopped' while in state INACTIVE, something is wrong! PATH: " + GetPath());

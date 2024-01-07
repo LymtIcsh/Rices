@@ -764,37 +764,37 @@
             <summary>
             Determines whether the directory has a given directory in its hierarchy of children.
             </summary>
-            <param name="parentDir">The parent directory.</param>
+            <param name="parentDir">The mParent directory.</param>
             <param name="subDir">The sub directory.</param>
         </member>
         <member name="M:Sirenix.Utilities.PathUtilities.FindParentDirectoryWithName(System.IO.DirectoryInfo,System.String)">
             <summary>
-            Finds a parent directory with a given name, or null if no such parent directory exists.
+            Finds a mParent directory with a given name, or null if no such mParent directory exists.
             </summary>
         </member>
         <member name="M:Sirenix.Utilities.PathUtilities.CanMakeRelative(System.String,System.String)">
             <summary>
             Returns a value indicating whether or not a path can be made relative to another.
             </summary>
-            <param name="absoluteParentPath">The parent path.</param>
-            <param name="absolutePath">The path to make relative to the parent path.</param>
-            <returns>A value indicating if the path can be made relative to the parent path.</returns>
+            <param name="absoluteParentPath">The mParent path.</param>
+            <param name="absolutePath">The path to make relative to the mParent path.</param>
+            <returns>A value indicating if the path can be made relative to the mParent path.</returns>
         </member>
         <member name="M:Sirenix.Utilities.PathUtilities.MakeRelative(System.String,System.String)">
             <summary>
-            Returns a path string to path that is relative to the parent path.
+            Returns a path string to path that is relative to the mParent path.
             </summary>
-            <param name="absoluteParentPath">The parent path.</param>
-            <param name="absolutePath">The path to make relative to the parent path.</param>
-            <returns>A relative path from parent path to path.</returns>
+            <param name="absoluteParentPath">The mParent path.</param>
+            <param name="absolutePath">The path to make relative to the mParent path.</param>
+            <returns>A relative path from mParent path to path.</returns>
         </member>
         <member name="M:Sirenix.Utilities.PathUtilities.TryMakeRelative(System.String,System.String,System.String@)">
             <summary>
-            Tries to make a path that is relative from parent path to path.
+            Tries to make a path that is relative from mParent path to path.
             </summary>
-            <param name="absoluteParentPath">The parent path.</param>
-            <param name="absolutePath">The path to make relative to the parent path.</param>
-            <param name="relativePath">A relative path from parent path to path. <c>null</c> if no relative path could be made.</param>
+            <param name="absoluteParentPath">The mParent path.</param>
+            <param name="absolutePath">The path to make relative to the mParent path.</param>
+            <param name="relativePath">A relative path from mParent path to path. <c>null</c> if no relative path could be made.</param>
             <returns>A value indicating if the method succeeded in making a relative path.</returns>
         </member>
         <member name="M:Sirenix.Utilities.PathUtilities.Combine(System.String,System.String)">
@@ -3091,7 +3091,7 @@
             <summary>
             Provides a methods of representing aliased methods.
             <para />
-            In this case, what we're representing is a method on a parent class with the same name.
+            In this case, what we're representing is a method on a mParent class with the same name.
             <para />
             We aggregate the MethodInfo associated with this member and return a mangled form of the name.
             The name that we return is "parentname+methodName".

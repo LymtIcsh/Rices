@@ -5,6 +5,10 @@ namespace NPBehave
     public class Root : Decorator
     {
         private Node mainNode;
+        
+        private System.Action m_MainNodeStartActionCache;
+
+            
 
         //private Node inProgressNode;
 
@@ -47,11 +51,21 @@ namespace NPBehave
             this.clock = UnityContext.GetClock();
             this.SetRoot(this);
         }
+        
+        public Root( Node mainNode, Clock clock) : base("Root", mainNode)
+        {
+            this.mainNode = mainNode;
+            m_MainNodeStartActionCache = this.mainNode.Start;
+            this.clock = clock;
+            this.blackboard = new Blackboard(this.clock);
+            this.SetRoot(this);
+        }
 
         public Root(Blackboard blackboard, Clock clock, Node mainNode) : base("Root", mainNode)
         {
             this.blackboard = blackboard;
             this.mainNode = mainNode;
+            m_MainNodeStartActionCache = this.mainNode.Start;
             this.clock = clock;
             this.SetRoot(this);
         }

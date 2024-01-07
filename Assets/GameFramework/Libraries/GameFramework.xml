@@ -3493,7 +3493,7 @@
             创建数据结点。
             </summary>
             <param name="name">数据结点名称。</param>
-            <param name="parent">父数据结点。</param>
+            <param name="mParent">父数据结点。</param>
             <returns>创建的数据结点。</returns>
         </member>
         <member name="P:GameFramework.DataNode.DataNodeManager.DataNode.Name">

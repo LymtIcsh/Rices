@@ -83,7 +83,27 @@ namespace Suture
         /// <param name="blackboard">要修改的黑板</param>
         public void SetBlackBoardValue(Blackboard blackboard)
         {
-            Np_bb
+            NP_BBValueHelper.SetTargetBlackboardUseANP_BBValue(this.NP_BBValue,blackboard,BBkey);
+        }
+
+        /// <summary>
+        /// 自动根据传来的值设置值
+        /// </summary>
+        /// <param name="blackboard">将要改变的黑板值</param>
+        /// <param name="value">值</param>
+        public void SetBlackBoardValue<T>(Blackboard blackboard, T value)
+        {
+            blackboard.Set(this.BBkey,value);
+        }
+
+        /// <summary>
+        /// 自动将一个黑板的对应key的value设置到另一个黑板上
+        /// </summary>
+        /// <param name="oriBB">数据源黑板</param>
+        /// <param name="desBB">目标黑板</param>
+        public void SetBBValueFromThisBBValue(Blackboard oriBB, Blackboard desBB)
+        {
+            NP_BBValueHelper.SetTargetBlackboardUseANP_BBValue(oriBB.Get(BBkey),desBB,BBkey);
         }
     }
 }

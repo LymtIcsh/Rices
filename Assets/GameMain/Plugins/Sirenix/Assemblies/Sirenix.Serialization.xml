@@ -7997,7 +7997,7 @@
             <summary>
             Determines whether the directory has a given directory in its hierarchy of children.
             </summary>
-            <param name="parentDir">The parent directory.</param>
+            <param name="parentDir">The mParent directory.</param>
             <param name="subDir">The sub directory.</param>
         </member>
         <member name="T:Sirenix.Serialization.Utilities.PropertyInfoExtensions">
@@ -9382,7 +9382,7 @@
             <summary>
             Provides a methods of representing aliased methods.
             <para />
-            In this case, what we're representing is a method on a parent class with the same name.
+            In this case, what we're representing is a method on a mParent class with the same name.
             <para />
             We aggregate the MethodInfo associated with this member and return a mangled form of the name.
             The name that we return is "parentname+methodName".

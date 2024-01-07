@@ -5,22 +5,62 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="842b7725-6adb-41b7-92ba-1e022023bc23" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/Helper.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/Helper/NP_BBValueHelper.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/Helper/NP_BBValueHelper.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/NodeDatas/BBValues/INP_BBValue.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/NodeDatas/BBValues/INP_BBValue.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/NodeDatas/BBValues/NP_BBValueBase.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/NodeDatas/BBValues/NP_BBValueBase.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/NodeDatas/Decorator/NP_BlackboardConditionNodeData.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/NodeDatas/Decorator/NP_BlackboardConditionNodeData.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/NodeDatas/NP_BlackBoardRelationData.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/NodeDatas/NP_BlackBoardRelationData.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Utility/DeepCloneHelper.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Utility/DeepCloneHelper.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/NPBehaveGraph/Nodes/Decorator/NP_BlackboardMultipleConditionsNode.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/NPBehaveGraph/Nodes/Decorator/NP_BlackboardMultipleConditionsNode.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/NPBehaveGraph/Nodes/Decorator/NP_RepeaterNode.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/NPBehaveGraph/Nodes/Decorator/NP_RepeaterNode.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/NPBehaveGraph/Nodes/Decorator/NP_RootNode.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/NPBehaveGraph/Nodes/Decorator/NP_RootNode.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Event/UnitEventArgs.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Event/UnitEventArgs.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/Core/NPBehave/Decorator/BlackboardMultipleConditions.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/Core/NPBehave/Decorator/BlackboardMultipleConditions.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/Core/NPBehave/FrameAction.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/NodeDatas/BBValues/NP_BBValue_Bool.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/NodeDatas/BBValues/NP_BBValue_Bool.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/NodeDatas/BBValues/NP_BBValue_Float.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/NodeDatas/BBValues/NP_BBValue_Float.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/NodeDatas/BBValues/NP_BBValue_Int.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/NodeDatas/BBValues/NP_BBValue_Int.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/NodeDatas/BBValues/NP_BBValue_List_Long.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/NodeDatas/BBValues/NP_BBValue_List_Long.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/NodeDatas/BBValues/NP_BBValue_Long.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/NodeDatas/BBValues/NP_BBValue_Long.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/NodeDatas/BBValues/NP_BBValue_String.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/NodeDatas/BBValues/NP_BBValue_String.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/NodeDatas/BBValues/NP_BBValue_UInt.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/NodeDatas/BBValues/NP_BBValue_UInt.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/NodeDatas/BBValues/NP_BBValue_Vector3.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/NodeDatas/BBValues/NP_BBValue_Vector3.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/NodeDatas/Decorator/NP_BlackboardMultipleConditionsNodeData.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/NodeDatas/Decorator/NP_BlackboardMultipleConditionsNodeData.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/NodeDatas/Decorator/NP_RepeaterNodeData.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/NodeDatas/Decorator/NP_RepeaterNodeData.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/NodeDatas/NP_RootNodeData.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/NodeDatas/NP_RootNodeData.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Unit.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Unit/Unit.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Unit/Unit.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Rices/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Rices/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/Libraries/GameFramework.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFramework/Libraries/GameFramework.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/NPBehaveGraph/Nodes/Decorator/NP_BlackboardConditionNode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/NPBehaveGraph/Nodes/Decorator/NP_BlackboardConditionNode.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/Core/NPBehave/Decorator/BlackboardCondition.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/Core/NPBehave/Decorator/BlackboardCondition.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Saves/NPBehaveGraph.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Saves/NPBehaveGraph.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/Sirenix/Assemblies/Sirenix.OdinInspector.Attributes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/Sirenix/Assemblies/Sirenix.OdinInspector.Attributes.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/Sirenix/Assemblies/Sirenix.OdinInspector.Editor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/Sirenix/Assemblies/Sirenix.OdinInspector.Editor.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/Sirenix/Assemblies/Sirenix.Serialization.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/Sirenix/Assemblies/Sirenix.Serialization.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/Sirenix/Assemblies/Sirenix.Utilities.Editor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/Sirenix/Assemblies/Sirenix.Utilities.Editor.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/Sirenix/Assemblies/Sirenix.Utilities.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/Sirenix/Assemblies/Sirenix.Utilities.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/NPBehaveExamples/Editor/Tests/BlackboardTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Res/NPBehaveExamples/Editor/Tests/BlackboardTest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/Component/NP_RuntimeTree.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/Component/NP_RuntimeTree.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/Core/NPBehave/Blackboard.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/Core/NPBehave/Blackboard.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/Core/NPBehave/Clock.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/Core/NPBehave/Clock.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/Core/NPBehave/Node.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/Core/NPBehave/Node.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/Core/NPBehave/Operator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/Core/NPBehave/Operator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/Core/NPBehave/Root.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/Core/NPBehave/Root.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/Helper/NP_BBValueHelper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/Helper/NP_BBValueHelper.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/NodeDatas/Decorator/NP_BlackboardConditionNodeData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/NodeDatas/Decorator/NP_BlackboardConditionNodeData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/NodeDatas/NP_BlackBoardRelationData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/NodeDatas/NP_BlackBoardRelationData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +82,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="SWEA" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 7
@@ -54,30 +97,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mongo"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mongo&quot;
     ],
-    "rider.external.source.directories": [
-      "C:\\Users\\26294\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\DecompilerCache",
-      "C:\\Users\\26294\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\SourcesCache",
-      "C:\\Users\\26294\\AppData\\Local\\Symbols\\src"
+    &quot;rider.external.source.directories&quot;: [
+      &quot;C:\\Users\\26294\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\26294\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\26294\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="附加到 Unity 编辑器.附加到 Unity 编辑器">
     <configuration name="启动 Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="D:\Software\Unity\2022.3.13f1c1\Editor\Unity.exe" />
@@ -140,6 +183,11 @@
       <workItem from="1702991216214" duration="5424000" />
       <workItem from="1703080154231" duration="4010000" />
       <workItem from="1703167634106" duration="5758000" />
+      <workItem from="1703259073711" duration="749000" />
+      <workItem from="1703683095171" duration="7113000" />
+      <workItem from="1704171941619" duration="12574000" />
+      <workItem from="1704188219217" duration="5198000" />
+      <workItem from="1704614109194" duration="6522000" />
     </task>
     <servers />
   </component>
