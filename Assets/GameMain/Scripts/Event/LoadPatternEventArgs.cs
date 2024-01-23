@@ -6,6 +6,9 @@ using UnityEngine;
 
 namespace Suture
 {
+    /// <summary>
+    /// 加载模式
+    /// </summary>
     public class LoadPatternEventArgs : GameEventArgs
     {
         public static readonly int EventId = typeof(LoadPatternEventArgs).GetHashCode();
@@ -40,6 +43,7 @@ namespace Suture
             get;
             private set;
         }
+        
 
         public static LoadPatternEventArgs Create(GameMode gameMode, (int, string, Vector3) InitPetData,object userData = null)
         {

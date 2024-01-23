@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Cinemachine;
 using GameFramework.Event;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityGameFramework.Runtime;
 
@@ -29,7 +31,7 @@ namespace Suture
             {
                 Name = name,
                 Position = InitPos,
-                Scale = new Vector3(0.01f, 0.01f, 0.01f)
+                Scale = Vector3.one
             });
 
 
@@ -44,7 +46,7 @@ namespace Suture
                 GameOver = true;
                 return;
             }
-            
+
             TimeInfo.Instance.Update();
         }
 
@@ -52,7 +54,7 @@ namespace Suture
         {
             GameEntry.Event.Unsubscribe(ShowEntitySuccessEventArgs.EventId, OnShowEntitySuccess);
             GameEntry.Event.Unsubscribe(ShowEntityFailureEventArgs.EventId, OnShowEntityFailure);
-            
+
             IdGenerater.Instance.Dispose();
         }
 
@@ -68,6 +70,13 @@ namespace Suture
             if ((ne.EntityLogicType == typeof(MyPet)))
             {
                 m_myPet = (MyPet)ne.Entity.Logic;
+
+                PlayerAssetsInputs _playerAssetsInputs = m_myPet.GetComponent<PlayerAssetsInputs>();
+                _playerAssetsInputs.cursorLocked = true;
+                _playerAssetsInputs.cursorInputForLook = true;
+                
+                GameObject.FindGameObjectWithTag("PlayerFollowCamera").GetComponent<CinemachineVirtualCamera>().Follow =
+                    m_myPet.Entity.transform.Find("PlayerCameraRoot").transform;
             }
         }
     }

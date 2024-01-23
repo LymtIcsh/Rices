@@ -320,7 +320,7 @@ MonoBehaviour:
   m_BlockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 127
 --- !u!114 &226560681040792791
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -334,8 +334,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   backButton: {fileID: 7612662897296343986}
-  YaSuoButton: {fileID: 3763591396997230646}
-  TeemoButton: {fileID: 8868299011023770459}
+  NingGuangButton: {fileID: 3763591396997230646}
+  YingButton: {fileID: 8868299011023770459}
   GameMode: 4
 --- !u!1 &7612662897296343984
 GameObject:

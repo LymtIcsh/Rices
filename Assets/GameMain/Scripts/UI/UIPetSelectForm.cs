@@ -44,7 +44,7 @@ namespace Suture
 
         void OnNingGuangButtonClick()
         {
-            InitPetData = (10002, "NingGuang", Vector3.zero);
+            InitPetData = (10002, "NingGuang", new Vector3(57,0,40));
 
             GameEntry.Event.Fire(this, LoadPatternEventArgs.Create(GameMode,InitPetData));
             Close(true);
@@ -52,7 +52,7 @@ namespace Suture
 
         void OnYingoButtonClick()
         {
-            InitPetData = (10003, "Ying", Vector3.zero);
+            InitPetData = (10003, "Ying",  new Vector3(57,0,40));
             GameEntry.Event.Fire(this, LoadPatternEventArgs.Create(GameMode,InitPetData));
             Close(true);
         }
