@@ -519,8 +519,8 @@ MonoBehaviour:
   exposedParameters: []
   serializedParameterList: []
   stickyNotes: []
-  position: {x: 0, y: 0, z: 0}
-  scale: {x: 1, y: 1, z: 1}
+  position: {x: 253, y: 111, z: 0}
+  scale: {x: 0.43232757, y: 0.43232757, z: 1}
   Name: 
   Config: {fileID: 0}
   IdInConfig: 0
