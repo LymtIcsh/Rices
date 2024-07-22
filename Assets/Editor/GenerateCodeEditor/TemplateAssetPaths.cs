@@ -6,6 +6,7 @@ namespace Suture
 {
     public class TemplateAssetPaths
     {
+        public const string SutureModelComponentTemplatePath = "Assets/Editor/GenerateCodeEditor/SutureModelComponentTemplate.txt";
         public const string BuffNodeTemplatePath = "Assets/Editor/GenerateCodeEditor/BuffNodeTemplate.txt";
         public const string BuffDataTemplatePath = "Assets/Editor/GenerateCodeEditor/BuffDataTemplate.txt";
         public const string BuffSystemTemplatePath = "Assets/Editor/GenerateCodeEditor/BuffSystemTemplate.txt";
@@ -26,6 +27,39 @@ namespace Suture
 
         public abstract Dictionary<string, string> GetAllParams();
     }
+    
+    #region Component
+
+    /// <summary>
+    /// 用于生成Component的结构体
+    /// </summary>
+    public class Params_GenerateETModelComponent: AParams_GenerateBase
+    {
+        [LabelText("组件名")]
+        [InfoBox("示例：Move")]
+        public string ComponentName;
+
+        public override string TemplateAssetPath
+        {
+            get
+            {
+                return TemplateAssetPaths.SutureModelComponentTemplatePath;
+            }
+        }
+
+        public override Dictionary<string, string> GetAllParams()
+        {
+            if (string.IsNullOrEmpty(ComponentName))
+            {
+                Log.Error("组件名不能为空");
+                return null;
+            }
+
+            return new Dictionary<string, string>() { { "_ComponentName_", ComponentName } };
+        }
+    }
+
+    #endregion
     
     #region Buff
 

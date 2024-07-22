@@ -1,15 +1,21 @@
-﻿using MongoDB.Bson.Serialization.Attributes;
+﻿using GameFramework;
+using MongoDB.Bson.Serialization.Attributes;
 using UnityEngine;
 
 namespace Suture
 {
     [BsonIgnoreExtraElements]
-    public sealed class Unit : Entity
+    public sealed class Unit : Entity, IReference
     {
         /// <summary>
         /// 配置表id
         /// </summary>
         public int ConfigId;
+        
+        /// <summary>
+        /// 归属的房间
+        /// </summary>
+        public Room BelongToRoom;
 
         private Vector3 position;
 
@@ -36,7 +42,7 @@ namespace Suture
             get => this.Rotation * Vector3.forward;
             set => this.Rotation = Quaternion.LookRotation(value, Vector3.up);
         }
-        
+
 // #if !SERVER
 
         private Vector3 viewPosition; //坐标
@@ -47,11 +53,11 @@ namespace Suture
             set
             {
                 this.viewPosition = value;
-                GameEntry.Event.FireNow(this,UnitEventArgs.Create(this));
+                GameEntry.Event.FireNow(this, UnitEventArgs.Create(this));
                 //Game.EventSystem.Publish(new EventType.ChangePosition() {Unit = this}).Coroutine();
             }
         }
- 
+
         private Quaternion viewRotation = Quaternion.identity;
 
         public Quaternion ViewRotation
@@ -60,10 +66,14 @@ namespace Suture
             set
             {
                 this.viewRotation = value;
-                GameEntry.Event.FireNow(this,UnitEventArgs.Create(this));
+                GameEntry.Event.FireNow(this, UnitEventArgs.Create(this));
             }
         }
 
 // #endif
+        public void Clear()
+        {
+            ConfigId = 0;
+        }
     }
 }

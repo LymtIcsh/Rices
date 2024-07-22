@@ -40,6 +40,7 @@ namespace Suture
         {
             this.m_RootNode.Start();
         }
+        
 
         /// <summary>
         /// 设置根结点

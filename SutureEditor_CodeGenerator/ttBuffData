@@ -1,0 +1,17 @@
+using System.Collections.Generic;
+using Sirenix.OdinInspector;
+
+namespace Suture
+{
+    /// <summary>
+    /// ttBuff数据
+    /// </summary>
+    public class ttBuffData: BuffDataBase
+    {
+        //[BoxGroup("自定义项")]
+        //[LabelText("将要被添加的材质名")]
+        //public List<string> TheMaterialNameWillBeAdded = new List<string>();
+        
+        
+    }
+}

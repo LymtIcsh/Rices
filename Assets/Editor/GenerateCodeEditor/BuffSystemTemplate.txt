@@ -1,0 +1,16 @@
+//------------------------------------------------------------
+// 代码由工具自动生成，请勿手动修改
+// 代码由工具自动生成，请勿手动修改
+// 代码由工具自动生成，请勿手动修改
+//------------------------------------------------------------
+namespace Suture
+{
+    public class _BUFFNAME_System: ABuffSystemBase
+    {
+        public override void OnExecute()
+        {
+
+            this.BuffState = BuffState.Finished;
+        }
+    }
+}
