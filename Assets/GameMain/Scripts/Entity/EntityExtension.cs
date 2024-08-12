@@ -63,6 +63,19 @@ namespace Suture
                 priority, data);
         }
 
+
+        /// <summary>
+        /// 显示实体。
+        /// </summary>
+        /// <param name="entityGroup">实体组名称</param>
+        /// <param name="ArmorAsset">加载实体资源的优先级。 【从 Constant.AssetPriority.ArmorAsset 】 </param>
+        /// <param name="entityData">用户自定义实体数据。</param>
+        /// <typeparam name="T">实体逻辑类型。</typeparam>
+        public static void ShowEntity<T>(this EntityComponent entityComponent,string entityGroup,int ArmorAsset, EntityData entityData)
+        {
+            entityComponent.ShowEntity(typeof(T), entityGroup, ArmorAsset, entityData);
+        }
+        
         public static void ShowMyPet(this EntityComponent entityComponent, MyPetData data)
         {
             entityComponent.ShowEntity(typeof(MyPet), "Pet", Constant.AssetPriority.ArmorAsset, data);

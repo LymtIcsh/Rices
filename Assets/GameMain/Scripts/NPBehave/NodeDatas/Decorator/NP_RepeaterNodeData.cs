@@ -17,7 +17,7 @@ namespace Suture
             return this.m_Repeater;
         }
 
-        public override Decorator CreateDecoratorNode(Unit unit, NP_RuntimeTree runtimeTree, Node node)
+        public override Decorator CreateDecoratorNode(TargetableObject unit, NP_RuntimeTree runtimeTree, Node node)
         {
             this.m_Repeater = new Repeater(node);
             return this.m_Repeater;

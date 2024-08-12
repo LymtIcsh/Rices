@@ -33,7 +33,7 @@ namespace Suture
                 Position = InitPos,
                 Scale = Vector3.one
             });
-
+            
 
             GameOver = false;
             m_myPet = null;
@@ -77,6 +77,12 @@ namespace Suture
                 
                 GameObject.FindGameObjectWithTag("PlayerFollowCamera").GetComponent<CinemachineVirtualCamera>().Follow =
                     m_myPet.Entity.transform.Find("PlayerCameraRoot").transform;
+
+
+                m_myPet.AddComponent<NP_RuntimeTreeManager>();
+                m_myPet.AddComponent<NP_TreeDataRepositoryComponent>();
+                m_myPet.AddComponent<SkillCanvasManagerComponent>();
+                NP_RuntimeTreeFactory.CreateSkillNpRuntimeTree(m_myPet,10001,10001).Start();
             }
         }
     }

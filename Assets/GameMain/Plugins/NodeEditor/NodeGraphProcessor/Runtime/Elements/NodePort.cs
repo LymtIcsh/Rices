@@ -43,6 +43,17 @@ namespace GraphProcessor
 		/// Is the port vertical
 		/// </summary>
 		public bool		vertical;
+		/// <summary>
+		/// 这个端口是否需要绘制icon，默认为true
+		/// 当然如果使用了CustomPortBehavior提供自定义PortData，就需要在CustomPortBehavior标记的方法中做好处理
+		/// </summary>
+		public bool showPortIcon = true;
+		/// <summary>
+		/// 这个端口如果要绘制icon，则将这个字段的值作为目标TypeName进行绘制，如果此字段为默认值（null or empty）则使用displayType作为TypeName进行绘制
+		/// 当然如果使用了CustomPortBehavior提供自定义PortData，就需要在CustomPortBehavior标记的方法中做好处理
+		/// </summary>
+		/// <returns></returns>
+		public string portIconName = null;
 
         public bool Equals(PortData other)
         {
@@ -52,7 +63,9 @@ namespace GraphProcessor
 				&& acceptMultipleEdges == other.acceptMultipleEdges
 				&& sizeInPixel == other.sizeInPixel
 				&& tooltip == other.tooltip
-				&& vertical == other.vertical;
+				&& vertical == other.vertical
+				&& showPortIcon == other.showPortIcon
+				&& portIconName == other.portIconName;
         }
 
 		public void CopyFrom(PortData other)
@@ -64,6 +77,8 @@ namespace GraphProcessor
 			sizeInPixel = other.sizeInPixel;
 			tooltip = other.tooltip;
 			vertical = other.vertical;
+			showPortIcon = other.showPortIcon;
+			portIconName = other.portIconName;
 		}
     }
 
@@ -82,6 +97,7 @@ namespace GraphProcessor
 		public BaseNode				owner;
 		/// <summary>
 		/// The fieldInfo from the fieldName
+		/// 这个Port对应Node中的字段反射信息
 		/// </summary>
 		public FieldInfo			fieldInfo;
 		/// <summary>
@@ -98,6 +114,8 @@ namespace GraphProcessor
 		public object				fieldOwner;
 
 		CustomPortIODelegate		customPortIOMethod;
+		
+		public bool connected => this.GetEdges().Count > 0;
 
 		/// <summary>
 		/// Delegate that is made to send the data from this port to another port connected through an edge
@@ -320,6 +338,19 @@ namespace GraphProcessor
 
 				fieldInfo.SetValue(fieldOwner, passThroughObject);
 			}
+		}
+		
+		public void GetInputValue<T>(ref T value)
+		{
+			if (connected)
+			{
+				GetEdges()[0].outputPort.GetOutputValue(this, ref value);
+			}
+		}
+
+		public void GetOutputValue<T>(NodePort inputPort, ref T value)
+		{
+			owner.TryGetOutputValue(this, inputPort, ref value);
 		}
 	}
 

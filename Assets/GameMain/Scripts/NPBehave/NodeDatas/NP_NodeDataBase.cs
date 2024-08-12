@@ -53,7 +53,7 @@ namespace Suture
         /// <param name="runtimeTree">运行时归属的行为树</param>
         /// <param name="node">所装饰的结点</param>
         /// <returns></returns>
-        public virtual Decorator CreateDecoratorNode(Unit unit, NP_RuntimeTree runtimeTree, Node node)
+        public virtual Decorator CreateDecoratorNode(TargetableObject unit, NP_RuntimeTree runtimeTree, Node node)
         {
             return null;
         }
@@ -64,7 +64,7 @@ namespace Suture
         /// <param name="unitId">行为树归属的Unit</param>
         /// <param name="runtimeTree">运行时归属的行为树</param>
         /// <returns></returns>
-        public virtual Task CreateTask(Unit unit, NP_RuntimeTree runtimeTree)
+        public virtual Task CreateTask(TargetableObject unit, NP_RuntimeTree runtimeTree)
         {
             return null;
         }

@@ -9,7 +9,7 @@ namespace Suture
     {
         [HideInEditorMode] private WaitUntilStopped m_WaitUntilStopped;
 
-        public override Task CreateTask(Unit unit, NP_RuntimeTree runtimeTree)
+        public override Task CreateTask(TargetableObject unit, NP_RuntimeTree runtimeTree)
         {
             this.m_WaitUntilStopped = new WaitUntilStopped();
             return this.m_WaitUntilStopped;

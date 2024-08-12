@@ -19,6 +19,7 @@ namespace Suture
             InitBuiltinComponents();
             InitCustomComponents();
             InitCustomDebuggers();
+         
         }
     }
 }

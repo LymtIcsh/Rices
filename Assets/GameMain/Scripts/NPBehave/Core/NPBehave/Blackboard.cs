@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 using Suture;
+using UnityGameFramework.Runtime;
 
 namespace NPBehave
 {
@@ -222,13 +223,22 @@ namespace NPBehave
 
         public T Get<T>(string key)
         {
-            object result = Get(key);
+            ANP_BBValue result = Get(key);
             if (result == null)
             {
-                return default(T);
+                return default;
             }
 
-            return (T)result;
+            NP_BBValueBase<T> finalResult = result as NP_BBValueBase<T>;
+            if (finalResult == null)
+            {
+                Log.Error($"黑板获取值转型失败，Key：{key}，Type：{typeof(NP_BBValueBase<T>)}");
+                return default;
+            }
+            else
+            {
+                return finalResult.GetValue();
+            }
         }
 
         public ANP_BBValue Get(string key)

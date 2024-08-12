@@ -14,8 +14,8 @@
         /// <param name="theUnitFrom">Buff来源者</param>
         /// <param name="theUnitBelongTo">Buff寄生者</param>
         /// <param name="theSkillCanvasBelongTo"></param>
-        public static void AutoAddBuff(this VTD_BuffInfo self, long dataId, long buffNodeId, Unit theUnitFrom,
-            Unit theUnitBelongTo,
+        public static void AutoAddBuff(this VTD_BuffInfo self, long dataId, long buffNodeId, TargetableObject theUnitFrom,
+            TargetableObject theUnitBelongTo,
             NP_RuntimeTree theSkillCanvasBelongTo)
         {
             int Layers = 0;
@@ -47,8 +47,8 @@
         /// <param name="buffNodeId">Buff节点的Id</param>
         /// <param name="theUnitFrom">Buff来源者</param>
         /// <param name="theUnitBelongTo">Buff寄生者</param>
-        public static void AutoAddBuff(this VTD_BuffInfo self, NP_DataSupportor npDataSupportor, long buffNodeId, Unit theUnitFrom,
-            Unit theUnitBelongTo,
+        public static void AutoAddBuff(this VTD_BuffInfo self, NP_DataSupportor npDataSupportor, long buffNodeId, TargetableObject theUnitFrom,
+            TargetableObject theUnitBelongTo,
             NP_RuntimeTree theSkillCanvasBelongTo)
         {
             int Layers = 0;

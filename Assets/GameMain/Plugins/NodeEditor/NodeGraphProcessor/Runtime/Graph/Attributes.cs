@@ -56,6 +56,21 @@ namespace GraphProcessor
 	}
 
 	/// <summary>
+	/// 决定一个Port是否绘制其Icon的特性
+	/// 当然如果使用了CustomPortBehavior提供自定义PortData，就需要在CustomPortBehavior标记的方法中做好处理
+	/// </summary>
+	[AttributeUsage(AttributeTargets.Field, AllowMultiple = false)]
+	public class ShowPortIconAttribute : Attribute
+	{
+		public bool ShowIcon = true;
+		/// <summary>
+		/// 在USS文件中匹配的数据类型，用于无法从默认类型获取绘制图标时进行重定向
+		/// 例如Dictionary无法找到其类型名对应的PortIcon文件，可以设置这个IconNameMathInUSSFile为Object作为fallback
+		/// </summary>
+		public string IconNameMatchedInUSSFile;
+	}
+
+	/// <summary>
 	/// Register the node in the NodeProvider class. The node will also be available in the node creation window.
 	/// </summary>
 	[AttributeUsage(AttributeTargets.Class, AllowMultiple = true)]

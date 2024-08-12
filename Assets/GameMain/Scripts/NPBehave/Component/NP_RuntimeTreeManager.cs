@@ -28,6 +28,8 @@ namespace Suture
             this.m_HasAddedTrees.Add(rootId,runTimeID);
         }
 
+
+        
         /// <summary>
         /// 通过运行时ID请求行为树
         /// </summary>

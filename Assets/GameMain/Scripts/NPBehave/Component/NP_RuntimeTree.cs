@@ -10,8 +10,16 @@ namespace Suture
     /// <summary>
     /// NP运行时树
     /// </summary>
-    public class NP_RuntimeTree :Entity
+    public class NP_RuntimeTree
     {
+
+        public NP_RuntimeTree(long id)
+        {
+            Id = id;
+        }
+        
+        public long Id;
+        
         /// <summary>
         /// NP行为树根结点
         /// </summary>
@@ -25,7 +33,7 @@ namespace Suture
         /// <summary>
         /// 所归属的Unit
         /// </summary>
-        public Unit BelongToUnit;
+        public Entity BelongToUnit;
         
         
         public Clock GetClock()
@@ -70,6 +78,13 @@ namespace Suture
             return this.m_RootNode.Blackboard;
         }
 
+        public void AddChildWithId(NP_DataSupportor belongNP_DataSupportor, Entity belongToUnit)
+        {
+            BelongToUnit = belongToUnit;
+            BelongNP_DataSupportor = belongNP_DataSupportor;
+
+        }
+        
         /// <summary>
         /// 终止行为树
         /// </summary>
@@ -82,5 +97,7 @@ namespace Suture
             this.m_RootNode = null;
             this.BelongNP_DataSupportor = null;
         }
+
+
     }
 }

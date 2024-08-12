@@ -1,4 +1,9 @@
-﻿using Sirenix.OdinInspector;
+﻿using System;
+using System.IO;
+using MongoDB.Bson.IO;
+using MongoDB.Bson.Serialization;
+using Sirenix.OdinInspector;
+using UnityGameFramework.Runtime;
 
 namespace Suture
 {
@@ -58,49 +63,52 @@ namespace Suture
         }
 
 
-        // [Button("保存技能树信息为二进制文件", 25), GUIColor(0.4f, 0.8f, 1)]
-        // public void Save()
-        // {
-        //     if (string.IsNullOrEmpty(SavePathServer) || string.IsNullOrEmpty(SavePathClient) ||
-        //         string.IsNullOrEmpty(Name))
-        //     {
-        //         Log.Error($"保存路径或文件名不能为空，请检查配置");
-        //         return;
-        //     }
-        //
-        //     using (FileStream file = File.Create($"{SavePathServer}/{this.Name}.bytes"))
-        //     {
-        //         BsonSerializer.Serialize(new BsonBinaryWriter(file), SkillDataSupportor_Server);
-        //     }
-        //
-        //     using (FileStream file = File.Create($"{SavePathClient}/{this.Name}.bytes"))
-        //     {
-        //         BsonSerializer.Serialize(new BsonBinaryWriter(file), SkillDataSupportor_Client);
-        //     }
-        //
-        //     Log.Info($"保存 {SavePathServer}/{this.Name}.bytes {SavePathClient}/{this.Name}.bytes 成功");
-        // }
-        //
-        // [Button("测试技能树反序列化", 25), GUIColor(0.4f, 0.8f, 1)]
-        // public void TestDe()
-        // {
-        //     try
-        //     {
-        //         byte[] mServerfile = File.ReadAllBytes($"{SavePathServer}/{this.Name}.bytes");
-        //         if (mServerfile.Length == 0) Log.Info("没有读取到文件");
-        //         SkillDataSupportor_ServerDes = BsonSerializer.Deserialize<NP_DataSupportor>(mServerfile);
-        //         Log.Info($"反序列化 {SavePathServer}/{this.Name}.bytes 成功");
-        //
-        //         byte[] mClientfile = File.ReadAllBytes($"{SavePathClient}/{this.Name}.bytes");
-        //         if (mClientfile.Length == 0) Log.Info("没有读取到文件");
-        //         SkillDataSupportor_Client_Des = BsonSerializer.Deserialize<NP_DataSupportor>(mClientfile);
-        //         Log.Info($"反序列化 {SavePathClient}/{this.Name}.bytes 成功");
-        //     }
-        //     catch (Exception e)
-        //     {
-        //         Log.Info(e.ToString());
-        //         throw;
-        //     }
-        // }
+        [Button("保存技能树信息为二进制文件", 25), GUIColor(0.4f, 0.8f, 1)]
+        public void Save()
+        {
+            if ( /*string.IsNullOrEmpty(SavePathServer) || */string.IsNullOrEmpty(SavePathClient) ||
+                                                             string.IsNullOrEmpty(Name))
+            {
+                Log.Error($"保存路径或文件名不能为空，请检查配置");
+                return;
+            }
+
+            /*    using (FileStream file = File.Create($"{SavePathServer}/{this.Name}.bytes"))
+                {
+                    BsonSerializer.Serialize(new BsonBinaryWriter(file), SkillDataSupportor_Server);
+                }*/
+            
+          
+            
+            using (FileStream file = File.Create($"{SavePathClient}/{this.Name}.bytes"))
+            {
+                BsonSerializer.Serialize(new BsonBinaryWriter(file), SkillDataSupportor_Client);
+            }
+
+
+            Log.Info($"保存 {SavePathServer}/{this.Name}.bytes {SavePathClient}/{this.Name}.bytes 成功");
+        }
+
+        [Button("测试技能树反序列化", 25), GUIColor(0.4f, 0.8f, 1)]
+        public void TestDe()
+        {
+            try
+            {
+                // byte[] mServerfile = File.ReadAllBytes($"{SavePathServer}/{this.Name}.bytes");
+                // if (mServerfile.Length == 0) Log.Info("没有读取到文件");
+                // SkillDataSupportor_ServerDes = BsonSerializer.Deserialize<NP_DataSupportor>(mServerfile);
+                // Log.Info($"反序列化 {SavePathServer}/{this.Name}.bytes 成功");
+
+                byte[] mClientfile = File.ReadAllBytes($"{SavePathClient}/{this.Name}.bytes");
+                if (mClientfile.Length == 0) Log.Info("没有读取到文件");
+                SkillDataSupportor_Client_Des = BsonSerializer.Deserialize<NP_DataSupportor>(mClientfile);
+                Log.Info($"反序列化 {SavePathClient}/{this.Name}.bytes 成功");
+            }
+            catch (Exception e)
+            {
+                Log.Info(e.ToString());
+                throw;
+            }
+        }
     }
 }

@@ -11,7 +11,7 @@ namespace Suture
 
         public NP_ClassForStoreAction NpClassForStoreAction;
 
-        public override Task CreateTask(Unit unit, NP_RuntimeTree runtimeTree)
+        public override Task CreateTask(TargetableObject unit, NP_RuntimeTree runtimeTree)
         {
             this.NpClassForStoreAction.BelongToUnit = unit;
             this.NpClassForStoreAction.BelongtoRuntimeTree = runtimeTree;

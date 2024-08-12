@@ -33,16 +33,16 @@ namespace Suture
                 IBuffSystem aBuff = this.m_Current.Value;
                 if (aBuff.BuffState == BuffState.Waiting)
                 {
-                    aBuff.Excute((uint)DateTime.UtcNow.Ticks);
+                    aBuff.Excute((uint)TimeInfo.Instance.ClientFrameTime());
                 }
                 else if (aBuff.BuffState == BuffState.Running || aBuff.BuffState == BuffState.Forever)
                 {
-                    aBuff.Update((uint)DateTime.UtcNow.Ticks);
+                    aBuff.Update((uint)TimeInfo.Instance.ClientFrameTime());
                     this.m_Current = this.m_Current.Next;
                 }
                 else if (aBuff.BuffState == BuffState.Finished)
                 {
-                    aBuff.Finished((uint)DateTime.UtcNow.Ticks);
+                    aBuff.Finished((uint)TimeInfo.Instance.ClientFrameTime());
                     this.m_Next = this.m_Current.Next;
                     m_Buffs.Remove(this.m_Current);
                     m_BuffsForFind_BuffWorkType.Remove(this.m_Current.Value.BuffData.BuffWorkType);

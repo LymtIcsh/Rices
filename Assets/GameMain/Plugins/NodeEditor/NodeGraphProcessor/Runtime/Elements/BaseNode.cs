@@ -5,16 +5,19 @@ using System;
 using System.Reflection;
 using Unity.Jobs;
 using System.Linq;
+using Sirenix.OdinInspector;
 
 namespace GraphProcessor
 {
 	public delegate IEnumerable< PortData > CustomPortBehaviorDelegate(List< SerializableEdge > edges);
 	public delegate IEnumerable< PortData > CustomPortTypeBehaviorDelegate(string fieldName, string displayName, object value);
 	
+	[BoxGroup]
+	[HideLabel]
 	public abstract class BaseNode
 	{
-		[SerializeField]
-		internal string nodeCustomName = null; // The name of the node in case it was renamed by a user
+		[HideInInspector]
+		public string nodeCustomName = null; // The name of the node in case it was renamed by a user
 
 		/// <summary>
 		/// Name of the node, it will be displayed in the title section
@@ -44,6 +47,7 @@ namespace GraphProcessor
         public virtual bool         isLocked => nodeLock; 
 
         //id
+        [HideInInspector]
         public string				GUID;
 
 		public int					computeOrder = -1;
@@ -61,26 +65,30 @@ namespace GraphProcessor
 		/// Container of input ports
 		/// </summary>
 		[NonSerialized]
-		public  NodeInputPortContainer	inputPorts;
+		public NodeInputPortContainer	inputPorts;
 		/// <summary>
 		/// Container of output ports
 		/// </summary>
 		[NonSerialized]
-		public  NodeOutputPortContainer	outputPorts;
+		public NodeOutputPortContainer	outputPorts;
 
 		//Node view datas
+		[HideInInspector]
 		public Rect					position;
 		/// <summary>
 		/// Is the node expanded
 		/// </summary>
+		[HideInInspector]
 		public bool					expanded;
 		/// <summary>
 		/// Is debug visible
 		/// </summary>
+		[HideInInspector]
 		public bool					debug;
 		/// <summary>
 		/// Node locked state
 		/// </summary>
+		[HideInInspector]
         public bool                 nodeLock;
 
         public delegate void		ProcessDelegate();
@@ -150,8 +158,11 @@ namespace GraphProcessor
 			public string						tooltip;
 			public CustomPortBehaviorDelegate	behavior;
 			public bool							vertical;
+			public bool                         showPortIcon;
+			public string                       portIconName;
 
-			public NodeFieldInformation(FieldInfo info, string name, bool input, bool isMultiple, string tooltip, bool vertical, CustomPortBehaviorDelegate behavior)
+			public NodeFieldInformation(FieldInfo info, string name, bool input, bool isMultiple, string tooltip,
+				bool vertical, CustomPortBehaviorDelegate behavior, bool showPortIcon, string portIconName)
 			{
 				this.input = input;
 				this.isMultiple = isMultiple;
@@ -161,6 +172,8 @@ namespace GraphProcessor
 				this.behavior = behavior;
 				this.tooltip = tooltip;
 				this.vertical = vertical;
+				this.showPortIcon = showPortIcon;
+				this.portIconName = portIconName;
 			}
 		}
 
@@ -219,7 +232,6 @@ namespace GraphProcessor
 			this.graph = graph;
 
 			ExceptionToLog.Call(() => Enable());
-
 			inputPorts = new NodeInputPortContainer(this);
 			outputPorts = new NodeOutputPortContainer(this);
 			nodeFields = new Dictionary<string, NodeFieldInformation>();
@@ -283,7 +295,7 @@ namespace GraphProcessor
 				else
 				{
 					// If we don't have a custom behavior on the node, we just have to create a simple port
-					AddPort(nodeField.input, nodeField.fieldName, new PortData { acceptMultipleEdges = nodeField.isMultiple, displayName = nodeField.name, tooltip = nodeField.tooltip, vertical = nodeField.vertical });
+					AddPort(nodeField.input, nodeField.fieldName, new PortData { acceptMultipleEdges = nodeField.isMultiple, displayName = nodeField.name, tooltip = nodeField.tooltip, vertical = nodeField.vertical, showPortIcon = nodeField.showPortIcon, portIconName = nodeField.portIconName});
 				}
 			}
 		}
@@ -474,7 +486,6 @@ namespace GraphProcessor
 
 			fieldsToUpdate ??= new Stack<PortUpdate>();
 			updatedFields ??= new HashSet<PortUpdate>();
-			
 			fieldsToUpdate.Clear();
 			updatedFields.Clear();
 
@@ -521,8 +532,8 @@ namespace GraphProcessor
 		internal void DisableInternal()
 		{
 			// port containers are initialized in the OnEnable
-			inputPorts.Clear();
-			outputPorts.Clear();
+			inputPorts?.Clear();
+			outputPorts?.Clear();
 
 			ExceptionToLog.Call(() => Disable());
 		}
@@ -549,12 +560,13 @@ namespace GraphProcessor
 				var tooltipAttribute = field.GetCustomAttribute< TooltipAttribute >();
 				var showInInspector = field.GetCustomAttribute< ShowInInspector >();
 				var vertical = field.GetCustomAttribute< VerticalAttribute >();
+				var showPortIconAttribute = field.GetCustomAttribute< ShowPortIconAttribute >();
 				bool isMultiple = false;
 				bool input = false;
 				string name = field.Name;
 				string tooltip = null;
 
-				// if (showInInspector != null)
+				//if (showInInspector != null)
 					_needsInspector = true;
 
 				if (inputAttribute == null && outputAttribute == null)
@@ -570,8 +582,15 @@ namespace GraphProcessor
 				if (!String.IsNullOrEmpty(outputAttribute?.name))
 					name = outputAttribute.name;
 
+				bool _showPortIcon = true;
+				string _portIconName = null;
+				if (showPortIconAttribute != null)
+				{
+					_showPortIcon = showPortIconAttribute.ShowIcon;
+					_portIconName = showPortIconAttribute.IconNameMatchedInUSSFile;
+				}
 				// By default we set the behavior to null, if the field have a custom behavior, it will be set in the loop just below
-				nodeFields[field.Name] = new NodeFieldInformation(field, name, input, isMultiple, tooltip, vertical != null, null);
+				nodeFields[field.Name] = new NodeFieldInformation(field, name, input, isMultiple, tooltip, vertical != null, null, _showPortIcon, _portIconName);
 			}
 
 			foreach (var method in methods)
@@ -637,13 +656,9 @@ namespace GraphProcessor
 
 		public void OnProcess()
 		{
-			inputPorts.PullDatas();
-
 			ExceptionToLog.Call(() => Process());
 
 			InvokeOnProcessed();
-
-			outputPorts.PushDatas();
 		}
 
 		public void InvokeOnProcessed() => onProcessed?.Invoke();
@@ -778,6 +793,56 @@ namespace GraphProcessor
 				var bothNull = String.IsNullOrEmpty(identifier) && String.IsNullOrEmpty(p.portData.identifier);
 				return p.fieldName == fieldName && (bothNull || identifier == p.portData.identifier);
 			});
+		}
+		
+		public NodePort	GetInputPort(string fieldName)
+		{
+			return inputPorts.FirstOrDefault(p => p.fieldName == fieldName);
+		}
+		
+		public NodePort	GetOutputPort(string fieldName)
+		{
+			return outputPorts.FirstOrDefault(p => p.fieldName == fieldName);
+		}
+
+		/// <summary>
+		/// 获取此节点的指定端口所有连接值
+		/// </summary>
+		/// <param name="fieldName"></param>
+		/// <typeparam name="T"></typeparam>
+		/// <returns></returns>
+		public IEnumerable<T> TryGetAllInputValues<T>(string fieldName)
+		{
+			NodePort inputPort = GetInputPort(fieldName);
+			foreach (var connectedEdge in inputPort.GetEdges())
+			{
+				T t = default;
+				connectedEdge.outputPort.GetOutputValue(inputPort, ref t);
+				yield return t;
+			}
+		}
+		
+		/// <summary>
+		/// 获取此节点指定端口输入值，默认只获取第一个与之相连的端口，如果要获取其对应的多个端口，请使用TryGetAllInputValues
+		/// </summary>
+		/// <param name="fieldName"></param>
+		/// <param name="value"></param>
+		/// <typeparam name="T"></typeparam>
+		public void TryGetInputValue<T>(string fieldName, ref T value)
+		{
+			GetInputPort(fieldName).GetInputValue(ref value);
+		}
+
+		/// <summary>
+		/// 需要由Node重写的方法，用于获取Output的值
+		/// </summary>
+		/// <param name="outputPort">output端口</param>
+		/// <param name="inputPort">与上面的output端口相连的input端口</param>
+		/// <param name="value">要返回的值</param>
+		/// <typeparam name="T"></typeparam>
+		public virtual void TryGetOutputValue<T>(NodePort outputPort, NodePort inputPort, ref T value)
+		{
+			Debug.LogError($"{this.GetType()} 未重写TryGetOutputValue函数，将无法正确获取输出值");
 		}
 
 		/// <summary>

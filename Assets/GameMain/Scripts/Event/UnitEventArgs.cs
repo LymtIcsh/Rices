@@ -14,7 +14,7 @@ namespace Suture
             NowUnit = null;
         }
 
-        public Unit NowUnit
+        public TargetableObject NowUnit
         {
             get;
             private set;
@@ -26,7 +26,7 @@ namespace Suture
             private set;
         }
 
-        public static UnitEventArgs Create(Unit NowUnit, object userData = null)
+        public static UnitEventArgs Create(TargetableObject NowUnit, object userData = null)
         {
             UnitEventArgs ne = ReferencePool.Acquire<UnitEventArgs>();
             ne.NowUnit = NowUnit;

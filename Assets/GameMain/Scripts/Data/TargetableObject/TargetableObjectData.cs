@@ -18,6 +18,7 @@ namespace Suture
         
         [SerializeField]  private int m_Defense = 0;
 
+        
         protected TargetableObjectData(int entityId, int typeId, CampType camp) : base(entityId, typeId)
         {
             m_Camp = camp;

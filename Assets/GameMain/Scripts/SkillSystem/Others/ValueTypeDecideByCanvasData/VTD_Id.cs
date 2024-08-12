@@ -20,29 +20,29 @@ namespace Suture
         public long Value;
         
         
-// #if UNITY_EDITOR
-//         private IEnumerable<string> GetIdKey()
-//         {
-//             if (NP_BlackBoardDataManager.CurrentEditedNP_BlackBoardDataManager != null)
-//             {
-//                 return NP_BlackBoardDataManager.CurrentEditedNP_BlackBoardDataManager.Ids.Keys;
-//             }
-//
-//             return null;
-//         }
-//
-//         private void ApplayId()
-//         {
-//             if (NP_BlackBoardDataManager.CurrentEditedNP_BlackBoardDataManager != null)
-//             {
-//                 if (NP_BlackBoardDataManager.CurrentEditedNP_BlackBoardDataManager.Ids.TryGetValue(IdKey, out var targetId))
-//                 {
-//                     Value = targetId;
-//                 }
-//             }
-//         }
-// #endif
-//
-//         
+#if UNITY_EDITOR
+        private IEnumerable<string> GetIdKey()
+        {
+            if (NP_BlackBoardDataManager.CurrentEditedNP_BlackBoardDataManager != null)
+            {
+                return NP_BlackBoardDataManager.CurrentEditedNP_BlackBoardDataManager.Ids.Keys;
+            }
+
+            return null;
+        }
+
+        private void ApplayId()
+        {
+            if (NP_BlackBoardDataManager.CurrentEditedNP_BlackBoardDataManager != null)
+            {
+                if (NP_BlackBoardDataManager.CurrentEditedNP_BlackBoardDataManager.Ids.TryGetValue(IdKey, out var targetId))
+                {
+                    Value = targetId;
+                }
+            }
+        }
+#endif
+
+        
     }
 }
