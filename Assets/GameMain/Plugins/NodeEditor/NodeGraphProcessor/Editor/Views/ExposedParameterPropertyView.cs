@@ -18,11 +18,20 @@ namespace GraphProcessor
 			baseGraphView = graphView;
 			parameter      = param;
 
-			var field = graphView.exposedParameterFactory.GetParameterSettingsField(param, (newValue) => {
+			var settingField = graphView.exposedParameterFactory.GetParameterSettingsField(param, (newValue) => {
 				param.settings = newValue as ExposedParameter.Settings;
 			});
 
-			Add(field);
+			var valueField = graphView.exposedParameterFactory.GetParameterValueField(param, (newValue) =>
+			{
+				param.value = newValue;
+				//serializedObject.ApplyModifiedProperties();
+				baseGraphView.graph.NotifyExposedParameterValueChanged(param);
+			});
+
+			Add(valueField);
+			
+			Add(settingField);
 		}
 	}
 } 

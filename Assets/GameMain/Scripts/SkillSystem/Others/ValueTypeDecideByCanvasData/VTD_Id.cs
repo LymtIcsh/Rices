@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using MongoDB.Bson.Serialization.Attributes;
 using Sirenix.OdinInspector;
 
 namespace Suture
@@ -12,6 +13,7 @@ namespace Suture
         [LabelText("此节点ID在数据仓库中的Key")]
         [ValueDropdown("GetIdKey")]
         [OnValueChanged("ApplayId")]
+        [BsonIgnore]
         public string IdKey;
 
         [LabelText("Id")]

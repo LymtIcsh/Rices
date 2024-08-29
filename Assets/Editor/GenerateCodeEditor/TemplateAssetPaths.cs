@@ -12,12 +12,15 @@ namespace Suture
         public const string BuffSystemTemplatePath = "Assets/Editor/GenerateCodeEditor/BuffSystemTemplate.txt";
         public const string NPBehaveActionNodeTemplatePath = "Assets/Editor/GenerateCodeEditor/NPBehaveActionNodeTemplate.txt";
         public const string NPBehaveActionTemplatePath = "Assets/Editor/GenerateCodeEditor/NPBehaveActionTemplate.txt";
+        
+        
+        public const string EventArgsTemplatePath = "Assets/Editor/GenerateCodeEditor/EventArgsTemplate.txt";
     }
 
     public abstract class AParams_GenerateBase
     {
         [LabelText("生成文件名称")]
-        public string FileName;
+        public  string FileName;
 
         [LabelText("目标文件夹")]
         [FolderPath]
@@ -225,6 +228,49 @@ namespace Suture
             }
 
             return new Dictionary<string, string>() { { "_ACTIONNAME_", ActionName }, { "_ACTIONDES_", ActionDes } };
+        }
+    }
+
+    #endregion
+
+    #region EventArgs
+
+    /// <summary>
+    /// 用于生成NPBehave Action Node数据结点的结构体
+    /// </summary>
+    public class Params_GenerateEventArgs: AParams_GenerateBase
+    {
+        [LabelText("Event名")]
+        [InfoBox("示例：NumericChange")]
+        public string EventName;
+
+        [LabelText("Event描述")]
+        [InfoBox("示例：打印一条消息")]
+        public string EventDes;
+        
+        
+        [LabelText("所有字段 key:字段类型  value：字段名")]
+        [InfoBox("key:string   value:name")]
+        public Dictionary<string, string> allFieldDic;
+
+
+        public override string TemplateAssetPath
+        {
+            get
+            {
+                return TemplateAssetPaths.EventArgsTemplatePath;
+            }
+        }
+
+        public override Dictionary<string, string> GetAllParams()
+        {
+            if (string.IsNullOrEmpty(EventName) || string.IsNullOrEmpty(this.EventDes))
+            {
+                Log.Error("Action名或Action描述不能为空");
+                return null;
+            }
+
+            return new Dictionary<string, string>() { { "_EventNAME_", EventName }, { "_EventNDES_", EventDes } };
         }
     }
 

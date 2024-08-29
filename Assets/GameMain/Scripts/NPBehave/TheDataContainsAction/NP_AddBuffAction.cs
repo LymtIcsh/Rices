@@ -17,7 +17,8 @@ namespace Suture
         public void AddBuff()
         {
             BuffDataInfo.AutoAddBuff(BelongtoRuntimeTree.BelongNP_DataSupportor, this.BuffDataInfo.BuffNodeId.Value,
-                BelongToUnit, BelongToUnit, BelongtoRuntimeTree);
+                BelongToUnit, BelongToUnit,
+                BelongtoRuntimeTree);
         }
     }
 }

@@ -24,6 +24,12 @@ namespace Suture
                 return m_TargetableObjectData.HP <= 0;
             }
         }
+        
+        
+        /// <summary>
+        /// 归属的房间
+        /// </summary>
+        public Room BelongToRoom;
 
         public abstract ImpactData GetImpactData();
 

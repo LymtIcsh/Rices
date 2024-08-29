@@ -1,15 +1,18 @@
-﻿
+//------------------------------------------------------------
+// Author: 烟雨迷离半世殇
+// Mail: 1778139321@qq.com
+// Data: 2019年9月7日 12:30:38
+//------------------------------------------------------------
+
+using Suture;
 using GraphProcessor;
 using Sirenix.OdinInspector;
 
-namespace Suture
+namespace Plugins.NodeEditor
 {
-    /// <summary>
-    /// NP并行节点
-    /// </summary>
-    [NodeMenuItem("NPBehave行为树/Composite/Parallel",typeof(NPBehaveGraph))]
-    [NodeMenuItem("NPBehave行为树/Composite/Parallel",typeof(SkillGraph))]
-    public class NP_ParallelNode:NP_CompositeNodeBase
+    [NodeMenuItem("NPBehave行为树/Composite/Parallel", typeof (NPBehaveGraph))]
+    [NodeMenuItem("NPBehave行为树/Composite/Parallel", typeof (SkillGraph))]
+    public class NP_ParallelNode: NP_CompositeNodeBase
     {
         public override string name => "并行节点";
 

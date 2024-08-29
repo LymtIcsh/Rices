@@ -1,99 +1,48 @@
 ﻿//此文件格式由工具自动生成
 namespace Suture
 {
-#region System
-
-    [ObjectSystem]
-    public class _ComponentName_ComponentAwakeSystem : AwakeSystem<_ComponentName_Component>
+  public class _ComponentName_Component : Entity
     {
-        public override void Awake(_ComponentName_Component self)
-        {
-            self.Awake();
-        }
-    }
-
-    [ObjectSystem]
-    public class _ComponentName_ComponentUpdateSystem : UpdateSystem<_ComponentName_Component>
-    {
-        public override void Update(_ComponentName_Component self)
-        {
-            self.Update();
-        }
-    }
-    
-    [ObjectSystem]
-    public class _ComponentName_ComponentFixedUpdateSystem : FixedUpdateSystem<_ComponentName_Component>
-    {
-        public override void FixedUpdate(_ComponentName_Component self)
-        {
-            self.FixedUpdate();
-        }
-    }
-    
-    [ObjectSystem]
-    public class _ComponentName_ComponentDestroySystem : DestroySystem<_ComponentName_Component>
-    {
-        public override void Destroy(_ComponentName_Component self)
-        {
-            self.Destroy();
-        }
-    }
+        #region 私有成员
 
 
 
-#endregion
+        #endregion
+
+        #region 公有成员
 
 
 
-    public class _ComponentName_Component : Component
-    {
-    #region 私有成员
-        
-        
-        
-    #endregion
-    
-    #region 公有成员
-        
-        
-        
-    #endregion
-    
-    #region 生命周期函数
-    
-        public void Awake()
+        #endregion
+
+        #region 生命周期函数
+
+        protected override void OnInit(object userData)
         {
-            //此处填写Awake逻辑
-            
+            base.OnInit(userData);
         }
-        
-        public void Update()
+
+        protected override void OnShow(object userData)
         {
-            //此处填写Update逻辑
-            
+            base.OnShow(userData);
         }
-        
-        public void FixedUpdate()
+
+        protected override void OnUpdate(float elapseSeconds, float realElapseSeconds)
         {
-            //此处填写FixedUpdate逻辑
-            
+            base.OnUpdate(elapseSeconds, realElapseSeconds);
         }
-        
-        public void Destroy()
+
+        protected override void OnHide(bool isShutdown, object userData)
         {
-            //此处填写Destroy逻辑
-            
+            base.OnHide(isShutdown, userData);
         }
-        
-        public override void Dispose()
+
+        protected override void OnRecycle()
         {
-            if (IsDisposed)
-                return;
-            base.Dispose();
-            //此处填写释放逻辑,但涉及Entity的操作，请放在Destroy中
+            base.OnRecycle();
         }
-    
-    #endregion
+
+        #endregion
 
     }
 }

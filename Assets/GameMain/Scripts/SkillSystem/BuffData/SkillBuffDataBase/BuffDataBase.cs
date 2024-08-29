@@ -1,4 +1,6 @@
 ﻿using System.Collections.Generic;
+using MongoDB.Bson.Serialization.Attributes;
+using MongoDB.Bson.Serialization.Options;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
@@ -6,6 +8,7 @@ namespace Suture
 {
     [Title("Buff数据块",TitleAlignment = TitleAlignments.Centered)]
     [HideLabel]
+    [HideReferenceObjectPicker]
     [BsonDeserializerRegister]
     public class BuffDataBase
     {
@@ -92,12 +95,12 @@ namespace Suture
         
         [BoxGroup("选填项")]
         [Tooltip("基础数值，比如技能面板伤害100/200/300这种")]
-     //   [BsonDictionaryOptions(DictionaryRepresentation.ArrayOfArrays)]
+    [BsonDictionaryOptions(DictionaryRepresentation.ArrayOfArrays)]
         public Dictionary<int, float> ValueToBeChanged = new Dictionary<int, float>();
 
         [Tooltip("具体的加成(可能会一个效果多种加成方式)，例如法强加成")]
         [BoxGroup("选填项")]
-        //[BsonDictionaryOptions(DictionaryRepresentation.ArrayOfArrays)]
+        [BsonDictionaryOptions(DictionaryRepresentation.ArrayOfArrays)]
         public Dictionary<BuffAdditionTypes, float> AdditionValue = new Dictionary<BuffAdditionTypes, float>();
     }
 }

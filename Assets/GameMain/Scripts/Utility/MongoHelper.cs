@@ -15,6 +15,7 @@ using UnityEditor;
 #endif
 
 using UnityEngine;
+using Debug = UnityEngine.Debug;
 using Object = System.Object;
 
 namespace Suture
@@ -39,6 +40,37 @@ namespace Suture
         }
     }
 
+    public class SkillSystemEventSerializer : IBsonSerializer<ISkillSystemEvent>
+    {
+        public void Serialize(BsonSerializationContext context, BsonSerializationArgs args, ISkillSystemEvent value)
+        {
+            var actualType = value.GetType();
+            var serializer = BsonSerializer.LookupSerializer(actualType);
+            serializer.Serialize(context, value);
+        }
+
+        public ISkillSystemEvent Deserialize(BsonDeserializationContext context, BsonDeserializationArgs args)
+        {
+            var discriminator = context.Reader.ReadString("_t");
+            var actualType = Type.GetType(discriminator); // 根据你的需要解析类型
+            var serializer = BsonSerializer.LookupSerializer(actualType);
+            var result = (ISkillSystemEvent)serializer.Deserialize(context, args);
+            context.Reader.ReadEndDocument();
+            return result;
+        }
+
+        public void Serialize(BsonSerializationContext context, BsonSerializationArgs args, object value)
+        {
+        }
+
+        object IBsonSerializer.Deserialize(BsonDeserializationContext context, BsonDeserializationArgs args)
+        {
+            return Deserialize(context, args);
+        }
+
+        public Type ValueType => typeof(ISkillSystemEvent);
+    }
+
     /// <summary>
     /// Bson序列化反序列化辅助类
     /// </summary>
@@ -53,15 +85,14 @@ namespace Suture
 #endif
         public static void Init()
         {
-            
         }
-        
+
         static MongoHelper()
         {
             // 自动注册IgnoreExtraElements
-            ConventionPack conventionPack = new ConventionPack {new IgnoreExtraElementsConvention(true)};
+            ConventionPack conventionPack = new ConventionPack { new IgnoreExtraElementsConvention(true) };
             ConventionRegistry.Register("IgnoreExtraElements", conventionPack, type => true);
- #if SERVER
+#if SERVER
              BsonSerializer.RegisterSerializer(typeof(System.Numerics.Vector2),
                  new StructBsonSerialize<System.Numerics.Vector2>());
              BsonSerializer.RegisterSerializer(typeof(Vector2), new StructBsonSerialize<Vector2>());
@@ -70,43 +101,119 @@ namespace Suture
              BsonSerializer.RegisterSerializer(typeof(Quaternion), new StructBsonSerialize<Quaternion>());
              BsonSerializer.RegisterSerializer(typeof(VTD_Id), new StructBsonSerialize<VTD_Id>());
              BsonSerializer.RegisterSerializer(typeof(VTD_EventId), new StructBsonSerialize<VTD_EventId>());
- #elif ROBOT
+#elif ROBOT
  			BsonSerializer.RegisterSerializer(typeof(Quaternion), new StructBsonSerialize<Quaternion>());
              BsonSerializer.RegisterSerializer(typeof(Vector3), new StructBsonSerialize<Vector3>());
              BsonSerializer.RegisterSerializer(typeof(Vector4), new StructBsonSerialize<Vector4>());
- #else
+#else
 
-             BsonSerializer.RegisterSerializer(typeof(System.Numerics.Vector2),
-                 new StructBsonSerialize<System.Numerics.Vector2>());
-             BsonSerializer.RegisterSerializer(typeof(Vector2), new StructBsonSerialize<Vector2>());
-             BsonSerializer.RegisterSerializer(typeof(Vector3), new StructBsonSerialize<Vector3>());
-             BsonSerializer.RegisterSerializer(typeof(Vector4), new StructBsonSerialize<Vector4>());
+            BsonSerializer.RegisterSerializer(typeof(System.Numerics.Vector2),
+                new StructBsonSerialize<System.Numerics.Vector2>());
 
-             BsonSerializer.RegisterSerializer(typeof(VTD_Id), new StructBsonSerialize<VTD_Id>());
-             BsonSerializer.RegisterSerializer(typeof(VTD_EventId), new StructBsonSerialize<VTD_EventId>());
- #endif
+            BsonSerializer.RegisterSerializer(typeof(Vector2), new StructBsonSerialize<Vector2>());
+            BsonSerializer.RegisterSerializer(typeof(Vector3), new StructBsonSerialize<Vector3>());
+            BsonSerializer.RegisterSerializer(typeof(Vector4), new StructBsonSerialize<Vector4>());
+
+            BsonSerializer.RegisterSerializer(typeof(VTD_Id), new StructBsonSerialize<VTD_Id>());
+            BsonSerializer.RegisterSerializer(typeof(VTD_EventId), new StructBsonSerialize<VTD_EventId>());
+#endif
             //技能配置反序列化相关(manually because these type cannot Automatically register)
-            BsonClassMap.LookupClassMap(typeof(NP_BBValue_Int));
-            BsonClassMap.LookupClassMap(typeof(NP_BBValue_Bool));
-            BsonClassMap.LookupClassMap(typeof(NP_BBValue_Float));
-            BsonClassMap.LookupClassMap(typeof(NP_BBValue_String));
-            BsonClassMap.LookupClassMap(typeof(NP_BBValue_Vector3));
-            BsonClassMap.LookupClassMap(typeof(NP_BBValue_Long));
-            BsonClassMap.LookupClassMap(typeof(NP_BBValue_List_Long));
 
-#if UNITY_EDITOR
+            #region 解决报错 //TODO 解决报错 InvalidOperationException: Can't compile a NewExpression with a constructor declared on an abstract class
+
+            BsonClassMap.RegisterClassMap<NP_NodeDataBase>(cm =>
+            {
+                cm.AutoMap();
+                cm.SetIsRootClass(true);
+                var featureType = typeof(NP_NodeDataBase);
+                featureType.Assembly.GetTypes().Where(type => featureType.IsAssignableFrom(type)).ToList()
+                    .ForEach(type => cm.AddKnownType(type));
+            });
+
+            BsonClassMap.RegisterClassMap<ANP_BBValue>(cm =>
+            {
+                cm.AutoMap();
+                cm.SetIsRootClass(true);
+                var featureType = typeof(ANP_BBValue);
+                featureType.Assembly.GetTypes().Where(type => featureType.IsAssignableFrom(type)).ToList()
+                    .ForEach(type => cm.AddKnownType(type));
+            });
+
+            #endregion
+
+            BsonClassMap.RegisterClassMap<NP_BBValue_Int>(cm =>
+            {
+                cm.AutoMap();
+                cm.SetDiscriminator("NP_BBValue_Int");
+            });
+            BsonClassMap.RegisterClassMap<NP_BBValue_Bool>(cm =>
+            {
+                cm.AutoMap();
+                cm.SetDiscriminator("NP_BBValue_Bool");
+            });
+            BsonClassMap.RegisterClassMap<NP_BBValue_Float>(cm =>
+            {
+                cm.AutoMap();
+                cm.SetDiscriminator("NP_BBValue_Float");
+            });
+            BsonClassMap.RegisterClassMap<NP_BBValue_String>(cm =>
+            {
+                cm.AutoMap();
+                cm.SetDiscriminator("NP_BBValue_String");
+            });
+            BsonClassMap.RegisterClassMap<NP_BBValue_Vector3>(cm =>
+            {
+                cm.AutoMap();
+                cm.SetDiscriminator("NP_BBValue_Vector3");
+            });
+            BsonClassMap.RegisterClassMap<NP_BBValue_Long>(cm =>
+            {
+                cm.AutoMap();
+                cm.SetDiscriminator("NP_BBValue_Long");
+            });
+            BsonClassMap.RegisterClassMap<NP_BBValue_List_Long>(cm =>
+            {
+                cm.AutoMap();
+                cm.SetDiscriminator("NP_BBValue_List_Long");
+            });
+
+            BsonClassMap.RegisterClassMap<SkillSystemEventSerializer>(cm =>
+            {
+                cm.AutoMap();
+                cm.SetDiscriminator("SkillSystemEventSerializer");
+            });
+
+            // BsonClassMap.LookupClassMap(typeof(NP_BBValue_Int));
+            // BsonClassMap.LookupClassMap(typeof(NP_BBValue_Bool));
+            // BsonClassMap.LookupClassMap(typeof(NP_BBValue_Float));
+            // BsonClassMap.LookupClassMap(typeof(NP_BBValue_String));
+            // BsonClassMap.LookupClassMap(typeof(NP_BBValue_Vector3));
+            // BsonClassMap.LookupClassMap(typeof(NP_BBValue_Long));
+            // BsonClassMap.LookupClassMap(typeof(NP_BBValue_List_Long));
+
+// #if UNITY_EDITOR
             Assembly[] assemblies = AppDomain.CurrentDomain.GetAssemblies();
             var types = new List<Type>();
             foreach (var assembly in assemblies)
             {
-                if (assembly.FullName.Contains("Assembly-CSharp")||assembly.FullName.Contains("Assembly-CSharp-Ediior"))
+                if (assembly.FullName.Contains("Assembly-CSharp") ||
+                    assembly.FullName.Contains("Assembly-CSharp-Ediior"))
                 {
                     types.AddRange(assembly.GetTypes());
                 }
             }
-#else
-            var types = Game.EventSystem.GetTypes();
-#endif
+// #else
+//             Assembly[] assemblies = AppDomain.CurrentDomain.GetAssemblies();
+//             var types = new List<Type>();
+//             foreach (var assembly in assemblies)
+//             {
+//                 if (assembly.FullName.Contains("Assembly-CSharp") ||
+//                     assembly.FullName.Contains("Assembly-CSharp-Ediior"))
+//                 {
+//                     types.AddRange(assembly.GetTypes());
+//                 }
+//             }
+// #endif
 
             foreach (Type type in types)
             {
@@ -120,7 +227,14 @@ namespace Suture
                     continue;
                 }
 
-                BsonClassMap.LookupClassMap(type);
+                try
+                {
+                    BsonClassMap.LookupClassMap(type);
+                }
+                catch (Exception e)
+                {
+                    Debug.LogWarning(e);
+                }
             }
 
             RegisterAllSubClassForDeserialize(types);
@@ -254,7 +368,7 @@ namespace Suture
             {
                 using (MemoryStream memoryStream = new MemoryStream(bytes))
                 {
-                    return (T) BsonSerializer.Deserialize(memoryStream, typeof(T));
+                    return (T)BsonSerializer.Deserialize(memoryStream, typeof(T));
                 }
             }
             catch (Exception e)
@@ -265,7 +379,7 @@ namespace Suture
 
         public static T FromBson<T>(byte[] bytes, int index, int count)
         {
-            return (T) FromBson(typeof(T), bytes, index, count);
+            return (T)FromBson(typeof(T), bytes, index, count);
         }
 
         public static T Clone<T>(T t)

@@ -1,5 +1,7 @@
 ﻿using System;
+
 using Sirenix.OdinInspector;
+
 
 namespace Suture
 {
@@ -107,5 +109,6 @@ namespace Suture
         }
 
         #endregion
+
     }
 }

@@ -1,5 +1,8 @@
 ﻿using GameFramework.DataTable;
 using System;
+using GameFramework.Entity;
+using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityGameFramework.Runtime;
 
 namespace Suture
@@ -84,6 +87,33 @@ namespace Suture
         public static void ShowArmor(this EntityComponent entityComponent, EquipData equipData)
         {
             entityComponent.ShowEntity(typeof(Equip), "Equip", Constant.AssetPriority.ArmorAsset, equipData);
+        }
+
+
+        
+        /// <summary>
+        /// 创建实体。
+        /// </summary>
+        /// <param name="entityName">实体名字。</param>
+        /// <param name="entityGroupName">实体所属的实体组。</param>
+        /// <param name="userData">用户自定义数据。</param>
+        /// <returns>实体。</returns>
+        public static T CreateEntity<T>(this EntityComponent entityComponent,string entityName, string entityGroupName, object userData) where T : Entity
+        {
+            GameObject gameObject = new GameObject();
+            if (gameObject == null)
+            {
+                Log.Error("Entity instance is invalid.");
+                return null;
+            }
+
+            gameObject.name = entityName;
+
+            Transform transform = gameObject.transform;
+            IEntityGroup entityGroup = GameEntry.Entity.GetEntityGroup(entityGroupName);
+            transform.SetParent(((MonoBehaviour)entityGroup.Helper).transform);
+
+            return gameObject.GetOrAddComponent<T>();
         }
 
         /// <summary>

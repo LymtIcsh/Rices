@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using MongoDB.Bson.Serialization.Attributes;
 using NPBehave;
 using Sirenix.OdinInspector;
 using Unity.VisualScripting;
@@ -28,6 +29,7 @@ namespace Suture
         [BoxGroup("结点信息描述")]
         [TextArea(2,2)]
         [HideLabel]
+        [BsonIgnore]
         public string NodeDes;
         
         /// <summary>

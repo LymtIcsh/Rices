@@ -2,6 +2,37 @@
     background-color: rgba(0, 63, 63, 0.8);
 }
 
+.node > #node-border > #title > #title-label{
+    -unity-font-style: bold;
+}
+
+.node > #node-border > #title{
+    background-color: rgba(34, 34, 34, 205);
+}
+
+.node > #node-border{
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+.node > #node-border > #contents > #divider , #top > #divider{
+    border-color: rgba(23, 23, 23, 205);
+    border-bottom-color: rgba(23, 23, 23, 205);
+    border-left-color: rgba(23, 23, 23, 205);
+    border-right-color: rgba(23, 23, 23, 205);
+    border-top-color: rgba(23, 23, 23, 205);
+
+    border-bottom-width: 1;
+    border-top-width: 1;
+    border-width: 1;
+}
+
+.node > #node-border > #contents > #top > #input{
+    background-color: rgba(46, 46, 46, 205);
+}
+
 #controls {
     background-color: rgba(63, 63, 63, 0.8);
 }
@@ -21,7 +52,7 @@
 }
 
 #settings-button:hover {
-    background-color: rgba(127, 127, 127 0.2);
+    background-color: rgba(127, 127, 127, 0.2);
 }
 
 #contents #top .executed #connector, #contents #top .executed #connector #cap,
@@ -106,48 +137,49 @@ ParameterNodeView #controls EnumField > VisualElement > VisualElement {
     --layer: -50;
 }
 
-#input-container > .port-input-element > * {
+#input-container > .port-input-element > IntegerField,
+#input-container > .port-input-element > FloatField {
     min-width: 30px;
-    max-width: 200px;
+    max-width: 100px;
 }
 
-#input-container > .port-input-element > PropertyField > ColorField,
-#input-container > .port-input-element > PropertyField > ObjectField,
-#input-container > .port-input-element > PropertyField > CurveField {
+#input-container > .port-input-element > ColorField,
+#input-container > .port-input-element > ObjectField,
+#input-container > .port-input-element > CurveField {
     margin-top: 0;
     margin-bottom: 0;
 }
 
-#input-container > .port-input-element > PropertyField > TextField {
+#input-container > .port-input-element > TextField {
     min-width: 50px;
+    max-width: 150px;
 }
 
-#input-container > .port-input-element > PropertyField > CurveField {
+#input-container > .port-input-element > CurveField {
     width: 100px;
 }
 
-#input-container > .port-input-element > PropertyField > Vector4Field Label,
-#input-container > .port-input-element > PropertyField > Vector3Field Label,
-#input-container > .port-input-element > PropertyField > Vector2Field Label,
-#input-container > .port-input-element > PropertyField > Vector3IntField Label,
-#input-container > .port-input-element > PropertyField > Vector2IntField Label {
+#input-container > .port-input-element > Vector4Field Label,
+#input-container > .port-input-element > Vector3Field Label,
+#input-container > .port-input-element > Vector2Field Label,
+#input-container > .port-input-element > Vector3IntField Label,
+#input-container > .port-input-element > Vector2IntField Label {
     font-size: 8px;
     min-width: 8px;
     flex-basis: 8px;
     padding-top: 2px;
     margin-right: 1px;
-    max-height: 150px;
 }
 
-#input-container > .port-input-element > PropertyField > Vector4Field FloatInput,
-#input-container > .port-input-element > PropertyField > Vector3Field FloatInput,
-#input-container > .port-input-element > PropertyField > Vector2Field FloatInput,
-#input-container > .port-input-element > PropertyField > Vector3IntField IntegerInput,
-#input-container > .port-input-element > PropertyField > Vector2IntField IntegerInput {
+#input-container > .port-input-element > Vector4Field FloatInput,
+#input-container > .port-input-element > Vector3Field FloatInput,
+#input-container > .port-input-element > Vector2Field FloatInput,
+#input-container > .port-input-element > Vector3IntField IntegerInput,
+#input-container > .port-input-element > Vector2IntField IntegerInput {
     min-width: 28px;
 }
 
-#input-container > .port-input-element > PropertyField > * .unity-composite-field__field-spacer {
+#input-container > .port-input-element > * .unity-composite-field__field-spacer {
     flex-grow: 0.01;
 }
 
@@ -166,7 +198,7 @@ ParameterNodeView #controls EnumField > VisualElement > VisualElement {
     margin: 0;
 }
 
-#input-container > .port-input-element > PropertyField > ColorField {
+#input-container > .port-input-element > ColorField {
     width: 60px;
 }
 
@@ -222,8 +254,8 @@ ParameterNodeView #controls EnumField > VisualElement > VisualElement {
 
 #TopPortContainer, #BottomPortContainer
 {
-   align-self: center; 
-   flex-direction: row;
+    align-self: center;
+    flex-direction: row;
 }
 
 #TopPortContainer
@@ -249,8 +281,16 @@ ParameterNodeView #controls EnumField > VisualElement > VisualElement {
     margin: 4px;
 }
 
-/* In Unity 2020.3, we need to manually hide labels of property fields with empty label */
-.DrawerField_2020_3 > * > Label
-{
-    display: none;
+#NodeIcon_Action {
+    align-self: center;
+    margin-left: 8px;
+
+    width: 12px;
+    height: 12px;
+    background-image: resource("Icons/Function@x3");
+}
+
+.NodeTexturePreview{
+    width: 200px;
+    height: 200px;
 }

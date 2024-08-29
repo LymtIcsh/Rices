@@ -1,15 +1,21 @@
-﻿using System;
+﻿//------------------------------------------------------------
+// Author: 烟雨迷离半世殇
+// Mail: 1778139321@qq.com
+// Data: 2021年6月15日 11:19:33
+//------------------------------------------------------------
+
+using System;
 using System.IO;
+using Suture;
 using MongoDB.Bson.IO;
 using MongoDB.Bson.Serialization;
 using Sirenix.OdinInspector;
-using UnityGameFramework.Runtime;
+using Sirenix.Serialization;
+using UnityEditor;
+using UnityEngine;
 
-namespace Suture
+namespace Plugins.NodeEditor
 {
-    /// <summary>
-    /// 技能图
-    /// </summary>
     public class SkillGraph : NPBehaveGraph
     {
         [BoxGroup("此技能树数据载体(客户端)")] [DisableInEditorMode]
@@ -35,14 +41,55 @@ namespace Suture
             this.AutoSetSkillData_NodeData(SkillDataSupportor_Client);
         }
 
-        /// <summary>
-        /// 自动设置技能数据节点数据
-        /// </summary>
-        /// <param name="npDataSupportor"></param>
+        [Button("保存技能树信息为二进制文件", 25), GUIColor(0.4f, 0.8f, 1)]
+        public void Save()
+        {
+            if ( /*string.IsNullOrEmpty(SavePathServer) ||*/ string.IsNullOrEmpty(SavePathClient) ||
+                                                             string.IsNullOrEmpty(Name))
+            {
+                Debug.LogError($"保存路径或文件名不能为空，请检查配置");
+                return;
+            }
+            //
+            // using (FileStream file = File.Create($"{SavePathServer}/{this.Name}.bytes"))
+            // {
+            //     BsonSerializer.Serialize(new BsonBinaryWriter(file), SkillDataSupportor_Server);
+            // }
+
+            using (FileStream file = File.Create($"{SavePathClient}/{this.Name}.bytes"))
+            {
+                BsonSerializer.Serialize(new BsonBinaryWriter(file), SkillDataSupportor_Client);
+            }
+
+            Debug.Log($"保存 {"SavePathServer"}/{this.Name}.bytes {SavePathClient}/{this.Name}.bytes 成功");
+        }
+
+        [Button("测试技能树反序列化", 25), GUIColor(0.4f, 0.8f, 1)]
+        public void TestDe()
+        {
+            try
+            {
+                // byte[] mServerfile = File.ReadAllBytes($"{SavePathServer}/{this.Name}.bytes");
+                // if (mServerfile.Length == 0)   Debug.LogError("没有读取到文件");
+                // SkillDataSupportor_ServerDes = BsonSerializer.Deserialize<NP_DataSupportor>(mServerfile);
+                // Debug.LogError($"反序列化 {SavePathServer}/{this.Name}.bytes 成功");
+
+                byte[] mClientfile = File.ReadAllBytes($"{SavePathClient}/{this.Name}.bytes");
+                if (mClientfile.Length == 0) Debug.LogError("没有读取到文件");
+                SkillDataSupportor_Client_Des = BsonSerializer.Deserialize<NP_DataSupportor>(mClientfile);
+                Debug.Log($"反序列化 {SavePathClient}/{this.Name}.bytes 成功");
+            }
+            catch (Exception e)
+            {
+                Debug.LogError(e.ToString());
+                throw;
+            }
+        }
+
+
         private void AutoSetSkillData_NodeData(NP_DataSupportor npDataSupportor)
         {
-            if (npDataSupportor.BuffNodeDataDic == null)
-                return;
+            if (npDataSupportor.BuffNodeDataDic == null) return;
             npDataSupportor.BuffNodeDataDic.Clear();
 
             foreach (var node in this.nodes)
@@ -59,55 +106,6 @@ namespace Suture
 
                     npDataSupportor.BuffNodeDataDic.Add(buffNodeDataBase.NodeId.Value, buffNodeDataBase);
                 }
-            }
-        }
-
-
-        [Button("保存技能树信息为二进制文件", 25), GUIColor(0.4f, 0.8f, 1)]
-        public void Save()
-        {
-            if ( /*string.IsNullOrEmpty(SavePathServer) || */string.IsNullOrEmpty(SavePathClient) ||
-                                                             string.IsNullOrEmpty(Name))
-            {
-                Log.Error($"保存路径或文件名不能为空，请检查配置");
-                return;
-            }
-
-            /*    using (FileStream file = File.Create($"{SavePathServer}/{this.Name}.bytes"))
-                {
-                    BsonSerializer.Serialize(new BsonBinaryWriter(file), SkillDataSupportor_Server);
-                }*/
-            
-          
-            
-            using (FileStream file = File.Create($"{SavePathClient}/{this.Name}.bytes"))
-            {
-                BsonSerializer.Serialize(new BsonBinaryWriter(file), SkillDataSupportor_Client);
-            }
-
-
-            Log.Info($"保存 {SavePathServer}/{this.Name}.bytes {SavePathClient}/{this.Name}.bytes 成功");
-        }
-
-        [Button("测试技能树反序列化", 25), GUIColor(0.4f, 0.8f, 1)]
-        public void TestDe()
-        {
-            try
-            {
-                // byte[] mServerfile = File.ReadAllBytes($"{SavePathServer}/{this.Name}.bytes");
-                // if (mServerfile.Length == 0) Log.Info("没有读取到文件");
-                // SkillDataSupportor_ServerDes = BsonSerializer.Deserialize<NP_DataSupportor>(mServerfile);
-                // Log.Info($"反序列化 {SavePathServer}/{this.Name}.bytes 成功");
-
-                byte[] mClientfile = File.ReadAllBytes($"{SavePathClient}/{this.Name}.bytes");
-                if (mClientfile.Length == 0) Log.Info("没有读取到文件");
-                SkillDataSupportor_Client_Des = BsonSerializer.Deserialize<NP_DataSupportor>(mClientfile);
-                Log.Info($"反序列化 {SavePathClient}/{this.Name}.bytes 成功");
-            }
-            catch (Exception e)
-            {
-                Log.Info(e.ToString());
-                throw;
             }
         }
     }

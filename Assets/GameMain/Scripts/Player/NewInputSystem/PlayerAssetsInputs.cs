@@ -11,6 +11,7 @@ public class PlayerAssetsInputs : MonoBehaviour
     public bool jump;
     public bool sprint;
     public bool attack;
+    public bool eDown;
 
     [Header(" 运动设置")] public bool analogMovement;
 
@@ -44,6 +45,11 @@ public class PlayerAssetsInputs : MonoBehaviour
     public void OnAttack(InputValue value)
     {
         AttackInput(value.isPressed);
+    }
+
+    public void OnESkill(InputValue value)
+    {
+        ESkillInput(value.isPressed);
     }
 
 #endif
@@ -81,5 +87,10 @@ public class PlayerAssetsInputs : MonoBehaviour
     private void SetCursorState(bool newState)
     {
         Cursor.lockState = newState ? CursorLockMode.Locked : CursorLockMode.None;
+    }
+
+    public void ESkillInput(bool newEDownState)
+    {
+        eDown = newEDownState;
     }
 }

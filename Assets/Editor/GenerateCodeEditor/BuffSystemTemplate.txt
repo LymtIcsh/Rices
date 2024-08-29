@@ -5,12 +5,16 @@
 //------------------------------------------------------------
 namespace Suture
 {
-    public class _BUFFNAME_System: ABuffSystemBase
+    public class _BUFFNAME_System: ABuffSystemBase<_BUFFNAME_Data>
     {
-        public override void OnExecute()
-        {
-
-            this.BuffState = BuffState.Finished;
-        }
+    #if SERVER
+    
+    
+        #else
+                public override void OnExecute(uint currentFrame)
+                {
+                    
+                }
+        #endif
     }
 }

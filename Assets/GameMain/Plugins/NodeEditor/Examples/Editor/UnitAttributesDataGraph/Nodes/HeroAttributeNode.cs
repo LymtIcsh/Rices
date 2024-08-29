@@ -4,10 +4,10 @@
 // Data: 2021年6月18日 20:19:35
 //------------------------------------------------------------
 
-
+using Suture;
 using GraphProcessor;
 
-namespace Suture
+namespace Plugins.NodeEditor
 {
     [NodeMenuItem("Unit属性数据/英雄属性数据", typeof(UnitAttributesDataGraph))]
     public class HeroAttributeNode: UnitAttributesNodeBase

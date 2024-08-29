@@ -1,0 +1,487 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae41bfa00ed84e27a7a56ed67bd886c4, type: 3}
+  m_Name: AllHeroAttributesData
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: nodes
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[GraphProcessor.BaseNode, com.alelievr.NodeGraphProcessor.Runtime]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 1|Plugins.NodeEditor.HeroAttributeNode, Assembly-CSharp-Editor
+    - Name: nodeCustomName
+      Entry: 1
+      Data: "\u8BFA\u624B\u5C5E\u6027\u6570\u636E\u5757"
+    - Name: GUID
+      Entry: 1
+      Data: 8ef457fa-1dd5-4d1b-bf3a-e2e86d02272e
+    - Name: computeOrder
+      Entry: 3
+      Data: 0
+    - Name: position
+      Entry: 7
+      Data: UnityEngine.Rect, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: 402
+    - Name: 
+      Entry: 4
+      Data: 177
+    - Name: 
+      Entry: 4
+      Data: 168
+    - Name: 
+      Entry: 4
+      Data: 42
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: expanded
+      Entry: 5
+      Data: false
+    - Name: debug
+      Entry: 5
+      Data: false
+    - Name: nodeLock
+      Entry: 5
+      Data: false
+    - Name: HeroArrtibutesData
+      Entry: 7
+      Data: 2|Suture.HeroAttributesNodeData, Assembly-CSharp
+    - Name: UnitDataNodeId
+      Entry: 3
+      Data: 10002
+    - Name: UnitName
+      Entry: 1
+      Data: "\u4E9A\u7D22"
+    - Name: UnitAvatar
+      Entry: 1
+      Data: Darius_Circle_8
+    - Name: OriHP
+      Entry: 4
+      Data: 857
+    - Name: OriHPRec
+      Entry: 4
+      Data: 2.3
+    - Name: OriMagicValue
+      Entry: 4
+      Data: 200
+    - Name: OriMagicRec
+      Entry: 4
+      Data: 1
+    - Name: OriAttackValue
+      Entry: 4
+      Data: 85
+    - Name: OriAttackRange
+      Entry: 4
+      Data: 175
+    - Name: OriMagicStrength
+      Entry: 4
+      Data: 0
+    - Name: OriArmor
+      Entry: 4
+      Data: 34
+    - Name: OriMagicResistance
+      Entry: 4
+      Data: 27
+    - Name: OriMoveSpeed
+      Entry: 4
+      Data: 340
+    - Name: OriAttackPre
+      Entry: 4
+      Data: 0.3
+    - Name: OriAttackSpeed
+      Entry: 4
+      Data: 0.625
+    - Name: OriAttackIncome
+      Entry: 4
+      Data: 1
+    - Name: OriAttackPos
+      Entry: 4
+      Data: 0.6
+    - Name: OriArmorPenetration
+      Entry: 4
+      Data: 0
+    - Name: OriMagicPenetration
+      Entry: 4
+      Data: 0
+    - Name: OriCriticalStrikeProbability
+      Entry: 4
+      Data: 0
+    - Name: OriCriticalStrikeHarm
+      Entry: 4
+      Data: 0
+    - Name: GroHP
+      Entry: 4
+      Data: 100
+    - Name: GroHPRec
+      Entry: 4
+      Data: 0.95
+    - Name: GroMagicValue
+      Entry: 4
+      Data: 10
+    - Name: GroMagicRec
+      Entry: 4
+      Data: 0.35
+    - Name: GroAttackValue
+      Entry: 4
+      Data: 3
+    - Name: GroMagicStrength
+      Entry: 4
+      Data: 0
+    - Name: GroArmor
+      Entry: 4
+      Data: 3
+    - Name: GroMagicResistance
+      Entry: 4
+      Data: 3
+    - Name: GroMoveSpeed
+      Entry: 4
+      Data: 0.02
+    - Name: GroAttackSpeed
+      Entry: 4
+      Data: 0
+    - Name: GroArmorPenetration
+      Entry: 4
+      Data: 0
+    - Name: GroMagicPenetration
+      Entry: 4
+      Data: 0
+    - Name: GroCriticalStrikeProbability
+      Entry: 4
+      Data: 0
+    - Name: GroCriticalStrikeHarm
+      Entry: 4
+      Data: 0
+    - Name: HeroProfession
+      Entry: 3
+      Data: 132
+    - Name: Talent_SkillSprite
+      Entry: 1
+      Data: Darius_Icon_Hemorrhage
+    - Name: Q_SkillSprite
+      Entry: 1
+      Data: Darius_Icon_Decimate
+    - Name: W_SkillSprite
+      Entry: 1
+      Data: Darius_Icon_Hamstring
+    - Name: E_SkillSprite
+      Entry: 1
+      Data: Darius_Icon_Axe_Grab
+    - Name: R_SkillSprite
+      Entry: 1
+      Data: Darius_Icon_Sudden_Death
+    - Name: LevelUpExp
+      Entry: 7
+      Data: 3|System.Collections.Generic.Dictionary`2[[System.Int32, mscorlib],[System.Int32,
+        mscorlib]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 4|System.Collections.Generic.GenericEqualityComparer`1[[System.Int32,
+        mscorlib]], mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 16
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 1
+    - Name: $v
+      Entry: 3
+      Data: 100
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 2
+    - Name: $v
+      Entry: 3
+      Data: 200
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 3
+    - Name: $v
+      Entry: 3
+      Data: 300
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 4
+    - Name: $v
+      Entry: 3
+      Data: 500
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 5
+    - Name: $v
+      Entry: 3
+      Data: 700
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 6
+    - Name: $v
+      Entry: 3
+      Data: 900
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 7
+    - Name: $v
+      Entry: 3
+      Data: 1200
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 8
+    - Name: $v
+      Entry: 3
+      Data: 1500
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 9
+    - Name: $v
+      Entry: 3
+      Data: 1800
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 10
+    - Name: $v
+      Entry: 3
+      Data: 2100
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 11
+    - Name: $v
+      Entry: 3
+      Data: 2400
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 12
+    - Name: $v
+      Entry: 3
+      Data: 2800
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 13
+    - Name: $v
+      Entry: 3
+      Data: 3300
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 14
+    - Name: $v
+      Entry: 3
+      Data: 3800
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 15
+    - Name: $v
+      Entry: 3
+      Data: 4300
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 16
+    - Name: $v
+      Entry: 3
+      Data: 4800
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: groups
+      Entry: 7
+      Data: 5|System.Collections.Generic.List`1[[GraphProcessor.Group, com.alelievr.NodeGraphProcessor.Runtime]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: m_TestDic
+      Entry: 7
+      Data: 6|Suture.UnitAttributesDataSupportor, Assembly-CSharp
+    - Name: SupportId
+      Entry: 3
+      Data: 10002
+    - Name: UnitAttributesDataSupportorDic
+      Entry: 7
+      Data: 7|System.Collections.Generic.Dictionary`2[[System.Int64, mscorlib],[Suture.UnitAttributesNodeDataBase,
+        Assembly-CSharp]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 8|System.Collections.Generic.GenericEqualityComparer`1[[System.Int64,
+        mscorlib]], mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 10002
+    - Name: $v
+      Entry: 9
+      Data: 2
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  serializedNodes: []
+  edges: []
+  stackNodes: []
+  pinnedElements: []
+  exposedParameters: []
+  serializedParameterList: []
+  stickyNotes: []
+  position: {x: 0, y: 0, z: 0}
+  scale: {x: 1, y: 1, z: 1}
+  Name: AllHeroAttributesData
+  SavePath: Assets/GameMain/Configs/UnitAttributesDatas
+  references:
+    version: 2
+    RefIds: []

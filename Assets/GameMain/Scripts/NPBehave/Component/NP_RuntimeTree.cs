@@ -18,6 +18,12 @@ namespace Suture
             Id = id;
         }
         
+        public NP_RuntimeTree(long id, NP_SyncComponent NpSyncComponent)
+        {
+            Id = id;
+            this.NpSyncComponent = NpSyncComponent;
+        }
+        
         public long Id;
         
         /// <summary>
@@ -35,10 +41,11 @@ namespace Suture
         /// </summary>
         public Entity BelongToUnit;
         
+        public NP_SyncComponent NpSyncComponent;
         
         public Clock GetClock()
         {
-            return UnityContext.GetClock();
+            return NpSyncComponent.SyncContext.GetClock();
         }
         
         /// <summary>
@@ -97,7 +104,6 @@ namespace Suture
             this.m_RootNode = null;
             this.BelongNP_DataSupportor = null;
         }
-
-
+        
     }
 }

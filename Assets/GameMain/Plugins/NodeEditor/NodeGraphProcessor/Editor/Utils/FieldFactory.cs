@@ -10,7 +10,6 @@ using System.Globalization;
 
 namespace GraphProcessor
 {
-	[Obsolete("Field Factory is not necessary anymore. You can use a SerializedProperty directly instead.")]
 	public static class FieldFactory
 	{
 		static readonly Dictionary< Type, Type >    fieldDrawers = new Dictionary< Type, Type >();
@@ -19,9 +18,9 @@ namespace GraphProcessor
 
 		static FieldFactory()
 		{
-			foreach (var type in AppDomain.CurrentDomain.GetAllTypes())
+			foreach (var type in UtilityRefelection.GetAllTypes())
 			{
-				var drawerAttribute = type.GetCustomAttributes(typeof(FieldDrawerAttribute), false).FirstOrDefault() as FieldDrawerAttribute;
+				UtilityAttribute.TryGetTypeAttribute(type, out FieldDrawerAttribute drawerAttribute);
 
 				if (drawerAttribute == null)
 					continue ;
@@ -79,7 +78,8 @@ namespace GraphProcessor
 
 			if (drawerType == null)
 			{
-				Debug.LogWarning("Can't find field drawer for type: " + t);
+				//TODO 不需要这个LogWarning
+				//Debug.LogWarning("Can't find field drawer for type: " + t);
 				return null;
 			}
 

@@ -1,0 +1,1529 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73d443753b8c4de0b1884e55b9c84517, type: 3}
+  m_Name: SkillGraph
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: nodes
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[GraphProcessor.BaseNode, com.alelievr.NodeGraphProcessor.Runtime]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 8
+    - Name: 
+      Entry: 7
+      Data: 1|Plugins.NodeEditor.NP_RootNode, Assembly-CSharp-Editor
+    - Name: nodeCustomName
+      Entry: 6
+      Data: 
+    - Name: GUID
+      Entry: 1
+      Data: 61abd93b-594e-40a1-8738-c253245fa579
+    - Name: computeOrder
+      Entry: 3
+      Data: 0
+    - Name: position
+      Entry: 7
+      Data: UnityEngine.Rect, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: 243
+    - Name: 
+      Entry: 4
+      Data: 77
+    - Name: 
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: expanded
+      Entry: 5
+      Data: false
+    - Name: debug
+      Entry: 5
+      Data: false
+    - Name: nodeLock
+      Entry: 5
+      Data: false
+    - Name: Level
+      Entry: 3
+      Data: 0
+    - Name: NextNode
+      Entry: 6
+      Data: 
+    - Name: MRootNodeData
+      Entry: 7
+      Data: 2|Suture.NP_RootNodeData, Assembly-CSharp
+    - Name: id
+      Entry: 3
+      Data: 10002
+    - Name: LinkedIds
+      Entry: 7
+      Data: 3|System.Collections.Generic.List`1[[System.Int64, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 3
+      Data: 2527207272917041159
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: NodeDes
+      Entry: 6
+      Data: 
+    - Name: m_Root
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 4|Plugins.NodeEditor.NP_BlackboardConditionNode, Assembly-CSharp-Editor
+    - Name: nodeCustomName
+      Entry: 6
+      Data: 
+    - Name: GUID
+      Entry: 1
+      Data: 202fba38-d2c3-45bd-82db-4077561efd66
+    - Name: computeOrder
+      Entry: 3
+      Data: 1
+    - Name: position
+      Entry: 7
+      Data: UnityEngine.Rect, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: 240.5
+    - Name: 
+      Entry: 4
+      Data: 336
+    - Name: 
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: expanded
+      Entry: 5
+      Data: false
+    - Name: debug
+      Entry: 5
+      Data: false
+    - Name: nodeLock
+      Entry: 5
+      Data: false
+    - Name: Level
+      Entry: 3
+      Data: 0
+    - Name: PrevNode
+      Entry: 6
+      Data: 
+    - Name: NextNode
+      Entry: 6
+      Data: 
+    - Name: NP_BlackboardConditionNodeData
+      Entry: 7
+      Data: 5|Suture.NP_BlackboardConditionNodeData, Assembly-CSharp
+    - Name: id
+      Entry: 3
+      Data: 2527207272917041159
+    - Name: LinkedIds
+      Entry: 7
+      Data: 6|System.Collections.Generic.List`1[[System.Int64, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 3
+      Data: 2527207272917041158
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: NodeDes
+      Entry: 1
+      Data: "\u9ED1\u677F\u6761\u4EF6\u7ED3\u70B9"
+    - Name: Ope
+      Entry: 3
+      Data: 2
+    - Name: Stop
+      Entry: 3
+      Data: 4
+    - Name: NPBalckBoardRelationData
+      Entry: 7
+      Data: 7|Suture.NP_BlackBoardRelationData, Assembly-CSharp
+    - Name: BBkey
+      Entry: 1
+      Data: PlayerInput
+    - Name: NP_BBValueType
+      Entry: 1
+      Data: System.String
+    - Name: WriteOrCompareToBB
+      Entry: 5
+      Data: true
+    - Name: NP_BBValue
+      Entry: 7
+      Data: 8|Suture.NP_BBValue_String, Assembly-CSharp
+    - Name: Value
+      Entry: 1
+      Data: E
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 9|Plugins.NodeEditor.NP_LogActionNode, Assembly-CSharp-Editor
+    - Name: nodeCustomName
+      Entry: 6
+      Data: 
+    - Name: GUID
+      Entry: 1
+      Data: 2b31fa38-3cb6-49c9-b71b-bad077d3d322
+    - Name: computeOrder
+      Entry: 3
+      Data: 4
+    - Name: position
+      Entry: 7
+      Data: UnityEngine.Rect, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 4
+      Data: 738
+    - Name: 
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: expanded
+      Entry: 5
+      Data: false
+    - Name: debug
+      Entry: 5
+      Data: false
+    - Name: nodeLock
+      Entry: 5
+      Data: false
+    - Name: Level
+      Entry: 3
+      Data: 0
+    - Name: PrevNode
+      Entry: 6
+      Data: 
+    - Name: NP_ActionNodeData
+      Entry: 7
+      Data: 10|Suture.NP_ActionNodeData, Assembly-CSharp
+    - Name: id
+      Entry: 3
+      Data: 2527207272917041153
+    - Name: LinkedIds
+      Entry: 7
+      Data: 11|System.Collections.Generic.List`1[[System.Int64, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: NodeDes
+      Entry: 6
+      Data: 
+    - Name: NpClassForStoreAction
+      Entry: 7
+      Data: 12|Suture.NP_LogAction, Assembly-CSharp
+    - Name: BelongToUnit
+      Entry: 6
+      Data: 
+    - Name: BelongtoRuntimeTree
+      Entry: 6
+      Data: 
+    - Name: Action
+      Entry: 6
+      Data: 
+    - Name: Func1
+      Entry: 6
+      Data: 
+    - Name: Func2
+      Entry: 6
+      Data: 
+    - Name: LogInfo
+      Entry: 1
+      Data: "\u6309\u4E0BE"
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 13|Plugins.NodeEditor.NP_ChangeBlackValueActionNode, Assembly-CSharp-Editor
+    - Name: nodeCustomName
+      Entry: 6
+      Data: 
+    - Name: GUID
+      Entry: 1
+      Data: 30039b92-54fd-4d3c-992e-e47c27fb5d38
+    - Name: computeOrder
+      Entry: 3
+      Data: 5
+    - Name: position
+      Entry: 7
+      Data: UnityEngine.Rect, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: 160
+    - Name: 
+      Entry: 4
+      Data: 738
+    - Name: 
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: expanded
+      Entry: 5
+      Data: false
+    - Name: debug
+      Entry: 5
+      Data: false
+    - Name: nodeLock
+      Entry: 5
+      Data: false
+    - Name: Level
+      Entry: 3
+      Data: 0
+    - Name: PrevNode
+      Entry: 6
+      Data: 
+    - Name: NP_ActionNodeData
+      Entry: 7
+      Data: 14|Suture.NP_ActionNodeData, Assembly-CSharp
+    - Name: id
+      Entry: 3
+      Data: 2527207272917041154
+    - Name: LinkedIds
+      Entry: 7
+      Data: 15|System.Collections.Generic.List`1[[System.Int64, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: NodeDes
+      Entry: 6
+      Data: 
+    - Name: NpClassForStoreAction
+      Entry: 7
+      Data: 16|Suture.NP_ChangeBlackValueAction, Assembly-CSharp
+    - Name: BelongToUnit
+      Entry: 6
+      Data: 
+    - Name: BelongtoRuntimeTree
+      Entry: 6
+      Data: 
+    - Name: Action
+      Entry: 6
+      Data: 
+    - Name: Func1
+      Entry: 6
+      Data: 
+    - Name: Func2
+      Entry: 6
+      Data: 
+    - Name: NPBalckBoardRelationData
+      Entry: 7
+      Data: 17|Suture.NP_BlackBoardRelationData, Assembly-CSharp
+    - Name: BBkey
+      Entry: 1
+      Data: PlayerInput
+    - Name: NP_BBValueType
+      Entry: 1
+      Data: System.String
+    - Name: WriteOrCompareToBB
+      Entry: 5
+      Data: true
+    - Name: NP_BBValue
+      Entry: 7
+      Data: 18|Suture.NP_BBValue_String, Assembly-CSharp
+    - Name: Value
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 19|Plugins.NodeEditor.NP_LogActionNode, Assembly-CSharp-Editor
+    - Name: nodeCustomName
+      Entry: 6
+      Data: 
+    - Name: GUID
+      Entry: 1
+      Data: 23cbb2f4-9208-4d8c-927b-630d92f0cee3
+    - Name: computeOrder
+      Entry: 3
+      Data: 6
+    - Name: position
+      Entry: 7
+      Data: UnityEngine.Rect, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: 334
+    - Name: 
+      Entry: 4
+      Data: 738
+    - Name: 
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: expanded
+      Entry: 5
+      Data: false
+    - Name: debug
+      Entry: 5
+      Data: false
+    - Name: nodeLock
+      Entry: 5
+      Data: false
+    - Name: Level
+      Entry: 3
+      Data: 0
+    - Name: PrevNode
+      Entry: 6
+      Data: 
+    - Name: NP_ActionNodeData
+      Entry: 7
+      Data: 20|Suture.NP_ActionNodeData, Assembly-CSharp
+    - Name: id
+      Entry: 3
+      Data: 2527207272917041155
+    - Name: LinkedIds
+      Entry: 7
+      Data: 21|System.Collections.Generic.List`1[[System.Int64, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: NodeDes
+      Entry: 6
+      Data: 
+    - Name: NpClassForStoreAction
+      Entry: 7
+      Data: 22|Suture.NP_LogAction, Assembly-CSharp
+    - Name: BelongToUnit
+      Entry: 6
+      Data: 
+    - Name: BelongtoRuntimeTree
+      Entry: 6
+      Data: 
+    - Name: Action
+      Entry: 6
+      Data: 
+    - Name: Func1
+      Entry: 6
+      Data: 
+    - Name: Func2
+      Entry: 6
+      Data: 
+    - Name: LogInfo
+      Entry: 1
+      Data: "\u91CD\u7F6EE"
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 23|Plugins.NodeEditor.NP_SelectorNode, Assembly-CSharp-Editor
+    - Name: nodeCustomName
+      Entry: 6
+      Data: 
+    - Name: GUID
+      Entry: 1
+      Data: 6a3864ff-5d9b-4c11-85a3-3701d9bc8377
+    - Name: computeOrder
+      Entry: 3
+      Data: 2
+    - Name: position
+      Entry: 7
+      Data: UnityEngine.Rect, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: 253.5
+    - Name: 
+      Entry: 4
+      Data: 470
+    - Name: 
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: expanded
+      Entry: 5
+      Data: false
+    - Name: debug
+      Entry: 5
+      Data: false
+    - Name: nodeLock
+      Entry: 5
+      Data: false
+    - Name: Level
+      Entry: 3
+      Data: 0
+    - Name: PrevNode
+      Entry: 6
+      Data: 
+    - Name: NextNode
+      Entry: 6
+      Data: 
+    - Name: NP_SelectorNodeData
+      Entry: 7
+      Data: 24|Suture.NP_SelectorNodeData, Assembly-CSharp
+    - Name: id
+      Entry: 3
+      Data: 2527207272917041158
+    - Name: LinkedIds
+      Entry: 7
+      Data: 25|System.Collections.Generic.List`1[[System.Int64, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 3
+      Data: 2527207272917041156
+    - Name: 
+      Entry: 3
+      Data: 2527207272917041157
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: NodeDes
+      Entry: 1
+      Data: "\u9009\u62E9\u7EC4\u5408\u5668"
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 26|Plugins.NodeEditor.NP_SequenceNode, Assembly-CSharp-Editor
+    - Name: nodeCustomName
+      Entry: 6
+      Data: 
+    - Name: GUID
+      Entry: 1
+      Data: 4b03ffbf-33f3-4627-a5f5-26a95ffa6f47
+    - Name: computeOrder
+      Entry: 3
+      Data: 3
+    - Name: position
+      Entry: 7
+      Data: UnityEngine.Rect, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: 165
+    - Name: 
+      Entry: 4
+      Data: 604
+    - Name: 
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: expanded
+      Entry: 5
+      Data: false
+    - Name: debug
+      Entry: 5
+      Data: false
+    - Name: nodeLock
+      Entry: 5
+      Data: false
+    - Name: Level
+      Entry: 3
+      Data: 0
+    - Name: PrevNode
+      Entry: 6
+      Data: 
+    - Name: NextNode
+      Entry: 6
+      Data: 
+    - Name: NP_SequenceNodeData
+      Entry: 7
+      Data: 27|Suture.NP_SequenceNodeData, Assembly-CSharp
+    - Name: id
+      Entry: 3
+      Data: 2527207272917041156
+    - Name: LinkedIds
+      Entry: 7
+      Data: 28|System.Collections.Generic.List`1[[System.Int64, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 3
+    - Name: 
+      Entry: 3
+      Data: 2527207272917041153
+    - Name: 
+      Entry: 3
+      Data: 2527207272917041154
+    - Name: 
+      Entry: 3
+      Data: 2527207272917041155
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: NodeDes
+      Entry: 1
+      Data: "\u5E8F\u5217\u7EC4\u5408\u5668"
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 29|Plugins.NodeEditor.NP_ChangeBlackValueActionNode, Assembly-CSharp-Editor
+    - Name: nodeCustomName
+      Entry: 1
+      Data: 
+    - Name: GUID
+      Entry: 1
+      Data: bd1de6fd-d2fb-4416-8455-6bedbecd2979
+    - Name: computeOrder
+      Entry: 3
+      Data: 7
+    - Name: position
+      Entry: 7
+      Data: UnityEngine.Rect, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: 329
+    - Name: 
+      Entry: 4
+      Data: 604
+    - Name: 
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: expanded
+      Entry: 5
+      Data: false
+    - Name: debug
+      Entry: 5
+      Data: false
+    - Name: nodeLock
+      Entry: 5
+      Data: false
+    - Name: Level
+      Entry: 3
+      Data: 0
+    - Name: PrevNode
+      Entry: 6
+      Data: 
+    - Name: NP_ActionNodeData
+      Entry: 7
+      Data: 30|Suture.NP_ActionNodeData, Assembly-CSharp
+    - Name: id
+      Entry: 3
+      Data: 2527207272917041157
+    - Name: LinkedIds
+      Entry: 7
+      Data: 31|System.Collections.Generic.List`1[[System.Int64, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: NodeDes
+      Entry: 6
+      Data: 
+    - Name: NpClassForStoreAction
+      Entry: 7
+      Data: 32|Suture.NP_ChangeBlackValueAction, Assembly-CSharp
+    - Name: BelongToUnit
+      Entry: 6
+      Data: 
+    - Name: BelongtoRuntimeTree
+      Entry: 6
+      Data: 
+    - Name: Action
+      Entry: 6
+      Data: 
+    - Name: Func1
+      Entry: 6
+      Data: 
+    - Name: Func2
+      Entry: 6
+      Data: 
+    - Name: NPBalckBoardRelationData
+      Entry: 7
+      Data: 33|Suture.NP_BlackBoardRelationData, Assembly-CSharp
+    - Name: BBkey
+      Entry: 1
+      Data: PlayerInput
+    - Name: NP_BBValueType
+      Entry: 1
+      Data: System.String
+    - Name: WriteOrCompareToBB
+      Entry: 5
+      Data: true
+    - Name: NP_BBValue
+      Entry: 7
+      Data: 34|Suture.NP_BBValue_String, Assembly-CSharp
+    - Name: Value
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: groups
+      Entry: 7
+      Data: 35|System.Collections.Generic.List`1[[GraphProcessor.Group, com.alelievr.NodeGraphProcessor.Runtime]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: NpDataSupportor_Client
+      Entry: 7
+      Data: 36|Suture.NP_DataSupportorBase, Assembly-CSharp
+    - Name: NPBehaveTreeDataId
+      Entry: 3
+      Data: 10002
+    - Name: NP_DataSupportorDic
+      Entry: 7
+      Data: 37|System.Collections.Generic.Dictionary`2[[System.Int64, mscorlib],[Suture.NP_NodeDataBase,
+        Assembly-CSharp]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 38|System.Collections.Generic.GenericEqualityComparer`1[[System.Int64,
+        mscorlib]], mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 8
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 2527207272917041153
+    - Name: $v
+      Entry: 9
+      Data: 10
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 2527207272917041154
+    - Name: $v
+      Entry: 9
+      Data: 14
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 2527207272917041155
+    - Name: $v
+      Entry: 9
+      Data: 20
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 2527207272917041156
+    - Name: $v
+      Entry: 9
+      Data: 27
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 2527207272917041157
+    - Name: $v
+      Entry: 9
+      Data: 30
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 2527207272917041158
+    - Name: $v
+      Entry: 9
+      Data: 24
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 2527207272917041159
+    - Name: $v
+      Entry: 9
+      Data: 5
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 10002
+    - Name: $v
+      Entry: 9
+      Data: 2
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: NP_BBValueManager
+      Entry: 7
+      Data: 39|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[Suture.ANP_BBValue,
+        Assembly-CSharp]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 40|System.Collections.Generic.GenericEqualityComparer`1[[System.String,
+        mscorlib]], mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: PlayerInput
+    - Name: $v
+      Entry: 7
+      Data: 41|Suture.NP_BBValue_String, Assembly-CSharp
+    - Name: Value
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: NpDataSupportor_Client_Des
+      Entry: 7
+      Data: 42|Suture.NP_DataSupportorBase, Assembly-CSharp
+    - Name: NPBehaveTreeDataId
+      Entry: 3
+      Data: 0
+    - Name: NP_DataSupportorDic
+      Entry: 7
+      Data: 43|System.Collections.Generic.Dictionary`2[[System.Int64, mscorlib],[Suture.NP_NodeDataBase,
+        Assembly-CSharp]], mscorlib
+    - Name: comparer
+      Entry: 9
+      Data: 38
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: NP_BBValueManager
+      Entry: 7
+      Data: 44|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[Suture.ANP_BBValue,
+        Assembly-CSharp]], mscorlib
+    - Name: comparer
+      Entry: 9
+      Data: 40
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: NpDataSupportor_Server
+      Entry: 7
+      Data: 45|Suture.NP_DataSupportorBase, Assembly-CSharp
+    - Name: NPBehaveTreeDataId
+      Entry: 3
+      Data: 10002
+    - Name: NP_DataSupportorDic
+      Entry: 7
+      Data: 46|System.Collections.Generic.Dictionary`2[[System.Int64, mscorlib],[Suture.NP_NodeDataBase,
+        Assembly-CSharp]], mscorlib
+    - Name: comparer
+      Entry: 9
+      Data: 38
+    - Name: 
+      Entry: 12
+      Data: 8
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 2527203063849091089
+    - Name: $v
+      Entry: 9
+      Data: 10
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 2527203063849091090
+    - Name: $v
+      Entry: 9
+      Data: 14
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 2527203063849091091
+    - Name: $v
+      Entry: 9
+      Data: 20
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 2527203063849091092
+    - Name: $v
+      Entry: 9
+      Data: 27
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 2527203063849091093
+    - Name: $v
+      Entry: 9
+      Data: 30
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 2527203063849091094
+    - Name: $v
+      Entry: 9
+      Data: 24
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 2527203063849091095
+    - Name: $v
+      Entry: 9
+      Data: 5
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 10002
+    - Name: $v
+      Entry: 9
+      Data: 2
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: NP_BBValueManager
+      Entry: 7
+      Data: 47|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[Suture.ANP_BBValue,
+        Assembly-CSharp]], mscorlib
+    - Name: comparer
+      Entry: 9
+      Data: 40
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: PlayerInput
+    - Name: $v
+      Entry: 9
+      Data: 41
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: NpDataSupportor_Server_Des
+      Entry: 7
+      Data: 48|Suture.NP_DataSupportorBase, Assembly-CSharp
+    - Name: NPBehaveTreeDataId
+      Entry: 3
+      Data: 0
+    - Name: NP_DataSupportorDic
+      Entry: 7
+      Data: 49|System.Collections.Generic.Dictionary`2[[System.Int64, mscorlib],[Suture.NP_NodeDataBase,
+        Assembly-CSharp]], mscorlib
+    - Name: comparer
+      Entry: 9
+      Data: 38
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: NP_BBValueManager
+      Entry: 7
+      Data: 50|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[Suture.ANP_BBValue,
+        Assembly-CSharp]], mscorlib
+    - Name: comparer
+      Entry: 9
+      Data: 40
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: NpBlackBoardDataManager
+      Entry: 7
+      Data: 51|Suture.NP_BlackBoardDataManager, Assembly-CSharp
+    - Name: BBValues
+      Entry: 7
+      Data: 52|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[Suture.ANP_BBValue,
+        Assembly-CSharp]], mscorlib
+    - Name: comparer
+      Entry: 9
+      Data: 40
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: PlayerInput
+    - Name: $v
+      Entry: 9
+      Data: 41
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: EventValues
+      Entry: 7
+      Data: 53|System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: Ids
+      Entry: 7
+      Data: 54|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[System.Int64,
+        mscorlib]], mscorlib
+    - Name: comparer
+      Entry: 9
+      Data: 40
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: SkillDataSupportor_Client
+      Entry: 7
+      Data: 55|Suture.NP_DataSupportor, Assembly-CSharp
+    - Name: BuffNodeDataDic
+      Entry: 7
+      Data: 56|System.Collections.Generic.Dictionary`2[[System.Int64, mscorlib],[Suture.BuffNodeDataBase,
+        Assembly-CSharp]], mscorlib
+    - Name: comparer
+      Entry: 9
+      Data: 38
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: NpDataSupportorBase
+      Entry: 9
+      Data: 36
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: SkillDataSupportor_Client_Des
+      Entry: 7
+      Data: 57|Suture.NP_DataSupportor, Assembly-CSharp
+    - Name: BuffNodeDataDic
+      Entry: 7
+      Data: 58|System.Collections.Generic.Dictionary`2[[System.Int64, mscorlib],[Suture.BuffNodeDataBase,
+        Assembly-CSharp]], mscorlib
+    - Name: comparer
+      Entry: 9
+      Data: 38
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: NpDataSupportorBase
+      Entry: 7
+      Data: 59|Suture.NP_DataSupportorBase, Assembly-CSharp
+    - Name: NPBehaveTreeDataId
+      Entry: 3
+      Data: 0
+    - Name: NP_DataSupportorDic
+      Entry: 7
+      Data: 60|System.Collections.Generic.Dictionary`2[[System.Int64, mscorlib],[Suture.NP_NodeDataBase,
+        Assembly-CSharp]], mscorlib
+    - Name: comparer
+      Entry: 9
+      Data: 38
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: NP_BBValueManager
+      Entry: 7
+      Data: 61|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[Suture.ANP_BBValue,
+        Assembly-CSharp]], mscorlib
+    - Name: comparer
+      Entry: 9
+      Data: 40
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: SkillDataSupportor_Server
+      Entry: 7
+      Data: 62|Suture.NP_DataSupportor, Assembly-CSharp
+    - Name: BuffNodeDataDic
+      Entry: 7
+      Data: 63|System.Collections.Generic.Dictionary`2[[System.Int64, mscorlib],[Suture.BuffNodeDataBase,
+        Assembly-CSharp]], mscorlib
+    - Name: comparer
+      Entry: 9
+      Data: 38
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: NpDataSupportorBase
+      Entry: 9
+      Data: 45
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: SkillDataSupportor_ServerDes
+      Entry: 7
+      Data: 64|Suture.NP_DataSupportor, Assembly-CSharp
+    - Name: BuffNodeDataDic
+      Entry: 7
+      Data: 65|System.Collections.Generic.Dictionary`2[[System.Int64, mscorlib],[Suture.BuffNodeDataBase,
+        Assembly-CSharp]], mscorlib
+    - Name: comparer
+      Entry: 9
+      Data: 38
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: NpDataSupportorBase
+      Entry: 7
+      Data: 66|Suture.NP_DataSupportorBase, Assembly-CSharp
+    - Name: NPBehaveTreeDataId
+      Entry: 3
+      Data: 0
+    - Name: NP_DataSupportorDic
+      Entry: 7
+      Data: 67|System.Collections.Generic.Dictionary`2[[System.Int64, mscorlib],[Suture.NP_NodeDataBase,
+        Assembly-CSharp]], mscorlib
+    - Name: comparer
+      Entry: 9
+      Data: 38
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: NP_BBValueManager
+      Entry: 7
+      Data: 68|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[Suture.ANP_BBValue,
+        Assembly-CSharp]], mscorlib
+    - Name: comparer
+      Entry: 9
+      Data: 40
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  serializedNodes: []
+  edges:
+  - GUID: b20835a3-b5b1-4ab2-bd0f-ec144f240a8e
+    owner: {fileID: 11400000}
+    inputNodeGUID: 6a3864ff-5d9b-4c11-85a3-3701d9bc8377
+    outputNodeGUID: 202fba38-d2c3-45bd-82db-4077561efd66
+    inputFieldName: PrevNode
+    outputFieldName: NextNode
+    inputPortIdentifier: 
+    outputPortIdentifier: 
+  - GUID: 92171868-c4f9-4e0b-a24b-cbede7ea4fc3
+    owner: {fileID: 11400000}
+    inputNodeGUID: 4b03ffbf-33f3-4627-a5f5-26a95ffa6f47
+    outputNodeGUID: 6a3864ff-5d9b-4c11-85a3-3701d9bc8377
+    inputFieldName: PrevNode
+    outputFieldName: NextNode
+    inputPortIdentifier: 
+    outputPortIdentifier: 
+  - GUID: 979056fc-2344-4d19-ab9a-cb06e00b6a0d
+    owner: {fileID: 11400000}
+    inputNodeGUID: 2b31fa38-3cb6-49c9-b71b-bad077d3d322
+    outputNodeGUID: 4b03ffbf-33f3-4627-a5f5-26a95ffa6f47
+    inputFieldName: PrevNode
+    outputFieldName: NextNode
+    inputPortIdentifier: 
+    outputPortIdentifier: 
+  - GUID: 0f0fe249-11c4-4ca6-830a-c2e9ec284f7f
+    owner: {fileID: 11400000}
+    inputNodeGUID: 30039b92-54fd-4d3c-992e-e47c27fb5d38
+    outputNodeGUID: 4b03ffbf-33f3-4627-a5f5-26a95ffa6f47
+    inputFieldName: PrevNode
+    outputFieldName: NextNode
+    inputPortIdentifier: 
+    outputPortIdentifier: 
+  - GUID: b23655e0-f949-4108-8486-17b25c8d95ea
+    owner: {fileID: 11400000}
+    inputNodeGUID: 23cbb2f4-9208-4d8c-927b-630d92f0cee3
+    outputNodeGUID: 4b03ffbf-33f3-4627-a5f5-26a95ffa6f47
+    inputFieldName: PrevNode
+    outputFieldName: NextNode
+    inputPortIdentifier: 
+    outputPortIdentifier: 
+  - GUID: a529563d-d7a3-41f3-800e-3216465eac39
+    owner: {fileID: 11400000}
+    inputNodeGUID: bd1de6fd-d2fb-4416-8455-6bedbecd2979
+    outputNodeGUID: 6a3864ff-5d9b-4c11-85a3-3701d9bc8377
+    inputFieldName: PrevNode
+    outputFieldName: NextNode
+    inputPortIdentifier: 
+    outputPortIdentifier: 
+  - GUID: c3010c48-cf35-44aa-87b3-ddf5a6440161
+    owner: {fileID: 11400000}
+    inputNodeGUID: 202fba38-d2c3-45bd-82db-4077561efd66
+    outputNodeGUID: 61abd93b-594e-40a1-8738-c253245fa579
+    inputFieldName: PrevNode
+    outputFieldName: NextNode
+    inputPortIdentifier: 
+    outputPortIdentifier: 
+  stackNodes: []
+  pinnedElements: []
+  exposedParameters: []
+  serializedParameterList: []
+  stickyNotes: []
+  position: {x: 426, y: 66, z: 0}
+  scale: {x: 0.7561437, y: 0.7561437, z: 1}
+  Name: S
+  IdInConfig: 10002
+  SavePathClient: Assets/GameMain/Configs/SkillConfig
+  references:
+    version: 2
+    RefIds: []

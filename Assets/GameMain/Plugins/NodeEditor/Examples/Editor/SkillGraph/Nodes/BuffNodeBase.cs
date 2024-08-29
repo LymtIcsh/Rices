@@ -1,9 +1,17 @@
-﻿using GraphProcessor;
+//------------------------------------------------------------
+// Author: 烟雨迷离半世殇
+// Mail: 1778139321@qq.com
+// Data: 2019年9月23日 18:36:38
+//------------------------------------------------------------
+
+using Suture;
+using GraphProcessor;
+using UnityEditor;
 using UnityEngine;
 
-namespace Suture
+namespace Plugins.NodeEditor
 {
-    public class BuffNodeBase:BaseNode
+    public class BuffNodeBase: BaseNode
     {
         [Input("InputBuff", allowMultiple = true)]
         [HideInInspector]
@@ -15,18 +23,11 @@ namespace Suture
 
         public override Color color => Color.green;
 
-        /// <summary>
-        /// 自动添加链接buff
-        /// </summary>
         public virtual void AutoAddLinkedBuffs()
         {
             
         }
         
-        /// <summary>
-        /// 获取Buff节点数据
-        /// </summary>
-        /// <returns></returns>
         public virtual BuffNodeDataBase GetBuffNodeData()
         {
             return null;

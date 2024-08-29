@@ -19,6 +19,8 @@ namespace GraphProcessor
     //     protected VisualElement selectedNodeList;
     //     protected VisualElement placeholder;
     //
+    //     Dictionary<BaseNode, VisualElement> nodeInspectorCache = new Dictionary<BaseNode, VisualElement>();
+    //
     //     protected virtual void OnEnable()
     //     {
     //         inspector = target as NodeInspectorObject;
@@ -72,28 +74,28 @@ namespace GraphProcessor
     /// </summary>
     public class NodeInspectorObject : SerializedScriptableObject
     {
-        /// <summary>Previously selected object by the inspector</summary>
-        public Object previouslySelectedObject;
-
         /// <summary>List of currently selected nodes</summary>
-        public HashSet<BaseNodeView> selectedNodes  = new HashSet<BaseNodeView>();
-
-        /// <summary>Triggered when the selection is updated</summary>
-        public event Action nodeSelectionUpdated;
-
-        /// <summary>Updates the selection from the graph</summary>
-        public virtual void UpdateSelectedNodes(HashSet<BaseNodeView> views)
-        {
-            selectedNodes = views;
-            nodeSelectionUpdated?.Invoke();
-        }
-
-        public virtual void RefreshNodes() => nodeSelectionUpdated?.Invoke();
+        public List<BaseNodeView> selectedNodes = new List<BaseNodeView>();
 
         public virtual void NodeViewRemoved(BaseNodeView view)
         {
             selectedNodes.Remove(view);
-            nodeSelectionUpdated?.Invoke();
+        }
+    }
+
+    /// <summary>
+    /// 手动清理NodeInspectorObject，防止出现编辑已经非法的数据，因为NodeView是每次重新编译/PlayMode后重新构建的
+    /// 所以如果这里不做清理在重新编译/PlayMode后编辑的就是已经失效的数据
+    /// </summary>
+    public class ResetSelectNodeInfo : Editor
+    {
+        [InitializeOnLoadMethod]
+        public static void _ResetSelectNodeInfo()
+        {
+            if (Selection.activeObject is NodeInspectorObject nodeInspectorObject)
+            {
+                nodeInspectorObject.selectedNodes.Clear();
+            }
         }
     }
 }

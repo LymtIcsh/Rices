@@ -36,76 +36,82 @@ namespace Suture
         /// <returns></returns>
         public static NP_RuntimeTree CreateNpRuntimeTree(TargetableObject unit, long nPDataId)
         {
-            // NP_DataSupportor npDataSupportor = unit.Entity.GetComponent<NP_TreeDataRepositoryComponent>()
-              //  .GetNP_TreeData_DeepCopyBBValuesOnly(nPDataId);
-              TextAsset textAsset =
-                  AssetDatabase.LoadAssetAtPath<TextAsset>(
-                      "Assets/GameMain/Configs/SkillConfig/TextQ.bytes");
-              NP_DataSupportor npDataSupportor = BsonSerializer.Deserialize<NP_DataSupportor>(textAsset.bytes);
+            NP_DataSupportor npDataSupportor = GameEntry.NP_TreeDataRepository
+                .GetNP_TreeData_DeepCopyBBValuesOnly(nPDataId);
+            // TextAsset textAsset =
+            //     AssetDatabase.LoadAssetAtPath<TextAsset>(
+            //         "Assets/GameMain/Configs/SkillConfig/S.bytes");
+            // NP_DataSupportor npDataSupportor = BsonSerializer.Deserialize<NP_DataSupportor>(textAsset.bytes);
+
 
             NP_RuntimeTreeManager npRuntimeTreeManager = unit.GetComponent<NP_RuntimeTreeManager>();
             long rootId = npDataSupportor.NpDataSupportorBase.NPBehaveTreeDataId;
 
-            NP_RuntimeTree tempTree = new NP_RuntimeTree( rootId + unit.Id);
-            tempTree.AddChildWithId(npDataSupportor,unit);
-            
-            
+            NP_RuntimeTree tempTree = new NP_RuntimeTree(rootId + unit.Id,
+                unit.GetComponent<NP_SyncComponent>());
+
+            //   tempTree.BelongToUnit = unit;
+
+            tempTree.AddChildWithId(npDataSupportor, unit);
+
+
             npRuntimeTreeManager.AddTree(tempTree.Id, rootId, tempTree);
-            
-            
+
+
             //Log.Info($"运行时id为{theRuntimeTreeID}");
             //配置节点数据
             foreach (var nodeDateBase in npDataSupportor.NpDataSupportorBase.NP_DataSupportorDic)
             {
-
                 switch (NPNodeRegister[nodeDateBase.Value.GetType()])
                 {
-                        case NodeType.Task:
-                            try
+                    case NodeType.Task:
+                        try
+                        {
+                            nodeDateBase.Value.CreateTask(unit, tempTree);
+                        }
+                        catch (Exception e)
+                        {
+                            Log.Error($"{e}-----{nodeDateBase.Value.NodeDes}");
+                            throw;
+                        }
+
+                        break;
+                    case NodeType.Decorator:
+                        try
+                        {
+                            nodeDateBase.Value.CreateDecoratorNode(unit, tempTree,
+                                npDataSupportor.NpDataSupportorBase.NP_DataSupportorDic[nodeDateBase.Value.LinkedIds[0]]
+                                    .NP_GetNode());
+                        }
+                        catch (Exception e)
+                        {
+                            Log.Error($"{e}-----{nodeDateBase.Value.NodeDes}");
+                            throw;
+                        }
+
+                        break;
+                    case NodeType.Composite:
+                        try
+                        {
+                            List<Node> temp = new List<Node>();
+                            foreach (var linkedId in nodeDateBase.Value.LinkedIds)
                             {
-                                nodeDateBase.Value.CreateTask(unit, tempTree);
-                            }
-                            catch (Exception e)
-                            {
-                                Log.Error($"{e}-----{nodeDateBase.Value.NodeDes}");
-                                throw;
-                            }
-                            break;
-                        case NodeType.Decorator:
-                            try
-                            {
-                                nodeDateBase.Value.CreateDecoratorNode(unit, tempTree,
-                                    npDataSupportor.NpDataSupportorBase.NP_DataSupportorDic[nodeDateBase.Value.LinkedIds[0]]
-                                        .NP_GetNode());
-                            }
-                            catch (Exception e)
-                            {
-                                Log.Error($"{e}-----{nodeDateBase.Value.NodeDes}");
-                                throw;
+                                temp.Add(npDataSupportor.NpDataSupportorBase.NP_DataSupportorDic[linkedId]
+                                    .NP_GetNode());
                             }
 
-                            break;
-                        case NodeType.Composite:
-                            try
-                            {
-                                List<Node> temp = new List<Node>();
-                                foreach (var linkedId in nodeDateBase.Value.LinkedIds)
-                                {
-                                    temp.Add(npDataSupportor.NpDataSupportorBase.NP_DataSupportorDic[linkedId]
-                                        .NP_GetNode());
-                                }
+                            nodeDateBase.Value.CreateComposite(temp.ToArray());
+                        }
+                        catch (Exception e)
+                        {
+                            Log.Error($"{e}-----{nodeDateBase.Value.NodeDes}");
+                            throw;
+                        }
 
-                                nodeDateBase.Value.CreateComposite(temp.ToArray());
-                            }
-                            catch (Exception e)
-                            {
-                                Log.Error($"{e}-----{nodeDateBase.Value.NodeDes}");
-                                 throw;
-                            }
-
-                            break;
+                        break;
                 }
             }
+
             //配置根结点
             tempTree.SetRootNode(npDataSupportor.NpDataSupportorBase.NP_DataSupportorDic[rootId].NP_GetNode() as Root);
 
@@ -113,7 +119,7 @@ namespace Suture
             Dictionary<string, ANP_BBValue> bbvaluesManager = tempTree.GetBlackboard().GetDatas();
             foreach (var bbValues in npDataSupportor.NpDataSupportorBase.NP_BBValueManager)
             {
-                bbvaluesManager.Add(bbValues.Key,bbValues.Value);
+                bbvaluesManager.Add(bbValues.Key, bbValues.Value);
             }
 
             return tempTree;
@@ -126,10 +132,11 @@ namespace Suture
         /// <param name="nPDataId">行为树数据id</param>
         /// <param name="belongToSkillId">归属的SkillId,一般来说需要从excel表中读取</param>
         /// <returns></returns>
-        public static NP_RuntimeTree CreateSkillNpRuntimeTree(TargetableObject unit, long nPDataId, long belongToSkillId)
+        public static NP_RuntimeTree CreateSkillNpRuntimeTree(TargetableObject unit, long nPDataId,
+            long belongToSkillId)
         {
             NP_RuntimeTree result = CreateNpRuntimeTree(unit, nPDataId);
-            unit.GetComponent<SkillCanvasManagerComponent>().AddSkillCanvas(belongToSkillId,result);
+            unit.GetComponent<SkillCanvasManagerComponent>().AddSkillCanvas(belongToSkillId, result);
             return result;
         }
     }

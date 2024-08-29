@@ -7,26 +7,33 @@ using System.Reflection;
 using System;
 using System.Collections;
 using System.Linq;
+using Sirenix.OdinInspector;
 using UnityEditor.UIElements;
-using System.Text.RegularExpressions;
 
 using Status = UnityEngine.UIElements.DropdownMenuAction.Status;
 using NodeView = UnityEditor.Experimental.GraphView.Node;
 
 namespace GraphProcessor
 {
-	[NodeCustomEditor(typeof(BaseNode))]
+	[BoxGroup]
+	[HideLabel]
+	[HideReferenceObjectPicker]
 	public class BaseNodeView : NodeView
 	{
+		//TODO 当前更新模式是只要此BaseNode数据发生变化，就全量更新其对应NodeView的所有数据，后续出现卡顿可以考虑去掉这个特性
+		[OnValueChanged(nameof(UpdateFieldValues), true)]
 		public BaseNode							nodeTarget;
 
+		[HideInInspector]
 		public List< PortView >					inputPortViews = new List< PortView >();
+		[HideInInspector]
 		public List< PortView >					outputPortViews = new List< PortView >();
 
 		public BaseGraphView					owner { private set; get; }
 
 		protected Dictionary< string, List< PortView > > portsPerFieldName = new Dictionary< string, List< PortView > >();
 
+		[HideInInspector]
         public VisualElement 					controlsContainer;
 		protected VisualElement					debugContainer;
 		protected VisualElement					rightTitleContainer;
@@ -46,6 +53,7 @@ namespace GraphProcessor
 
 		protected virtual bool					hasSettings { get; set; }
 
+		[HideInInspector]
         public bool								initializing = false; //Used for applying SetPosition on locked node at init.
 
         readonly string							baseNodeStyle = "GraphProcessorStyles/BaseNodeView";
@@ -134,6 +142,7 @@ namespace GraphProcessor
 
 			rightTitleContainer = new VisualElement{ name = "RightTitleContainer" };
 			titleContainer.Add(rightTitleContainer);
+			titleContainer.Insert(0, new VisualElement(){ name = "NodeIcon_Action" });
 
 			topPortContainer = new VisualElement { name = "TopPortContainer" };
 			this.Insert(0, topPortContainer);
@@ -234,6 +243,11 @@ namespace GraphProcessor
 			title = (nodeTarget.GetCustomName() == null) ? nodeTarget.GetType().Name : nodeTarget.GetCustomName();
 		}
 
+		public void UpdateNodeSerializedPropertyBindings()
+		{
+
+		}
+
 		void InitializeSettings()
 		{
 			// Initialize settings button:
@@ -248,7 +262,7 @@ namespace GraphProcessor
 				settingsContainer.Add(settings);
 				Add(settingsContainer);
 				
-				var fields = nodeTarget.GetType().GetFields(BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance);
+				var fields = nodeTarget.GetType().GetFields(BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance | BindingFlags.DeclaredOnly);
 
 				foreach(var field in fields)
 					if(field.GetCustomAttribute(typeof(SettingAttribute)) != null) 
@@ -263,21 +277,6 @@ namespace GraphProcessor
 				var settingsButtonLayout = settingButton.ChangeCoordinatesTo(settingsContainer.parent, settingButton.layout);
 				settingsContainer.style.top = settingsButtonLayout.yMax - 18f;
 				settingsContainer.style.left = settingsButtonLayout.xMin - layout.width + 20f;
-			}
-		}
-
-		// Workaround for bug in GraphView that makes the node selection border way too big
-		VisualElement selectionBorder, nodeBorder;
-		internal void EnableSyncSelectionBorderHeight()
-		{
-			if (selectionBorder == null || nodeBorder == null)
-			{
-				selectionBorder = this.Q("selection-border");
-				nodeBorder = this.Q("node-border");
-
-				schedule.Execute(() => {
-					selectionBorder.style.height = nodeBorder.localBound.height;
-				}).Every(17);
 			}
 		}
 		
@@ -548,23 +547,7 @@ namespace GraphProcessor
 				selectedNode.SetPosition(GetNodeRect(selectedNode, top: selectedNodesFarBottom - selectedNode.localBound.size.y));
 			}
 		}
-
-		public void OpenNodeViewScript()
-		{
-			var script = NodeProvider.GetNodeViewScript(GetType());
-
-			if (script != null)
-				AssetDatabase.OpenAsset(script.GetInstanceID(), 0, 0);
-		}
-
-		public void OpenNodeScript()
-		{
-			var script = NodeProvider.GetNodeScript(nodeTarget.GetType());
-
-			if (script != null)
-				AssetDatabase.OpenAsset(script.GetInstanceID(), 0, 0);
-		}
-
+		
 		public void ToggleDebug()
 		{
 			nodeTarget.debug = !nodeTarget.debug;
@@ -685,18 +668,18 @@ namespace GraphProcessor
 				}
 
 				//skip if the field is not serializable
-				bool serializeField = field.GetCustomAttribute(typeof(SerializeField)) != null;
-				if((!field.IsPublic && !serializeField) || field.IsNotSerialized)
+				if((!field.IsPublic && field.GetCustomAttribute(typeof(SerializeField)) == null) || field.IsNotSerialized)
 				{
 					AddEmptyField(field, fromInspector);
 					continue;
 				}
 
+
 				//skip if the field is an input/output and not marked as SerializedField
 				bool hasInputAttribute         = field.GetCustomAttribute(typeof(InputAttribute)) != null;
 				bool hasInputOrOutputAttribute = hasInputAttribute || field.GetCustomAttribute(typeof(OutputAttribute)) != null;
 				bool showAsDrawer			   = !fromInspector && field.GetCustomAttribute(typeof(ShowAsDrawer)) != null;
-				if (!serializeField && hasInputOrOutputAttribute && !showAsDrawer)
+				if (field.GetCustomAttribute(typeof(SerializeField)) == null && hasInputOrOutputAttribute && !showAsDrawer)
 				{
 					AddEmptyField(field, fromInspector);
 					continue;
@@ -711,7 +694,7 @@ namespace GraphProcessor
 
 				// Hide the field if we want to display in in the inspector
 				var showInInspector = field.GetCustomAttribute<ShowInInspector>();
-				if (!serializeField && showInInspector != null && !showInInspector.showInNode && !fromInspector)
+				if (showInInspector != null && !showInInspector.showInNode && !fromInspector)
 				{
 					AddEmptyField(field, fromInspector);
 					continue;
@@ -722,13 +705,7 @@ namespace GraphProcessor
 				showInputDrawer &= !fromInspector; // We can't show a drawer in the inspector
 				showInputDrawer &= !typeof(IList).IsAssignableFrom(field.FieldType);
 
-				string displayName = ObjectNames.NicifyVariableName(field.Name);
-
-				var inspectorNameAttribute = field.GetCustomAttribute<InspectorNameAttribute>();
-				if (inspectorNameAttribute != null)
-					displayName = inspectorNameAttribute.displayName;
-
-				var elem = AddControlField(field, displayName, showInputDrawer);
+				var elem = AddControlField(field, ObjectNames.NicifyVariableName(field.Name), showInputDrawer);
 				if (hasInputAttribute)
 				{
 					hideElementIfConnected[field.Name] = elem;
@@ -763,8 +740,6 @@ namespace GraphProcessor
 
 		void UpdateFieldVisibility(string fieldName, object newValue)
 		{
-			if (newValue == null)
-				return;
 			if (visibleConditions.TryGetValue(fieldName, out var list))
 			{
 				foreach (var elem in list)
@@ -823,53 +798,21 @@ namespace GraphProcessor
 		protected VisualElement AddControlField(string fieldName, string label = null, bool showInputDrawer = false, Action valueChangedCallback = null)
 			=> AddControlField(nodeTarget.GetType().GetField(fieldName, BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance), label, showInputDrawer, valueChangedCallback);
 
-		Regex s_ReplaceNodeIndexPropertyPath = new Regex(@"(^nodes.Array.data\[)(\d+)(\])");
-		internal void SyncSerializedPropertyPathes()
-		{
-			int nodeIndex = owner.graph.nodes.FindIndex(n => n == nodeTarget);
-
-			// If the node is not found, then it means that it has been deleted from serialized data.
-			if (nodeIndex == -1)
-				return;
-
-			var nodeIndexString = nodeIndex.ToString();
-			foreach (var propertyField in this.Query<PropertyField>().ToList())
-			{
-				propertyField.Unbind();
-				// The property path look like this: nodes.Array.data[x].fieldName
-				// And we want to update the value of x with the new node index:
-				propertyField.bindingPath = s_ReplaceNodeIndexPropertyPath.Replace(propertyField.bindingPath, m => m.Groups[1].Value + nodeIndexString + m.Groups[3].Value);
-				propertyField.Bind(owner.serializedGraph);
-			}
-		}
-
-		protected SerializedProperty FindSerializedProperty(string fieldName)
-		{
-			int i = owner.graph.nodes.FindIndex(n => n == nodeTarget);
-			return owner.serializedGraph.FindProperty("nodes").GetArrayElementAtIndex(i).FindPropertyRelative(fieldName);
-		}
-
 		protected VisualElement AddControlField(FieldInfo field, string label = null, bool showInputDrawer = false, Action valueChangedCallback = null)
 		{
 			if (field == null)
 				return null;
-
-			var element = new PropertyField(FindSerializedProperty(field.Name), showInputDrawer ? "" : label);
-			element.Bind(owner.serializedGraph);
-
-#if UNITY_2020_3 // In Unity 2020.3 the empty label on property field doesn't hide it, so we do it manually
-			if ((showInputDrawer || String.IsNullOrEmpty(label)) && element != null)
-				element.AddToClassList("DrawerField_2020_3");
-#endif
-
-			if (typeof(IList).IsAssignableFrom(field.FieldType))
-				EnableSyncSelectionBorderHeight();
-
-			element.RegisterValueChangeCallback(e => {
-				UpdateFieldVisibility(field.Name, field.GetValue(nodeTarget));
-				valueChangedCallback?.Invoke();
+	
+			var element = FieldFactory.CreateField(field.FieldType, field.GetValue(nodeTarget), (newValue) => {
+				owner.RegisterCompleteObjectUndo("Updated " + newValue);
+				field.SetValue(nodeTarget, newValue);
 				NotifyNodeChanged();
-			});
+				valueChangedCallback?.Invoke();
+				UpdateFieldVisibility(field.Name, newValue);
+				// When you have the node inspector, it's possible to have multiple input fields pointing to the same
+				// property. We need to update those manually otherwise they still have the old value in the inspector.
+				UpdateOtherFieldValue(field, newValue);
+			}, showInputDrawer ? "" : label);
 
 			// Disallow picking scene objects when the graph is not linked to a scene
 			if (element != null && !owner.graph.IsLinkedToScene())
@@ -894,9 +837,9 @@ namespace GraphProcessor
 				}
 				else
 				{
+					element.name = field.Name;
 					controlsContainer.Add(element);
 				}
-				element.name = field.Name;
 			}
 			else
 			{
@@ -908,7 +851,7 @@ namespace GraphProcessor
 			if (visibleCondition != null)
 			{
 				// Check if target field exists:
-				var conditionField = nodeTarget.GetType().GetField(visibleCondition.fieldName, BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance);
+				var conditionField = nodeTarget.GetType().GetField(visibleCondition.fieldName, BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance | BindingFlags.DeclaredOnly);
 				if (conditionField == null)
 					Debug.LogError($"[VisibleIf] Field {visibleCondition.fieldName} does not exists in node {nodeTarget.GetType()}");
 				else
@@ -937,10 +880,12 @@ namespace GraphProcessor
 
 			var label = field.GetCustomAttribute<SettingAttribute>().name;
 
-			var element = new PropertyField(FindSerializedProperty(field.Name));
-			element.Bind(owner.serializedGraph);
+			var element = FieldFactory.CreateField(field.FieldType, field.GetValue(nodeTarget), (newValue) => {
+				owner.RegisterCompleteObjectUndo("Updated " + newValue);
+				field.SetValue(nodeTarget, newValue);
+			}, label);
 
-			if (element != null)
+			if(element != null)
 			{
 				settingsContainer.Add(element);
 				element.name = field.Name;
@@ -1018,8 +963,6 @@ namespace GraphProcessor
         public override void BuildContextualMenu(ContextualMenuPopulateEvent evt)
 		{
 			BuildAlignMenu(evt);
-			evt.menu.AppendAction("Open Node Script", (e) => OpenNodeScript(), OpenNodeScriptStatus);
-			evt.menu.AppendAction("Open Node View Script", (e) => OpenNodeViewScript(), OpenNodeViewScriptStatus);
 			evt.menu.AppendAction("Debug", (e) => ToggleDebug(), DebugStatus);
             if (nodeTarget.unlockable)
                 evt.menu.AppendAction((nodeTarget.isLocked ? "Unlock" : "Lock"), (e) => ChangeLockStatus(), LockStatus);
@@ -1049,21 +992,7 @@ namespace GraphProcessor
 			return Status.Normal;
 		}
 
-		Status OpenNodeScriptStatus(DropdownMenuAction action)
-		{
-			if (NodeProvider.GetNodeScript(nodeTarget.GetType()) != null)
-				return Status.Normal;
-			return Status.Disabled;
-		}
-
-		Status OpenNodeViewScriptStatus(DropdownMenuAction action)
-		{
-			if (NodeProvider.GetNodeViewScript(GetType()) != null)
-				return Status.Normal;
-			return Status.Disabled;
-		}
-
-		IEnumerable< PortView > SyncPortCounts(IEnumerable< NodePort > ports, IEnumerable< PortView > portViews)
+        IEnumerable< PortView > SyncPortCounts(IEnumerable< NodePort > ports, IEnumerable< PortView > portViews)
 		{
 			var listener = owner.connectorListener;
 			var portViewList = portViews.ToList();

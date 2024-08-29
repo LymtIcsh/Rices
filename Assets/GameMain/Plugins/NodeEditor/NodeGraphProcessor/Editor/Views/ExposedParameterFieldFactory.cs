@@ -31,7 +31,7 @@ namespace GraphProcessor
 
             exposedParameterObject = ScriptableObject.CreateInstance<ExposedParameterWorkaround>();
             exposedParameterObject.graph = graph;
-            exposedParameterObject.hideFlags = HideFlags.HideAndDontSave ^ HideFlags.NotEditable;
+            exposedParameterObject.hideFlags = HideFlags.HideAndDontSave;
             serializedObject = new SerializedObject(exposedParameterObject);
             UpdateSerializedProperties(customParameters);
         }

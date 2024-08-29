@@ -38,7 +38,7 @@ namespace NPBehave
 
         override protected void DoStop()
         {
-            Decoratee.Stop();
+            Decoratee.CancelWithoutReturnResult();
         }
 
         protected override void DoChildStopped(Node child, bool result)
@@ -52,6 +52,7 @@ namespace NPBehave
                     StopObserving();
                 }
             }
+
             Stopped(result);
         }
 
@@ -68,15 +69,17 @@ namespace NPBehave
         {
             if (IsActive && !IsConditionMet())
             {
-                if (stopsOnChange == Stops.SELF || stopsOnChange == Stops.BOTH || stopsOnChange == Stops.IMMEDIATE_RESTART)
+                if (stopsOnChange == Stops.SELF || stopsOnChange == Stops.BOTH ||
+                    stopsOnChange == Stops.IMMEDIATE_RESTART)
                 {
                     // Debug.Log( this.key + " stopped self ");
-                    this.Stop();
+                    this.CancelWithoutReturnResult();
                 }
             }
             else if (!IsActive && IsConditionMet())
             {
-                if (stopsOnChange == Stops.LOWER_PRIORITY || stopsOnChange == Stops.BOTH || stopsOnChange == Stops.IMMEDIATE_RESTART || stopsOnChange == Stops.LOWER_PRIORITY_IMMEDIATE_RESTART)
+                if (stopsOnChange == Stops.LOWER_PRIORITY || stopsOnChange == Stops.BOTH ||
+                    stopsOnChange == Stops.IMMEDIATE_RESTART || stopsOnChange == Stops.LOWER_PRIORITY_IMMEDIATE_RESTART)
                 {
                     // Debug.Log( this.key + " stopped other ");
                     Container parentNode = this.ParentNode;
@@ -86,14 +89,18 @@ namespace NPBehave
                         childNode = parentNode;
                         parentNode = parentNode.ParentNode;
                     }
-                    Assert.IsNotNull(parentNode, "NTBtrStops is only valid when attached to a parent composite");
-                    Assert.IsNotNull(childNode);
+
+                    Debug.Assert(parentNode != null,
+                        $"NTBtrStops is only valid when attached to a parent composite  PATH: {GetPath()}");
+                    Debug.Assert(childNode != null);
                     if (parentNode is Parallel)
                     {
-                        Assert.IsTrue(stopsOnChange == Stops.IMMEDIATE_RESTART, "On Parallel Nodes all children have the same priority, thus Stops.LOWER_PRIORITY or Stops.BOTH are unsupported in this context!");
+                        Debug.Assert(stopsOnChange == Stops.IMMEDIATE_RESTART,
+                            $"On Parallel Nodes all children have the same priority, thus Stops.LOWER_PRIORITY or Stops.BOTH are unsupported in this context!  PATH: {GetPath()}");
                     }
 
-                    if (stopsOnChange == Stops.IMMEDIATE_RESTART || stopsOnChange == Stops.LOWER_PRIORITY_IMMEDIATE_RESTART)
+                    if (stopsOnChange == Stops.IMMEDIATE_RESTART ||
+                        stopsOnChange == Stops.LOWER_PRIORITY_IMMEDIATE_RESTART)
                     {
                         if (isObserving)
                         {
@@ -102,7 +109,9 @@ namespace NPBehave
                         }
                     }
 
-                    ((Composite)parentNode).StopLowerPriorityChildrenForChild(childNode, stopsOnChange == Stops.IMMEDIATE_RESTART || stopsOnChange == Stops.LOWER_PRIORITY_IMMEDIATE_RESTART);
+                    ((Composite)parentNode).StopLowerPriorityChildrenForChild(childNode,
+                        stopsOnChange == Stops.IMMEDIATE_RESTART ||
+                        stopsOnChange == Stops.LOWER_PRIORITY_IMMEDIATE_RESTART);
                 }
             }
         }
@@ -112,6 +121,5 @@ namespace NPBehave
         protected abstract void StopObserving();
 
         protected abstract bool IsConditionMet();
-
     }
 }

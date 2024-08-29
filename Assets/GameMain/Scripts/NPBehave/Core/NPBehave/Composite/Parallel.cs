@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.Assertions;
 using System.Collections.Generic;
+using Sirenix.OdinInspector;
 
 namespace NPBehave
 {
@@ -8,7 +9,9 @@ namespace NPBehave
     {
         public enum Policy
         {
+            [LabelText("一个XX就返回XX")]
             ONE,
+            [LabelText("全部XX才返回XX")]
             ALL,
         }
 
@@ -60,13 +63,13 @@ namespace NPBehave
 
         protected override void DoStop()
         {
-            Assert.IsTrue(runningCount + succeededCount + failedCount == childrenCount);
+            Debug.Assert(runningCount + succeededCount + failedCount == childrenCount);
 
             foreach (Node child in this.Children)
             {
                 if (child.IsActive)
                 {
-                    child.Stop();
+                    child.CancelWithoutReturnResult();
                 }
             }
         }
@@ -112,8 +115,8 @@ namespace NPBehave
                 }
                 else if (!this.childrenAborted)
                 {
-                    Assert.IsFalse(succeededCount == childrenCount);
-                    Assert.IsFalse(failedCount == childrenCount);
+                    Debug.Assert(succeededCount != childrenCount);
+                    Debug.Assert(failedCount != childrenCount);
 
                     if (failurePolicy == Policy.ONE && failedCount > 0/* && waitForPendingChildrenRule != Wait.ON_FAILURE && waitForPendingChildrenRule != Wait.BOTH*/)
                     {
@@ -132,7 +135,7 @@ namespace NPBehave
                         {
                             if (currentChild.IsActive)
                             {
-                                currentChild.Stop();
+                                currentChild.CancelWithoutReturnResult();
                             }
                         }
                     }

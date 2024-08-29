@@ -7,6 +7,7 @@ using Cysharp.Threading.Tasks.Triggers;
 using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityGameFramework.Runtime;
 using Random = UnityEngine.Random;
 
 namespace Suture
@@ -23,7 +24,7 @@ namespace Suture
         [Tooltip("角色的冲刺速度，单位为m/s")] public float SprintSpeed = 5.335f;
 
         [Tooltip("加速和减速")] public float SpeedChangeRate = 10.0f;
-        
+
         public AudioClip LandingAudioClip;
         public AudioClip[] FootstepAudioClips;
         [Range(0, 1)] public float FootstepAudioVolume = 0.5f;
@@ -63,6 +64,7 @@ namespace Suture
 
         [Tooltip("用于锁定相机在所有轴上的位置")] public bool LockCameraPosition = false;
 
+        private StackFsmComponent _stackFsmComponent;
 
         // 摄像机
         private float _cinemachineTargetYaw;
@@ -129,6 +131,7 @@ namespace Suture
             _hasAnimator = TryGetComponent(out _animator);
             _controller = GetComponent<CharacterController>();
             _playerAssetsInputs = GetComponent<PlayerAssetsInputs>();
+            _stackFsmComponent = GetComponent<StackFsmComponent>();
 
 #if ENABLE_INPUT_SYSTEM
             _playerInput = GetComponent<PlayerInput>();
@@ -152,6 +155,19 @@ namespace Suture
             JumpAndGravity();
             GroundedCheck();
             Move();
+            EDown();
+            
+            // if (!CDComponent.Instance.GetCDResult(GetComponent<MyPet>().Id, "E"))
+            // {
+            //     Log.Info(  ((int) Math.Ceiling((double) (1000) / 1000))
+            //         .ToString());
+            //     
+            //     // self.FuiUIPanelBattle.m_SkillE_CDInfo.text =
+            //     //     ((int) Math.Ceiling((double) (self.m_ECDInfo.RemainCDLength) / 1000))
+            //     //     .ToString();
+            //     // self.FuiUIPanelBattle.m_SkillE_Bar.self.value =
+            //     //     100 * (self.m_ECDInfo.RemainCDLength * 1f / self.m_ECDInfo.Interval);
+            // }
         }
 
         private void LateUpdate()
@@ -247,7 +263,11 @@ namespace Suture
             //注意:Vector2的==运算符使用近似值，因此不容易出现浮点错误，并且比幅度方便
             //若无输入，则将目标转速设为0
             if (_playerAssetsInputs.move == Vector2.zero)
+            {
                 targetSpeed = 0.0f;
+                _stackFsmComponent.ChangeIldeState();
+            }
+
 
             //参考玩家当前的水平速度
             float currentHorizontalSpeed = new Vector3(_controller.velocity.x, 0.0f, _controller.velocity.z).magnitude;
@@ -376,29 +396,46 @@ namespace Suture
             }
         }
 
+        private void EDown()
+        {
+            if (_playerAssetsInputs.eDown)
+            {
+                foreach (var skillTree in this.GetComponent<NP_RuntimeTreeManager>().RuntimeTrees)
+                {
+                    skillTree.Value.GetBlackboard().Set("PlayerInput", "E", true, true);
+                    skillTree.Value.GetBlackboard().Set("SkillTargetAngle", transform.eulerAngles.y, true, true);
+                }
+
+                _playerAssetsInputs.eDown = false;
+                _stackFsmComponent.ChangeIldeState();
+            }
+        }
+
         #region 动画事件
 
         void OnFootstep(AnimationEvent animationEvent)
         {
             if (animationEvent.animatorClipInfo.weight > 0.5f)
             {
-                if (FootstepAudioClips.Length>0)
+                if (FootstepAudioClips.Length > 0)
                 {
                     var index = Random.Range(0, FootstepAudioClips.Length);
-                    AudioSource.PlayClipAtPoint(FootstepAudioClips[index],transform.TransformPoint(_controller.center),FootstepAudioVolume);
+                    AudioSource.PlayClipAtPoint(FootstepAudioClips[index], transform.TransformPoint(_controller.center),
+                        FootstepAudioVolume);
                 }
             }
- 
         }
 
-        
+
         private void OnLand(AnimationEvent animationEvent)
         {
             if (animationEvent.animatorClipInfo.weight > 0.5f)
             {
-                AudioSource.PlayClipAtPoint(LandingAudioClip, transform.TransformPoint(_controller.center), FootstepAudioVolume);
+                AudioSource.PlayClipAtPoint(LandingAudioClip, transform.TransformPoint(_controller.center),
+                    FootstepAudioVolume);
             }
         }
+
         #endregion
 
 

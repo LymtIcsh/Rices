@@ -12,7 +12,7 @@ using Sirenix.Utilities.Editor;
 using UnityEditor;
 using UnityEngine;
 
-namespace Suture
+namespace Plugins.NodeEditor
 {
     public class SkillAssetsOverViewEditorWindow: OdinMenuEditorWindow
     {
@@ -22,7 +22,7 @@ namespace Suture
 
         private GUIStyle buttonStyle;
 
-        [Command("SutureEditor_SkillAssetsOverView", "技能资产概览")]
+        [Command("ETEditor_SkillAssetsOverView", "技能资产概览")]
         public static void PopUp()
         {
             bool flag = Resources.FindObjectsOfTypeAll<AttributesExampleWindow>().Length == 0;

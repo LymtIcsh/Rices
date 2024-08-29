@@ -26,7 +26,7 @@ namespace NPBehave
 
         protected override void DoStop()
         {
-            Children[currentIndex].Stop();
+            Children[currentIndex].CancelWithoutReturnResult();
         }
 
 
@@ -85,7 +85,7 @@ namespace NPBehave
                     {
                         currentIndex = Children.Length;
                     }
-                    currentChild.Stop();
+                    currentChild.CancelWithoutReturnResult();
                     break;
                 }
             }

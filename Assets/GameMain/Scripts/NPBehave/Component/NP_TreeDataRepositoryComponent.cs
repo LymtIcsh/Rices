@@ -1,4 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
+using MongoDB.Bson.Serialization;
 using UnityGameFramework.Runtime;
 
 namespace Suture
@@ -6,7 +9,7 @@ namespace Suture
     /// <summary>
     /// 行为树数据仓库组件
     /// </summary>
-    public class NP_TreeDataRepositoryComponent:Entity
+    public class NP_TreeDataRepositoryComponent:GameFrameworkComponent
     {
         public const string NPDataServerPath = "../Config/SkillConfigs/";
 
@@ -15,7 +18,61 @@ namespace Suture
         /// </summary>
         public Dictionary<long, NP_DataSupportor> NpRuntimeTreesDatas = new Dictionary<long, NP_DataSupportor>();
 
-        
+        protected override void Awake()
+        {
+            base.Awake();
+            
+#if SERVER
+            DirectoryInfo directory = new DirectoryInfo(NP_TreeDataRepositoryComponent.NPDataServerPath);
+            FileInfo[] fileInfos = directory.GetFiles();
+
+            foreach (var fileInfo in fileInfos)
+            {
+                try
+                {
+                    byte[] mfile = File.ReadAllBytes(fileInfo.FullName);
+
+                    if (mfile.Length == 0) Log.Info("没有读取到文件");
+                    NP_DataSupportor MnNpDataSupportor = BsonSerializer.Deserialize<NP_DataSupportor>(mfile);
+
+                    Log.Info($"反序列化行为树：id：{MnNpDataSupportor.NpDataSupportorBase.NPBehaveTreeDataId} {fileInfo.FullName}完成");
+
+                    self.NpRuntimeTreesDatas.Add(MnNpDataSupportor.NpDataSupportorBase.NPBehaveTreeDataId, MnNpDataSupportor);
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e);
+                    throw;
+                }
+            }
+#else
+            // foreach (var skillCanvasConfig in SkillCanvasConfigCategory.Instance.GetAll())
+            // {
+                // TextAsset textAsset =
+                //     AssetDatabase.LoadAssetAtPath<TextAsset>(
+                //       "Assets/GameMain/Configs/SkillConfig/S.bytes");
+
+                byte[] mClientfile = File.ReadAllBytes("Assets/GameMain/Configs/SkillConfig/ETest.bytes");
+
+                
+                if (mClientfile.Length == 0) Log.Info("没有读取到文件");
+                try
+                {
+                    NP_DataSupportor MnNpDataSupportor = BsonSerializer.Deserialize<NP_DataSupportor>(mClientfile);
+
+                    Log.Info($"反序列化行为树:{{skillCanvasConfig.Value.SkillConfigName}}完成");
+
+                    NpRuntimeTreesDatas.Add(MnNpDataSupportor.NpDataSupportorBase.NPBehaveTreeDataId, MnNpDataSupportor);
+                }
+                catch (Exception e)
+                {
+                    Log.Error(e);
+                    throw;
+                }
+            // }
+#endif
+        }
+
         /// <summary>
         /// 获取一棵树的所有数据（默认形式）
         /// </summary>

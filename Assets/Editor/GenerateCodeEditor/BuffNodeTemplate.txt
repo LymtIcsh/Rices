@@ -8,6 +8,7 @@
 //using Plugins;
 using UnityEditor;
 using GraphProcessor;
+using Plugins.NodeEditor;
 
 namespace Suture
 {
@@ -20,10 +21,10 @@ namespace Suture
                 new NormalBuffNodeData()
                 {
                     BuffDes = "_BUFFDES_",
-                    BuffData = new _BUFFNAME_Data() { BelongBuffSystemType = BuffSystemType._BUFFNAME_System }
+                    BuffData = new _BUFFNAME_Data() {  }
                 };
 
-        public override BuffNodeDataBase Skill_GetNodeData()
+        public override BuffNodeDataBase GetBuffNodeData()
         {
             return SkillBuffBases;
         }

@@ -1,0 +1,40 @@
+//------------------------------------------------------------
+// 此代码由工具自动生成，请勿更改
+// 此代码由工具自动生成，请勿更改
+// 此代码由工具自动生成，请勿更改
+//------------------------------------------------------------
+
+using GameFramework;
+using GameFramework.Event;
+
+namespace Suture
+{
+    /// <summary>
+    /// _EventNDES_
+    /// </summary>
+    public class  _EventNAME_EventArgs:GameEventArgs
+    {
+        public static readonly int EventID = typeof(_EventNAME_EventArgs).GetHashCode();
+
+        public override int Id => EventID;
+        
+  
+        
+        public _EventNAME_EventArgs()
+        {
+            
+        }
+        
+        public override void Clear()
+        {
+          
+        }
+
+
+        public static _EventNAME_EventArgs Create()
+        {
+           _EventNAME_EventArgs ne = ReferencePool.Acquire<_EventNAME_EventArgs>();
+            return ne;
+        }
+    }
+}

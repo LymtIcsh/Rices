@@ -1,5 +1,8 @@
 ﻿using System.Collections.Generic;
 using Sirenix.OdinInspector;
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
 
 namespace Suture
 {

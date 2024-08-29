@@ -1,17 +1,21 @@
-﻿using GraphProcessor;
+﻿//------------------------------------------------------------
+// Author: 烟雨迷离半世殇
+// Mail: 1778139321@qq.com
+// Data: 2021年5月31日 19:15:32
+//------------------------------------------------------------
+
+using Suture;
+using GraphProcessor;
 using Sirenix.OdinInspector;
 using UnityEditor;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
-namespace Suture
+namespace Plugins.NodeEditor
 {
-    /// <summary>
-    /// NP行为工具栏视图
-    /// </summary>
-    public class NPBehaveToolbarView : UniversalToolbarView
+    public class NPBehaveToolbarView: UniversalToolbarView
     {
-        public class BlackboardInspectorViewer : SerializedScriptableObject
+        public class BlackboardInspectorViewer: SerializedScriptableObject
         {
             public NP_BlackBoardDataManager NpBlackBoardDataManager;
         }
@@ -31,7 +35,7 @@ namespace Suture
             }
         }
 
-        public NPBehaveToolbarView(BaseGraphView graphView, MiniMap miniMap, BaseGraph baseGraph) : base(graphView,
+        public NPBehaveToolbarView(BaseGraphView graphView, MiniMap miniMap, BaseGraph baseGraph): base(graphView,
             miniMap, baseGraph)
         {
         }
@@ -39,17 +43,21 @@ namespace Suture
         protected override void AddButtons()
         {
             base.AddButtons();
-
+            
             AddButton(new GUIContent("AutoLayout", "自动优化布局"),
-                () => { (this.graphView as NPBehaveGraphView).AutoSortLayout(); }, false);
-
+                () =>
+                {
+                    (this.graphView as NPBehaveGraphView).AutoSortLayout();
+                }, false);
+        
             AddButton(new GUIContent("Blackboard", "打开Blackboard数据面板"),
                 () =>
                 {
                     NPBehaveToolbarView.BlackboardInspector.NpBlackBoardDataManager =
-                        (this.m_BaseGraph as NPBehaveGraph).NpBlackBoardDataManager;
+                            (this.m_BaseGraph as NPBehaveGraph).NpBlackBoardDataManager;
                     Selection.activeObject = BlackboardInspector;
                 }, false);
+            
         }
     }
 }

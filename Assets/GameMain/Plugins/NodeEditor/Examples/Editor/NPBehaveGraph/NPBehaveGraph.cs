@@ -1,35 +1,39 @@
-﻿using System;
+﻿//------------------------------------------------------------
+// Author: 烟雨迷离半世殇
+// Mail: 1778139321@qq.com
+// Data: 2021年6月15日 11:19:33
+//------------------------------------------------------------
+
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using Suture;
 using GraphProcessor;
 using MongoDB.Bson.IO;
 using MongoDB.Bson.Serialization;
 using Sirenix.OdinInspector;
 using Sirenix.Serialization;
-using UnityEditor;
 using UnityEngine;
-using UnityGameFramework.Runtime;
-using SerializationUtility = Sirenix.Serialization.SerializationUtility;
 
-namespace Suture
+namespace Plugins.NodeEditor
 {
-   public class NPBehaveGraph : BaseGraph
+    public class NPBehaveGraph : BaseGraph
     {
         [BoxGroup("本Canvas所有数据整理部分")] [LabelText("保存文件名"), GUIColor(0.9f, 0.7f, 1)]
         public string Name;
 
-        [BoxGroup("本Canvas所有数据整理部分")] [LabelText("对应的配置表"), GUIColor(0.9f, 0.7f, 1)]
-        public TextAsset Config;
-
-        [BoxGroup("本Canvas所有数据整理部分")] [LabelText("对应的配置表类型"), GUIColor(0.9f, 0.7f, 1)] //[ValueDropdown("GetConfigTypes")]
-        public Type ConfigType;
+        // [BoxGroup("本Canvas所有数据整理部分")] [LabelText("对应的配置表"), GUIColor(0.9f, 0.7f, 1)]
+        // public TextAsset Config;
+        //
+        // [BoxGroup("本Canvas所有数据整理部分")] [LabelText("对应的配置表类型"), GUIColor(0.9f, 0.7f, 1)] [ValueDropdown("GetConfigTypes")]
+        // public Type ConfigType;
 
         [BoxGroup("本Canvas所有数据整理部分")] [LabelText("配置表中的Id"), GUIColor(0.9f, 0.7f, 1)]
         public int IdInConfig;
 
-        [BoxGroup("本Canvas所有数据整理部分")] [LabelText("保存路径(服务端)"), GUIColor(0.1f, 0.7f, 1)] [FolderPath]
-        public string SavePathServer;
+        // [BoxGroup("本Canvas所有数据整理部分")] [LabelText("保存路径(服务端)"), GUIColor(0.1f, 0.7f, 1)] [FolderPath]
+        // public string SavePathServer;
 
         [BoxGroup("本Canvas所有数据整理部分")] [LabelText("保存路径(客户端)"), GUIColor(0.1f, 0.7f, 1)] [FolderPath]
         public string SavePathClient;
@@ -66,22 +70,20 @@ namespace Suture
                 NpDataSupportor_Client = new NP_DataSupportorBase();
             }
 
-            if (this.NpDataSupportor_Server == null)
-            {
-                NpDataSupportor_Server = new NP_DataSupportorBase();
-            }
+            // if (this.NpDataSupportor_Server == null)
+            // {
+            //     NpDataSupportor_Server = new NP_DataSupportorBase();
+            // }
 
             this.OnGraphEnable();
             NP_BlackBoardHelper.SetCurrentBlackBoardDataManager(this);
 
             PrepareAllNodeData();
-            AutoSetCanvasDatas(true);
+          //  AutoSetCanvasDatas(true);
             AutoSetCanvasDatas(false);
         }
 
-        /// <summary>
-        ///  准备所有节点的数据
-        /// </summary>
+        // 准备所有节点的数据
         private void PrepareAllNodeData()
         {
             m_AllNodes.Clear();
@@ -122,24 +124,24 @@ namespace Suture
         [Button("保存行为树信息为二进制文件", 25), GUIColor(0.4f, 0.8f, 1)]
         public void Save()
         {
-            if (string.IsNullOrEmpty(SavePathServer) || string.IsNullOrEmpty(SavePathClient) ||
+            if (/*string.IsNullOrEmpty(SavePathServer) || */string.IsNullOrEmpty(SavePathClient) ||
                 string.IsNullOrEmpty(Name))
             {
-                Log.Error($"保存路径或文件名不能为空，请检查配置");
+                Debug.LogError($"保存路径或文件名不能为空，请检查配置");
                 return;
             }
-        
-            using (FileStream file = File.Create($"{SavePathServer}/{this.Name}.bytes"))
-            {
-                BsonSerializer.Serialize(new BsonBinaryWriter(file), NpDataSupportor_Server);
-            }
-            
+
+            // using (FileStream file = File.Create($"{SavePathServer}/{this.Name}.bytes"))
+            // {
+            //     BsonSerializer.Serialize(new BsonBinaryWriter(file), NpDataSupportor_Server);
+            // }
+
             using (FileStream file = File.Create($"{SavePathClient}/{this.Name}.bytes"))
             {
                 BsonSerializer.Serialize(new BsonBinaryWriter(file), NpDataSupportor_Client);
             }
-        
-            Log.Info($"保存 {SavePathServer}/{this.Name}.bytes {SavePathClient}/{this.Name}.bytes 成功");
+
+            Debug.Log($"保存 {"SavePathServer"}/{this.Name}.bytes {SavePathClient}/{this.Name}.bytes 成功");
         }
 
         [Button("测试反序列化", 25), GUIColor(0.4f, 0.8f, 1)]
@@ -147,17 +149,17 @@ namespace Suture
         {
             try
             {
-                this.NpDataSupportor_Server_Des = null;
-                using (var fs = new FileStream($"{SavePathServer}/{this.Name}.bytes", FileMode.Open, FileAccess.Read,
-                    FileShare.Read))
-                using (var reader = new BinaryReader(fs))
-                {
-                    this.NpDataSupportor_Server_Des =
-                        SerializationUtility.DeserializeValue<NP_DataSupportorBase>(reader.BaseStream,
-                            DataFormat.Binary);
-                    Log.Info($"反序列化{SavePathServer}/{this.Name}.bytes成功");
-                }
-        
+                // this.NpDataSupportor_Server_Des = null;
+                // using (var fs = new FileStream($"{SavePathServer}/{this.Name}.bytes", FileMode.Open, FileAccess.Read,
+                //     FileShare.Read))
+                // using (var reader = new BinaryReader(fs))
+                // {
+                //     this.NpDataSupportor_Server_Des =
+                //         SerializationUtility.DeserializeValue<NP_DataSupportorBase>(reader.BaseStream,
+                //             DataFormat.Binary);
+                //     Debug.LogError($"反序列化{SavePathServer}/{this.Name}.bytes成功");
+                // }
+
                 this.NpDataSupportor_Client_Des = null;
                 using (var fs = new FileStream($"{SavePathClient}/{this.Name}.bytes", FileMode.Open, FileAccess.Read,
                     FileShare.Read))
@@ -166,12 +168,12 @@ namespace Suture
                     this.NpDataSupportor_Client_Des =
                         SerializationUtility.DeserializeValue<NP_DataSupportorBase>(reader.BaseStream,
                             DataFormat.Binary);
-                    Log.Info($"反序列化{SavePathClient}/{this.Name}.bytes成功");
+                    Debug.Log($"反序列化{SavePathClient}/{this.Name}.bytes成功");
                 }
             }
             catch (Exception e)
             {
-                Log.Info(e.ToString());
+                Debug.LogError(e.ToString());
                 throw;
             }
         }
@@ -207,17 +209,15 @@ namespace Suture
                 }
             }
             
-            if (this.Config == null)
-            {
-                return;
-            }
-
-
-            npDataSupportorBase.NPBehaveTreeDataId = IdInConfig;
-
+            // if (this.Config == null)
+            // {
+            //     return;
+            // }
             
-            // object config = ProtobufHelper.FromBytes(this.ConfigType, this.Config.bytes, 0, this.Config.bytes.Length);
-            //
+            npDataSupportorBase.NPBehaveTreeDataId = IdInConfig;
+            
+           // object config = ProtobufHelper.FromBytes(this.ConfigType, this.Config.bytes, 0, this.Config.bytes.Length);
+
             // //目前行为树只有三种类型，直接在这里写出
             // switch (config)
             // {
@@ -245,7 +245,7 @@ namespace Suture
             {
                 //设置为根结点Id
                 npDataSupportorBase.NPBehaveTreeDataId = m_ValidNodes[m_ValidNodes.Count - 1].NP_GetNodeData().id;
-                Log.Error(
+                Debug.LogError(
                     $"注意，名为{this.Name}的Graph首次导出，或者未在配置表中找到Id为{this.IdInConfig}的数据行，行为树Id被设置为{npDataSupportorBase.NPBehaveTreeDataId}，请前往Excel表中进行添加，然后导出Excel");
             }
             else
@@ -262,7 +262,7 @@ namespace Suture
                     mNodeData.LinkedIds = new List<long>();
                 }
 
-               mNodeData.LinkedIds.Clear();
+                mNodeData.LinkedIds.Clear();
 
                 //出结点连接的Nodes
                 List<NP_NodeBase> theNodesConnectedToOutNode = new List<NP_NodeBase>();
@@ -286,6 +286,8 @@ namespace Suture
 
                 //将此结点数据写入字典
                 npDataSupportorBase.NP_DataSupportorDic.Add(mNodeData.id, mNodeData);
+
+                Debug.Log("自动配置所有行为树结点成功");
             }
         }
 

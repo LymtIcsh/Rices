@@ -22,32 +22,47 @@ namespace Suture
         /// </summary>
         public Dictionary<long, int> SkillLevels = new Dictionary<long, int>();
 
+        // protected override void OnRecycle()
+        // {
+        //     foreach (var skillContent in Skills)
+        //     {
+        //         foreach (var skillCanvas in skillContent.Value)
+        //         {
+        //             skillCanvas.Dispose();
+        //         }
+        //     }
+        //
+        //     Skills.Clear();
+        //
+        //     base.OnRecycle();
+        // }
+
         /// <summary>
         /// 添加技能Canvas
         /// </summary>
         /// <param name="skillId">归属技能Id，不是技能图本身的id</param>
         /// <param name="npRuntimeTree">对应行为树</param>
-        public  void AddSkillCanvas(long skillId, NP_RuntimeTree npRuntimeTree)
+        public void AddSkillCanvas(long skillId, NP_RuntimeTree npRuntimeTree)
         {
-            if (npRuntimeTree==null)
+            if (npRuntimeTree == null)
             {
                 Log.Error($"试图添加的id为{skillId}的技能图为空");
                 return;
             }
 
-            if (Skills.TryGetValue(skillId,out var skillContent))
+            if (Skills.TryGetValue(skillId, out var skillContent))
             {
                 skillContent.Add(npRuntimeTree);
             }
             else
             {
-                Skills.Add(skillId,new List<NP_RuntimeTree>(){npRuntimeTree});
+                Skills.Add(skillId, new List<NP_RuntimeTree>() { npRuntimeTree });
             }
 
             //TODO 这里默认一级了
-            if (SkillLevels.ContainsKey(skillId))
+            if (!SkillLevels.ContainsKey(skillId))
             {
-                SkillLevels.Add(skillId,1);
+                SkillLevels.Add(skillId, 1);
             }
         }
 
@@ -63,7 +78,7 @@ namespace Suture
         /// <param name="skillId">技能标识</param>
         public List<NP_RuntimeTree> GetSkillCanvas(long skillId)
         {
-            if (Skills.TryGetValue(skillId,out var skillContent))
+            if (Skills.TryGetValue(skillId, out var skillContent))
             {
                 return skillContent;
             }
@@ -83,12 +98,12 @@ namespace Suture
         {
             foreach (var skillCanvas in GetSkillCanvas(skillId))
             {
-                RemoveSkillCanvas(skillId,skillCanvas);
+                RemoveSkillCanvas(skillId, skillCanvas);
             }
-            
+
             if (SkillLevels.ContainsKey(skillId))
             {
-               SkillLevels.Remove(skillId);
+                SkillLevels.Remove(skillId);
             }
         }
 
@@ -101,17 +116,16 @@ namespace Suture
             NP_RuntimeTree npRuntimeTree)
         {
             List<NP_RuntimeTree> targetSkillContent = GetSkillCanvas(skillId);
-            if (targetSkillContent!=null)
+            if (targetSkillContent != null)
             {
-                for (int i = targetSkillContent.Count-1; i >=0; i--)
+                for (int i = targetSkillContent.Count - 1; i >= 0; i--)
                 {
-                    if (targetSkillContent[i]==npRuntimeTree)
+                    if (targetSkillContent[i] == npRuntimeTree)
                     {
-                        
                         //TODO SkillCanvasManagerComponentUtitlites 烟雨et脚本
                         GetComponentInParent<TargetableObject>().GetComponent<NP_RuntimeTreeManager>()
                             .RemoveTree(npRuntimeTree.Id);
-                        
+
                         targetSkillContent.RemoveAt(i);
                     }
                 }
@@ -123,12 +137,13 @@ namespace Suture
         /// </summary>
         /// <param name="skillId"></param>
         /// <param name="count">升级点数</param>
-        public  void AddSkillLevel( long skillId, int count = 1)
+        public void AddSkillLevel(long skillId, int count = 1)
         {
-            if (SkillLevels.TryGetValue(skillId,out var lever))
+            if (SkillLevels.TryGetValue(skillId, out var lever))
             {
                 SkillLevels[skillId] = lever + count;
-            }     else
+            }
+            else
             {
                 Log.Error($"请求升级的SkillId:{skillId}不存在");
             }
@@ -140,7 +155,7 @@ namespace Suture
         /// <param name="skillId"></param>
         public int GetSkillLevel(long skillId)
         {
-            if (SkillLevels.TryGetValue(skillId,out var lever))
+            if (SkillLevels.TryGetValue(skillId, out var lever))
             {
                 return lever;
             }

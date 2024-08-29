@@ -1,13 +1,12 @@
 ﻿using System;
+using Suture;
 using GraphProcessor;
 using UnityEditor.Experimental.GraphView;
+using UnityEngine;
 
-namespace Suture
+namespace Plugins.NodeEditor
 {
-    /// <summary>
-    /// 技能 图表窗口
-    /// </summary>
-    public class SkillGraphWindow:UniversalGraphWindow
+    public class SkillGraphWindow: UniversalGraphWindow
     {
         protected override void InitializeWindow(BaseGraph graph)
         {
@@ -27,12 +26,15 @@ namespace Suture
             SetCurrentBlackBoardDataManager();
         }
 
-        /// <summary>
-        /// 设置当前黑板数据管理器
-        /// </summary>
         private void SetCurrentBlackBoardDataManager()
         {
-           
+            SkillGraph npBehaveGraph = (this.graph as SkillGraph);
+            if (npBehaveGraph == null)
+            {
+                //因为OnFocus执行时机比较诡异，在OnEnable后，或者执行一些操作后都会执行，但这时Graph可能为空，所以做判断
+                return;
+            }
+            NP_BlackBoardDataManager.CurrentEditedNP_BlackBoardDataManager = (this.graph as SkillGraph).NpBlackBoardDataManager;
         }
     }
 }

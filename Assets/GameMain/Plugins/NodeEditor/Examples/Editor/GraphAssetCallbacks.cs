@@ -1,23 +1,12 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEditor;
 using GraphProcessor;
 using UnityEditor.Callbacks;
-using System.IO;
-using Suture;
 
-
-namespace Suture
+namespace Plugins.NodeEditor
 {
-    /// <summary>
-    /// 图形资产回调
-    /// </summary>
     public class GraphAssetCallbacks
     {
-        /// <summary>
-        /// 创建图形处理器
-        /// </summary>
         [MenuItem("Assets/Create/GraphProcessor", false, 10)]
         public static void CreateGraphPorcessor()
         {
@@ -25,9 +14,6 @@ namespace Suture
             ProjectWindowUtil.CreateAsset(graph, "GraphProcessor.asset");
         }
 
-        /// <summary>
-        /// 创建图形处理器NP
-        /// </summary>
         [MenuItem("Assets/Create/GraphProcessor_NP", false, 10)]
         public static void CreateGraphPorcessor_NP()
         {
@@ -35,36 +21,24 @@ namespace Suture
             ProjectWindowUtil.CreateAsset(graph, "NPBehaveGraph.asset");
         }
 
-        /// <summary>
-        /// 创建技能图形处理器
-        /// </summary>
-        [MenuItem("Assets/Create/GraphProcessor_Skill",false,10)]
+        [MenuItem("Assets/Create/GraphProcessor_Skill", false, 10)]
         public static void CreateGraphPorcessor_Skill()
         {
             var graph = ScriptableObject.CreateInstance<SkillGraph>();
-            ProjectWindowUtil.CreateAsset(graph,"SkillGraph.asset");
+            ProjectWindowUtil.CreateAsset(graph, "SkillGraph.asset");
         }
+        
+        [MenuItem("Assets/Create/GraphProcessor_UnitAttributesDatal", false, 10)]
+        public static void CreateGraphPorcessor_UnitAttributesData()
+        {
+            var graph = ScriptableObject.CreateInstance<UnitAttributesDataGraph>();
+            ProjectWindowUtil.CreateAsset(graph, "UnitAttributesDataGraph.asset");
+        }
+        
 
-
-        /// <summary>
-        /// 打开BaseGraph
-        /// </summary>
-        /// <param name="instanceID"></param>
-        /// <param name="line"></param>
-        /// <returns></returns>
         [OnOpenAsset(0)]
         public static bool OnBaseGraphOpened(int instanceID, int line)
         {
-            // var asset = EditorUtility.InstanceIDToObject(instanceID) as BaseGraph;
-            //
-            // if (asset != null && AssetDatabase.GetAssetPath(asset).Contains("Examples"))
-            // {
-            //     EditorWindow.GetWindow<AllGraphWindow>().InitializeGraph(asset as BaseGraph);
-            //     return true;
-            // }
-            //
-            // return false;
-            
             var baseGraph = EditorUtility.InstanceIDToObject(instanceID) as BaseGraph;
             return InitializeGraph(baseGraph);
         }
@@ -76,17 +50,17 @@ namespace Suture
             switch (baseGraph)
             {
                 case SkillGraph skillGraph:
-                	NodeGraphWindowHelper.GetAndShowNodeGraphWindow<SkillGraphWindow>(skillGraph)
-                		.InitializeGraph(skillGraph);
-                	break;
+                    NodeGraphWindowHelper.GetAndShowNodeGraphWindow<SkillGraphWindow>(skillGraph)
+                        .InitializeGraph(skillGraph);
+                    break;
                 case NPBehaveGraph npBehaveGraph:
                     NodeGraphWindowHelper.GetAndShowNodeGraphWindow<NPBehaveGraphWindow>(npBehaveGraph)
                         .InitializeGraph(npBehaveGraph);
                     break;
                 default:
-                	NodeGraphWindowHelper.GetAndShowNodeGraphWindow<FallbackGraphWindow>(baseGraph)
-                		.InitializeGraph(baseGraph);
-                	break;
+                    NodeGraphWindowHelper.GetAndShowNodeGraphWindow<FallbackGraphWindow>(baseGraph)
+                        .InitializeGraph(baseGraph);
+                    break;
             }
 
             return true;

@@ -1,21 +1,30 @@
-using System.Collections;
+﻿//------------------------------------------------------------
+// Author: 烟雨迷离半世殇
+// Mail: 1778139321@qq.com
+// Data: 2021年6月15日 11:19:33
+//------------------------------------------------------------
+
+using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
+using Suture;
 using GraphProcessor;
+using MongoDB.Bson.IO;
+using MongoDB.Bson.Serialization;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace Suture
+namespace Plugins.NodeEditor
 {
-    /// <summary>
-    /// 单元属性数据图
-    /// </summary>
-    public class UnitAttributesDataGraph : BaseGraph
+    public class UnitAttributesDataGraph: BaseGraph
     {
-        [Title("本Canvas所有数据整理部分")] [LabelText("保存文件名"), GUIColor(0.9f, 0.7f, 1)]
+        [Title("本Canvas所有数据整理部分")]
+        [LabelText("保存文件名"), GUIColor(0.9f, 0.7f, 1)]
         public string Name = "HeroData";
 
-        [LabelText("保存路径"), GUIColor(0.1f, 0.7f, 1)] [FolderPath]
+        [LabelText("保存路径"), GUIColor(0.1f, 0.7f, 1)]
+        [FolderPath]
         public string SavePath;
 
         /// <summary>
@@ -23,9 +32,6 @@ namespace Suture
         /// </summary>
         public UnitAttributesDataSupportor m_TestDic = new UnitAttributesDataSupportor();
 
-        /// <summary>
-        /// 添加所有节点数据
-        /// </summary>
         [Button("扫描所有NodeData并添加", 25), GUIColor(0.4f, 0.8f, 1)]
         public void AddAllNodeData()
         {
@@ -34,8 +40,7 @@ namespace Suture
             {
                 if (node is UnitAttributesNodeBase unitAttributesNodeBase)
                 {
-                    m_TestDic.UnitAttributesDataSupportorDic.Add(
-                        unitAttributesNodeBase.UnitAttributesData_GetNodeData().UnitDataNodeId,
+                    m_TestDic.UnitAttributesDataSupportorDic.Add(unitAttributesNodeBase.UnitAttributesData_GetNodeData().UnitDataNodeId,
                         unitAttributesNodeBase.UnitAttributesData_GetNodeData());
                 }
             }
@@ -46,6 +51,7 @@ namespace Suture
         {
             using (FileStream file = File.Create($"{SavePath}/{this.Name}.bytes"))
             {
+                BsonSerializer.Serialize(new BsonBinaryWriter(file), m_TestDic);
             }
 
             Debug.Log("保存成功");

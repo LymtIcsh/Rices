@@ -23,7 +23,7 @@
 
         override protected void DoStop()
         {
-            Decoratee.Stop();
+            Decoratee.CancelWithoutReturnResult();
         }
 
         protected override void DoChildStopped(Node child, bool result)

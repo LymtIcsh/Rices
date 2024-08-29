@@ -21,7 +21,7 @@ namespace UnityGameFramework.Runtime
         private string m_EntityAssetName;
         private IEntityGroup m_EntityGroup;
         private EntityLogic m_EntityLogic;
-
+        
         /// <summary>
         /// 获取实体编号。
         /// </summary>

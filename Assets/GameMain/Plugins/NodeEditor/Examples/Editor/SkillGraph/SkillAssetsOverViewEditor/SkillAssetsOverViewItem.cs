@@ -6,7 +6,7 @@
 
 using Sirenix.OdinInspector.Editor;
 
-namespace Suture
+namespace Plugins.NodeEditor
 {
     public class SkillAssetsOverViewItem
     {
@@ -21,7 +21,7 @@ namespace Suture
         public string Category = "Uncategorized";
 
         /// <summary>
-        ///示例的描述 The description of the example.
+        /// The description of the example.
         /// </summary>
         public string Description;
 

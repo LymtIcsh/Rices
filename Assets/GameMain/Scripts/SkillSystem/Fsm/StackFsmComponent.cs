@@ -1,9 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using GameFramework;
 
 namespace Suture
 {
+    /// <summary>
+    /// 适用于动画切换的栈式状态机
+    /// </summary>
     public class StackFsmComponent:Entity
     {
         /// <summary>
@@ -29,7 +33,7 @@ namespace Suture
         protected override void OnInit(object userData)
         {
             base.OnInit(userData);
-            ChangeState<IdleState>(StateTypes.Idle, "Idle", 1);
+            ChangeIldeState();
         }
 
         /// <summary>
@@ -58,7 +62,12 @@ namespace Suture
             this.m_States[temp.StateTypes].Remove(temp);
             this.m_FsmStateBases.Remove(temp);
             temp.OnRemoved(this);
-            ReferencePool.Release(temp);
+
+            if (ReferencePool.GetAllReferencePoolInfos().All(v => v.Type != temp.GetType()))
+            {
+                ReferencePool.Release(temp);
+            }
+            
             if (theRemovedItemIsFirstState)
             {
                 this.GetCurrentFsmState()?.OnEnter(this);
@@ -194,7 +203,7 @@ namespace Suture
         {
             AFsmStateBase tempFsmStateBase = this.GetState(aFsmStateBase.StateName);
 
-            if (ReferenceEquals(tempFsmStateBase,null))
+            if (!ReferenceEquals(tempFsmStateBase,null))
             {
                 //因为已有此状态，所以进行回收
                 ReferencePool.Release(aFsmStateBase);
@@ -303,6 +312,14 @@ namespace Suture
             }
         }
 
+        /// <summary>
+        /// 切回默认状态
+        /// </summary>
+        public void ChangeIldeState()
+        {
+            ChangeState<IdleState>(StateTypes.Idle, "Idle", 1);
+        }
+        
         #endregion
     }
 }

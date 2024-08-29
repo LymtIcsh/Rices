@@ -2,7 +2,7 @@
 
 namespace Suture
 {
-    // [ProtobufBaseTypeRegister]
+   //  [ProtobufBaseTypeRegister]
     public abstract class ANP_BBValue
     {
         

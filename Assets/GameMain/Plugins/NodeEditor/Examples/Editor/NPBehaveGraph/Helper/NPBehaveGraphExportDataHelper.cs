@@ -1,6 +1,6 @@
-﻿namespace Suture
+﻿namespace Plugins.NodeEditor
 {
-    public class NPBehaveGraphExportDataHelper
+    public static class NPBehaveGraphExportDataHelper
     {
         public static bool IsServerSpecialNode(NPBehaveGraph npBehaveGraph, NP_NodeBase npNodeBase)
         {

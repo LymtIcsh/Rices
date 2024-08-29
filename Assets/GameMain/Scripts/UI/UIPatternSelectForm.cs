@@ -43,6 +43,8 @@ namespace Suture
         {
             GameMode = GameMode.Pve;
             GameEntry.UI.OpenUIForm(UIFormId.UIPetSelectForm, this);
+            //战斗房间
+            GameEntry.RoomManager.GetOrCreateBattleRoom();
             Close(true);
         }
 

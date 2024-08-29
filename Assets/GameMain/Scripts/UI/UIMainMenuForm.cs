@@ -58,6 +58,8 @@ namespace Suture
         {
             //m_ProcedureMenu.StartGame();
             GameEntry.UI.OpenUIForm(UIFormId.UIPatternSelectForm,this);
+          //组队房间
+          //  GameEntry.RoomManager.CreateLobbyRoom();
             //GameEntry.UI.OpenUIForm(UIFormId.UIPatternSelectForm);
         }
 

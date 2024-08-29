@@ -52,7 +52,7 @@ namespace NPBehave
 
         protected override void DoStop()
         {
-            Children[randomizedOrder[currentIndex]].Stop();
+            Children[randomizedOrder[currentIndex]].CancelWithoutReturnResult();
         }
 
 
@@ -111,7 +111,7 @@ namespace NPBehave
                     {
                         currentIndex = Children.Length;
                     }
-                    currentChild.Stop();
+                    currentChild.CancelWithoutReturnResult();
                     break;
                 }
             }

@@ -5,7 +5,7 @@ namespace Suture
     /// <summary>
     /// 代表一个房间
     /// </summary>
-    public class Room:Entity
+    public class Room : Entity
     {
         /// <summary>
         /// 房主Id
@@ -23,5 +23,15 @@ namespace Suture
         public string RoomName;
 
         public int PlayerMaxCount = 6;
+
+
+        protected override void OnRecycle()
+        {
+            RoomHolderPlayerId = 0;
+            PlayerCount = 0;
+            RoomName = "";
+
+            base.OnRecycle();
+        }
     }
 }

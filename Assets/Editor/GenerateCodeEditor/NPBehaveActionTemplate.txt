@@ -5,7 +5,7 @@ using Sirenix.OdinInspector;
 namespace Suture
 {
     [Title("_ACTIONDES_",TitleAlignment = TitleAlignments.Centered)]
-    public class NP__ACTIONNAME_:NP_ClassForStoreAction
+    public class NP__ACTIONNAME_Action:NP_ClassForStoreAction
     {        
         public override Action GetActionToBeDone()
         {

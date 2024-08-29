@@ -1,21 +1,25 @@
-﻿using GraphProcessor;
+//------------------------------------------------------------
+// Author: 烟雨迷离半世殇
+// Mail: 1778139321@qq.com
+// Data: 2019年8月23日 17:35:02
+//------------------------------------------------------------
+
+using Suture;
+using GraphProcessor;
 using Sirenix.OdinInspector;
 
-namespace Suture
+namespace Plugins.NodeEditor
 {
-    /// <summary>
-    /// NP选择节点
-    /// </summary>
-    [NodeMenuItem("NPBehave行为树/Composite/Selector",typeof(NPBehaveGraph))]
-    [NodeMenuItem("NPBehave行为树/Composite/Selector",typeof(SkillGraph))]
-    public class NP_SelectorNode:NP_CompositeNodeBase
+    [NodeMenuItem("NPBehave行为树/Composite/Selector", typeof (NPBehaveGraph))]
+    [NodeMenuItem("NPBehave行为树/Composite/Selector", typeof (SkillGraph))]
+    public class NP_SelectorNode: NP_CompositeNodeBase
     {
         public override string name => "选择结点";
 
-        [BoxGroup("Selector选择结点数据")]
+        [BoxGroup("Selector结点数据")]
         [HideReferenceObjectPicker]
         [HideLabel]
-        public NP_SelectorNodeData NP_SelectorNodeData = new NP_SelectorNodeData{ NodeDes = "选择组合器" };
+        public NP_SelectorNodeData NP_SelectorNodeData = new NP_SelectorNodeData { NodeDes = "选择组合器"};
 
         public override NP_NodeDataBase NP_GetNodeData()
         {

@@ -5,6 +5,7 @@ namespace Suture
     /// <summary>
     /// Buff节点数据库
     /// </summary>
+     [BsonDeserializerRegister]
     public class BuffNodeDataBase
     {
         [LabelText("节点Id")]

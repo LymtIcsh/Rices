@@ -19,7 +19,7 @@ namespace Suture
             InitBuiltinComponents();
             InitCustomComponents();
             InitCustomDebuggers();
-         
+            MongoHelper.Init();
         }
     }
 }

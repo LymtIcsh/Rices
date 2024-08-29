@@ -9,7 +9,7 @@ using Sirenix.OdinInspector.Editor;
 using UnityEditor;
 using UnityEngine;
 
-namespace Suture
+namespace Plugins.NodeEditor
 {
     public static class SkillAssetsOverViewUtilities
     {

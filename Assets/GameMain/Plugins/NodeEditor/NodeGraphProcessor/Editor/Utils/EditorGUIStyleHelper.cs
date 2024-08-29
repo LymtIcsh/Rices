@@ -1,11 +1,14 @@
-﻿using System.Collections.Generic;
+﻿//------------------------------------------------------------
+// Author: 烟雨迷离半世殇
+// Mail: 1778139321@qq.com
+// Data: 2021年6月9日 12:42:03
+//------------------------------------------------------------
+
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace GraphProcessor
 {
-    /// <summary>
-    /// 编辑器GUI样式助手
-    /// </summary>
     public static class EditorGUIStyleHelper
     {
         private static Dictionary<string, GUIStyle> s_Styles = new Dictionary<string, GUIStyle>();
@@ -23,7 +26,7 @@ namespace GraphProcessor
         /// <returns></returns>
         public static GUIStyle GetGUIStyleByName(string styleName)
         {
-            if (s_Styles.TryGetValue(styleName,out var guiStyle))
+            if (s_Styles.TryGetValue(styleName, out var guiStyle))
             {
                 return guiStyle;
             }

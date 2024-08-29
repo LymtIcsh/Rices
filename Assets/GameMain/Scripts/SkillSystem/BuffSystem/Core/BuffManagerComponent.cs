@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using NPBehave;
 
 namespace Suture
 {
@@ -23,9 +24,12 @@ namespace Suture
         private Dictionary<long, IBuffSystem> m_BuffsForFind_BuffId = new Dictionary<long, IBuffSystem>();
 
         private LinkedListNode<IBuffSystem> m_Current, m_Next;
+        
 
         public void FixedUpdate()
         {
+
+            
             this.m_Current = m_Buffs.First;
             //轮询链表
             while (this.m_Current != null)

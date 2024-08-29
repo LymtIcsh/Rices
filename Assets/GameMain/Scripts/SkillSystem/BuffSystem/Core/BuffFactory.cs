@@ -14,7 +14,18 @@ namespace Suture
         /// </summary>
         public static Dictionary<Type, Type> AllBuffSystemTypes = new Dictionary<Type, Type>()
         {
-
+            {typeof(ChangePropertyBuffData), typeof(ChangePropertyBuffSystem)},
+        //    {typeof(ListenBuffCallBackBuffData), typeof(ListenBuffCallBackBuffSystem)},
+            {typeof(BindStateBuffData), typeof(BindStateBuffSystem)},
+            // {typeof(PlayEffectBuffData), typeof(PlayEffectBuffSystem)},
+            // {typeof(ReplaceAnimBuffData), typeof(ReplaceAnimBuffSystem)},
+            // {typeof(ChangeMaterialBuffData), typeof(ChangeMaterialBuffSystem)},
+            //
+            // {typeof(RefreshTargetBuffTimeBuffData), typeof(RefreshTargetBuffTimeBuffSystem)},
+            // {typeof(FlashDamageBuffData), typeof(FlashDamageBuffSystem)},
+            // {typeof(SustainDamageBuffData), typeof(SustainDamageBuffSystem)},
+            {typeof(TreatmentBuffData), typeof(TreatmentBuffSystem)},
+            // {typeof(ReplaceAttackBuffData), typeof(ReplaceAttackBuffSystem)}
         };
         
         /// <summary>
@@ -39,7 +50,7 @@ namespace Suture
                 .GetTreeByRuntimeID(theSkillCanvasIdBelongTo);
 
             return AcquireBuff(
-                (theUnitFrom.Entity.GetComponent<NP_TreeDataRepositoryComponent>()
+                (GameEntry.NP_TreeDataRepository
                     .GetNP_TreeData(npsupportDataId)
                     .BuffNodeDataDic[buffNodeId] as NormalBuffNodeData)?.BuffData, buffNodeId,
                 theUnitFrom, theUnitBelongTo, npRuntimeTree);
@@ -58,7 +69,7 @@ namespace Suture
             NP_RuntimeTree theSkillCanvasBelongTo)
         {
             return AcquireBuff(
-                (theUnitFrom.Entity.GetComponent<NP_TreeDataRepositoryComponent>().GetNP_TreeData(dataId)
+                (GameEntry.NP_TreeDataRepository.GetNP_TreeData(dataId)
                     .BuffNodeDataDic[buffNodeId] as NormalBuffNodeData)?.BuffData, buffNodeId,
                 theUnitFrom, theUnitBelongTo, theSkillCanvasBelongTo);
         }

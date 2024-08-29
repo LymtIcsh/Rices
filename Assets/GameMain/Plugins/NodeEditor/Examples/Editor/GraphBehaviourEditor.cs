@@ -1,17 +1,17 @@
 using UnityEditor;
 using UnityEngine.UIElements;
 
-namespace Suture
+namespace Plugins.NodeEditor
 {
     [CustomEditor(typeof(GraphBehaviour))]
-    public class GraphBehaviourEditor : UnityEditor.Editor
+    public class GraphBehaviourEditor : Editor
     {
-        UnityEditor.Editor graphEditor;
+        Editor graphEditor;
         GraphBehaviour behaviour => target as GraphBehaviour;
 
         void OnEnable()
         {
-            graphEditor = UnityEditor.Editor.CreateEditor(behaviour.graph);
+            graphEditor = Editor.CreateEditor(behaviour.graph);
         }
 
         void OnDisable()
@@ -24,7 +24,7 @@ namespace Suture
             var root = new VisualElement();
             var graphContainer = graphEditor != null ? graphEditor.CreateInspectorGUI().Q("ExposedParameters") : null;
 
-            root.Add(new Button(() => EditorWindow.GetWindow<AllGraphWindow>().InitializeGraph(behaviour.graph))
+            root.Add(new Button(() => EditorWindow.GetWindow<UniversalGraphWindow>().InitializeGraph(behaviour.graph))
             {
                 text = "Open"
             });

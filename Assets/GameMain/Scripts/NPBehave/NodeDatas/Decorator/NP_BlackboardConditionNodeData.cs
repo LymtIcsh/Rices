@@ -21,7 +21,7 @@ namespace Suture
         {
             this.m_BlackboardConditionNode = new BlackboardCondition(this.NPBalckBoardRelationData.BBkey,
                 this.Ope,
-                this.NPBalckBoardRelationData.NP_BBValueType, this.Stop, node);
+                this.NPBalckBoardRelationData.NP_BBValue, this.Stop, node);
             //此处的value参数可以随便设，因为我们在游戏中这个value是需要动态改变的
             return this.m_BlackboardConditionNode;
         }
