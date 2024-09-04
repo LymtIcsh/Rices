@@ -37,6 +37,11 @@ namespace Suture
             TempNodes.Clear();
         }
 
+        /// <summary>
+        /// 注册事件
+        /// </summary>
+        /// <param name="eventId"></param>
+        /// <param name="e"></param>
         public void RegisterEvent(string eventId, ISkillSystemEvent e)
         {
             if (!AllEvents.ContainsKey(eventId))
@@ -47,6 +52,11 @@ namespace Suture
             AllEvents[eventId].AddLast(e);
         }
 
+        /// <summary>
+        /// 移除注册事件
+        /// </summary>
+        /// <param name="eventId"></param>
+        /// <param name="e"></param>
         public void UnRegisterEvent(string eventId, ISkillSystemEvent e)
         {
             if (CachedNodes.Count > 0)
@@ -62,7 +72,6 @@ namespace Suture
                 }
 
                 //把临时结点字典中的目标元素值更新到缓存结点字典
-                //TODO 这里为啥不在上面直接覆盖
                 if (TempNodes.Count > 0)
                 {
                     foreach (KeyValuePair<string, LinkedListNode<ISkillSystemEvent>> tempNode in TempNodes)

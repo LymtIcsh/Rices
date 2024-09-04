@@ -6,7 +6,7 @@ namespace Suture
     [Serializable]
     public class MyPetData : PetData
     {
-        [SerializeField] private string m_Name = null;
+      //  [SerializeField] private string m_Name = null;
 
         public MyPetData(int entityId, int typeId) : base(entityId, typeId, CampType.Player)
         {
@@ -17,8 +17,8 @@ namespace Suture
         /// </summary>
         public string Name
         {
-            get => m_Name;
-            set => m_Name = value;
+            get => m_unitAttributesNodeDataBase.UnitName;
+          //  set => m_unitAttributesNodeDataBase.UnitName = value;
         }
     }
 }

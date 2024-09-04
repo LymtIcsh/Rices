@@ -21,9 +21,13 @@ namespace Suture
         private void Awake()
         {
             
-            UnitAttributesNodeDataBase = GameEntry.UnitAttributesDataRepository
-                .GetUnitAttributesDataById_DeepCopy<HeroAttributesNodeData>(10002, GetComponent<MyPet>().Id);
-        
+            // UnitAttributesNodeDataBase = GameEntry.UnitAttributesDataRepository
+            //     .GetUnitAttributesDataById_DeepCopy<HeroAttributesNodeData>(10002, GetComponent<MyPet>().Id);
+            //
+            UnitAttributesNodeDataBase =
+                GetComponent<TargetableObject>().m_TargetableObjectData.m_unitAttributesNodeDataBase;
+            
+            
             NumericComponent = GetComponent<NumericComponent>();
             
             NumericComponent.SetValueWithoutBroadCast(NumericType.Level, 1);

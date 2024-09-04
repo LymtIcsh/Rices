@@ -141,6 +141,10 @@ namespace Suture
         [LabelText("Buff名")]
         [InfoBox("示例：FlashDamgeBuff")]
         public string BuffName;
+        
+        [LabelText("Buff描述")]
+        [InfoBox("示例：这是一个瞬时伤害Buff")]
+        public string BuffDes;
 
         public override string TemplateAssetPath
         {
@@ -152,13 +156,13 @@ namespace Suture
 
         public override Dictionary<string, string> GetAllParams()
         {
-            if (string.IsNullOrEmpty(BuffName))
+            if (string.IsNullOrEmpty(BuffName) || string.IsNullOrEmpty(this.BuffDes))
             {
                 Log.Error("Buff名或Buff描述不能为空");
                 return null;
             }
 
-            return new Dictionary<string, string>() { { "_BUFFNAME_", BuffName } };
+            return new Dictionary<string, string>() { { "_BUFFNAME_", BuffName }, { "_BUFFDES_", BuffDes } };
         }
     }
     #endregion

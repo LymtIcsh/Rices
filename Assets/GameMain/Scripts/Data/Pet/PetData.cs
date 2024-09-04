@@ -5,19 +5,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
+using Sirenix.OdinInspector;
 
 namespace Suture
 {
     [Serializable]
     public abstract class PetData : TargetableObjectData
     {
+        [ShowInInspector] private List<EquipData> m_ArmorDatas = new List<EquipData>();
 
-        [SerializeField] private List<EquipData> m_ArmorDatas = new List<EquipData>();
+        // [SerializeField] private int m_MaxHP = 0;
 
-        [SerializeField] private int m_MaxHP = 0;
-        
         [SerializeField] private int m_Money = 0;
-        
+
+       
+
         protected PetData(int entityId, int typeId, CampType camp) : base(entityId, typeId, camp)
         {
             IDataTable<DRPet> dtPets = GameEntry.DataTable.GetDataTable<DRPet>();
@@ -27,19 +29,19 @@ namespace Suture
                 return;
             }
             
-            Defense = drPets.InitDefense;
-            ASK = drPets.InitAsk;
-            HP = m_MaxHP = drPets.InitHp;
+            
+            // Defense = drPets.InitDefense;
+            // ASK = drPets.InitAsk;
+            // HP = m_MaxHP = drPets.InitHp;
         }
 
-        /// <summary>
-        /// 最大生命。
-        /// </summary>
-        public override int MaxHP
-        {
-            get { return m_MaxHP; }
-        }
-        
+        // /// <summary>
+        // /// 最大生命。
+        // /// </summary>
+        // public override int MaxHP
+        // {
+        //     get { return m_MaxHP; }
+        // }
 
 
         public List<EquipData> GetAllArmorDatas()
@@ -81,18 +83,17 @@ namespace Suture
         {
             // m_MaxHP = 0;
             // Defense = 0;
-            
+
             for (int i = 0; i < m_ArmorDatas.Count; i++)
             {
-                ASK += m_ArmorDatas[i].Ask;
-                m_MaxHP += m_ArmorDatas[i].MaxHP;
-                Defense += m_ArmorDatas[i].Defense;
-                
+                m_unitAttributesNodeDataBase.OriAttackValue += m_ArmorDatas[i].Ask;
+                MaxHP += m_ArmorDatas[i].MaxHP;
+                m_unitAttributesNodeDataBase.OriArmor += m_ArmorDatas[i].Defense;
             }
 
-            if (HP > m_MaxHP)
+            if (m_unitAttributesNodeDataBase.OriHP > MaxHP)
             {
-                HP = m_MaxHP;
+                m_unitAttributesNodeDataBase.OriHP = MaxHP;
             }
         }
     }

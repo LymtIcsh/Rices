@@ -5,6 +5,7 @@ namespace Suture
     /// <summary>
     /// Unit基本属性数据
     /// </summary>
+
     [BsonDeserializerRegister]
     public class UnitAttributesNodeDataBase
     {

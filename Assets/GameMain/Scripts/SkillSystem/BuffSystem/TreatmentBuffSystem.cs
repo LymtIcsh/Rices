@@ -4,6 +4,8 @@
 // 代码由工具自动生成，请勿手动修改
 //------------------------------------------------------------
 
+using UnityGameFramework.Runtime;
+
 namespace Suture
 {
     public class TreatmentBuffSystem : ABuffSystemBase<TreatmentBuffData>
@@ -45,6 +47,9 @@ namespace Suture
                 .Run($"ExcuteTreate{this.TheUnitFrom.Id}", finalTreatValue);
             this.GetBuffTarget().BelongToRoom.GetComponent<BattleEventSystemComponent>()
                 .Run($"TakeTreate{this.GetBuffTarget()}", finalTreatValue);
+            
+            Log.Info($"治疗buff:   ExcuteTreate{this.TheUnitFrom.Id}     TakeTreate{this.GetBuffTarget()}   最终值：{finalTreatValue}");
+
         }
 #endif
     }

@@ -88,7 +88,7 @@ namespace Suture
 
         public override ImpactData GetImpactData()
         {
-            return new ImpactData(_petData.Camp, _petData.HP, _petData.ASK, _petData.Defense);
+            return new ImpactData(_petData.Camp/*, _petData.HP, _petData.ASK, _petData.Defense*/);
         }
     }
 }

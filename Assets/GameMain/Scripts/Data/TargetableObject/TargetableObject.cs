@@ -11,8 +11,8 @@ namespace Suture
     /// </summary>
     public abstract class TargetableObject:Entity
     {
-        [SerializeField]
-        private TargetableObjectData m_TargetableObjectData = null;
+
+        public TargetableObjectData m_TargetableObjectData = null;
 
         /// <summary>
         /// 是否死亡
@@ -21,7 +21,7 @@ namespace Suture
         {
             get
             {
-                return m_TargetableObjectData.HP <= 0;
+                return m_TargetableObjectData.m_unitAttributesNodeDataBase.GroHP <= 0;
             }
         }
         
@@ -36,13 +36,13 @@ namespace Suture
         public void ApplyDamage(Entity attacker, int damageHP)
         {
             float fromHPRatio = m_TargetableObjectData.HPRatio;
-            m_TargetableObjectData.HP-= damageHP;
+            m_TargetableObjectData.m_unitAttributesNodeDataBase.OriHP-= damageHP;
             float toHPRatio = m_TargetableObjectData.HPRatio;
             if (fromHPRatio > toHPRatio)
             {
                //原demo应该是，受伤显示血条
             }
-            if(m_TargetableObjectData.HP <= 0)
+            if(m_TargetableObjectData.m_unitAttributesNodeDataBase.OriHP <= 0)
             {
                 OnDead(attacker);
             }

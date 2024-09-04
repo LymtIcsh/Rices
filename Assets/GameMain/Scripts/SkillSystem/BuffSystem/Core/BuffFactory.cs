@@ -14,9 +14,9 @@ namespace Suture
         /// </summary>
         public static Dictionary<Type, Type> AllBuffSystemTypes = new Dictionary<Type, Type>()
         {
-            {typeof(ChangePropertyBuffData), typeof(ChangePropertyBuffSystem)},
-        //    {typeof(ListenBuffCallBackBuffData), typeof(ListenBuffCallBackBuffSystem)},
-            {typeof(BindStateBuffData), typeof(BindStateBuffSystem)},
+            { typeof(ChangePropertyBuffData), typeof(ChangePropertyBuffSystem) },
+            { typeof(ListenBuffCallBackBuffData), typeof(ListenBuffCallBackBuffSystem) },
+            { typeof(BindStateBuffData), typeof(BindStateBuffSystem) },
             // {typeof(PlayEffectBuffData), typeof(PlayEffectBuffSystem)},
             // {typeof(ReplaceAnimBuffData), typeof(ReplaceAnimBuffSystem)},
             // {typeof(ChangeMaterialBuffData), typeof(ChangeMaterialBuffSystem)},
@@ -24,10 +24,10 @@ namespace Suture
             // {typeof(RefreshTargetBuffTimeBuffData), typeof(RefreshTargetBuffTimeBuffSystem)},
             // {typeof(FlashDamageBuffData), typeof(FlashDamageBuffSystem)},
             // {typeof(SustainDamageBuffData), typeof(SustainDamageBuffSystem)},
-            {typeof(TreatmentBuffData), typeof(TreatmentBuffSystem)},
+            { typeof(TreatmentBuffData), typeof(TreatmentBuffSystem) },
             // {typeof(ReplaceAttackBuffData), typeof(ReplaceAttackBuffSystem)}
         };
-        
+
         /// <summary>
         /// 取得Buff,Buff流程是Acquire->OnInit(CalculateTimerAndOverlay)->AddTemp->经过筛选->AddReal
         /// </summary>
@@ -65,7 +65,8 @@ namespace Suture
         /// <param name="theUnitBelongTo">Buff寄生者</param>
         /// <param name="theSkillCanvasBelongTo"></param>
         /// <returns></returns>
-        public static IBuffSystem AcquireBuff(long dataId, long buffNodeId, TargetableObject theUnitFrom, TargetableObject theUnitBelongTo,
+        public static IBuffSystem AcquireBuff(long dataId, long buffNodeId, TargetableObject theUnitFrom,
+            TargetableObject theUnitBelongTo,
             NP_RuntimeTree theSkillCanvasBelongTo)
         {
             return AcquireBuff(
@@ -82,7 +83,8 @@ namespace Suture
         /// <param name="theUnitFrom">Buff来源者</param>
         /// <param name="theUnitBelongTo">Buff寄生者</param>
         /// <returns></returns>
-        public static IBuffSystem AcquireBuff(NP_DataSupportor npDataSupportor, long buffNodeId, TargetableObject theUnitFrom,
+        public static IBuffSystem AcquireBuff(NP_DataSupportor npDataSupportor, long buffNodeId,
+            TargetableObject theUnitFrom,
             TargetableObject theUnitBelongTo,
             NP_RuntimeTree theSkillCanvasBelongTo)
         {
@@ -105,14 +107,14 @@ namespace Suture
             TargetableObject theUnitBelongTo,
             NP_RuntimeTree theSkillCanvasBelongTo)
         {
-         //LSF_Component lsfComponent = theUnitFrom.BelongToRoom.GetComponent<LSF_Component>();
+            //LSF_Component lsfComponent = theUnitFrom.BelongToRoom.GetComponent<LSF_Component>();
             IBuffSystem resultBuff = ReferencePool.Acquire(AllBuffSystemTypes[buffDataBase.GetType()]) as IBuffSystem;
             resultBuff.BelongtoRuntimeTree = theSkillCanvasBelongTo;
             resultBuff.BuffNodeId = buffNodeId;
             resultBuff.Init(buffDataBase, theUnitFrom, theUnitBelongTo, (uint)TimeInfo.Instance.ClientFrameTime());
             return resultBuff;
         }
-        
+
         /// <summary>
         /// 回收一个Buff
         /// </summary>

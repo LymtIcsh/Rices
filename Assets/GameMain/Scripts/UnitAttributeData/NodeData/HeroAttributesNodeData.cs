@@ -11,6 +11,7 @@ using Sirenix.OdinInspector;
 
 namespace Suture
 {
+    
     public class HeroAttributesNodeData: UnitAttributesNodeDataBase
     {
         [TitleGroup("自定义属性")]

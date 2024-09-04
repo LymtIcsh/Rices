@@ -31,6 +31,8 @@ namespace Suture
         /// </summary>
         public static NP_TreeDataRepositoryComponent NP_TreeDataRepository { get; private set; }
 
+        public static NumericWatcherComponent NumericWatcher { get; private set; }
+        
         /// <summary>
         /// 初始化自定义组件
         /// </summary>
@@ -40,6 +42,7 @@ namespace Suture
                 UnityGameFramework.Runtime.GameEntry.GetComponent<UnitAttributesDataRepositoryComponent>();
             RoomManager = UnityGameFramework.Runtime.GameEntry.GetComponent<RoomManagerComponent>();
             NP_TreeDataRepository = UnityGameFramework.Runtime.GameEntry.GetComponent<NP_TreeDataRepositoryComponent>();
+            NumericWatcher = UnityGameFramework.Runtime.GameEntry.GetComponent<NumericWatcherComponent>();
         }
 
         /// <summary>

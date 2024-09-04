@@ -5,6 +5,9 @@
 //------------------------------------------------------------
 namespace Suture
 {
+ /// <summary>
+    /// _BUFFDES_
+    /// </summary>
     public class _BUFFNAME_System: ABuffSystemBase<_BUFFNAME_Data>
     {
     #if SERVER

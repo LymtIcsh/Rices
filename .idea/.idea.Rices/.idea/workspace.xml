@@ -5,585 +5,53 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="842b7725-6adb-41b7-92ba-1e022023bc23" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/App.config" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/UnitAttributesDataGraph/UnitAttributesDataGraphWindow.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/UnitAttributesDataGraph/UnitAttributesDataGraphWindow.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Component/BattleEvent.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Component/BattleEvent/ISkillSystemEvent.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Component/BattleEvent/ISkillSystemEvent.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Component/BattleEventSystemComponent.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Component/BattleEventSystemComponent.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Component/DataModifiers.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Component/DataModifiers/ADataModifier.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Component/DataModifiers/ADataModifier.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Component/DataModifiers/ConstantModifier.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Component/DataModifiers/ConstantModifier.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Component/DataModifiers/PercentageModifier.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Component/DataModifiers/PercentageModifier.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Component/NP_SyncComponent.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Component/NP_SyncComponent.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Component/Numeric.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Component/Numeric/INumericWatcher.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Component/Numeric/INumericWatcher.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Component/Numeric/NumericType.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Component/Numeric/NumericType.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Component/NumericComponent.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Component/NumericComponent.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Component/RoomManagerComponent.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Component/RoomManagerComponent.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Component/UnitAttributesDataRepositoryComponent.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Component/UnitAttributesDataRepositoryComponent.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Event/NumericChangeEventArgs.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/TheDataContainsAction/BBValue/NP_ChangeBlackValueAction.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/TheDataContainsAction/BBValue/NP_ChangeBlackValueAction.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/SkillSystem/BuffData/ChangePropertyBuffData.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/SkillSystem/BuffData/ChangePropertyBuffData.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/SkillSystem/BuffSystem/BindStateBuffSystem.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/SkillSystem/BuffSystem/BindStateBuffSystem.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/SkillSystem/BuffSystem/ChangePropertyBuffSystem.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/SkillSystem/BuffSystem/ChangePropertyBuffSystem.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/SkillSystem/BuffSystem/Core/BuffDataCalculateHelper.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/SkillSystem/BuffSystem/Core/BuffDataCalculateHelper.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Utility/NodeGraph.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Utility/NodeGraph/INodeForLayoutConvertor.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Utility/NodeGraph/INodeForLayoutConvertor.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Utility/NodeGraph/NodeAutoLayouter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Utility/NodeGraph/NodeAutoLayouter.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Utility/TimeAndFrameConverter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Utility/TimeAndFrameConverter.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Component/NumericWatcherComponent.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Component/NumericWatcherComponent.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/CustomAttributes.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/CustomAttributes/BaseAttribute.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/CustomAttributes/BaseAttribute.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/CustomAttributes/Numeric.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/CustomAttributes/Numeric/NumericWatcherAttribute.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/CustomAttributes/Numeric/NumericWatcherAttribute.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/SkillSystem/BuffSystem/ListenBuffEvents.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/SkillSystem/BuffSystem/ListenBuffEvents/ListenBuffEvent_CheckOverlay.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/SkillSystem/BuffSystem/ListenBuffEvents/ListenBuffEvent_CheckOverlay.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/SkillSystem/BuffSystem/ListenBuffEvents/ListenBuffEvent_Normal.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/SkillSystem/BuffSystem/ListenBuffEvents/ListenBuffEvent_Normal.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/UI/HeaderBar.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/UI/HeaderBar/UIHeadBarController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/UI/HeaderBar/UIHeadBarController.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Rices/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Rices/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Editor/GenerateCodeEditor/BuffDataTemplate.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/GenerateCodeEditor/BuffDataTemplate.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Editor/GenerateCodeEditor/BuffNodeTemplate.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/GenerateCodeEditor/BuffNodeTemplate.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Editor/GenerateCodeEditor/BuffSystemTemplate.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/GenerateCodeEditor/BuffSystemTemplate.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Editor/GenerateCodeEditor/GenerateComponentEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/GenerateCodeEditor/GenerateComponentEditor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Editor/GenerateCodeEditor/NPBehaveActionTemplate.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/GenerateCodeEditor/NPBehaveActionTemplate.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Editor/GenerateCodeEditor/SutureModelComponentTemplate.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/GenerateCodeEditor/SutureModelComponentTemplate.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Editor/GenerateCodeEditor/NPBehaveActionNodeTemplate.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/GenerateCodeEditor/NPBehaveActionNodeTemplate.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Editor/GenerateCodeEditor/TemplateAssetPaths.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/GenerateCodeEditor/TemplateAssetPaths.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Runtime/Entity/Entity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Runtime/Entity/Entity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Configs/SkillConfig/TextQ.bytes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Configs/SkillConfig/TextQ.bytes.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Entities/NingGuang.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Entities/NingGuang.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Entities/Ying.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Entities/Ying.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/FallbackGraph.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/FallbackGraph.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/FallbackGraph/FallbackGraphWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/FallbackGraph/FallbackGraphWindow.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/FallbackGraph/FallbackGraphWindow.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/FallbackGraph/FallbackGraphWindow.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/GraphAssetCallbacks.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/GraphAssetCallbacks.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/GraphAssetInspector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/GraphAssetInspector.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/GraphBehaviourEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/GraphBehaviourEditor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/GraphProcessorMenuItems.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/GraphProcessorMenuItems.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/NPBehaveGraph.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/NPBehaveGraph.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/NPBehaveGraph/Helper.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/NPBehaveGraph/Helper.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/NPBehaveGraph/Helper/NPBehaveGraphExportDataHelper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/NPBehaveGraph/Helper/NPBehaveGraphExportDataHelper.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/NPBehaveGraph/Helper/NPBehaveGraphExportDataHelper.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/NPBehaveGraph/Helper/NPBehaveGraphExportDataHelper.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/NPBehaveGraph/Helper/NP_BlackBoardHelper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/NPBehaveGraph/Helper/NP_BlackBoardHelper.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/NPBehaveGraph/Helper/NP_BlackBoardHelper.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/NPBehaveGraph/Helper/NP_BlackBoardHelper.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/NPBehaveGraph/NPBehaveGraph.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/NPBehaveGraph/NPBehaveGraph.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/NPBehaveGraph/NPBehaveGraph.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/NPBehaveGraph/NPBehaveGraph.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/NPBehaveGraph/NPBehaveGraphView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/NPBehaveGraph/NPBehaveGraphView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/NPBehaveGraph/NPBehaveGraphView.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/NPBehaveGraph/NPBehaveGraphView.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/NPBehaveGraph/NPBehaveGraphWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/NPBehaveGraph/NPBehaveGraphWindow.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/NPBehaveGraph/NPBehaveGraphWindow.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/NPBehaveGraph/NPBehaveGraphWindow.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/NPBehaveGraph/NPBehaveToolbarView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/NPBehaveGraph/NPBehaveToolbarView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/NPBehaveGraph/NPBehaveToolbarView.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/NPBehaveGraph/NPBehaveToolbarView.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/NPBehaveGraph/Nodes.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/NPBehaveGraph/Nodes.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/NPBehaveGraph/Nodes/Base.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/NPBehaveGraph/Nodes/Base.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/NPBehaveGraph/Nodes/Base/NP_CompositeNodeBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/NPBehaveGraph/Nodes/Base/NP_CompositeNodeBase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/NPBehaveGraph/Nodes/Base/NP_CompositeNodeBase.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/NPBehaveGraph/Nodes/Base/NP_CompositeNodeBase.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/NPBehaveGraph/Nodes/Base/NP_DecoratorNodeBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/NPBehaveGraph/Nodes/Base/NP_DecoratorNodeBase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/NPBehaveGraph/Nodes/Base/NP_DecoratorNodeBase.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/NPBehaveGraph/Nodes/Base/NP_DecoratorNodeBase.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/NPBehaveGraph/Nodes/Base/NP_NodeBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/NPBehaveGraph/Nodes/Base/NP_NodeBase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/NPBehaveGraph/Nodes/Base/NP_NodeBase.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/NPBehaveGraph/Nodes/Base/NP_NodeBase.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/NPBehaveGraph/Nodes/Base/NP_TaskNodeBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/NPBehaveGraph/Nodes/Base/NP_TaskNodeBase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/NPBehaveGraph/Nodes/Base/NP_TaskNodeBase.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/NPBehaveGraph/Nodes/Base/NP_TaskNodeBase.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/NPBehaveGraph/Nodes/Composite.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/NPBehaveGraph/Nodes/Composite.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/NPBehaveGraph/Nodes/Composite/NP_ParallelNode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/NPBehaveGraph/Nodes/Composite/NP_ParallelNode.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/NPBehaveGraph/Nodes/Composite/NP_ParallelNode.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/NPBehaveGraph/Nodes/Composite/NP_ParallelNode.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/NPBehaveGraph/Nodes/Composite/NP_SelectorNode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/NPBehaveGraph/Nodes/Composite/NP_SelectorNode.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/NPBehaveGraph/Nodes/Composite/NP_SelectorNode.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/NPBehaveGraph/Nodes/Composite/NP_SelectorNode.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/NPBehaveGraph/Nodes/Composite/NP_SequenceNode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/NPBehaveGraph/Nodes/Composite/NP_SequenceNode.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/NPBehaveGraph/Nodes/Composite/NP_SequenceNode.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/NPBehaveGraph/Nodes/Composite/NP_SequenceNode.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/NPBehaveGraph/Nodes/Decorator.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/NPBehaveGraph/Nodes/Decorator.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/NPBehaveGraph/Nodes/Decorator/NP_BlackboardConditionNode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/NPBehaveGraph/Nodes/Decorator/NP_BlackboardConditionNode.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/NPBehaveGraph/Nodes/Decorator/NP_BlackboardConditionNode.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/NPBehaveGraph/Nodes/Decorator/NP_BlackboardConditionNode.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/NPBehaveGraph/Nodes/Decorator/NP_BlackboardMultipleConditionsNode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/NPBehaveGraph/Nodes/Decorator/NP_BlackboardMultipleConditionsNode.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/NPBehaveGraph/Nodes/Decorator/NP_BlackboardMultipleConditionsNode.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/NPBehaveGraph/Nodes/Decorator/NP_BlackboardMultipleConditionsNode.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/NPBehaveGraph/Nodes/Decorator/NP_RepeaterNode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/NPBehaveGraph/Nodes/Decorator/NP_RepeaterNode.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/NPBehaveGraph/Nodes/Decorator/NP_RepeaterNode.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/NPBehaveGraph/Nodes/Decorator/NP_RepeaterNode.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/NPBehaveGraph/Nodes/Decorator/NP_RootNode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/NPBehaveGraph/Nodes/Decorator/NP_RootNode.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/NPBehaveGraph/Nodes/Decorator/NP_RootNode.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/NPBehaveGraph/Nodes/Decorator/NP_RootNode.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/NPBehaveGraph/Nodes/Editor.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/NPBehaveGraph/Nodes/Editor.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/NPBehaveGraph/Nodes/Editor/NP_NodeView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/NPBehaveGraph/Nodes/Editor/NP_NodeView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/NPBehaveGraph/Nodes/Editor/NP_NodeView.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/NPBehaveGraph/Nodes/Editor/NP_NodeView.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/NPBehaveGraph/Nodes/Task.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/NPBehaveGraph/Nodes/Task.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/NPBehaveGraph/Nodes/Task/NP_AddBuffActionNode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/NPBehaveGraph/Nodes/Task/NP_AddBuffActionNode.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/NPBehaveGraph/Nodes/Task/NP_AddBuffActionNode.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/NPBehaveGraph/Nodes/Task/NP_AddBuffActionNode.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/NPBehaveGraph/Nodes/Task/NP_LogActionNode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/NPBehaveGraph/Nodes/Task/NP_LogActionNode.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/NPBehaveGraph/Nodes/Task/NP_LogActionNode.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/NPBehaveGraph/Nodes/Task/NP_LogActionNode.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/SkillGraph.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/SkillGraph.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/SkillGraph/Nodes.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/SkillGraph/Nodes.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/SkillGraph/Nodes/BuffDescriptionNode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/SkillGraph/Nodes/BuffDescriptionNode.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/SkillGraph/Nodes/BuffDescriptionNode.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/SkillGraph/Nodes/BuffDescriptionNode.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/SkillGraph/Nodes/BuffNodeBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/SkillGraph/Nodes/BuffNodeBase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/SkillGraph/Nodes/BuffNodeBase.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/SkillGraph/Nodes/BuffNodeBase.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/SkillGraph/Nodes/BuffNodes.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/SkillGraph/Nodes/BuffNodes.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/SkillGraph/Nodes/BuffNodes/BindStateBuffNode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/SkillGraph/Nodes/BuffNodes/BindStateBuffNode.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/SkillGraph/Nodes/BuffNodes/BindStateBuffNode.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/SkillGraph/Nodes/BuffNodes/BindStateBuffNode.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/SkillGraph/Nodes/Editor.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/SkillGraph/Nodes/Editor.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/SkillGraph/Nodes/Editor/BuffNodeView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/SkillGraph/Nodes/Editor/BuffNodeView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/SkillGraph/Nodes/Editor/BuffNodeView.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/SkillGraph/Nodes/Editor/BuffNodeView.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/SkillGraph/SkillAssetsOverViewEditor.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/SkillGraph/SkillAssetsOverViewEditor.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/SkillGraph/SkillAssetsOverViewEditor/SkillAssetsOverViewEditorWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/SkillGraph/SkillAssetsOverViewEditor/SkillAssetsOverViewEditorWindow.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/SkillGraph/SkillAssetsOverViewEditor/SkillAssetsOverViewEditorWindow.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/SkillGraph/SkillAssetsOverViewEditor/SkillAssetsOverViewEditorWindow.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/SkillGraph/SkillAssetsOverViewEditor/SkillAssetsOverViewItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/SkillGraph/SkillAssetsOverViewEditor/SkillAssetsOverViewItem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/SkillGraph/SkillAssetsOverViewEditor/SkillAssetsOverViewItem.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/SkillGraph/SkillAssetsOverViewEditor/SkillAssetsOverViewItem.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/SkillGraph/SkillAssetsOverViewEditor/SkillAssetsOverViewUtilities.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/SkillGraph/SkillAssetsOverViewEditor/SkillAssetsOverViewUtilities.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/SkillGraph/SkillAssetsOverViewEditor/SkillAssetsOverViewUtilities.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/SkillGraph/SkillAssetsOverViewEditor/SkillAssetsOverViewUtilities.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/SkillGraph/SkillGraph.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/SkillGraph/SkillGraph.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/SkillGraph/SkillGraph.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/SkillGraph/SkillGraph.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/SkillGraph/SkillGraphWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/SkillGraph/SkillGraphWindow.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/SkillGraph/SkillGraphWindow.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/SkillGraph/SkillGraphWindow.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/SkillGraph/SkillToolbarView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/SkillGraph/SkillToolbarView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/SkillGraph/SkillToolbarView.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/SkillGraph/SkillToolbarView.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/UnitAttributesDataGraph.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/UnitAttributesDataGraph.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/UnitAttributesDataGraph/Nodes.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/UnitAttributesDataGraph/Nodes.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/UnitAttributesDataGraph/Nodes/HeroAttributeNode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/UnitAttributesDataGraph/Nodes/HeroAttributeNode.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/UnitAttributesDataGraph/Nodes/HeroAttributeNode.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/UnitAttributesDataGraph/Nodes/HeroAttributeNode.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/UnitAttributesDataGraph/Nodes/UnitAttributesNodeBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/UnitAttributesDataGraph/Nodes/UnitAttributesNodeBase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/UnitAttributesDataGraph/Nodes/UnitAttributesNodeBase.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/UnitAttributesDataGraph/Nodes/UnitAttributesNodeBase.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/UnitAttributesDataGraph/UnitAttributesDataGraph.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/UnitAttributesDataGraph/UnitAttributesDataGraph.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/UnitAttributesDataGraph/UnitAttributesDataGraph.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/UnitAttributesDataGraph/UnitAttributesDataGraph.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/UniversalGraph.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/UniversalGraph.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/UniversalGraph/UniversalGraphView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/UniversalGraph/UniversalGraphView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/UniversalGraph/UniversalGraphView.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/UniversalGraph/UniversalGraphView.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/UniversalGraph/UniversalGraphWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/UniversalGraph/UniversalGraphWindow.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/UniversalGraph/UniversalGraphWindow.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/UniversalGraph/UniversalGraphWindow.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/UniversalGraph/UniversalToolbarView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/UniversalGraph/UniversalToolbarView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/UniversalGraph/UniversalToolbarView.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/UniversalGraph/UniversalToolbarView.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Saves.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Saves.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Saves/NPBehaveGraph.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Saves/NPBehaveGraph.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Saves/SkillGraphs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Saves/SkillGraphs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Saves/SkillGraphs/Test_Q.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Saves/SkillGraphs/Test_Q.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Editor/Blackboard.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Editor/Blackboard.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Editor/Callbacks/OnBaseGraphDeleted.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Editor/Callbacks/OnBaseGraphDeleted.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Editor/CreateNew.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Editor/CreateNew.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Editor/EditorAttributes.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Editor/EditorAttributes.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Editor/GotoFile.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Editor/GotoFile.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Editor/Icon_Dark.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Editor/Icon_Dark.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Editor/MiniMap.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Editor/MiniMap.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Editor/NodeGraphWindowHelper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Editor/NodeGraphWindowHelper.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Editor/NodeGraphWindowHelper.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Editor/NodeGraphWindowHelper.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Editor/NodeInspectorObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Editor/NodeInspectorObject.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Editor/Resources/GraphProcessorStyles/BaseNodeView.uss" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Editor/Resources/GraphProcessorStyles/BaseNodeView.uss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Editor/Resources/GraphProcessorStyles/ExposedParameterView.uss" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Editor/Resources/GraphProcessorStyles/ExposedParameterView.uss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Editor/Resources/GraphProcessorStyles/PortView.uss" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Editor/Resources/GraphProcessorStyles/PortView.uss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Editor/Run.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Editor/Run.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Editor/Save.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Editor/Save.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Editor/Utils/EditorGUIStyleHelper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Editor/Utils/EditorGUIStyleHelper.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Editor/Utils/EditorGUIStyleHelper.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Editor/Utils/EditorGUIStyleHelper.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Editor/Utils/FieldFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Editor/Utils/FieldFactory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Editor/Utils/GraphCreateAndSaveHelper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Editor/Utils/GraphCreateAndSaveHelper.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Editor/Utils/GraphCreateAndSaveHelper.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Editor/Utils/GraphCreateAndSaveHelper.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Editor/Utils/NodeProvider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Editor/Utils/NodeProvider.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Editor/Views/BaseNodeView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Editor/Views/BaseNodeView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Editor/Views/ExposedParameterFieldFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Editor/Views/ExposedParameterFieldFactory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Editor/Views/ExposedParameterFieldView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Editor/Views/ExposedParameterFieldView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Editor/Views/ExposedParameterPropertyView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Editor/Views/ExposedParameterPropertyView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Editor/Views/MiniMapView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Editor/Views/MiniMapView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Editor/Views/PortView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Editor/Views/PortView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Editor/Views/ToolbarView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Editor/Views/ToolbarView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Editor/com.alelievr.NodeGraphProcessor.Editor.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Editor/com.alelievr.NodeGraphProcessor.Editor.asmdef" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/BasicExample.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/BasicExample.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/ConditionalGraph.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/ConditionalGraph.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/ConditionalGraph.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/ConditionalGraph/Comparison.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/ConditionalGraph/Comparison.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/ConditionalGraph/ConditionalLink.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/ConditionalGraph/ConditionalLink.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/ConditionalGraph/ConditionalNode.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/ConditionalGraph/ConditionalNode.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/ConditionalGraph/ConditionalProcessor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/ConditionalGraph/ConditionalProcessor.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/ConditionalGraph/Editor.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/ConditionalGraph/Editor/ComparisonView.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/ConditionalGraph/Editor/ComparisonView.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/ConditionalGraph/Editor/ConditionalProcessorView.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/ConditionalGraph/Editor/ConditionalProcessorView.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/ConditionalGraph/IConditionalNode.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/ConditionalGraph/IConditionalNode.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/ConditionalGraph/StartNode.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/ConditionalGraph/StartNode.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/CustomConvertions.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/CustomConvertions.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/CustomOutputExample.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/CustomOutputExample.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/CustomPushExample.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/CustomPushExample.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/CycleTest.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/CycleTest.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/DefaultNodes.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/DefaultNodes/Editor.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/DefaultNodes/Editor/AbstractNodeView.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/DefaultNodes/Editor/AbstractNodeView.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/DefaultNodes/Editor/CircleRadiansView.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/DefaultNodes/Editor/CircleRadiansView.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/DefaultNodes/Editor/ColorNodeView.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/DefaultNodes/Editor/ColorNodeView.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/DefaultNodes/Editor/FloatNodeView.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/DefaultNodes/Editor/FloatNodeView.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/DefaultNodes/Editor/ForLoopNodeView.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/DefaultNodes/Editor/ForLoopNodeView.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/DefaultNodes/Editor/IfNodeView.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/DefaultNodes/Editor/IfNodeView.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/DefaultNodes/Editor/MessageNode2View.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/DefaultNodes/Editor/MessageNode2View.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/DefaultNodes/Editor/MutliAddNodeView.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/DefaultNodes/Editor/MutliAddNodeView.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/DefaultNodes/Editor/PrefabNodeView.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/DefaultNodes/Editor/PrefabNodeView.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/DefaultNodes/Editor/PrintNodeView.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/DefaultNodes/Editor/PrintNodeView.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/DefaultNodes/Editor/SettingsNodeView.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/DefaultNodes/Editor/SettingsNodeView.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/DefaultNodes/Editor/StringNodeView.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/DefaultNodes/Editor/StringNodeView.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/DefaultNodes/Editor/SwitchNodeView.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/DefaultNodes/Editor/SwitchNodeView.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/DefaultNodes/Editor/TypeSwitchNodeView.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/DefaultNodes/Editor/TypeSwitchNodeView.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/DefaultNodes/Nodes.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/DefaultNodes/Nodes/AbstractNode.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/DefaultNodes/Nodes/AbstractNode.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/DefaultNodes/Nodes/CircleRadians.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/DefaultNodes/Nodes/CircleRadians.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/DefaultNodes/Nodes/ColorNode.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/DefaultNodes/Nodes/ColorNode.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/DefaultNodes/Nodes/ConsoleLogNode.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/DefaultNodes/Nodes/ConsoleLogNode.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/DefaultNodes/Nodes/CustomPortDataNode.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/DefaultNodes/Nodes/CustomPortDataNode.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/DefaultNodes/Nodes/CustomPortsNode.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/DefaultNodes/Nodes/CustomPortsNode.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/DefaultNodes/Nodes/DrawerFieldTestNode.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/DefaultNodes/Nodes/DrawerFieldTestNode.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/DefaultNodes/Nodes/FieldTestNode.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/DefaultNodes/Nodes/FieldTestNode.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/DefaultNodes/Nodes/FloatNode.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/DefaultNodes/Nodes/FloatNode.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/DefaultNodes/Nodes/ForLoopNode.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/DefaultNodes/Nodes/ForLoopNode.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/DefaultNodes/Nodes/GameObjectNode.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/DefaultNodes/Nodes/GameObjectNode.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/DefaultNodes/Nodes/IfNode.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/DefaultNodes/Nodes/IfNode.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/DefaultNodes/Nodes/Inheritance1.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/DefaultNodes/Nodes/Inheritance1.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/DefaultNodes/Nodes/Inheritance2.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/DefaultNodes/Nodes/Inheritance2.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/DefaultNodes/Nodes/InheritanceBase.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/DefaultNodes/Nodes/InheritanceBase.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/DefaultNodes/Nodes/InspectorNode.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/DefaultNodes/Nodes/InspectorNode.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/DefaultNodes/Nodes/ListNode.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/DefaultNodes/Nodes/ListNode.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/DefaultNodes/Nodes/MessageNode.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/DefaultNodes/Nodes/MessageNode.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/DefaultNodes/Nodes/MessageNode2.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/DefaultNodes/Nodes/MessageNode2.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/DefaultNodes/Nodes/MultiAddNode.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/DefaultNodes/Nodes/MultiAddNode.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/DefaultNodes/Nodes/OutputNode.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/DefaultNodes/Nodes/OutputNode.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/DefaultNodes/Nodes/PortConnectionTests.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/DefaultNodes/Nodes/PortConnectionTests.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/DefaultNodes/Nodes/PrefabNode.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/DefaultNodes/Nodes/PrefabNode.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/DefaultNodes/Nodes/PrintNode.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/DefaultNodes/Nodes/PrintNode.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/DefaultNodes/Nodes/RenamableNode.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/DefaultNodes/Nodes/RenamableNode.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/DefaultNodes/Nodes/SettingsNode.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/DefaultNodes/Nodes/SettingsNode.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/DefaultNodes/Nodes/StringNode.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/DefaultNodes/Nodes/StringNode.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/DefaultNodes/Nodes/SubNode.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/DefaultNodes/Nodes/SubNode.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/DefaultNodes/Nodes/SwitchNode.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/DefaultNodes/Nodes/SwitchNode.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/DefaultNodes/Nodes/TextNode.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/DefaultNodes/Nodes/TextNode.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/DefaultNodes/Nodes/TypeSwitchNode.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/DefaultNodes/Nodes/TypeSwitchNode.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/DefaultNodes/Nodes/UnityEventNode.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/DefaultNodes/Nodes/UnityEventNode.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/DefaultNodes/Nodes/VectorNode.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/DefaultNodes/Nodes/VectorNode.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/DefaultNodes/Nodes/VerticalNode.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/DefaultNodes/Nodes/VerticalNode.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/DefaultNodes/Nodes/VerticalNode2.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/DefaultNodes/Nodes/VerticalNode2.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/DefaultNodes/Nodes/VisibleIfAttributeNode.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/DefaultNodes/Nodes/VisibleIfAttributeNode.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/DefaultNodes/Nodes/WaitFrameNode.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/DefaultNodes/Nodes/WaitFrameNode.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/DefaultNodes/Nodes/WaitNode.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/DefaultNodes/Nodes/WaitNode.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/Editor.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/Editor/01_DefaultGraph.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/Editor/01_DefaultGraph/DefaultGraphWindow.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/Editor/01_DefaultGraph/DefaultGraphWindow.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/Editor/02_CustomContextMenu.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/Editor/02_CustomContextMenu/CustomContextMenuGraphView.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/Editor/02_CustomContextMenu/CustomContextMenuGraphView.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/Editor/02_CustomContextMenu/CustomContextMenuGraphWindow.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/Editor/02_CustomContextMenu/CustomContextMenuGraphWindow.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/Editor/03_CustomToolbar.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/Editor/03_CustomToolbar/CustomToolbarGraphView.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/Editor/03_CustomToolbar/CustomToolbarGraphView.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/Editor/03_CustomToolbar/CustomToolbarGraphWindow.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/Editor/03_CustomToolbar/CustomToolbarGraphWindow.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/Editor/03_CustomToolbar/CustomToolbarView.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/Editor/03_CustomToolbar/CustomToolbarView.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/Editor/04_ExposedProperties.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/Editor/04_ExposedProperties/ExposedPropertiesGraph.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/Editor/04_ExposedProperties/ExposedPropertiesGraph.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/Editor/04_ExposedProperties/ExposedPropertiesGraphView.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/Editor/04_ExposedProperties/ExposedPropertiesGraphView.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/Editor/04_ExposedProperties/ExposedPropertiesGraphWindow.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/Editor/04_ExposedProperties/ExposedPropertiesGraphWindow.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/Editor/05_All.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/Editor/05_All/AllGraphView.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/Editor/05_All/AllGraphView.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/Editor/05_All/AllGraphWindow.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/Editor/05_All/AllGraphWindow.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/ExposedGetProperties.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/ExposedGetProperties.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/ExposedPropertiesExample.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/ExposedPropertiesExample.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/GraphBehaviour.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/GraphBehaviour.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/Multi-Port.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/Multi-Port.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/MultiPort2.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/MultiPort2.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/Performances.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/Performances/BigComputeOrder.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/Performances/BigComputeOrder.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/Performances/LotsOfNode.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/Performances/LotsOfNode.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/Relay test.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/Relay test.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/RelayTest.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/RelayTest.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/Resources.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/Resources/Cube.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/Resources/Cube.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/Resources/PortViewTypes.uss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/Resources/PortViewTypes.uss.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/Resources/TestType.uss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/Resources/TestType.uss.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/Scenes.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/Scenes/Conditional Graph.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/Scenes/Conditional Graph.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/Scenes/ConditionalGraph.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/Scenes/ConditionalGraph/RuntimeConditionalGraph.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/Scenes/ConditionalGraph/RuntimeConditionalGraph.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/Scenes/EmbeddedGraph.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/Scenes/EmbeddedGraph.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/Scenes/RuntimeGraph.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/Scenes/RuntimeGraph.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/Scenes/RuntimeGraph.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/Scenes/RuntimeGraph/RuntimeGraph.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/Scenes/RuntimeGraph/RuntimeGraph.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/Simple.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/Simple.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/Vertical.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/Vertical.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/Wait-Test.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Examples/Wait-Test.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Runtime/Elements/BaseNode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Runtime/Elements/BaseNode.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Runtime/Elements/ExposedParameter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Runtime/Elements/ExposedParameter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Runtime/Elements/Group.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Runtime/Elements/Group.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Runtime/Elements/NodePort.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Runtime/Elements/NodePort.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Runtime/Elements/ParameterNode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Runtime/Elements/ParameterNode.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Runtime/Elements/RelayNode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Runtime/Elements/RelayNode.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Runtime/Graph/Attributes.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Runtime/Graph/Attributes.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Runtime/Processing/CustomPortIO.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Runtime/Processing/CustomPortIO.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Runtime/Processing/ProcessGraphProcessor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Runtime/Processing/ProcessGraphProcessor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Runtime/Processing/TypeAdapter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Runtime/Processing/TypeAdapter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Runtime/Utils/SerializableEdge.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Runtime/Utils/SerializableEdge.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/NPBehaveExamples.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/NPBehaveExamples/Editor.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/NPBehaveExamples/Editor/DebuggerEditor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/NPBehaveExamples/Editor/DebuggerEditor.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Event/NumericChangeEventArgs.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/NPBehaveExamples/Editor/DebuggerWindow.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/NPBehaveExamples/Editor/DebuggerWindow.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/NPBehaveExamples/Editor/Tests.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/NPBehaveExamples/Editor/Tests/BlackboardTest.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/NPBehaveExamples/Editor/Tests/BlackboardTest.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/NPBehaveExamples/Editor/Tests/ClockTest.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/NPBehaveExamples/Editor/Tests/ClockTest.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/NPBehaveExamples/Editor/Tests/Composite.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/NPBehaveExamples/Editor/Tests/Composite/ParallelTest.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/NPBehaveExamples/Editor/Tests/Composite/ParallelTest.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/NPBehaveExamples/Editor/Tests/Composite/RandomSelectorTest.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/NPBehaveExamples/Editor/Tests/Composite/RandomSelectorTest.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/NPBehaveExamples/Editor/Tests/Composite/RandomSequenceTest.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/NPBehaveExamples/Editor/Tests/Composite/RandomSequenceTest.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/NPBehaveExamples/Editor/Tests/Composite/SelectorTest.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/NPBehaveExamples/Editor/Tests/Composite/SelectorTest.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/NPBehaveExamples/Editor/Tests/Composite/SequenceTest.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/NPBehaveExamples/Editor/Tests/Composite/SequenceTest.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/NPBehaveExamples/Editor/Tests/Decorator.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/NPBehaveExamples/Editor/Tests/Decorator/BlackboardQueryTest.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/NPBehaveExamples/Editor/Tests/Decorator/BlackboardQueryTest.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/NPBehaveExamples/Editor/Tests/Decorator/CooldownTest.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/NPBehaveExamples/Editor/Tests/Decorator/CooldownTest.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/NPBehaveExamples/Editor/Tests/Decorator/RepeaterTest.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/NPBehaveExamples/Editor/Tests/Decorator/RepeaterTest.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/NPBehaveExamples/Editor/Tests/GeneralTest.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/NPBehaveExamples/Editor/Tests/GeneralTest.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/NPBehaveExamples/Editor/Tests/_utils.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/NPBehaveExamples/Editor/Tests/_utils/MockNode.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/NPBehaveExamples/Editor/Tests/_utils/MockNode.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/NPBehaveExamples/Editor/Tests/_utils/Test.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/NPBehaveExamples/Editor/Tests/_utils/Test.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/NPBehaveExamples/Editor/Tests/_utils/TestRoot.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/NPBehaveExamples/Editor/Tests/_utils/TestRoot.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/NPBehaveExamples/Examples.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/NPBehaveExamples/Examples/Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/NPBehaveExamples/Examples/Materials/NPBehave_Example_Enemy.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/NPBehaveExamples/Examples/Materials/NPBehave_Example_Enemy.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/NPBehaveExamples/Examples/Materials/NPBehave_Example_Player.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/NPBehaveExamples/Examples/Materials/NPBehave_Example_Player.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/NPBehaveExamples/Examples/Materials/NPBehave_Example_Terrain.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/NPBehaveExamples/Examples/Materials/NPBehave_Example_Terrain.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/NPBehaveExamples/Examples/Prefabs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/NPBehaveExamples/Examples/Prefabs/Player.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/NPBehaveExamples/Examples/Prefabs/Player.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/NPBehaveExamples/Examples/Prefabs/SimpleEnemy.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/NPBehaveExamples/Examples/Prefabs/SimpleEnemy.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/NPBehaveExamples/Examples/Prefabs/SwarmEnemy.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/NPBehaveExamples/Examples/Prefabs/SwarmEnemy.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/NPBehaveExamples/Examples/Scenes.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/NPBehaveExamples/Examples/Scenes/NPBehaveExample_ClockThrottling.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/NPBehaveExamples/Examples/Scenes/NPBehaveExample_ClockThrottling.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/NPBehaveExamples/Examples/Scenes/NPBehaveExample_HelloBlackboardsAI.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/NPBehaveExamples/Examples/Scenes/NPBehaveExample_HelloBlackboardsAI.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/NPBehaveExamples/Examples/Scenes/NPBehaveExample_HelloWorldAI.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/NPBehaveExamples/Examples/Scenes/NPBehaveExample_HelloWorldAI.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/NPBehaveExamples/Examples/Scenes/NPBehaveExample_NavMoveTo.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/NPBehaveExamples/Examples/Scenes/NPBehaveExample_NavMoveTo.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/NPBehaveExamples/Examples/Scenes/NPBehaveExample_NavMoveTo.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/NPBehaveExamples/Examples/Scenes/NPBehaveExample_NavMoveTo/NavMesh.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/NPBehaveExamples/Examples/Scenes/NPBehaveExample_NavMoveTo/NavMesh.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/NPBehaveExamples/Examples/Scenes/NPBehaveExample_ReusableSubtrees.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/NPBehaveExamples/Examples/Scenes/NPBehaveExample_ReusableSubtrees.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/NPBehaveExamples/Examples/Scenes/NPBehaveExample_SimpleAI.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/NPBehaveExamples/Examples/Scenes/NPBehaveExample_SimpleAI.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/NPBehaveExamples/Examples/Scenes/NPBehaveExample_SwarmAI.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/NPBehaveExamples/Examples/Scenes/NPBehaveExample_SwarmAI.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/NPBehaveExamples/Examples/Scripts.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/NPBehaveExamples/Examples/Scripts/NPBehaveExampleClockThrottling.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/NPBehaveExamples/Examples/Scripts/NPBehaveExampleClockThrottling.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/NPBehaveExamples/Examples/Scripts/NPBehaveExampleEnemyAI.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/NPBehaveExamples/Examples/Scripts/NPBehaveExampleEnemyAI.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/NPBehaveExamples/Examples/Scripts/NPBehaveExampleHelloBlackboardsAI.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/NPBehaveExamples/Examples/Scripts/NPBehaveExampleHelloBlackboardsAI.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/NPBehaveExamples/Examples/Scripts/NPBehaveExampleHelloWorldAI.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/NPBehaveExamples/Examples/Scripts/NPBehaveExampleHelloWorldAI.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/NPBehaveExamples/Examples/Scripts/NPBehaveExampleMouseController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/NPBehaveExamples/Examples/Scripts/NPBehaveExampleMouseController.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/NPBehaveExamples/Examples/Scripts/NPBehaveExampleNavMoveToEnemy.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/NPBehaveExamples/Examples/Scripts/NPBehaveExampleNavMoveToEnemy.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/NPBehaveExamples/Examples/Scripts/NPBehaveExampleSwarmEnemyAI.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/NPBehaveExamples/Examples/Scripts/NPBehaveExampleSwarmEnemyAI.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/NPBehaveExamples/Examples/Scripts/ReusableSubtrees.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/NPBehaveExamples/Examples/Scripts/ReusableSubtrees/EnemyA.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/NPBehaveExamples/Examples/Scripts/ReusableSubtrees/EnemyA.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/NPBehaveExamples/Examples/Scripts/ReusableSubtrees/EnemyB.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/NPBehaveExamples/Examples/Scripts/ReusableSubtrees/EnemyB.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/NPBehaveExamples/Examples/Scripts/ReusableSubtrees/NodeFactory.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/NPBehaveExamples/Examples/Scripts/ReusableSubtrees/NodeFactory.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/NewInputSystem/PlayerAssets.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Res/NewInputSystem/PlayerAssets.inputactions" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Runtime/Entity/EntityLogic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Runtime/Entity/EntityLogic.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Configs/SkillConfig/ETest.bytes" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Configs/SkillConfig/ETest.bytes" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Saves/SkillGraphs/ETest.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Saves/SkillGraphs/ETest.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Saves/UnitAttributesDataGraph/AllHeroAttributesData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Saves/UnitAttributesDataGraph/AllHeroAttributesData.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/Sirenix/Odin Inspector/Config/Editor/OdinModuleConfig.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/Sirenix/Odin Inspector/Config/Editor/OdinModuleConfig.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scenes/GameStart.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scenes/GameStart.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Base/GameEntry.Builtin.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Base/GameEntry.Builtin.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Base/GameEntry.Custom.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Base/GameEntry.Custom.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Base/GameEntry.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Base/GameEntry.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Component/BattleEventSystemComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Component/BattleEventSystemComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Component/DataModifierComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Component/DataModifierComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Component/NumericComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Component/NumericComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Data/Pet/MyPetData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Data/Pet/MyPetData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Data/Pet/Pet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Data/Pet/Pet.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Data/Pet/PetData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Data/Pet/PetData.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Data/TargetableObject/TargetableObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Data/TargetableObject/TargetableObject.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Entity/EntityExtension.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Entity/EntityExtension.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Data/TargetableObject/TargetableObjectData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Data/TargetableObject/TargetableObjectData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Definition/DataStruct/ImpactData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Definition/DataStruct/ImpactData.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Game/GameBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Game/GameBase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/Component/NP_RuntimeTree.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/Component/NP_RuntimeTree.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/Component/NP_TreeDataRepositoryComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/Component/NP_TreeDataRepositoryComponent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/Core/NPBehave/Blackboard.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/Core/NPBehave/Blackboard.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/Core/NPBehave/Clock.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/Core/NPBehave/Clock.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/Core/NPBehave/Composite/Parallel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/Core/NPBehave/Composite/Parallel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/Core/NPBehave/Composite/RandomSelector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/Core/NPBehave/Composite/RandomSelector.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/Core/NPBehave/Composite/RandomSequence.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/Core/NPBehave/Composite/RandomSequence.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/Core/NPBehave/Composite/Selector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/Core/NPBehave/Composite/Selector.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/Core/NPBehave/Composite/Sequence.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/Core/NPBehave/Composite/Sequence.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/Core/NPBehave/Debugger.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/Core/NPBehave/Decorator/Condition.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/Core/NPBehave/Decorator/Condition.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/Core/NPBehave/Decorator/Cooldown.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/Core/NPBehave/Decorator/Cooldown.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/Core/NPBehave/Decorator/Failer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/Core/NPBehave/Decorator/Failer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/Core/NPBehave/Decorator/Inverter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/Core/NPBehave/Decorator/Inverter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/Core/NPBehave/Decorator/Observer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/Core/NPBehave/Decorator/Observer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/Core/NPBehave/Decorator/ObservingDecorator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/Core/NPBehave/Decorator/ObservingDecorator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/Core/NPBehave/Decorator/Random.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/Core/NPBehave/Decorator/Random.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/Core/NPBehave/Decorator/Repeater.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/Core/NPBehave/Decorator/Repeater.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/Core/NPBehave/Decorator/Service.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/Core/NPBehave/Decorator/Service.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/Core/NPBehave/Decorator/Succeeder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/Core/NPBehave/Decorator/Succeeder.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/Core/NPBehave/Decorator/TimeMax.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/Core/NPBehave/Decorator/TimeMax.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/Core/NPBehave/Decorator/TimeMin.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/Core/NPBehave/Decorator/TimeMin.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/Core/NPBehave/Decorator/WaitForCondition.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/Core/NPBehave/Decorator/WaitForCondition.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/Core/NPBehave/Node.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/Core/NPBehave/Node.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/Core/NPBehave/README-Debugger.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/Core/NPBehave/Root.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/Core/NPBehave/Root.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/Core/NPBehave/Task/Action.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/Core/NPBehave/Task/Action.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/Core/NPBehave/Task/NavMoveTo.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/Core/NPBehave/Task/NavMoveTo.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/Core/NPBehave/Task/Wait.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/Core/NPBehave/Task/Wait.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/Core/NPBehave/UnityContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/Core/NPBehave/SyncContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/NPBlackBoardDataManager/NP_BlackBoardDataManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/NPBlackBoardDataManager/NP_BlackBoardDataManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/NP_RuntimeTreeFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/NP_RuntimeTreeFactory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/NodeDatas/BBValues/ANP_BBValue.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/NodeDatas/BBValues/ANP_BBValue.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/NodeDatas/BBValues/NP_BBValue_Int.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/NodeDatas/BBValues/NP_BBValue_Int.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/NodeDatas/Decorator/NP_BlackboardConditionNodeData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/NodeDatas/Decorator/NP_BlackboardConditionNodeData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/NodeDatas/NP_NodeDataBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/NodeDatas/NP_NodeDataBase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/NodeDatas/NP_RootNodeData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/NodeDatas/NP_RootNodeData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/TheDataContainsAction/NP_AddBuffAction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/TheDataContainsAction/NP_AddBuffAction.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Player/NewInputSystem/PlayerAssetsInputs.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Player/NewInputSystem/PlayerAssetsInputs.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Player/PlayerThirdPersonController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Player/PlayerThirdPersonController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Room/Room.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Room/Room.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/SkillSystem/BuffData/SkillBuffDataBase/BuffDataBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/SkillSystem/BuffData/SkillBuffDataBase/BuffDataBase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/TheDataContainsAction/NP_ChangeUnitPropertyAction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/TheDataContainsAction/NP_ChangeUnitPropertyAction.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/SkillSystem/BuffSystem/ChangePropertyBuffSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/SkillSystem/BuffSystem/ChangePropertyBuffSystem.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/SkillSystem/BuffSystem/Core/BuffFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/SkillSystem/BuffSystem/Core/BuffFactory.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/SkillSystem/BuffSystem/Core/BuffManagerComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/SkillSystem/BuffSystem/Core/BuffManagerComponent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/SkillSystem/Fsm/StackFsmComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/SkillSystem/Fsm/StackFsmComponent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/SkillSystem/Others/BuffNodeDataBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/SkillSystem/Others/BuffNodeDataBase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/SkillSystem/Others/NormalBuffNodeData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/SkillSystem/Others/NormalBuffNodeData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/SkillSystem/Others/SkillCanvasManagerComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/SkillSystem/Others/SkillCanvasManagerComponent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/SkillSystem/Others/ValueTypeDecideByCanvasData/VTD_Id.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/SkillSystem/Others/ValueTypeDecideByCanvasData/VTD_Id.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/UI/UIMainMenuForm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/UI/UIMainMenuForm.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/UI/UIPatternSelectForm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/UI/UIPatternSelectForm.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Unit.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Unit/UnitComponent.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Unit/UnitComponent.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/SkillSystem/BuffSystem/Core/BuffTimerAndOverlayHelper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/SkillSystem/BuffSystem/Core/BuffTimerAndOverlayHelper.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/SkillSystem/BuffSystem/TreatmentBuffSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/SkillSystem/BuffSystem/TreatmentBuffSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/UnitAttributeData/NodeData/HeroAttributesNodeData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/UnitAttributeData/NodeData/HeroAttributesNodeData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/UnitAttributeData/NodeData/UnitAttributesNodeDataBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/UnitAttributeData/NodeData/UnitAttributesNodeDataBase.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/UnitAttributeData/UnitAttributesDataComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/UnitAttributeData/UnitAttributesDataComponent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/UnitAttributeData/UnitAttributesDataSupportor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/UnitAttributeData/UnitAttributesDataSupportor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Utility/MongoHelper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Utility/MongoHelper.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -599,6 +67,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1635ac259ea544e995e61edbd50c5666175800/31/7e79b2f5/IMGUIContainer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4bcf7fea78174bc093803aefb9e9d8a05c800/02/5f5227fe/ReferencePoolInfo.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4bcf7fea78174bc093803aefb9e9d8a05c800/34/a4d0a5f1/IEntityGroup.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4bcf7fea78174bc093803aefb9e9d8a05c800/5c/817145b0/IReference.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4bcf7fea78174bc093803aefb9e9d8a05c800/60/2eb75396/GameEventArgs.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4bcf7fea78174bc093803aefb9e9d8a05c800/66/2f0c8b76/IResourceManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4bcf7fea78174bc093803aefb9e9d8a05c800/b0/876fcb32/IEntityManager.cs" root0="SKIP_HIGHLIGHTING" />
@@ -650,6 +119,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/be91ca7e8f3b464890ab1d48b84e94ea174200/c1/2b7512fb/Behaviour.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/be91ca7e8f3b464890ab1d48b84e94ea174200/c6/30eafe9f/Component.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/be91ca7e8f3b464890ab1d48b84e94ea174200/e2/08ccf5dd/Resources.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/cf872124b3f4465e87923725fbaf943219200/5c/a3d64c87/ListDrawerSettingsAttribute.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/cf872124b3f4465e87923725fbaf943219200/ea/8c628d3f/TitleAttribute.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f07eb00f18584bbda00d12c92d2ad54394f800/5e/aa73c3d3/EditorWindow.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f07eb00f18584bbda00d12c92d2ad54394f800/5f/1d77ab8a/SerializedObject.cs" root0="SKIP_HIGHLIGHTING" />
@@ -664,6 +134,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/GameMain/Scripts/UnitAttributeData/UnitAttributesDataComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameMain/Scripts/Utility/StructBsonSerialize.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.postprocessing@3.2.2/PostProcessing/Shaders/Builtins/AutoExposure.compute" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.postprocessing@3.2.2/PostProcessing/Shaders/Builtins/SubpixelMorphologicalAntialiasing.hlsl" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.postprocessing@3.2.2/PostProcessing/Shaders/Builtins/TemporalAntialiasing.shader" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.shadergraph@14.0.9/Tests/Editor/TestNode.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -729,10 +200,10 @@
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <method v="2" />
     </configuration>
-    <configuration name="附加到 Unity 编辑器" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="7612">
+    <configuration name="附加到 Unity 编辑器" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="10452">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="7612" />
+      <option name="pid" value="10452" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -824,6 +295,11 @@
       <workItem from="1724901911287" duration="1926000" />
       <workItem from="1724904245981" duration="774000" />
       <workItem from="1724905111601" duration="12963000" />
+      <workItem from="1724983723919" duration="10779000" />
+      <workItem from="1725067808734" duration="15701000" />
+      <workItem from="1725244332962" duration="10181000" />
+      <workItem from="1725329585430" duration="1015000" />
+      <workItem from="1725332185928" duration="23027000" />
     </task>
     <servers />
   </component>

@@ -20,6 +20,8 @@ namespace Suture
             InitCustomComponents();
             InitCustomDebuggers();
             MongoHelper.Init();
+            
+         NumericWatcher.NumericWatcherSubscribe();
         }
     }
 }

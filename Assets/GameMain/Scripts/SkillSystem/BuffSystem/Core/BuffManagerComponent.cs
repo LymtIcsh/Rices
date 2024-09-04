@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using NPBehave;
+using UnityGameFramework.Runtime;
 
 namespace Suture
 {
@@ -28,8 +29,6 @@ namespace Suture
 
         public void FixedUpdate()
         {
-
-            
             this.m_Current = m_Buffs.First;
             //轮询链表
             while (this.m_Current != null)
@@ -51,8 +50,8 @@ namespace Suture
                     m_Buffs.Remove(this.m_Current);
                     m_BuffsForFind_BuffWorkType.Remove(this.m_Current.Value.BuffData.BuffWorkType);
                     this.m_BuffsForFind_BuffId.Remove(this.m_Current.Value.BuffData.BuffId);
-                    // Log.Info(
-                    //     $"移除一个Buff，Id为{this.m_Current.Value.BuffData.BuffId},BuffManager是否还有?:{this.FindBuffById(this.m_Current.Value.BuffData.BuffId)}");
+                    Log.Info(
+                        $"移除一个Buff，Id为{this.m_Current.Value.BuffData.BuffId},BuffManager是否还有?:{this.FindBuffById(this.m_Current.Value.BuffData.BuffId)}");
                     this.m_Current = this.m_Next;
                 }
             }
@@ -70,7 +69,7 @@ namespace Suture
 
             this.m_BuffsForFind_BuffWorkType[aBuff.BuffData.BuffWorkType] = aBuff;
             this.m_BuffsForFind_BuffId[aBuff.BuffData.BuffId] = aBuff;
-            // Log.Info($"把ID为{aBuff.BuffData.BuffId}的buff加入检索表");
+            Log.Info($"把ID为{aBuff.BuffData.BuffId}的buff加入检索表");
         }
 
         /// <summary>
@@ -135,7 +134,7 @@ namespace Suture
                 return _temp;
             }
 
-            //Log.Error($"查找{buffWorkTypes}失败");
+            Log.Error($"查找{buffWorkTypes}失败");
             return null;
         }
 

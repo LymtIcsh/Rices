@@ -13,19 +13,19 @@ namespace Suture
         // readonly 在字段声明中，readonly 指示只能在声明期间或在同一个类的构造函数中向字段赋值
         // 。 可以在字段声明和构造函数中多次分配和重新分配只读字段。
         private readonly CampType m_Camp;
-        private readonly int m_HP;
-
-
-        private readonly int m_Attack;
-
-        private readonly int m_Defense;
+        // private readonly int m_HP;
+        //
+        //
+        // private readonly int m_Attack;
+        //
+        // private readonly int m_Defense;
         
-        public ImpactData(CampType camp, int hp, int attack, int defense)
+        public ImpactData(CampType camp/*, int hp, int attack, int defense*/)
         {
             m_Camp = camp;
-            m_HP = hp;
-            m_Attack = attack;
-            m_Defense = defense;
+            // m_HP = hp;
+            // m_Attack = attack;
+            // m_Defense = defense;
         }
 
         public CampType Camp
@@ -36,34 +36,34 @@ namespace Suture
             }
         }
 
-        public int HP
-        {
-            get
-            {
-                return m_HP;
-            }
-        }
-
-        /// <summary>
-        /// 攻击
-        /// </summary>
-        public int Attack
-        {
-            get
-            {
-                return m_Attack;
-            }
-        }
-        /// <summary>
-        /// 防御
-        /// </summary>
-        public int Defense
-        {
-            get
-            {
-                return m_Defense;
-            }
-        }
+        // public int HP
+        // {
+        //     get
+        //     {
+        //         return m_HP;
+        //     }
+        // }
+        //
+        // /// <summary>
+        // /// 攻击
+        // /// </summary>
+        // public int Attack
+        // {
+        //     get
+        //     {
+        //         return m_Attack;
+        //     }
+        // }
+        // /// <summary>
+        // /// 防御
+        // /// </summary>
+        // public int Defense
+        // {
+        //     get
+        //     {
+        //         return m_Defense;
+        //     }
+        // }
     }
 
 }

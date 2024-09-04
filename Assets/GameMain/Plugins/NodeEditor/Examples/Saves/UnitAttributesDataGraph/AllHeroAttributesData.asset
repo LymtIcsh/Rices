@@ -33,7 +33,7 @@ MonoBehaviour:
       Data: 1|Plugins.NodeEditor.HeroAttributeNode, Assembly-CSharp-Editor
     - Name: nodeCustomName
       Entry: 1
-      Data: "\u8BFA\u624B\u5C5E\u6027\u6570\u636E\u5757"
+      Data: "\u4E9A\u7D22\u5C5E\u6027\u6570\u636E\u5757"
     - Name: GUID
       Entry: 1
       Data: 8ef457fa-1dd5-4d1b-bf3a-e2e86d02272e
@@ -48,10 +48,10 @@ MonoBehaviour:
       Data: 402
     - Name: 
       Entry: 4
-      Data: 177
+      Data: 177.5
     - Name: 
       Entry: 4
-      Data: 168
+      Data: 152
     - Name: 
       Entry: 4
       Data: 42
@@ -478,8 +478,8 @@ MonoBehaviour:
   exposedParameters: []
   serializedParameterList: []
   stickyNotes: []
-  position: {x: 0, y: 0, z: 0}
-  scale: {x: 1, y: 1, z: 1}
+  position: {x: -481, y: -198, z: 0}
+  scale: {x: 2, y: 2, z: 1}
   Name: AllHeroAttributesData
   SavePath: Assets/GameMain/Configs/UnitAttributesDatas
   references:

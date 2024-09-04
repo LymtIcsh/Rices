@@ -30,7 +30,7 @@ namespace Suture
 
             GameEntry.Entity.ShowMyPet(new MyPetData(typeId, typeId)
             {
-                Name = name,
+              //  Name = name,
                 Position = InitPos,
                 Scale = Vector3.one,
             });

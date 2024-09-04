@@ -1,4 +1,6 @@
-﻿namespace Suture
+﻿using UnityGameFramework.Runtime;
+
+namespace Suture
 {
     public static class BuffTimerAndOverlayHelper
     {
@@ -29,7 +31,7 @@
             {
                 CalculateTimerAndOverlayHelper(buffSystemBase, layer);
 
-                //Log.Info($"本次新加BuffID为{buffDataBase.FlagId}");
+                Log.Info($"本次新加BuffID为{buffSystemBase.BuffData.BuffId}");
                 buffSystemBase.BuffState = BuffState.Waiting;
                 buffManagerComponent.AddBuff(buffSystemBase);
 

@@ -2,15 +2,17 @@
 
 using System;
 using System.Collections.Generic;
+using UnityGameFramework.Runtime;
 
 namespace Suture
 {
     /// <summary>
     /// 数据修改器组件
     /// </summary>
-  public class DataModifierComponent : Entity
+    public class DataModifierComponent : Entity
     {
         #region 私有成员
+
         /// <summary>
         /// 所有的数据修改器
         /// Key为分组名称，其中如果和NumericComponent有联系，则必须使用NumericType对应String作为Key，例如NumericType.HP对应String就是HP
@@ -22,16 +24,58 @@ namespace Suture
 
         #region 公有成员
 
-        // /// <summary>
-        // /// 新增一个数据修改器
-        // /// </summary>
-        // /// <param name="modifierName">所归属修改器集合名称</param>
-        // /// <param name="dataModifier">要添加的修改器</param>
-        // /// <param name="numericType">如果不为Min说明需要直接去更新属性</param>
-        // public void AddDataModifier(string modifierName, ADataModifier dataModifier,
-        //     NumericType numericType = NumericType.Min)
-        // {
-        // }
+        /// <summary>
+        /// 新增一个数据修改器
+        /// </summary>
+        /// <param name="modifierName">所归属修改器集合名称</param>
+        /// <param name="dataModifier">要添加的修改器</param>
+        /// <param name="numericType">如果不为Min说明需要直接去更新属性</param>
+        public void AddDataModifier(string modifierName, ADataModifier dataModifier,
+            NumericType numericType = NumericType.Min)
+        {
+            if (AllModifiers.TryGetValue(modifierName, out var modifiers))
+            {
+                modifiers.Add(dataModifier);
+            }
+            else
+            {
+                AllModifiers.Add(modifierName, new List<ADataModifier>() { dataModifier });
+            }
+
+            if (numericType == NumericType.Min)
+                return;
+
+            this.GetComponent<TargetableObject>().GetComponent<NumericComponent>()[numericType] = this.BaptismData(
+                modifierName,
+                this.GetComponent<TargetableObject>().GetComponent<NumericComponent>().GetOriNum()[(int)numericType]);
+        }
+
+
+        /// <summary>
+        /// 移除一个数据修改器
+        /// </summary>
+        /// <param name="modifierName">所归属修改器集合名称</param>
+        /// <param name="dataModifier">要移除的修改器</param>
+        /// <param name="numericType">如果不为Min说明需要直接去更新属性</param>
+        public void RemoveDataModifier(string modifierName, ADataModifier dataModifier,
+            NumericType numericType = NumericType.Min)
+        {
+            if (AllModifiers.TryGetValue(modifierName, out var modifiers))
+            {
+                if (modifiers.Remove(dataModifier))
+                {
+                    if (numericType == NumericType.Min)
+                        return;
+                    this.GetComponent<TargetableObject>().GetComponent<NumericComponent>()[numericType] =
+                        this.BaptismData(modifierName,
+                            this.GetComponent<TargetableObject>().GetComponent<NumericComponent>().GetOriNum()[
+                                (int)numericType]);
+                    return;
+                }
+            }
+
+            Log.Error($"目前数据修改器集合中没有名为：{modifierName}的集合");
+        }
 
         /// <summary>
         /// 洗礼一个数值
@@ -40,13 +84,13 @@ namespace Suture
         /// <param name="targetData">将要修改的值</param>
         public float BaptismData(string targetModifierName, float targetData)
         {
-            if (AllModifiers.TryGetValue(targetModifierName,out var modifiers))
+            if (AllModifiers.TryGetValue(targetModifierName, out var modifiers))
             {
                 float constantValue = 0;
                 float percentageValue = 0;
                 foreach (var modify in modifiers)
                 {
-                    if (modify.ModifierType==ModifierType.Constant)
+                    if (modify.ModifierType == ModifierType.Constant)
                     {
                         constantValue += modify.GetModifierValue();
                     }
@@ -65,7 +109,6 @@ namespace Suture
         #endregion
 
         #region 生命周期函数
-        
 
         protected override void OnInit(object userData)
         {
@@ -90,12 +133,11 @@ namespace Suture
         protected override void OnRecycle()
         {
             base.OnRecycle();
-            
+
             //此处填写释放逻辑,但涉及Entity的操作，请放在Destroy中
             this.AllModifiers.Clear();
         }
 
         #endregion
-
     }
 }
