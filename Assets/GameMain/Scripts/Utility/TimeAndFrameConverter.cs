@@ -14,6 +14,9 @@ namespace Suture
         
         public const float FixedUpdateTargetDTTime_Float = 1f / FixedUpdateTargetFPS;
 
+        /// <summary>
+        /// 固定更新目标DT时间长
+        /// </summary>
         public const long FixedUpdateTargetDTTime_Long = (long) (FixedUpdateTargetDTTime_Float * 1000);
 
         
@@ -29,12 +32,14 @@ namespace Suture
 
         public static uint Frame_Long2Frame(long time)
         {
-            return (uint)Mathf.CeilToInt(((time * 1.0f) / FixedUpdateTargetDTTime_Long));
+            //TODO    (uint)Mathf.CeilToInt(((time * 1.0f) / FixedUpdateTargetDTTime_Long))  当除 固定更新目标DT时间长 时间倍速快了
+            return (uint)Mathf.CeilToInt(time * 1.0f);
         }
 
         public static uint Frame_Float2Frame(float time)
-        {
-            return (uint)Mathf.CeilToInt(time / FixedUpdateTargetDTTime_Float);
+        { 
+            //TODO    (uint)Mathf.CeilToInt(((time * 1.0f) / FixedUpdateTargetDTTime_Long))  当除 固定更新目标DT时间长 时间倍速快了
+            return (uint)Mathf.CeilToInt(time );
         }
 
         public static uint Frame_Float2FrameWithHalfRTT(float time, long halfRTT)

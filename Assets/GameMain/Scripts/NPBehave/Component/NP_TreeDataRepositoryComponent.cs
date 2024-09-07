@@ -12,7 +12,7 @@ namespace Suture
     public class NP_TreeDataRepositoryComponent:GameFrameworkComponent
     {
         public const string NPDataServerPath = "../Config/SkillConfigs/";
-
+        
         /// <summary>
         /// 运行时的行为树仓库，注意，一定不能对这些数据做修改
         /// </summary>
@@ -21,7 +21,7 @@ namespace Suture
         protected override void Awake()
         {
             base.Awake();
-            
+          
 #if SERVER
             DirectoryInfo directory = new DirectoryInfo(NP_TreeDataRepositoryComponent.NPDataServerPath);
             FileInfo[] fileInfos = directory.GetFiles();
@@ -52,7 +52,7 @@ namespace Suture
                 //     AssetDatabase.LoadAssetAtPath<TextAsset>(
                 //       "Assets/GameMain/Configs/SkillConfig/S.bytes");
 
-                byte[] mClientfile = File.ReadAllBytes("Assets/GameMain/Configs/SkillConfig/ETest.bytes");
+                byte[] mClientfile = File.ReadAllBytes("Assets/GameMain/Configs/SkillConfig/E_Teleport.bytes");
 
                 
                 if (mClientfile.Length == 0) Log.Info("没有读取到文件");

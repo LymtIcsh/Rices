@@ -67,7 +67,6 @@ namespace Suture
         public Dictionary<long, Dictionary<string, CDInfo>>
             CDInfos = new Dictionary<long, Dictionary<string, CDInfo>>();
 
-        
         #endregion
 
         #region 公有成员
@@ -93,10 +92,12 @@ namespace Suture
                     if (!cdInfo.Value.Result)
                     {
                         cdInfo.Value.RemainCDLength -= 33;
-                        if ( (uint)TimeInfo.Instance.ClientFrameTime() >= cdInfo.Value.TargetTriggerCDFrame)
+                        if ((uint)TimeInfo.Instance.ClientFrameTime() >= cdInfo.Value.TargetTriggerCDFrame)
                         {
                             cdInfo.Value.Result = true;
                             cdInfo.Value.CDChangedCallBack?.Invoke(cdInfo.Value);
+                            Log.Info(
+                                $"{cdInfo.Value.Name}  冷却好了  当前{(uint)TimeInfo.Instance.ClientFrameTime()}  目标cd帧{cdInfo.Value.TargetTriggerCDFrame}");
                         }
                     }
                 }
@@ -126,14 +127,14 @@ namespace Suture
         /// </summary>
         public CDInfo AddCDData(long id, string name, long cDLength, Action<CDInfo> onCDChangedCallback = null)
         {
-            if (this.GetCDData(id,name)!=null)
+            if (this.GetCDData(id, name) != null)
             {
                 Log.Error($"已注册id为：{id}，Name为：{name}的CD信息，请勿重复注册");
                 return null;
             }
-            
+
             CDInfo cdInfo = ReferencePool.Acquire<CDInfo>();
-            cdInfo.Init(name,  (uint)TimeInfo.Instance.ClientFrameTime(), cDLength, onCDChangedCallback);
+            cdInfo.Init(name, (uint)TimeInfo.Instance.ClientFrameTime(), cDLength, onCDChangedCallback);
             AddCDData(id, cdInfo);
             return cdInfo;
         }
@@ -145,13 +146,13 @@ namespace Suture
         /// <param name="cdInfo"></param>
         public CDInfo AddCDData(long id, CDInfo cdInfo)
         {
-            if (this.CDInfos.TryGetValue(id,out var cdInfoDic))
+            if (this.CDInfos.TryGetValue(id, out var cdInfoDic))
             {
                 cdInfoDic.Add(cdInfo.Name, cdInfo);
             }
             else
             {
-                CDInfos.Add(id, new Dictionary<string, CDInfo>() {{cdInfo.Name, cdInfo}});
+                CDInfos.Add(id, new Dictionary<string, CDInfo>() { { cdInfo.Name, cdInfo } });
             }
 
             return cdInfo;
@@ -168,8 +169,9 @@ namespace Suture
             CDInfo cdInfo = GetCDData(id, name);
             cdInfo.Result = false;
             cdInfo.RemainCDLength = cdLength == -1 ? cdInfo.Interval : cdLength;
-            
-            cdInfo.TargetTriggerCDFrame = (uint)TimeInfo.Instance.ClientFrameTime() +TimeAndFrameConverter.Frame_Long2Frame(cdInfo.RemainCDLength);
+
+            cdInfo.TargetTriggerCDFrame = (uint)TimeInfo.Instance.ClientFrameTime() +
+                                          TimeAndFrameConverter.Frame_Long2Frame(cdInfo.RemainCDLength);
         }
 
         /// <summary>
@@ -179,7 +181,7 @@ namespace Suture
         /// <param name="name"></param>
         public CDInfo GetCDData(long id, string name)
         {
-            if (this.CDInfos.TryGetValue(id,out var cdInfoDic))
+            if (this.CDInfos.TryGetValue(id, out var cdInfoDic))
             {
                 if (cdInfoDic.TryGetValue(name, out var cdInfo))
                 {
@@ -211,7 +213,7 @@ namespace Suture
 
             int tempFrame = (int)cdInfo.TargetTriggerCDFrame;
             int result = tempFrame - (int)TimeAndFrameConverter.Frame_Long2Frame(reducedCDLength);
-            cdInfo.TargetTriggerCDFrame=result <= 0 ? (uint)0 : (uint)result;
+            cdInfo.TargetTriggerCDFrame = result <= 0 ? (uint)0 : (uint)result;
             cdInfo.CDChangedCallBack?.Invoke(cdInfo);
         }
 
@@ -221,7 +223,7 @@ namespace Suture
         public void SetCD(long id, string name, long cDLength, long remainCDLength)
         {
             CDInfo cdInfo = GetCDData(id, name);
-            if (cdInfo==null)
+            if (cdInfo == null)
             {
                 cdInfo = this.AddCDData(id, name, cDLength, null);
             }
@@ -230,6 +232,10 @@ namespace Suture
             cdInfo.RemainCDLength = remainCDLength;
             cdInfo.TargetTriggerCDFrame =
                 (uint)TimeInfo.Instance.ClientFrameTime() + TimeAndFrameConverter.Frame_Long2Frame(remainCDLength);
+
+            Log.Info(
+                $"设置 {cdInfo.Name} 技能cd 当前帧{(uint)TimeInfo.Instance.ClientFrameTime()} cd总帧{TimeAndFrameConverter.Frame_Long2Frame(remainCDLength)}   cd冷却完成帧{cdInfo.TargetTriggerCDFrame}    当前时间{TimeInfo.Instance.ToDateTime((uint)TimeInfo.Instance.ClientFrameTime()).ToString("T")}    cd结束时间{TimeInfo.Instance.ToDateTime(cdInfo.TargetTriggerCDFrame).ToString("T")}");
+
             cdInfo.Result = false;
             cdInfo.CDChangedCallBack?.Invoke(cdInfo);
         }
@@ -253,7 +259,7 @@ namespace Suture
             Log.Error($"尚未注册id为：{id}，Name为：{name}的CD信息");
             return false;
         }
-        
+
         /// <summary>
         /// 移除一条CD数据
         /// </summary>
@@ -266,7 +272,7 @@ namespace Suture
                 cdInfoDic.Remove(name);
             }
         }
-        
+
         public void ResetCD(long belongToUnitId, string cdName)
         {
             CDInfo cdInfo = GetCDData(belongToUnitId, cdName);

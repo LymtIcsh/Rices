@@ -78,6 +78,8 @@ namespace Suture
                 PlayerAssetsInputs _playerAssetsInputs = m_myPet.GetComponent<PlayerAssetsInputs>();
                 _playerAssetsInputs.cursorLocked = true;
                 _playerAssetsInputs.cursorInputForLook = true;
+                
+                
 
                 GameObject.FindGameObjectWithTag("PlayerFollowCamera").GetComponent<CinemachineVirtualCamera>().Follow =
                     m_myPet.Entity.transform.Find("PlayerCameraRoot").transform;
@@ -94,8 +96,13 @@ namespace Suture
 
                 m_myPet.AddComponent<NP_RuntimeTreeManager>();
                 m_myPet.AddComponent<UnitAttributesDataComponent>();
+                
+                m_myPet.GetComponent<PlayerThirdPersonController>().MoveSpeed = m_myPet
+                    .GetComponent<UnitAttributesDataComponent>().GetAttribute(NumericType.Speed)/100;
 
-                NP_RuntimeTreeFactory.CreateSkillNpRuntimeTree(m_myPet, 10002, 10002).Start();
+
+                NP_RuntimeTreeFactory.CreateSkillNpRuntimeTree(m_myPet, 10001, 10001).Start();
+              //  NP_RuntimeTreeFactory.CreateSkillNpRuntimeTree(m_myPet, 10002, 10002).Start();
 
 
                 // CDComponent.Instance.AddCDData(m_myPet.Id, "E", 0, info =>

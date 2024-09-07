@@ -5,53 +5,41 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="842b7725-6adb-41b7-92ba-1e022023bc23" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Component/NumericWatcherComponent.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Component/NumericWatcherComponent.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/CustomAttributes.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/CustomAttributes/BaseAttribute.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/CustomAttributes/BaseAttribute.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/CustomAttributes/Numeric.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/CustomAttributes/Numeric/NumericWatcherAttribute.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/CustomAttributes/Numeric/NumericWatcherAttribute.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/SkillSystem/BuffSystem/ListenBuffEvents.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/SkillSystem/BuffSystem/ListenBuffEvents/ListenBuffEvent_CheckOverlay.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/SkillSystem/BuffSystem/ListenBuffEvents/ListenBuffEvent_CheckOverlay.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/SkillSystem/BuffSystem/ListenBuffEvents/ListenBuffEvent_Normal.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/SkillSystem/BuffSystem/ListenBuffEvents/ListenBuffEvent_Normal.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/UI/HeaderBar.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/UI/HeaderBar/UIHeadBarController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/UI/HeaderBar/UIHeadBarController.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/ActionEditor/Editor/Preview.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/ActionEditor/Editor/Preview/Clips.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/ActionEditor/Editor/Preview/Clips/PlaySkillGraphPreview.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/ActionEditor/Editor/Preview/Clips/PlaySkillGraphPreview.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/ActionEditor/Runtime/Directables.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/ActionEditor/Runtime/Directables/Clips.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/ActionEditor/Runtime/Directables/Clips/PlaySkillGraph.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/ActionEditor/Runtime/Directables/Clips/PlaySkillGraph.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/ActionEditor/Runtime/Directables/Tracks.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/ActionEditor/Runtime/Directables/Tracks/SkillGraphTrack.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/ActionEditor/Runtime/Directables/Tracks/SkillGraphTrack.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/ActionEditor/Runtime/SkillAsset.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/ActionEditor/Runtime/SkillAsset.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Rices/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Rices/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Rices/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Rices/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Editor/GenerateCodeEditor/BuffSystemTemplate.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/GenerateCodeEditor/BuffSystemTemplate.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Editor/GenerateCodeEditor/NPBehaveActionNodeTemplate.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/GenerateCodeEditor/NPBehaveActionNodeTemplate.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Editor/GenerateCodeEditor/TemplateAssetPaths.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/GenerateCodeEditor/TemplateAssetPaths.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Runtime/Entity/EntityLogic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Runtime/Entity/EntityLogic.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GameMain/Configs/SkillConfig/ETest.bytes" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Configs/SkillConfig/ETest.bytes" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Configs/UnitAttributesDatas/AllHeroAttributesData.bytes" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Configs/UnitAttributesDatas/AllHeroAttributesData.bytes" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/ActionEditor/Editor/GUIS/Customized/GroupAndTrackListGUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/ActionEditor/Editor/GUIS/Customized/GroupAndTrackListGUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/ActionEditor/Editor/Menus.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/ActionEditor/Editor/Menus.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/ActionEditor/Editor/NBC.ActionEditor.Editor.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/ActionEditor/Editor/NBC.ActionEditor.Editor.asmdef" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Saves/SkillGraphs/ETest.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Saves/SkillGraphs/ETest.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Saves/UnitAttributesDataGraph/AllHeroAttributesData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Saves/UnitAttributesDataGraph/AllHeroAttributesData.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/Sirenix/Odin Inspector/Config/Editor/OdinModuleConfig.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/Sirenix/Odin Inspector/Config/Editor/OdinModuleConfig.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scenes/GameStart.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scenes/GameStart.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Base/GameEntry.Custom.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Base/GameEntry.Custom.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Base/GameEntry.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Base/GameEntry.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Component/BattleEventSystemComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Component/BattleEventSystemComponent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Component/DataModifierComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Component/DataModifierComponent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Component/NumericComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Component/NumericComponent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Data/Pet/MyPetData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Data/Pet/MyPetData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Data/Pet/Pet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Data/Pet/Pet.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Data/Pet/PetData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Data/Pet/PetData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Component/CDComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Component/CDComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Component/UnitAttributesDataRepositoryComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Component/UnitAttributesDataRepositoryComponent.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Data/TargetableObject/TargetableObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Data/TargetableObject/TargetableObject.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Data/TargetableObject/TargetableObjectData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Data/TargetableObject/TargetableObjectData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Definition/DataStruct/ImpactData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Definition/DataStruct/ImpactData.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Game/GameBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Game/GameBase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/TheDataContainsAction/NP_ChangeUnitPropertyAction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/TheDataContainsAction/NP_ChangeUnitPropertyAction.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/SkillSystem/BuffSystem/ChangePropertyBuffSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/SkillSystem/BuffSystem/ChangePropertyBuffSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/SkillSystem/BuffSystem/Core/BuffFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/SkillSystem/BuffSystem/Core/BuffFactory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/SkillSystem/BuffSystem/Core/BuffManagerComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/SkillSystem/BuffSystem/Core/BuffManagerComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/Component/NP_TreeDataRepositoryComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/Component/NP_TreeDataRepositoryComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/TheDataContainsAction/NP_SetCDInfoAction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/TheDataContainsAction/NP_SetCDInfoAction.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Player/PlayerThirdPersonController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Player/PlayerThirdPersonController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/SkillSystem/BuffSystem/Core/BuffTimerAndOverlayHelper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/SkillSystem/BuffSystem/Core/BuffTimerAndOverlayHelper.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/SkillSystem/BuffSystem/TreatmentBuffSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/SkillSystem/BuffSystem/TreatmentBuffSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/UnitAttributeData/NodeData/HeroAttributesNodeData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/UnitAttributeData/NodeData/HeroAttributesNodeData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/UnitAttributeData/NodeData/UnitAttributesNodeDataBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/UnitAttributeData/NodeData/UnitAttributesNodeDataBase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/UnitAttributeData/UnitAttributesDataComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/UnitAttributeData/UnitAttributesDataComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Utility/TimeAndFrameConverter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Utility/TimeAndFrameConverter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/PackageManagerSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/PackageManagerSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TimeManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TimeManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -119,13 +107,17 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/be91ca7e8f3b464890ab1d48b84e94ea174200/c1/2b7512fb/Behaviour.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/be91ca7e8f3b464890ab1d48b84e94ea174200/c6/30eafe9f/Component.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/be91ca7e8f3b464890ab1d48b84e94ea174200/e2/08ccf5dd/Resources.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/be91ca7e8f3b464890ab1d48b84e94ea174200/e6/e21afdbb/Mathf.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/cf872124b3f4465e87923725fbaf943219200/5c/a3d64c87/ListDrawerSettingsAttribute.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/cf872124b3f4465e87923725fbaf943219200/ea/8c628d3f/TitleAttribute.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f07eb00f18584bbda00d12c92d2ad54394f800/1c/7608adb8/PhysicsDebugDraw.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f07eb00f18584bbda00d12c92d2ad54394f800/5e/aa73c3d3/EditorWindow.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f07eb00f18584bbda00d12c92d2ad54394f800/5f/1d77ab8a/SerializedObject.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f07eb00f18584bbda00d12c92d2ad54394f800/81/552ea3be/ProjectWindowUtil.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f07eb00f18584bbda00d12c92d2ad54394f800/ae/0e5aa7f3/Selection.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f07eb00f18584bbda00d12c92d2ad54394f800/ca/ce191f95/SerializedProperty.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f07eb00f18584bbda00d12c92d2ad54394f800/e2/7d5b86d6/AssetDatabase.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/GameMain/Plugins/ActionEditor/Editor/Menus.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/SkillGraph/Nodes/BuffNodes/TreatmentBuffNode.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Editor/Views/ExposedParameterFieldFactory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameMain/Scripts/CoreObject/IdGenerater.cs" root0="FORCE_HIGHLIGHTING" />
@@ -136,6 +128,7 @@
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.postprocessing@3.2.2/PostProcessing/Shaders/Builtins/AutoExposure.compute" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.postprocessing@3.2.2/PostProcessing/Shaders/Builtins/SubpixelMorphologicalAntialiasing.hlsl" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.postprocessing@3.2.2/PostProcessing/Shaders/Builtins/TemporalAntialiasing.shader" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.searcher@4.9.2/Samples~/Editor/SearcherExampleHostWindow.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.shadergraph@14.0.9/Tests/Editor/TestNode.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -169,7 +162,7 @@
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;RoslynSettingsId&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;CodeLensConfigurable&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -200,10 +193,10 @@
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <method v="2" />
     </configuration>
-    <configuration name="附加到 Unity 编辑器" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="10452">
+    <configuration name="附加到 Unity 编辑器" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="2496">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="10452" />
+      <option name="pid" value="2496" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -300,6 +293,11 @@
       <workItem from="1725244332962" duration="10181000" />
       <workItem from="1725329585430" duration="1015000" />
       <workItem from="1725332185928" duration="23027000" />
+      <workItem from="1725418144016" duration="15499000" />
+      <workItem from="1725460064317" duration="2394000" />
+      <workItem from="1725501053608" duration="19678000" />
+      <workItem from="1725587122068" duration="9210000" />
+      <workItem from="1725673438926" duration="10390000" />
     </task>
     <servers />
   </component>
@@ -331,13 +329,13 @@
     </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
-        <PinnedItemInfo parentTag="Type#Suture.NP_DataSupportor" memberName="BuffNodeDataDic" />
         <PinnedItemInfo parentTag="Type#Suture.NP_BlackboardConditionNodeData" memberName="NPBalckBoardRelationData" />
         <PinnedItemInfo parentTag="Type#Suture.NP_RuntimeTree" memberName="BelongToUnit" />
         <PinnedItemInfo parentTag="Type#System.Collections.Generic.LinkedListNode`1" memberName="List" />
         <PinnedItemInfo parentTag="Type#System.Collections.Generic.KeyValuePair`2" memberName="Value" />
         <PinnedItemInfo parentTag="Type#Suture.NP_DataSupportor" memberName="NpDataSupportorBase" />
         <PinnedItemInfo parentTag="Type#Suture.NP_ClassForStoreAction" memberName="BelongToUnit" />
+        <PinnedItemInfo parentTag="Type#UnityEngine.Component" memberName="transform" />
         <PinnedItemInfo parentTag="Type#Suture.NormalBuffNodeData" memberName="BuffData" />
         <PinnedItemInfo parentTag="Type#UnityEngine.TextAsset" memberName="text" />
         <PinnedItemInfo parentTag="Type#Suture.BuffNodeDataBase" memberName="NodeId" />

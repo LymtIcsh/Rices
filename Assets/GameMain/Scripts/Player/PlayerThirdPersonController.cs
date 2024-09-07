@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.Linq;
 using Cysharp.Threading.Tasks.Triggers;
+using GameFramework.Event;
 using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -19,7 +20,7 @@ namespace Suture
     public class PlayerThirdPersonController : MonoBehaviour
     {
         [Header("玩家")] [Tooltip("角色的移动速度，单位为m/s")]
-        public float MoveSpeed = 2.0f;
+        public float MoveSpeed = 1.0f;
 
         [Tooltip("角色的冲刺速度，单位为m/s")] public float SprintSpeed = 5.335f;
 
@@ -121,6 +122,19 @@ namespace Suture
         private void Awake()
         {
             _mainCamera ??= GameObject.FindGameObjectWithTag("MainCamera");
+            
+            GameEntry.Event.Subscribe(NumericChangeEventArgs.EventID,ChangeSpeed);
+        }
+
+        private void OnDisable()
+        {
+            GameEntry.Event.Unsubscribe(NumericChangeEventArgs.EventID,ChangeSpeed);
+        }
+
+        private void ChangeSpeed(object sender, GameEventArgs e)
+        {
+            NumericChangeEventArgs ne = (NumericChangeEventArgs)e;
+            MoveSpeed = ne.NumericComponent.GetByKey((int)ne.NumericType)/100;
         }
 
         // Start is called before the first frame update
@@ -403,7 +417,8 @@ namespace Suture
                 foreach (var skillTree in this.GetComponent<NP_RuntimeTreeManager>().RuntimeTrees)
                 {
                     skillTree.Value.GetBlackboard().Set("PlayerInput", "E", true, true);
-                    skillTree.Value.GetBlackboard().Set("SkillTargetAngle", transform.eulerAngles.y, true, true);
+                //    skillTree.Value.GetBlackboard().Set("SkillTargetAngle", transform.eulerAngles.y, true, true);
+                skillTree.Value.GetBlackboard().Set<float>("TeleportValue", 3, true, true);
                 }
 
                 _playerAssetsInputs.eDown = false;

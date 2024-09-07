@@ -25,6 +25,22 @@ namespace Suture
             }
         }
         
+        private Vector3 position; //坐标
+
+        public Vector3 Position
+        {
+            get => this.transform.position;
+            set { this.transform.position = value; }
+        }
+        
+        private Quaternion rotation = Quaternion.identity;
+
+        public Quaternion Rotation
+        {
+            get => this.rotation;
+            set { this.rotation = value; }
+        }
+        
         
         /// <summary>
         /// 归属的房间

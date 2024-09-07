@@ -36,6 +36,7 @@ namespace Suture
             //设置cd
             cdComponent.SetCD(unit.Id,
                 TheTimeToWait.GetBlackBoardValue<string>(this.BelongtoRuntimeTree.GetBlackboard()), cd, cd);
+            
         }
     }
 }
