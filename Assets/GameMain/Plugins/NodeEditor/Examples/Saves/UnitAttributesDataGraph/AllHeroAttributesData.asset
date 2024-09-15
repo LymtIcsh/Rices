@@ -108,7 +108,7 @@ MonoBehaviour:
       Data: 27
     - Name: OriMoveSpeed
       Entry: 4
-      Data: 200
+      Data: 50
     - Name: OriAttackPre
       Entry: 4
       Data: 0.3
@@ -175,6 +175,36 @@ MonoBehaviour:
     - Name: GroCriticalStrikeHarm
       Entry: 4
       Data: 0
+    - Name: NormalAttackHarm
+      Entry: 7
+      Data: 3|System.Int32[], mscorlib
+    - Name: 
+      Entry: 14
+      Data: 5
+    - Name: 
+      Entry: 3
+      Data: 10
+    - Name: 
+      Entry: 3
+      Data: 15
+    - Name: 
+      Entry: 3
+      Data: 20
+    - Name: 
+      Entry: 3
+      Data: 25
+    - Name: 
+      Entry: 3
+      Data: 35
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: CurrentNormalAttackIndex
+      Entry: 3
+      Data: 1
     - Name: HeroProfession
       Entry: 3
       Data: 132
@@ -195,11 +225,11 @@ MonoBehaviour:
       Data: Darius_Icon_Sudden_Death
     - Name: LevelUpExp
       Entry: 7
-      Data: 3|System.Collections.Generic.Dictionary`2[[System.Int32, mscorlib],[System.Int32,
+      Data: 4|System.Collections.Generic.Dictionary`2[[System.Int32, mscorlib],[System.Int32,
         mscorlib]], mscorlib
     - Name: comparer
       Entry: 7
-      Data: 4|System.Collections.Generic.GenericEqualityComparer`1[[System.Int32,
+      Data: 5|System.Collections.Generic.GenericEqualityComparer`1[[System.Int32,
         mscorlib]], mscorlib
     - Name: 
       Entry: 8
@@ -419,7 +449,7 @@ MonoBehaviour:
       Data: 
     - Name: groups
       Entry: 7
-      Data: 5|System.Collections.Generic.List`1[[GraphProcessor.Group, com.alelievr.NodeGraphProcessor.Runtime]],
+      Data: 6|System.Collections.Generic.List`1[[GraphProcessor.Group, com.alelievr.NodeGraphProcessor.Runtime]],
         mscorlib
     - Name: 
       Entry: 12
@@ -432,17 +462,17 @@ MonoBehaviour:
       Data: 
     - Name: m_TestDic
       Entry: 7
-      Data: 6|Suture.UnitAttributesDataSupportor, Assembly-CSharp
+      Data: 7|Suture.UnitAttributesDataSupportor, Assembly-CSharp
     - Name: SupportId
       Entry: 3
       Data: 10002
     - Name: UnitAttributesDataSupportorDic
       Entry: 7
-      Data: 7|System.Collections.Generic.Dictionary`2[[System.Int64, mscorlib],[Suture.UnitAttributesNodeDataBase,
+      Data: 8|System.Collections.Generic.Dictionary`2[[System.Int64, mscorlib],[Suture.UnitAttributesNodeDataBase,
         Assembly-CSharp]], mscorlib
     - Name: comparer
       Entry: 7
-      Data: 8|System.Collections.Generic.GenericEqualityComparer`1[[System.Int64,
+      Data: 9|System.Collections.Generic.GenericEqualityComparer`1[[System.Int64,
         mscorlib]], mscorlib
     - Name: 
       Entry: 8

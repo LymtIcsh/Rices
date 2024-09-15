@@ -15,6 +15,7 @@ namespace Suture
         
         
         public const string EventArgsTemplatePath = "Assets/Editor/GenerateCodeEditor/EventArgsTemplate.txt";
+        public const string FSMStateTemplatePath = "Assets/Editor/GenerateCodeEditor/FSMStateTemplate.txt";
     }
 
     public abstract class AParams_GenerateBase
@@ -277,6 +278,46 @@ namespace Suture
             return new Dictionary<string, string>() { { "_EventNAME_", EventName }, { "_EventNDES_", EventDes } };
         }
     }
+
+    #endregion
+
+    #region FSMState
+
+    /// <summary>
+    /// 用于生成NPBehave Action Node数据结点的结构体
+    /// </summary>
+    public class Params_GenerateFSMState: AParams_GenerateBase
+    {
+        [LabelText("FSMState名")]
+        [InfoBox("示例：Ilde")]
+        public string FSMStateName;
+
+        [LabelText("FSMState描述")]
+        [InfoBox("示例：待机")]
+        public string FSMStateDes;
+        
+
+
+        public override string TemplateAssetPath
+        {
+            get
+            {
+                return TemplateAssetPaths.FSMStateTemplatePath;
+            }
+        }
+
+        public override Dictionary<string, string> GetAllParams()
+        {
+            if (string.IsNullOrEmpty(FSMStateName) || string.IsNullOrEmpty(this.FSMStateDes))
+            {
+                Log.Error("Action名或Action描述不能为空");
+                return null;
+            }
+
+            return new Dictionary<string, string>() { { "_FSMStateNAME_", FSMStateName }, { "_FSMStateNDES_", FSMStateDes } };
+        }
+    }
+
 
     #endregion
 }

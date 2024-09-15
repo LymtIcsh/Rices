@@ -6,8 +6,10 @@ namespace Suture
     public class MyPet : Pet
     {
         [SerializeField] private MyPetData m_myPetData = null;
+        
 
-        private Vector3 m_TargetPosition = Vector3.zero;
+        
+      //  private Vector3 m_TargetPosition = Vector3.zero;
 
 #if UNITY_2017_3_OR_NEWER
         protected override void OnInit(object userData)
@@ -44,7 +46,25 @@ namespace Suture
                  
                  
         }
-        
-        
+
+
+        protected override void StartFsm()
+        {
+               // base.StartFsm();
+                m_fsm.Start<IdleState>();
+        }
+
+        protected override void AddFsmState()
+        {
+             //   base.AddFsmState();
+                
+                m_States.Add( IdleState.Create());
+                m_States.Add( RunState.Create());
+                m_States.Add( RunEndState.Create());
+                m_States.Add( TurnBackState.Create());
+                m_States.Add( EvadeState.Create());
+                m_States.Add( NormalAttackState.Create());
+                m_States.Add( NormalAttackEndState.Create());
+        }
     }
 }

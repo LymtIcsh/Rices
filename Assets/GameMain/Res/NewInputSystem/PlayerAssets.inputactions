@@ -33,10 +33,10 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Sprint",
-                    "type": "PassThrough",
-                    "id": "81746c53-d805-4f63-b7c8-b7cacc45f44b",
-                    "expectedControlType": "",
+                    "name": "Evade",
+                    "type": "Button",
+                    "id": "848517c8-9236-432e-9c46-39c4d7475aef",
+                    "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -184,17 +184,6 @@
                 },
                 {
                     "name": "",
-                    "id": "67b1050a-a47d-4a23-8c1c-0c36a3f391c4",
-                    "path": "<Keyboard>/leftShift",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "KeyboardMouse",
-                    "action": "Sprint",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "1e1e1e85-f311-4e14-b512-e931a39b4ef0",
                     "path": "<Mouse>/leftButton",
                     "interactions": "",
@@ -212,6 +201,17 @@
                     "processors": "",
                     "groups": "KeyboardMouse",
                     "action": "ESkill",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6b9d7f25-8e73-40eb-856d-75926de4911c",
+                    "path": "<Keyboard>/leftShift",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "KeyboardMouse",
+                    "action": "Evade",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

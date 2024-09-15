@@ -1,8 +1,3 @@
-//------------------------------------------------------------
-// Author: 烟雨迷离半世殇
-// Mail: 1778139321@qq.com
-// Data: 2021年6月18日 20:23:13
-//------------------------------------------------------------
 
 using System.Collections.Generic;
 using MongoDB.Bson.Serialization.Attributes;
@@ -14,6 +9,12 @@ namespace Suture
     
     public class HeroAttributesNodeData: UnitAttributesNodeDataBase
     {
+        [TitleGroup("普通攻击")] [LabelText("普通攻击连招每段伤害")]
+        public int[] NormalAttackHarm;
+
+        [LabelText("当前普通攻击起手索引")] public int CurrentNormalAttackIndex = 1;
+        
+        
         [TitleGroup("自定义属性")]
         [LabelText("英雄职业")]
         public HeroProfession HeroProfession;

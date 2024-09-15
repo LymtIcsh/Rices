@@ -1,9 +1,4 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using Cysharp.Threading.Tasks;
-using Cysharp.Threading.Tasks.Linq;
-using Cysharp.Threading.Tasks.Triggers;
+
 using GameFramework.Event;
 using Unity.Mathematics;
 using UnityEngine;
@@ -64,8 +59,7 @@ namespace Suture
         [Tooltip("额外的度来覆盖摄像头。有用的微调相机位置锁定时")] public float CameraAngleOverride = 0.0f;
 
         [Tooltip("用于锁定相机在所有轴上的位置")] public bool LockCameraPosition = false;
-
-        private StackFsmComponent _stackFsmComponent;
+        
 
         // 摄像机
         private float _cinemachineTargetYaw;
@@ -80,16 +74,10 @@ namespace Suture
         private float _terminalVelocity = 53.0f;
         private Collider[] physicsColliders = new Collider[10];
 
+
         //  【超时增量】
         private float _jumpTimeoutDelta;
         private float _fallTimeoutDelta;
-
-        // 动画id
-        private int _animIDSpeed;
-        private int _animIDGrounded;
-        private int _animIDJump;
-        private int _animIDFreeFall;
-        private int _animIDMotionSpeed;
 
 
 #if ENABLE_INPUT_SYSTEM
@@ -102,7 +90,7 @@ namespace Suture
 
         private const float _threshold = 0.01f;
 
-        private bool _hasAnimator;
+    public Animator characterAnimator { get; private set; }
 
         /// <summary>
         /// 当前是鼠标设备吗?
@@ -122,30 +110,30 @@ namespace Suture
         private void Awake()
         {
             _mainCamera ??= GameObject.FindGameObjectWithTag("MainCamera");
+
+            characterAnimator = GetComponent<Animator>();
             
-            GameEntry.Event.Subscribe(NumericChangeEventArgs.EventID,ChangeSpeed);
+            GameEntry.Event.Subscribe(NumericChangeEventArgs.EventID, ChangeSpeed);
         }
 
         private void OnDisable()
         {
-            GameEntry.Event.Unsubscribe(NumericChangeEventArgs.EventID,ChangeSpeed);
+            GameEntry.Event.Unsubscribe(NumericChangeEventArgs.EventID, ChangeSpeed);
         }
 
         private void ChangeSpeed(object sender, GameEventArgs e)
         {
             NumericChangeEventArgs ne = (NumericChangeEventArgs)e;
-            MoveSpeed = ne.NumericComponent.GetByKey((int)ne.NumericType)/100;
+            MoveSpeed = ne.NumericComponent.GetByKey((int)ne.NumericType) / 100;
         }
 
         // Start is called before the first frame update
         void Start()
         {
             _cinemachineTargetYaw = CinemachineCameraTarget.transform.rotation.eulerAngles.y;
-
-            _hasAnimator = TryGetComponent(out _animator);
+            
             _controller = GetComponent<CharacterController>();
             _playerAssetsInputs = GetComponent<PlayerAssetsInputs>();
-            _stackFsmComponent = GetComponent<StackFsmComponent>();
 
 #if ENABLE_INPUT_SYSTEM
             _playerInput = GetComponent<PlayerInput>();
@@ -153,7 +141,7 @@ namespace Suture
 			Debug.LogError( "未添加 PlayerInput 组件");
 #endif
 
-            AssignAnimationIDs();
+            // AssignAnimationIDs();
 
             //重新设置开始时的超时时间
             _jumpTimeoutDelta = JumpTimeout;
@@ -164,24 +152,13 @@ namespace Suture
         // Update is called once per frame
         void Update()
         {
-            _hasAnimator = TryGetComponent(out _animator);
 
-            JumpAndGravity();
+           JumpAndGravity();
             GroundedCheck();
             Move();
             EDown();
-            
-            // if (!CDComponent.Instance.GetCDResult(GetComponent<MyPet>().Id, "E"))
-            // {
-            //     Log.Info(  ((int) Math.Ceiling((double) (1000) / 1000))
-            //         .ToString());
-            //     
-            //     // self.FuiUIPanelBattle.m_SkillE_CDInfo.text =
-            //     //     ((int) Math.Ceiling((double) (self.m_ECDInfo.RemainCDLength) / 1000))
-            //     //     .ToString();
-            //     // self.FuiUIPanelBattle.m_SkillE_Bar.self.value =
-            //     //     100 * (self.m_ECDInfo.RemainCDLength * 1f / self.m_ECDInfo.Interval);
-            // }
+
+       
         }
 
         private void LateUpdate()
@@ -189,17 +166,7 @@ namespace Suture
             CameraRotation();
         }
 
-        /// <summary>
-        /// 分配动画id
-        /// </summary>
-        private void AssignAnimationIDs()
-        {
-            _animIDSpeed = Animator.StringToHash("Speed");
-            _animIDGrounded = Animator.StringToHash("Grounded");
-            _animIDJump = Animator.StringToHash("Jump");
-            _animIDFreeFall = Animator.StringToHash("FreeFall");
-            _animIDMotionSpeed = Animator.StringToHash("MotionSpeed");
-        }
+
 
         /// <summary>
         /// 是否在地面
@@ -220,11 +187,6 @@ namespace Suture
 
             Grounded = raycastAll > 0;
 
-            //如果使用动画状态机，更新落地
-            if (_hasAnimator)
-            {
-                _animator.SetBool(_animIDGrounded, Grounded);
-            }
         }
 
         void CameraRotation()
@@ -264,13 +226,21 @@ namespace Suture
             return Mathf.Clamp(lfAngle, lfMin, lfMax);
         }
 
+        private void OnAnimatorMove()
+        {
+            //开启角色的RootMotion
+            characterAnimator.ApplyBuiltinRootMotion();
+
+            //Move();
+        }
+
         /// <summary>
         /// 玩家移动
         /// </summary>
-        private void Move()
+        public void Move()
         {
             //设置目标速度基于移动速度，冲刺速度，如果冲刺被按下
-            float targetSpeed = _playerAssetsInputs.sprint ? SprintSpeed : MoveSpeed;
+         float targetSpeed = /*_playerAssetsInputs.evade ? SprintSpeed :*/ MoveSpeed;
 
             //一种简单的加速和减速设计，易于删除，替换或迭代
 
@@ -279,13 +249,13 @@ namespace Suture
             if (_playerAssetsInputs.move == Vector2.zero)
             {
                 targetSpeed = 0.0f;
-                _stackFsmComponent.ChangeIldeState();
+                // _stackFsmComponent.ChangeState(new IdleState());
             }
 
 
             //参考玩家当前的水平速度
             float currentHorizontalSpeed = new Vector3(_controller.velocity.x, 0.0f, _controller.velocity.z).magnitude;
-
+            
             float speedOffset = 0.1f;
             float inputMagnitude = _playerAssetsInputs.analogMovement ? _playerAssetsInputs.move.magnitude : 1f;
 
@@ -297,7 +267,7 @@ namespace Suture
                 //注意Lerp中的T是夹住的，所以我们不需要夹住我们的速度
                 _speed = Mathf.Lerp(currentHorizontalSpeed, targetSpeed * inputMagnitude,
                     Time.deltaTime * SpeedChangeRate);
-
+            
                 //将速度四舍五入到小数点后三位
                 _speed = Mathf.Round(_speed * 1000f) / 1000f;
             }
@@ -321,22 +291,21 @@ namespace Suture
                 float rotation = Mathf.SmoothDampAngle(transform.eulerAngles.y, _targetRotation, ref _rotationVelocity,
                     RotationSmoothTime);
 
+
                 //旋转到相对于摄像机位置的面输入方向
                 transform.rotation = Quaternion.Euler(0.0f, rotation, 0.0f);
+
+
+
             }
 
             Vector3 targetDirection = Quaternion.Euler(0.0f, _targetRotation, 0.0f) * Vector3.forward;
 
-            //移动玩家
+            //移动玩家 并控制跳越
             _controller.Move(targetDirection.normalized * (_speed * Time.deltaTime) +
                              new Vector3(0.0f, _verticalVelocity, 0.0f) * Time.deltaTime);
-
-            //如果使用动画状态机，更新速度 和 移动速率
-            if (_hasAnimator)
-            {
-                _animator.SetFloat(_animIDSpeed, _animationBlend);
-                _animator.SetFloat(_animIDMotionSpeed, inputMagnitude);
-            }
+            
+            
         }
 
         /// <summary>
@@ -348,13 +317,7 @@ namespace Suture
             {
                 //重置坠落超时定时器
                 _fallTimeoutDelta = FallTimeout;
-
-                //如果使用动画状态机，更新跳跃和自由落体
-                if (_hasAnimator)
-                {
-                    _animator.SetBool(_animIDJump, false);
-                    _animator.SetBool(_animIDFreeFall, false);
-                }
+                
 
                 //停止我们的速度在着陆时无限下降
                 if (_verticalVelocity < 0.0f)
@@ -365,12 +328,7 @@ namespace Suture
                 {
                     // H * -2 * G的平方根=达到期望高度所需的速度
                     _verticalVelocity = Mathf.Sqrt(JumpHeight * -2 * Gravity);
-
-                    //如果使用动画状态机，更新跳跃
-                    if (_hasAnimator)
-                    {
-                        _animator.SetBool(_animIDJump, true);
-                    }
+                    
                 }
 
                 //跳跃超时
@@ -391,12 +349,9 @@ namespace Suture
                 }
                 else
                 {
-                    //如果使用动画状态机，更新自由落体
-                    if (_hasAnimator)
-                    {
-                        _animator.SetBool(_animIDFreeFall, true);
-                    }
+                    
                 }
+
 
                 //如果我们没有落地，就不要跳
                 _playerAssetsInputs.jump = false;
@@ -417,12 +372,12 @@ namespace Suture
                 foreach (var skillTree in this.GetComponent<NP_RuntimeTreeManager>().RuntimeTrees)
                 {
                     skillTree.Value.GetBlackboard().Set("PlayerInput", "E", true, true);
-                //    skillTree.Value.GetBlackboard().Set("SkillTargetAngle", transform.eulerAngles.y, true, true);
-                skillTree.Value.GetBlackboard().Set<float>("TeleportValue", 3, true, true);
+                    //    skillTree.Value.GetBlackboard().Set("SkillTargetAngle", transform.eulerAngles.y, true, true);
+                    skillTree.Value.GetBlackboard().Set<float>("TeleportValue", 3, true, true);
                 }
 
                 _playerAssetsInputs.eDown = false;
-                _stackFsmComponent.ChangeIldeState();
+                
             }
         }
 

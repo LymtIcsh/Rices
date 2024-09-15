@@ -5,40 +5,88 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="842b7725-6adb-41b7-92ba-1e022023bc23" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/ActionEditor/Editor/Preview.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/ActionEditor/Editor/Preview/Clips.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/ActionEditor/Editor/Preview/Clips/PlaySkillGraphPreview.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/ActionEditor/Editor/Preview/Clips/PlaySkillGraphPreview.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/ActionEditor/Runtime/Directables.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/ActionEditor/Runtime/Directables/Clips.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/ActionEditor/Runtime/Directables/Clips/PlaySkillGraph.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/ActionEditor/Runtime/Directables/Clips/PlaySkillGraph.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/ActionEditor/Runtime/Directables/Tracks.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/ActionEditor/Runtime/Directables/Tracks/SkillGraphTrack.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/ActionEditor/Runtime/Directables/Tracks/SkillGraphTrack.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/ActionEditor/Runtime/SkillAsset.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/ActionEditor/Runtime/SkillAsset.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Rices/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Rices/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Fsm/StateTypeForAnimExtension.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Fsm/StateTypeForAnimExtension.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Fsm/States/IFSMState.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Fsm/States/IFSMState.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Fsm/States/IdleState.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Fsm/States/RunState.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Fsm/States/RunState.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Rices/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Rices/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Editor/GenerateCodeEditor/TemplateAssetPaths.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/GenerateCodeEditor/TemplateAssetPaths.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GameMain/Configs/SkillConfig/ETest.bytes" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Configs/SkillConfig/ETest.bytes" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Configs/SkillConfig/E_Teleport.bytes" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Configs/SkillConfig/E_Teleport.bytes" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GameMain/Configs/UnitAttributesDatas/AllHeroAttributesData.bytes" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Configs/UnitAttributesDatas/AllHeroAttributesData.bytes" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/DataTables/Entity.bytes" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/DataTables/Entity.bytes" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/DataTables/Entity.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/DataTables/Entity.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Entities/NingGuang.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Entities/NingGuang.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Entities/PlayerFollowCamera.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Entities/PlayerFollowCamera.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/ActionEditor/Editor/GUIS/Customized/GroupAndTrackListGUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/ActionEditor/Editor/GUIS/Customized/GroupAndTrackListGUI.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/ActionEditor/Editor/Menus.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/ActionEditor/Editor/Menus.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/ActionEditor/Editor/NBC.ActionEditor.Editor.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/ActionEditor/Editor/NBC.ActionEditor.Editor.asmdef" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Saves/SkillGraphs/ETest.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Saves/SkillGraphs/ETest.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Saves/SkillGraphs/ETransform.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Saves/SkillGraphs/ETransform.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Saves/SkillGraphs/SkillGraph.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Saves/SkillGraphs/SkillGraph.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Saves/UnitAttributesDataGraph/AllHeroAttributesData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Saves/UnitAttributesDataGraph/AllHeroAttributesData.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Component/CDComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Component/CDComponent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Component/UnitAttributesDataRepositoryComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Component/UnitAttributesDataRepositoryComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/NewInputSystem/PlayerAssets.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Res/NewInputSystem/PlayerAssets.inputactions" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Animations/Ilde/Idle2.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Animations/Ilde/Idle2.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Animations/Ilde/Ilde.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Animations/Ilde/Ilde.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Animations/Jump/InAir.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Animations/Jump/InAir.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Animations/Jump/JumpLand.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Animations/Jump/JumpLand.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Animations/Jump/JumpStart.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Animations/Jump/JumpStart.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Animations/冲刺/Running.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Animations/冲刺/Running.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Animations/走路/Walk_N.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Animations/走路/Walk_N.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/AnimatorController/NingGuang.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/AnimatorController/NingGuang.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/凝光/ningguang.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/凝光/ningguang.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/凯亚/kaiya.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/凯亚/kaiya.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/PolygonSamurai/Materials/Layout_BaseMesh_Gen_Grey.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/PolygonSamurai/Materials/Layout_BaseMesh_Gen_Grey.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/PolygonSamurai/Materials/PolygonSamurai_Clouds_Mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/PolygonSamurai/Materials/PolygonSamurai_Clouds_Mat.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/PolygonSamurai/Materials/PolygonSamurai_Fire_FX.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/PolygonSamurai/Materials/PolygonSamurai_Fire_FX.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/PolygonSamurai/Materials/PolygonSamurai_Mat_01.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/PolygonSamurai/Materials/PolygonSamurai_Mat_01.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/PolygonSamurai/Materials/PolygonSamurai_Mat_02.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/PolygonSamurai/Materials/PolygonSamurai_Mat_02.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/PolygonSamurai/Materials/PolygonSamurai_Mat_03.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/PolygonSamurai/Materials/PolygonSamurai_Mat_03.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/PolygonSamurai/Materials/PolygonSamurai_Mat_04.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/PolygonSamurai/Materials/PolygonSamurai_Mat_04.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/PolygonSamurai/Materials/PolygonSamurai_Petals_Mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/PolygonSamurai/Materials/PolygonSamurai_Petals_Mat.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/StarterAssets/ThirdPersonController/Scenes/Playground.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Res/StarterAssets/ThirdPersonController/Scenes/Playground.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scenes/GameStart.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scenes/GameStart.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/ActionEditor/Editor/Preview/Clips/PlaySkillGraphPreview.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/ActionEditor/Editor/Preview/Clips/PlaySkillGraphPreview.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Data/Pet/MyPet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Data/Pet/MyPet.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Data/Pet/Pet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Data/Pet/Pet.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Data/TargetableObject/TargetableObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Data/TargetableObject/TargetableObject.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Data/TargetableObject/TargetableObjectData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Data/TargetableObject/TargetableObjectData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/DataTable/DREntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/DataTable/DREntity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/DataTable/DREquip.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/DataTable/DREquip.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/DataTable/DRPet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/DataTable/DRPet.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/DataTable/DRScene.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/DataTable/DRScene.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/DataTable/DRUIForm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/DataTable/DRUIForm.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/DataTable/DRWave.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/DataTable/DRWave.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/DataTable/DRWaveElement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/DataTable/DRWaveElement.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Game/GameBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Game/GameBase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/Component/NP_TreeDataRepositoryComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/Component/NP_TreeDataRepositoryComponent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/TheDataContainsAction/NP_SetCDInfoAction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/TheDataContainsAction/NP_SetCDInfoAction.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/TheDataContainsAction/NP_CheckSkillCanBeCastAction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/TheDataContainsAction/NP_CheckSkillCanBeCastAction.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/TheDataContainsAction/NP_SetUnitTransformAction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/TheDataContainsAction/NP_SetUnitTransformAction.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Player/NewInputSystem/PlayerAssetsInputs.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Player/NewInputSystem/PlayerAssetsInputs.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Player/PlayerThirdPersonController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Player/PlayerThirdPersonController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/SkillSystem/BuffSystem/Core/BuffTimerAndOverlayHelper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/SkillSystem/BuffSystem/Core/BuffTimerAndOverlayHelper.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Utility/TimeAndFrameConverter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Utility/TimeAndFrameConverter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/PackageManagerSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/PackageManagerSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TimeManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TimeManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/SkillSystem/BuffData/BindStateBuffData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/SkillSystem/BuffData/BindStateBuffData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/SkillSystem/BuffSystem/BindStateBuffSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/SkillSystem/BuffSystem/BindStateBuffSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/SkillSystem/Fsm.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Fsm.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/SkillSystem/Fsm/StackFsmComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Component/StackFsmComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/SkillSystem/Fsm/StackFsmComponent.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Component/StackFsmComponent.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/SkillSystem/Fsm/StateTypes.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Fsm/StateTypes.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/SkillSystem/Fsm/StateTypes.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Fsm/StateTypes.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/SkillSystem/Fsm/States.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Fsm/States.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/SkillSystem/Fsm/States/AFsmStateBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Fsm/States/AFsmStateBase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/SkillSystem/Fsm/States/AFsmStateBase.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Fsm/States/AFsmStateBase.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/SkillSystem/Fsm/States/CustomState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Fsm/States/CustomState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/SkillSystem/Fsm/States/CustomState.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Fsm/States/CustomState.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/SkillSystem/Fsm/States/IdleState.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/SkillSystem/Fsm/States/IdleState.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Fsm/States/IdleState.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/UI/UIPetSelectForm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/UI/UIPetSelectForm.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/UnitAttributeData/NodeData/HeroAttributesNodeData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/UnitAttributeData/NodeData/HeroAttributesNodeData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/UnitAttributeData/NodeData/UnitAttributesNodeDataBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/UnitAttributeData/NodeData/UnitAttributesNodeDataBase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" afterDir="false" />
     </list>
@@ -54,10 +102,13 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/ILViewer/f07eb00f18584bbda00d12c92d2ad54394f800/5e/c6c9fcc4/02000BFC.il" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1635ac259ea544e995e61edbd50c5666175800/31/7e79b2f5/IMGUIContainer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4bcf7fea78174bc093803aefb9e9d8a05c800/02/5f5227fe/ReferencePoolInfo.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4bcf7fea78174bc093803aefb9e9d8a05c800/2f/bc8ca452/IFsm`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4bcf7fea78174bc093803aefb9e9d8a05c800/34/a4d0a5f1/IEntityGroup.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4bcf7fea78174bc093803aefb9e9d8a05c800/3c/e559a183/FsmState`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4bcf7fea78174bc093803aefb9e9d8a05c800/5c/817145b0/IReference.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4bcf7fea78174bc093803aefb9e9d8a05c800/60/2eb75396/GameEventArgs.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4bcf7fea78174bc093803aefb9e9d8a05c800/66/2f0c8b76/IResourceManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4bcf7fea78174bc093803aefb9e9d8a05c800/a1/96b5a161/IFsmManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4bcf7fea78174bc093803aefb9e9d8a05c800/b0/876fcb32/IEntityManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4bcf7fea78174bc093803aefb9e9d8a05c800/b5/5cfe37df/IEntity.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4bcf7fea78174bc093803aefb9e9d8a05c800/b8/032e0390/IObjectPoolManager.cs" root0="SKIP_HIGHLIGHTING" />
@@ -69,9 +120,11 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4bcf7fea78174bc093803aefb9e9d8a05c800/d4/380686ba/GameFrameworkEntry.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4bcf7fea78174bc093803aefb9e9d8a05c800/f2/174f10fc/LoadAssetCallbacks.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4bcf7fea78174bc093803aefb9e9d8a05c800/f4/477298bb/IDataProvider`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/59/e546e01c/Activator.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/73/5cc54608/KeyValuePair`2.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/b4/393a8c0f/Action.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/c2/e27b8b26/List`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/eb/b4fe06d5/LinkedList`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5fe2538c35c04372826a3b4dfd5b6b882ddc00/df/ffee01b1/DefaultMethodDrawer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/757e37f44719485d9ea056c24e905a1a1fe00/e4/fda012f4/CharacterController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/78266e6ef69d42759e5eb24bde7e827864a00/27/68203deb/SerializedScriptableObject.cs" root0="SKIP_HIGHLIGHTING" />
@@ -120,15 +173,19 @@
     <setting file="file://$PROJECT_DIR$/Assets/GameMain/Plugins/ActionEditor/Editor/Menus.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/SkillGraph/Nodes/BuffNodes/TreatmentBuffNode.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Editor/Views/ExposedParameterFieldFactory.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/GameMain/Scripts/Component/AnimationComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameMain/Scripts/CoreObject/IdGenerater.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/GameMain/Scripts/Fsm/States/TurnBackState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/Core/NPBehave/SyncContext.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/TheDataContainsAction/NP_WaitCDAction.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameMain/Scripts/UnitAttributeData/UnitAttributesDataComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameMain/Scripts/Utility/StructBsonSerialize.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/GameMain/Scripts/Utility/TimerHelper.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.postprocessing@3.2.2/PostProcessing/Shaders/Builtins/AutoExposure.compute" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.postprocessing@3.2.2/PostProcessing/Shaders/Builtins/SubpixelMorphologicalAntialiasing.hlsl" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.postprocessing@3.2.2/PostProcessing/Shaders/Builtins/TemporalAntialiasing.shader" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.searcher@4.9.2/Samples~/Editor/SearcherExampleHostWindow.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.settings-manager@2.0.1/Samples~/PackageWithProjectAndUserSettings/SettingsExamples.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.shadergraph@14.0.9/Tests/Editor/TestNode.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -193,10 +250,10 @@
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <method v="2" />
     </configuration>
-    <configuration name="附加到 Unity 编辑器" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="2496">
+    <configuration name="附加到 Unity 编辑器" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="21244">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="2496" />
+      <option name="pid" value="21244" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -298,6 +355,15 @@
       <workItem from="1725501053608" duration="19678000" />
       <workItem from="1725587122068" duration="9210000" />
       <workItem from="1725673438926" duration="10390000" />
+      <workItem from="1725761748966" duration="863000" />
+      <workItem from="1725807244837" duration="470000" />
+      <workItem from="1725846998015" duration="13815000" />
+      <workItem from="1726018005254" duration="21472000" />
+      <workItem from="1726103961796" duration="11454000" />
+      <workItem from="1726190827282" duration="24799000" />
+      <workItem from="1726281476591" duration="6998000" />
+      <workItem from="1726299209082" duration="7563000" />
+      <workItem from="1726359073062" duration="15350000" />
     </task>
     <servers />
   </component>

@@ -30,8 +30,9 @@ namespace Suture
 
             GameEntry.Entity.ShowMyPet(new MyPetData(typeId, typeId)
             {
-              //  Name = name,
-                Position = InitPos,
+                //  Name = name,
+                //TODO Animator 开启了Apply Root Motion，所以无法设置位置
+             //   Position = InitPos,
                 Scale = Vector3.one,
             });
 
@@ -71,38 +72,40 @@ namespace Suture
             if ((ne.EntityLogicType == typeof(MyPet)))
             {
                 m_myPet = (MyPet)ne.Entity.Logic;
-
+                
+                
                 //当前房间
                 m_myPet.BelongToRoom = GameEntry.RoomManager.BattleRoom;
 
                 PlayerAssetsInputs _playerAssetsInputs = m_myPet.GetComponent<PlayerAssetsInputs>();
                 _playerAssetsInputs.cursorLocked = true;
                 _playerAssetsInputs.cursorInputForLook = true;
-                
-                
 
-                GameObject.FindGameObjectWithTag("PlayerFollowCamera").GetComponent<CinemachineVirtualCamera>().Follow =
+
+                CinemachineFreeLook cinemachineFreeLook = GameObject.FindGameObjectWithTag("PlayerFollowCamera")
+                    .GetComponent<CinemachineFreeLook>();
+                cinemachineFreeLook.Follow =
                     m_myPet.Entity.transform.Find("PlayerCameraRoot").transform;
+                cinemachineFreeLook.LookAt = cinemachineFreeLook.Follow;
 
                 m_myPet.AddComponent<DataModifierComponent>();
                 m_myPet.AddComponent<NP_SyncComponent>();
                 m_myPet.AddComponent<NumericComponent>();
-                
-                //增加栈式状态机，辅助动画切换
-                m_myPet.AddComponent<StackFsmComponent>();
+
+
                 //增加Buff管理组件
                 m_myPet.AddComponent<BuffManagerComponent>();
                 m_myPet.AddComponent<SkillCanvasManagerComponent>();
 
                 m_myPet.AddComponent<NP_RuntimeTreeManager>();
                 m_myPet.AddComponent<UnitAttributesDataComponent>();
-                
+
                 m_myPet.GetComponent<PlayerThirdPersonController>().MoveSpeed = m_myPet
-                    .GetComponent<UnitAttributesDataComponent>().GetAttribute(NumericType.Speed)/100;
+                    .GetComponent<UnitAttributesDataComponent>().GetAttribute(NumericType.Speed) / 100;
 
 
                 NP_RuntimeTreeFactory.CreateSkillNpRuntimeTree(m_myPet, 10001, 10001).Start();
-              //  NP_RuntimeTreeFactory.CreateSkillNpRuntimeTree(m_myPet, 10002, 10002).Start();
+                //  NP_RuntimeTreeFactory.CreateSkillNpRuntimeTree(m_myPet, 10002, 10002).Start();
 
 
                 // CDComponent.Instance.AddCDData(m_myPet.Id, "E", 0, info =>
@@ -121,9 +124,11 @@ namespace Suture
                 //     // self.FuiUIPanelBattle.m_SkillE_Bar.Visible = true;
                 // });
 
-                
+
                 NumericComponent NumericComponent = m_myPet.GetComponent<NumericComponent>();
             }
         }
+
+       
     }
 }

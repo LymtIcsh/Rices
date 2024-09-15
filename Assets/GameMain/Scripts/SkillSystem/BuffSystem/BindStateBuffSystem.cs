@@ -13,10 +13,10 @@
 
         public override void OnFinished(uint currentFrame)
         {
-            if (this.GetBuffDataWithTType.OriState!=null)
-            {
-                this.GetBuffTarget().GetComponent<StackFsmComponent>().RemoveState(this.GetBuffDataWithTType.OriState.StateName);
-            }
+            // if (this.GetBuffDataWithTType.OriState!=null)
+            // {
+            //     this.GetBuffTarget().RemoveState(this.GetBuffDataWithTType.OriState/*.StateName*/);
+            // }
         }
 
         public override void OnRefreshed(uint currentFrame)
@@ -42,11 +42,11 @@
                         .Run($"{eventId.Value}{this.TheUnitFrom.Id}", this);
                 }
 
-                if (this.GetBuffDataWithTType.OriState!=null)
-                {
-                    this.GetBuffTarget().GetComponent<StackFsmComponent>()
-                        .ChangeState(this.GetBuffDataWithTType.OriState);
-                }
+                // if (this.GetBuffDataWithTType.OriState!=null)
+                // {
+                //     this.GetBuffTarget()
+                //         .AddFsmBuffState(this.GetBuffDataWithTType.OriState);
+                // }
             }
         }
     }

@@ -30,7 +30,7 @@ namespace Suture
         public int Level=1;
 
         [LabelText("英雄数据")] [ShowInInspector]
-        public UnitAttributesNodeDataBase m_unitAttributesNodeDataBase;
+        public HeroAttributesNodeData m_unitAttributesNodeDataBase;
 
         protected TargetableObjectData(int entityId, int typeId, CampType camp) : base(entityId, typeId)
         {

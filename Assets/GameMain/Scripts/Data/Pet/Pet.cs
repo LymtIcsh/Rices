@@ -9,9 +9,9 @@ namespace Suture
     {
         [SerializeField] private PetData _petData = null;
 
-
-
         [SerializeField] protected List<Equip> _armors = new List<Equip>();
+        
+  
 
 #if UNITY_2017_3_OR_NEWER
         protected override void OnShow(object userData)
@@ -83,12 +83,13 @@ namespace Suture
         {
             base.OnDead(attacker);
             
-            
         }
+        
 
         public override ImpactData GetImpactData()
         {
             return new ImpactData(_petData.Camp/*, _petData.HP, _petData.ASK, _petData.Defense*/);
         }
+
     }
 }

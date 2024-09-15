@@ -31,8 +31,9 @@ namespace Suture
             TargetableObject unit = BelongToUnit;
             if (SetPos)
             {
-                // float result =
-                //     PosBlackBoardRelationData.GetBlackBoardValue<float>(this.BelongtoRuntimeTree.GetBlackboard());
+
+                 float result =
+                   PosBlackBoardRelationData.GetBlackBoardValue<float>(this.BelongtoRuntimeTree.GetBlackboard());
                 //
                 // Vector2 value = unit.GetComponent<PlayerAssetsInputs>().move.normalized;
                 
@@ -40,7 +41,8 @@ namespace Suture
                
                 //unit.Position = new Vector3(unit.Position.x + value.x, unit.Position.y, unit.Position.z + value.y);
 
-                unit.Position += unit.transform.forward;
+                //unit.Position += unit.transform.forward*result;
+                unit.GetComponent<CharacterController>().Move(unit.transform.forward * result);
             }
 
             if (SetRot)

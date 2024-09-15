@@ -37,14 +37,15 @@ namespace Suture
                 (SkillDesNodeData)this.BelongtoRuntimeTree.BelongNP_DataSupportor.BuffNodeDataDic[this.DataId.Value];
             // 相关状态检测，例如沉默，眩晕等,下面是示例代码
 
-            if (BelongToUnit.GetComponent<StackFsmComponent>().CheckConflictState(ConfliectType))
+            if (BelongToUnit.CheckConflictState(ConfliectType))
             {
                 return false;
             }
             
-            //给要修改的黑板节点进行赋值
-            UnitAttributesDataComponent unitAttributesDataComponent =
-                BelongToUnit.GetComponent<UnitAttributesDataComponent>();
+            // //给要修改的黑板节点进行赋值
+            // UnitAttributesDataComponent unitAttributesDataComponent =
+            //     BelongToUnit.GetComponent<UnitAttributesDataComponent>();
+            
             switch (this.SkillDesNodeData.SkillCostTypes)
             {
                 case SkillCostTypes.MagicValue:

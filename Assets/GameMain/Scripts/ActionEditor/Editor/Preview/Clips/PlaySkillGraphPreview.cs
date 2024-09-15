@@ -88,7 +88,7 @@ namespace Suture
             myPet.AddComponent<NumericComponent>();
 
             //增加栈式状态机，辅助动画切换
-            myPet.AddComponent<StackFsmComponent>();
+         //   myPet.AddComponent<StackFsmComponent>();
             //增加Buff管理组件
             myPet.AddComponent<BuffManagerComponent>();
             myPet.AddComponent<SkillCanvasManagerComponent>();

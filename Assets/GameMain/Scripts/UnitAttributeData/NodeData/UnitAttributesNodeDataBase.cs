@@ -115,5 +115,6 @@ namespace Suture
 
         [LabelText("成长暴击伤害")]
         public float GroCriticalStrikeHarm;
+        
     }
 }

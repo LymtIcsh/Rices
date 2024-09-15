@@ -44,7 +44,7 @@ namespace Suture
 
         void OnNingGuangButtonClick()
         {
-            InitPetData = (10002, "NingGuang", new Vector3(57,0,40));
+            InitPetData = (10002, "安比", new Vector3(57,0,40));
 
             GameEntry.Event.Fire(this, LoadPatternEventArgs.Create(GameMode,InitPetData));
             Close(true);

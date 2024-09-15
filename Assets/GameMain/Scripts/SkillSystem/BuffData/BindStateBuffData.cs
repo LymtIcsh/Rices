@@ -5,6 +5,7 @@ namespace Suture
 {
     public class BindStateBuffData:BuffDataBase
     {
+        //TODO BindStateBuffSystem 脚本里 处理buff状态 
         [BoxGroup("自定义项")]
         [HideReferenceObjectPicker]
         [LabelText("此状态自带的状态数据")]

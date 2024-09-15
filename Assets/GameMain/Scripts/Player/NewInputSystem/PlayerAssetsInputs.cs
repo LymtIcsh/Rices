@@ -9,7 +9,7 @@ public class PlayerAssetsInputs : MonoBehaviour
     [Header("按键出入值")] public Vector2 move;
     public Vector2 look;
     public bool jump;
-    public bool sprint;
+    public bool evade;
     public bool attack;
     public bool eDown;
 
@@ -37,9 +37,9 @@ public class PlayerAssetsInputs : MonoBehaviour
         JumpInput(value.isPressed);
     }
 
-    public void OnSprint(InputValue value)
+    public void OnEvade(InputValue value)
     {
-        SprintInput(value.isPressed);
+        EvadeInput(value.isPressed);
     }
 
     public void OnAttack(InputValue value)
@@ -68,9 +68,9 @@ public class PlayerAssetsInputs : MonoBehaviour
         jump = newJumpState;
     }
 
-    public void SprintInput(bool newSprintState)
+    public void EvadeInput(bool newEvadeState)
     {
-        sprint = newSprintState;
+        evade = newEvadeState;
     }
 
     public void AttackInput(bool newAttackState)
