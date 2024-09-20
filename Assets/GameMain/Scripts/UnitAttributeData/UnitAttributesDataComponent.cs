@@ -25,7 +25,7 @@ namespace Suture
             //     .GetUnitAttributesDataById_DeepCopy<HeroAttributesNodeData>(10002, GetComponent<MyPet>().Id);
             //
             UnitAttributesNodeDataBase =
-                GetComponent<TargetableObject>().m_TargetableObjectData.m_unitAttributesNodeDataBase;
+                GetComponent<Pet>()._petData.m_unitAttributesNodeDataBase;
             
             
             NumericComponent = GetComponent<NumericComponent>();

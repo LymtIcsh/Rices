@@ -1,26 +1,25 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using Cysharp.Threading.Tasks.Triggers;
 
 namespace Suture
 {
     public static class UnitComponentSystem
     {
-        public static void Add(this UnitComponent self, TargetableObject unit)
+        public static void Add(this UnitComponent self, Pet unit)
         {
             self.idUnits.Add(unit.Id, unit);
         }
 
-        public static TargetableObject Get(this UnitComponent self, long id)
+        public static Pet Get(this UnitComponent self, long id)
         {
-            TargetableObject unit;
+            Pet unit;
             self.idUnits.TryGetValue(id, out unit);
             return unit;
         }
 
         public static void Remove(this UnitComponent self, long id)
         {
-            TargetableObject unit;
+            Pet unit;
             self.idUnits.TryGetValue(id, out unit);
             self.idUnits.Remove(id);
             GameEntry.Entity.HideEntity(unit);
@@ -43,7 +42,7 @@ namespace Suture
             self.idUnits.Remove(id);
         }
 
-        public static TargetableObject[] GetAll(this UnitComponent self)
+        public static Pet[] GetAll(this UnitComponent self)
         {
             return self.idUnits.Values.ToArray();
         }
@@ -55,10 +54,10 @@ namespace Suture
     }
     public class UnitComponent : Entity
     {
-        public Dictionary<long, TargetableObject> idUnits = new Dictionary<long, TargetableObject>();
+        public Dictionary<long, Pet> idUnits = new Dictionary<long, Pet>();
 
 #if !SERVER
-        public TargetableObject MyUnit;
+        public Pet MyUnit;
 #endif
         public void LSF_Tick()
         {

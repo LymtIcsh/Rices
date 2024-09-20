@@ -27,14 +27,18 @@ namespace Suture
         {
             GameEntry.Event.Subscribe(ShowEntitySuccessEventArgs.EventId, OnShowEntitySuccess);
             GameEntry.Event.Subscribe(ShowEntityFailureEventArgs.EventId, OnShowEntityFailure);
+            GameEntry.Event.Subscribe(SpawnSkillObjEventArgs.EventID, OnSpawnSkillObjSuccess);
 
-            GameEntry.Entity.ShowMyPet(new MyPetData(typeId, typeId)
+
+            GameEntry.Entity.ShowMyPet(new MyPetData(GameEntry.Entity.GenerateSerialId(), typeId)
             {
-                //  Name = name,
+                  //Name = name,
                 //TODO Animator 开启了Apply Root Motion，所以无法设置位置
-             //   Position = InitPos,
+                Position = InitPos,
                 Scale = Vector3.one,
             });
+            
+
 
 
             GameOver = false;
@@ -56,9 +60,20 @@ namespace Suture
         {
             GameEntry.Event.Unsubscribe(ShowEntitySuccessEventArgs.EventId, OnShowEntitySuccess);
             GameEntry.Event.Unsubscribe(ShowEntityFailureEventArgs.EventId, OnShowEntityFailure);
+            GameEntry.Event.Unsubscribe(SpawnSkillObjEventArgs.EventID, OnSpawnSkillObjSuccess);
+
 
             IdGenerater.Instance.Dispose();
         }
+
+        private void OnSpawnSkillObjSuccess(object sender, GameEventArgs e)
+        {
+            SpawnSkillObjEventArgs ne = (SpawnSkillObjEventArgs)e;
+
+            GameEntry.Entity.ShowSkillSummonObject<SkillMushroom>("SkillMushroom", ne.SkillObjData.AssetName,
+                Constant.AssetPriority.ArmorAsset,ne.SkillObjData);
+        }
+
 
         private void OnShowEntityFailure(object sender, GameEventArgs e)
         {
@@ -72,21 +87,29 @@ namespace Suture
             if ((ne.EntityLogicType == typeof(MyPet)))
             {
                 m_myPet = (MyPet)ne.Entity.Logic;
-                
-                
+
+
                 //当前房间
                 m_myPet.BelongToRoom = GameEntry.RoomManager.BattleRoom;
+                m_myPet.BelongToRoom.RoomHolderPlayerId = m_myPet._petData.TypeId;
+                m_myPet.BelongToRoom.RoomName = m_myPet.Name;
+                m_myPet.BelongToRoom.PlayerCount++;
+
+                UnitComponent unitComponent = m_myPet.BelongToRoom.GetComponent<UnitComponent>();
+                unitComponent .MyUnit = m_myPet;
+                unitComponent.idUnits.Add(m_myPet._petData.TypeId,m_myPet);
+                
 
                 PlayerAssetsInputs _playerAssetsInputs = m_myPet.GetComponent<PlayerAssetsInputs>();
                 _playerAssetsInputs.cursorLocked = true;
                 _playerAssetsInputs.cursorInputForLook = true;
 
 
-                CinemachineFreeLook cinemachineFreeLook = GameObject.FindGameObjectWithTag("PlayerFollowCamera")
-                    .GetComponent<CinemachineFreeLook>();
+                CinemachineVirtualCamera cinemachineFreeLook = GameObject.FindGameObjectWithTag("PlayerFollowCamera")
+                    .GetComponent<CinemachineVirtualCamera>();
                 cinemachineFreeLook.Follow =
                     m_myPet.Entity.transform.Find("PlayerCameraRoot").transform;
-                cinemachineFreeLook.LookAt = cinemachineFreeLook.Follow;
+                cinemachineFreeLook.LookAt = m_myPet.Entity.transform.Find("LookAt").transform;
 
                 m_myPet.AddComponent<DataModifierComponent>();
                 m_myPet.AddComponent<NP_SyncComponent>();
@@ -104,7 +127,7 @@ namespace Suture
                     .GetComponent<UnitAttributesDataComponent>().GetAttribute(NumericType.Speed) / 100;
 
 
-                NP_RuntimeTreeFactory.CreateSkillNpRuntimeTree(m_myPet, 10001, 10001).Start();
+                NP_RuntimeTreeFactory.CreateSkillNpRuntimeTree(m_myPet, 10003, 10003).Start();
                 //  NP_RuntimeTreeFactory.CreateSkillNpRuntimeTree(m_myPet, 10002, 10002).Start();
 
 
@@ -128,7 +151,5 @@ namespace Suture
                 NumericComponent NumericComponent = m_myPet.GetComponent<NumericComponent>();
             }
         }
-
-       
     }
 }

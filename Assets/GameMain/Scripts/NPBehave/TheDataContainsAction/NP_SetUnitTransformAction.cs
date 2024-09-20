@@ -28,7 +28,7 @@ namespace Suture
 
         public void SetUnitTransform()
         {
-            TargetableObject unit = BelongToUnit;
+            Pet unit = BelongToUnit;
             if (SetPos)
             {
 

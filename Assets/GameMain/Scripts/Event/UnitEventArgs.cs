@@ -8,13 +8,14 @@ namespace Suture
         public static readonly int EventId = typeof(UnitEventArgs).GetHashCode();
 
         public override int Id => EventId;
+        
 
         public UnitEventArgs()
         {
             NowUnit = null;
         }
 
-        public TargetableObject NowUnit
+        public Pet NowUnit
         {
             get;
             private set;
@@ -26,7 +27,7 @@ namespace Suture
             private set;
         }
 
-        public static UnitEventArgs Create(TargetableObject NowUnit, object userData = null)
+        public static UnitEventArgs Create(Pet NowUnit, object userData = null)
         {
             UnitEventArgs ne = ReferencePool.Acquire<UnitEventArgs>();
             ne.NowUnit = NowUnit;

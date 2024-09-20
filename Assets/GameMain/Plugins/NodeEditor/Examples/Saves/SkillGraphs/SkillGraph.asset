@@ -2001,8 +2001,8 @@ MonoBehaviour:
   exposedParameters: []
   serializedParameterList: []
   stickyNotes: []
-  position: {x: 426, y: 66, z: 0}
-  scale: {x: 0.7561437, y: 0.7561437, z: 1}
+  position: {x: 300, y: -215, z: 0}
+  scale: {x: 1, y: 1, z: 1}
   Name: S
   IdInConfig: 10002
   SavePathClient: Assets/GameMain/Configs/SkillConfig

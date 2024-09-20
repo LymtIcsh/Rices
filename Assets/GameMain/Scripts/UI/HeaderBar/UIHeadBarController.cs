@@ -16,9 +16,9 @@ namespace Suture.HeaderBar
     {
         public void Run(NumericComponent numericComponent, NumericType numericType, float value)
         {
-            TargetableObject targetableObject = numericComponent.GetComponent<TargetableObject>();
+            Pet targetableObject = numericComponent.GetComponent<Pet>();
 
-            targetableObject.m_TargetableObjectData.m_unitAttributesNodeDataBase.OriHP += (int)value;
+            targetableObject._petData.m_unitAttributesNodeDataBase.OriHP += (int)value;
             
             Log.Info($"HP 改变:{value}");
         }

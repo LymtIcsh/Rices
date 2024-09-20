@@ -510,11 +510,11 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Avatar_Female_Size02_Anbi_Ani_Hit_H_Front
+      name: Hit_H_Front
       takeName: Avatar_Female_Size02_Anbi_Ani_Hit_H_Front
       internalID: 554482296720618122
       firstFrame: 0
-      lastFrame: 174
+      lastFrame: 130
       wrapMode: 0
       orientationOffsetY: 0
       level: 0

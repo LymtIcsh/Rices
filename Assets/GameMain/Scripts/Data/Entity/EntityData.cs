@@ -1,11 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using GameFramework;
 using UnityEngine;
 
 namespace Suture
 {
     [SerializeField]
-    public abstract class EntityData
+    public class EntityData : IReference
     {
         [SerializeField] private int m_Id = 0;
 
@@ -17,21 +18,31 @@ namespace Suture
 
         [SerializeField] private Quaternion m_Rotation = Quaternion.identity;
 
-        public EntityData(int entityId, int typeId)
+
+        public EntityData()
         {
-            m_Id = entityId;
-            m_TypeId = typeId;
+            m_Position = Vector3.zero;
+            m_Rotation = Quaternion.identity;
+            UserData = null;
         }
 
         /// <summary>
         /// 实体编号。
         /// </summary>
-        public int Id => m_Id;
+        public int Id
+        {
+            get => m_Id;
+            set => m_Id = value;
+        }
 
         /// <summary>
         /// 实体类型编号。
         /// </summary>
-        public int TypeId => m_TypeId;
+        public int TypeId
+        {
+            get => m_TypeId;
+            set => m_TypeId = value;
+        }
 
         /// <summary>
         /// 实体位置。
@@ -58,6 +69,42 @@ namespace Suture
         {
             get => m_Scale;
             set => m_Scale = value;
+        }
+
+        public object UserData { get; protected set; }
+
+        public static EntityData Create(object userData = null)
+        {
+            EntityData entityData = ReferencePool.Acquire<EntityData>();
+            entityData.Position = Vector3.zero;
+            entityData.Rotation = Quaternion.identity;
+            entityData.UserData = userData;
+            return entityData;
+        }
+
+        public static EntityData Create(Vector3 position, object userData = null)
+        {
+            EntityData entityData = ReferencePool.Acquire<EntityData>();
+            entityData.Position = position;
+            entityData.Rotation = Quaternion.identity;
+            entityData.UserData = userData;
+            return entityData;
+        }
+
+        public static EntityData Create(Vector3 position, Quaternion quaternion, object userData = null)
+        {
+            EntityData entityData = ReferencePool.Acquire<EntityData>();
+            entityData.Position = position;
+            entityData.Rotation = quaternion;
+            entityData.UserData = userData;
+            return entityData;
+        }
+
+        public void Clear()
+        {
+            m_Position = Vector3.zero;
+            m_Rotation = Quaternion.identity;
+            UserData = null;
         }
     }
 }

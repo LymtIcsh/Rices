@@ -6875,7 +6875,7 @@ MonoBehaviour:
   move: {x: 0, y: 0}
   look: {x: 0, y: 0}
   jump: 0
-  sprint: 0
+  evade: 0
   attack: 0
   eDown: 0
   analogMovement: 0

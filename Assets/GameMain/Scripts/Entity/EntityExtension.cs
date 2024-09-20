@@ -66,17 +66,55 @@ namespace Suture
                 priority, data);
         }
 
+        private static void ShowSkillSummonObject(this EntityComponent entityComponent, Type logicType, string entityGroup,
+            int priority, EntityData data) 
+        {
+            if (data == null)
+            {
+                Log.Warning("Data is invalid.");
+                return;
+            }
+
+            IDataTable<DRSkillSummonObject> dtEtity = GameEntry.DataTable.GetDataTable<DRSkillSummonObject>();
+            DRSkillSummonObject drEntity = dtEtity.GetDataRow(data.TypeId);
+            if (drEntity == null)
+            {
+                Log.Warning("Can not load entity id '{0}' from data table.", data.TypeId.ToString());
+                return;
+            }
+
+            entityComponent.ShowEntity(data.Id, logicType, AssetUtility.GetEntityAsset(drEntity.AssetName), entityGroup,
+                priority, data);
+        }
 
         /// <summary>
         /// 显示实体。
         /// </summary>
+        /// <param name="entityComponent"></param>
         /// <param name="entityGroup">实体组名称</param>
+        /// <param name="entityAssetName"></param>
         /// <param name="ArmorAsset">加载实体资源的优先级。 【从 Constant.AssetPriority.ArmorAsset 】 </param>
         /// <param name="entityData">用户自定义实体数据。</param>
         /// <typeparam name="T">实体逻辑类型。</typeparam>
-        public static void ShowEntity<T>(this EntityComponent entityComponent,string entityGroup,int ArmorAsset, EntityData entityData)
+        public static void ShowEntity<T>(this EntityComponent entityComponent, string entityGroup,
+            string entityAssetName, int ArmorAsset, EntityData entityData) where T: TargetableObject
         {
             entityComponent.ShowEntity(typeof(T), entityGroup, ArmorAsset, entityData);
+        }
+        
+        /// <summary>
+        /// 显示技能召唤物实体。
+        /// </summary>
+        /// <param name="entityComponent"></param>
+        /// <param name="entityGroup">实体组名称</param>
+        /// <param name="entityAssetName"></param>
+        /// <param name="ArmorAsset">加载实体资源的优先级。 【从 Constant.AssetPriority.ArmorAsset 】 </param>
+        /// <param name="entityData">用户自定义实体数据。</param>
+        /// <typeparam name="T">实体逻辑类型。</typeparam>
+        public static void ShowSkillSummonObject<T>(this EntityComponent entityComponent, string entityGroup,
+            string entityAssetName, int ArmorAsset, EntityData entityData) where T: TargetableObject
+        {
+            entityComponent.ShowSkillSummonObject(typeof(T), entityGroup, ArmorAsset, entityData);
         }
         
         public static void ShowMyPet(this EntityComponent entityComponent, MyPetData data)

@@ -10,7 +10,7 @@
         /// </summary>
         /// <param name="self"></param>
         /// <returns></returns>
-        public static TargetableObject GetBuffTarget(this IBuffSystem self)
+        public static Pet GetBuffTarget(this IBuffSystem self)
         {
             return self.BuffData.BuffTargetTypes == BuffTargetTypes.Self? self.TheUnitFrom : self.TheUnitBelongto;
         }

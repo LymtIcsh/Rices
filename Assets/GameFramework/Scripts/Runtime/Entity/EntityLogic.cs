@@ -105,7 +105,7 @@ namespace UnityGameFramework.Runtime
         {
             if (m_CachedTransform == null)
             {
-                m_CachedTransform = transform;
+                m_CachedTransform = this.transform;
             }
 
             m_Entity = GetComponent<Entity>();

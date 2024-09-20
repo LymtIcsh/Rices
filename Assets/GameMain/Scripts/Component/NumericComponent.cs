@@ -53,7 +53,7 @@ namespace Suture
         /// </summary>
         public void ApplyChange(NumericType numericType, float changedValue)
         {
-            TargetableObject unit = GetComponent<TargetableObject>();
+            Pet unit = GetComponent<Pet>();
             
       //播放扣血瓢字特效
 
@@ -115,7 +115,7 @@ namespace Suture
                 //取得最终值，由基础xxx+额外xxx值组成
                 float finalResult = this.GetByKey(bas) + this.GetByKey(add);
                 //更新最终值
-                this[(NumericType)final] = this.Entity.transform.parent.GetComponent<DataModifierComponent>()
+                this[(NumericType)final] =GetComponent<DataModifierComponent>()
                     .BaptismData(numericType.ToString(), finalResult);
             }
 

@@ -43,8 +43,8 @@ namespace Suture
             long theSkillCanvasIdBelongTo)
         {
             UnitComponent unitComponent = room.GetComponent<UnitComponent>();
-            TargetableObject theUnitFrom = unitComponent.Get(theUnitIdFrom);
-            TargetableObject theUnitBelongTo = unitComponent.Get(theUnitIdBelongTo);
+            Pet theUnitFrom = unitComponent.Get(theUnitIdFrom);
+            Pet theUnitBelongTo = unitComponent.Get(theUnitIdBelongTo);
 
             NP_RuntimeTree npRuntimeTree = theUnitFrom.GetComponent<NP_RuntimeTreeManager>()
                 .GetTreeByRuntimeID(theSkillCanvasIdBelongTo);
@@ -65,8 +65,8 @@ namespace Suture
         /// <param name="theUnitBelongTo">Buff寄生者</param>
         /// <param name="theSkillCanvasBelongTo"></param>
         /// <returns></returns>
-        public static IBuffSystem AcquireBuff(long dataId, long buffNodeId, TargetableObject theUnitFrom,
-            TargetableObject theUnitBelongTo,
+        public static IBuffSystem AcquireBuff(long dataId, long buffNodeId, Pet theUnitFrom,
+            Pet theUnitBelongTo,
             NP_RuntimeTree theSkillCanvasBelongTo)
         {
             return AcquireBuff(
@@ -84,8 +84,8 @@ namespace Suture
         /// <param name="theUnitBelongTo">Buff寄生者</param>
         /// <returns></returns>
         public static IBuffSystem AcquireBuff(NP_DataSupportor npDataSupportor, long buffNodeId,
-            TargetableObject theUnitFrom,
-            TargetableObject theUnitBelongTo,
+            Pet theUnitFrom,
+            Pet theUnitBelongTo,
             NP_RuntimeTree theSkillCanvasBelongTo)
         {
             return AcquireBuff((npDataSupportor.BuffNodeDataDic[buffNodeId] as NormalBuffNodeData)?.BuffData,
@@ -103,8 +103,8 @@ namespace Suture
         /// <param name="theUnitBelongTo">Buff寄生者</param>
         /// <param name="theSkillCanvasBelongTo"></param>
         /// <returns></returns>
-        public static IBuffSystem AcquireBuff(BuffDataBase buffDataBase, long buffNodeId, TargetableObject theUnitFrom,
-            TargetableObject theUnitBelongTo,
+        public static IBuffSystem AcquireBuff(BuffDataBase buffDataBase, long buffNodeId, Pet theUnitFrom,
+            Pet theUnitBelongTo,
             NP_RuntimeTree theSkillCanvasBelongTo)
         {
             //LSF_Component lsfComponent = theUnitFrom.BelongToRoom.GetComponent<LSF_Component>();

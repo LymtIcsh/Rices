@@ -19,7 +19,7 @@ namespace Suture
 
         public NPBehave.Action.Result WaitCDAction(bool hasDown)
         {
-            TargetableObject unit = BelongToUnit;
+            Pet unit = BelongToUnit;
             CDComponent cdComponent = unit.BelongToRoom.GetComponent<CDComponent>();
 
             if (!cdComponent.GetCDResult(BelongToUnit.Id,

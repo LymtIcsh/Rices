@@ -58,6 +58,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Zoom",
+                    "type": "Value",
+                    "id": "655dd5d2-253e-4f27-8e6b-74d4179fc817",
+                    "expectedControlType": "Axis",
+                    "processors": "Clamp(min=-0.1,max=0.1),Invert",
+                    "interactions": "",
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -165,7 +174,7 @@
                     "id": "5cbb186f-4491-4c54-b491-400caedbed0a",
                     "path": "<Pointer>/delta",
                     "interactions": "",
-                    "processors": "InvertVector2(invertX=false),ScaleVector2(x=0.05,y=0.05)",
+                    "processors": "ScaleVector2(x=0.35,y=0.35)",
                     "groups": "KeyboardMouse",
                     "action": "Look",
                     "isComposite": false,
@@ -212,6 +221,17 @@
                     "processors": "",
                     "groups": "KeyboardMouse",
                     "action": "Evade",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "4a58c42e-4a81-4459-9ef9-3c64b41ece0d",
+                    "path": "<Mouse>/scroll/y",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Zoom",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

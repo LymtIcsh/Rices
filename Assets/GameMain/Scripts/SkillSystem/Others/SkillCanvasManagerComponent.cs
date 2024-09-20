@@ -123,7 +123,7 @@ namespace Suture
                     if (targetSkillContent[i] == npRuntimeTree)
                     {
                         //TODO SkillCanvasManagerComponentUtitlites 烟雨et脚本
-                        GetComponentInParent<TargetableObject>().GetComponent<NP_RuntimeTreeManager>()
+                        GetComponentInParent<Pet>().GetComponent<NP_RuntimeTreeManager>()
                             .RemoveTree(npRuntimeTree.Id);
 
                         targetSkillContent.RemoveAt(i);

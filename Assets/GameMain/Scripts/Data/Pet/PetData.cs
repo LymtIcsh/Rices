@@ -4,13 +4,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using GameFramework;
 using UnityEngine;
 using Sirenix.OdinInspector;
+using UnityGameFramework.Runtime;
 
 namespace Suture
 {
     [Serializable]
-    public abstract class PetData : TargetableObjectData
+    public  class PetData : TargetableObjectData
     {
         [ShowInInspector] private List<EquipData> m_ArmorDatas = new List<EquipData>();
 
@@ -18,10 +20,26 @@ namespace Suture
 
         [SerializeField] private int m_Money = 0;
 
-       
+        [SerializeField] private CampType m_Camp = CampType.Unknown;
+        
+        /// <summary>
+        /// 最大生命值
+        /// </summary>
+        public int MaxHP;
 
-        protected PetData(int entityId, int typeId, CampType camp) : base(entityId, typeId, camp)
-        {
+        /// <summary>
+        /// 当前等级
+        /// </summary>
+        public int Level=1;
+
+        [LabelText("英雄数据")] [ShowInInspector]
+        public HeroAttributesNodeData m_unitAttributesNodeDataBase;
+
+        protected PetData(int entityId, int typeId, CampType camp) : base()
+        {     
+            TypeId = typeId;
+            Id = entityId;
+            
             IDataTable<DRPet> dtPets = GameEntry.DataTable.GetDataTable<DRPet>();
             DRPet drPets = dtPets.GetDataRow(TypeId);
             if (drPets == null)
@@ -29,10 +47,64 @@ namespace Suture
                 return;
             }
             
+            m_Camp = camp;
+            // m_HP = 0;
+            // m_ASK = 0;
             
+            m_unitAttributesNodeDataBase = GameEntry.UnitAttributesDataRepository
+                .GetUnitAttributesDataById_DeepCopy<HeroAttributesNodeData>(TypeId, TypeId);
+
+            MaxHP = (int)(m_unitAttributesNodeDataBase.OriHP + m_unitAttributesNodeDataBase.GroHP * Level);
             // Defense = drPets.InitDefense;
             // ASK = drPets.InitAsk;
             // HP = m_MaxHP = drPets.InitHp;
+        }
+
+        // public PetData()
+        // {
+        //     IDataTable<DRPet> dtPets = GameEntry.DataTable.GetDataTable<DRPet>();
+        //     DRPet drPets = dtPets.GetDataRow(TypeId);
+        //     
+        //     if (drPets == null)
+        //     {
+        //         Log.Info("drPets 为空");
+        //     }
+        // }
+
+
+        // public static PetData Create(int entityId, int typeId,Vector3 position,CampType camp,object userData = null)
+        // {
+        //     PetData entityData = ReferencePool.Acquire<PetData>();
+        //     
+        //     entityData.Id = entityId;
+        //     entityData.TypeId = typeId;
+        //     entityData.Position = position;
+        //     entityData.m_Camp = camp;
+        //     entityData.UserData = userData;
+        //     
+        //     IDataTable<DRPet> dtPets = GameEntry.DataTable.GetDataTable<DRPet>();
+        //     DRPet drPets = dtPets.GetDataRow(typeId);
+        //     
+        //     if (drPets == null)
+        //     {
+        //         Log.Info("drPets 为空");
+        //     }
+        //     // m_HP = 0;
+        //     // m_ASK = 0;
+        //     
+        //     entityData. m_unitAttributesNodeDataBase = GameEntry.UnitAttributesDataRepository
+        //         .GetUnitAttributesDataById_DeepCopy<HeroAttributesNodeData>(typeId, entityId);
+        //
+        //     entityData.MaxHP = (int)(entityData.m_unitAttributesNodeDataBase.OriHP + entityData.m_unitAttributesNodeDataBase.GroHP * entityData.Level);
+        //     return entityData;
+        // }
+        
+        /// <summary>
+        /// 角色阵营
+        /// </summary>
+        public CampType Camp
+        {
+            get { return m_Camp; }
         }
 
         // /// <summary>
@@ -95,6 +167,14 @@ namespace Suture
             {
                 m_unitAttributesNodeDataBase.OriHP = MaxHP;
             }
+        }
+        
+        /// <summary>
+        /// 生命百分比。
+        /// </summary>
+        public float HPRatio
+        {
+            get { return  MaxHP> 0 ? (float)m_unitAttributesNodeDataBase.OriHP / MaxHP : 0f; }
         }
     }
 }

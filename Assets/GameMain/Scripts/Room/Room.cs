@@ -15,7 +15,7 @@ namespace Suture
         /// <summary>
         /// 房间人数
         /// </summary>
-        public int PlayerCount;
+        public int PlayerCount=1;
 
         /// <summary>
         /// 房间名

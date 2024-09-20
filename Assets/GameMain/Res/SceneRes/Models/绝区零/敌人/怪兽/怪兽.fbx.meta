@@ -46,8 +46,8 @@ ModelImporter:
       hasAdditiveReferencePose: 0
       loopTime: 0
       loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
       loopBlendPositionXZ: 0
       keepOriginalOrientation: 0
       keepOriginalPositionY: 1
@@ -91,7 +91,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Goblin_Ani_Walk_F
+      name: Walk_F
       takeName: Goblin_Ani_Walk_F
       internalID: 3562186347886755870
       firstFrame: 0
@@ -120,7 +120,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Goblin_Ani_Dodge
+      name: Dodge
       takeName: Goblin_Ani_Dodge
       internalID: 8742447364452139131
       firstFrame: 0
@@ -149,7 +149,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Monster_Goblin_Ani_Hit_Shake
+      name: Hit_Shake
       takeName: Monster_Goblin_Ani_Hit_Shake
       internalID: -1837773511420484736
       firstFrame: 0
@@ -178,7 +178,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Goblin_Ani_Stun_Hit_L_Front
+      name: Stun_Hit_L_Front
       takeName: Goblin_Ani_Stun_Hit_L_Front
       internalID: -777874509372367948
       firstFrame: 0
@@ -191,10 +191,10 @@ ModelImporter:
       hasAdditiveReferencePose: 0
       loopTime: 0
       loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
       loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
+      keepOriginalOrientation: 1
       keepOriginalPositionY: 1
       keepOriginalPositionXZ: 0
       heightFromFeet: 0
@@ -207,7 +207,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Goblin_Ani_Attack_04_01
+      name: Attack_04_01
       takeName: Goblin_Ani_Attack_04_01
       internalID: 502101898023932757
       firstFrame: 0
@@ -236,7 +236,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Goblin_Ani_Walk_L_Start
+      name: Walk_L_Start
       takeName: Goblin_Ani_Walk_L_Start
       internalID: -433123386122403151
       firstFrame: 0
@@ -252,7 +252,7 @@ ModelImporter:
       loopBlendOrientation: 0
       loopBlendPositionY: 0
       loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
+      keepOriginalOrientation: 1
       keepOriginalPositionY: 1
       keepOriginalPositionXZ: 0
       heightFromFeet: 0
@@ -265,7 +265,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Goblin_Ani_Debuff_Stun_End
+      name: Debuff_Stun_End
       takeName: Goblin_Ani_Debuff_Stun_End
       internalID: -3252624744545793878
       firstFrame: 0
@@ -294,7 +294,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Goblin_Ani_Run_End
+      name: Run_End
       takeName: Goblin_Ani_Run_End
       internalID: 556536183868401645
       firstFrame: 0
@@ -307,10 +307,10 @@ ModelImporter:
       hasAdditiveReferencePose: 0
       loopTime: 0
       loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
       loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
+      keepOriginalOrientation: 1
       keepOriginalPositionY: 1
       keepOriginalPositionXZ: 0
       heightFromFeet: 0
@@ -323,7 +323,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Goblin_Ani_Attack_05_Start
+      name: Attack_05_Start
       takeName: Goblin_Ani_Attack_05_Start
       internalID: -7625310122096358266
       firstFrame: 0
@@ -352,7 +352,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Goblin_Ani_Idle
+      name: Idle
       takeName: Goblin_Ani_Idle
       internalID: -6197149268509949104
       firstFrame: 0
@@ -381,7 +381,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Goblin_Ani_Death_Stay
+      name: Death_Stay
       takeName: Goblin_Ani_Death_Stay
       internalID: -398616934780067719
       firstFrame: 0
@@ -410,7 +410,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Goblin_Ani_Run_Start
+      name: Run_Start
       takeName: Goblin_Ani_Run_Start
       internalID: 2602183277397786733
       firstFrame: 0
@@ -423,10 +423,10 @@ ModelImporter:
       hasAdditiveReferencePose: 0
       loopTime: 0
       loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
       loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
+      keepOriginalOrientation: 1
       keepOriginalPositionY: 1
       keepOriginalPositionXZ: 0
       heightFromFeet: 0
@@ -439,7 +439,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Goblin_Ani_Attack_02
+      name: Attack_02
       takeName: Goblin_Ani_Attack_02
       internalID: -8010443721694757569
       firstFrame: 0
@@ -468,7 +468,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Goblin_Ani_Stun_Hit_Stay
+      name: Stun_Hit_Stay
       takeName: Goblin_Ani_Stun_Hit_Stay
       internalID: 3879896132321488740
       firstFrame: 0
@@ -497,7 +497,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Goblin_Ani_Hit_Stay
+      name: Hit_Stay
       takeName: Goblin_Ani_Hit_Stay
       internalID: 4337259651633663158
       firstFrame: 0
@@ -526,7 +526,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Goblin_Ani_Hit_L_Back
+      name: Hit_L_Back
       takeName: Goblin_Ani_Hit_L_Back
       internalID: 1595277625356204253
       firstFrame: 0
@@ -555,7 +555,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Goblin_Ani_Walk_B_Start
+      name: Walk_B_Start
       takeName: Goblin_Ani_Walk_B_Start
       internalID: -8074612405589502612
       firstFrame: 0
@@ -584,7 +584,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Goblin_Ani_Attack_05
+      name: Attack_05
       takeName: Goblin_Ani_Attack_05
       internalID: 4141581912768169984
       firstFrame: 0
@@ -613,7 +613,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Goblin_Ani_Stun_Hit_H_Back
+      name: Stun_Hit_H_Back
       takeName: Goblin_Ani_Stun_Hit_H_Back
       internalID: 6435010428011532180
       firstFrame: 0
@@ -642,7 +642,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Goblin_Ani_Attack_02_Stamp
+      name: Attack_02_Stamp
       takeName: Goblin_Ani_Attack_02_Stamp
       internalID: -8791453557880034616
       firstFrame: 0
@@ -671,7 +671,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Goblin_Ani_Death_Hit_Back
+      name: Death_Hit_Back
       takeName: Goblin_Ani_Death_Hit_Back
       internalID: 4262689594016058279
       firstFrame: 0
@@ -700,7 +700,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Goblin_Ani_Walk_B
+      name: Walk_B
       takeName: Goblin_Ani_Walk_B
       internalID: 6733344748642250728
       firstFrame: 0
@@ -729,7 +729,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Goblin_Ani_Hit_L_Front
+      name: Hit_L_Front
       takeName: Goblin_Ani_Hit_L_Front
       internalID: 3301660742571461909
       firstFrame: 0
@@ -758,7 +758,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Goblin_Ani_Attack_05_Miss_2
+      name: Attack_05_Miss_2
       takeName: Goblin_Ani_Attack_05_Miss_2
       internalID: -3825524971311146892
       firstFrame: 0
@@ -787,7 +787,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Goblin_Ani_Debuff_Stun_Loop
+      name: Debuff_Stun_Loop
       takeName: Goblin_Ani_Debuff_Stun_Loop
       internalID: -3418896938200717279
       firstFrame: 0
@@ -816,7 +816,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Goblin_Ani_Attack_06
+      name: Attack_06
       takeName: Goblin_Ani_Attack_06
       internalID: -7878026066155401312
       firstFrame: 0
@@ -845,7 +845,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Goblin_Ani_Walk_R_Start
+      name: Walk_R_Start
       takeName: Goblin_Ani_Walk_R_Start
       internalID: 5698375180565610465
       firstFrame: 0
@@ -874,7 +874,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Goblin_Ani_Walk_L
+      name: Walk_L
       takeName: Goblin_Ani_Walk_L
       internalID: -5954985257845531946
       firstFrame: 0
@@ -903,7 +903,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Goblin_Ani_Stun_Hit_L_Back
+      name: Stun_Hit_L_Back
       takeName: Goblin_Ani_Stun_Hit_L_Back
       internalID: -8517309220019642180
       firstFrame: 0
@@ -916,10 +916,10 @@ ModelImporter:
       hasAdditiveReferencePose: 0
       loopTime: 0
       loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
       loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
+      keepOriginalOrientation: 1
       keepOriginalPositionY: 1
       keepOriginalPositionXZ: 0
       heightFromFeet: 0
@@ -932,7 +932,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Goblin_Ani_Death_Hit_Front
+      name: Death_Hit_Front
       takeName: Goblin_Ani_Death_Hit_Front
       internalID: 7753710542118689880
       firstFrame: 0
@@ -945,10 +945,10 @@ ModelImporter:
       hasAdditiveReferencePose: 0
       loopTime: 0
       loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
       loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
+      keepOriginalOrientation: 1
       keepOriginalPositionY: 1
       keepOriginalPositionXZ: 0
       heightFromFeet: 0
@@ -961,7 +961,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Goblin_Ani_Attack_07
+      name: Attack_07
       takeName: Goblin_Ani_Attack_07
       internalID: -7765459740144276260
       firstFrame: 0
@@ -990,7 +990,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Goblin_Ani_Attack_04
+      name: Attack_04
       takeName: Goblin_Ani_Attack_04
       internalID: -3735212492818192165
       firstFrame: 0
@@ -1019,7 +1019,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Goblin_Ani_Debuff_Stun_Start
+      name: Debuff_Stun_Start
       takeName: Goblin_Ani_Debuff_Stun_Start
       internalID: -3804751593570551859
       firstFrame: 0
@@ -1048,7 +1048,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Goblin_Ani_Attack_03
+      name: Attack_03
       takeName: Goblin_Ani_Attack_03
       internalID: 12983523418525675
       firstFrame: 0
@@ -1061,10 +1061,10 @@ ModelImporter:
       hasAdditiveReferencePose: 0
       loopTime: 0
       loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
       loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
+      keepOriginalOrientation: 1
       keepOriginalPositionY: 1
       keepOriginalPositionXZ: 0
       heightFromFeet: 0
@@ -1077,7 +1077,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Goblin_Ani_Walk_F_Start
+      name: Walk_F_Start
       takeName: Goblin_Ani_Walk_F_Start
       internalID: 8054114090722858692
       firstFrame: 0
@@ -1090,10 +1090,10 @@ ModelImporter:
       hasAdditiveReferencePose: 0
       loopTime: 0
       loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
       loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
+      keepOriginalOrientation: 1
       keepOriginalPositionY: 1
       keepOriginalPositionXZ: 0
       heightFromFeet: 0
@@ -1106,7 +1106,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Goblin_Ani_Attack_01
+      name: Attack_01
       takeName: Goblin_Ani_Attack_01
       internalID: -3568453503579113454
       firstFrame: 0
@@ -1119,10 +1119,10 @@ ModelImporter:
       hasAdditiveReferencePose: 0
       loopTime: 0
       loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
       loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
+      keepOriginalOrientation: 1
       keepOriginalPositionY: 1
       keepOriginalPositionXZ: 0
       heightFromFeet: 0
@@ -1135,7 +1135,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Goblin_Ani_Run
+      name: Run
       takeName: Goblin_Ani_Run
       internalID: 1275926326739213637
       firstFrame: 0
@@ -1164,7 +1164,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Goblin_Ani_Stun_Hit_H_Front
+      name: Stun_Hit_H_Front
       takeName: Goblin_Ani_Stun_Hit_H_Front
       internalID: -263664931086917705
       firstFrame: 0
@@ -1177,10 +1177,10 @@ ModelImporter:
       hasAdditiveReferencePose: 0
       loopTime: 0
       loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
       loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
+      keepOriginalOrientation: 1
       keepOriginalPositionY: 1
       keepOriginalPositionXZ: 0
       heightFromFeet: 0
@@ -1193,7 +1193,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Goblin_Ani_Born
+      name: Ani_Born
       takeName: Goblin_Ani_Born
       internalID: -6677452333279547328
       firstFrame: 0
@@ -1222,7 +1222,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Goblin_Ani_Walk_R
+      name: Walk_R
       takeName: Goblin_Ani_Walk_R
       internalID: 9160966505602295481
       firstFrame: 0
@@ -1238,7 +1238,7 @@ ModelImporter:
       loopBlendOrientation: 0
       loopBlendPositionY: 0
       loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
+      keepOriginalOrientation: 1
       keepOriginalPositionY: 1
       keepOriginalPositionXZ: 0
       heightFromFeet: 0
@@ -1251,7 +1251,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Goblin_Ani_Attack_05_Full
+      name: Attack_05_Full
       takeName: Goblin_Ani_Attack_05_Full
       internalID: -8653875885114101551
       firstFrame: 0
@@ -1264,10 +1264,10 @@ ModelImporter:
       hasAdditiveReferencePose: 0
       loopTime: 0
       loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
       loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
+      keepOriginalOrientation: 1
       keepOriginalPositionY: 1
       keepOriginalPositionXZ: 0
       heightFromFeet: 0

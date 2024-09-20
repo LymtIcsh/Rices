@@ -114,6 +114,8 @@ namespace Suture
             characterAnimator = GetComponent<Animator>();
             
             GameEntry.Event.Subscribe(NumericChangeEventArgs.EventID, ChangeSpeed);
+
+            Cursor.lockState = CursorLockMode.Locked;
         }
 
         private void OnDisable()
@@ -157,8 +159,7 @@ namespace Suture
             GroundedCheck();
             Move();
             EDown();
-
-       
+            
         }
 
         private void LateUpdate()

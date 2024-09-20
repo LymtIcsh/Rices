@@ -45,9 +45,9 @@ namespace Suture
             if (numericType == NumericType.Min)
                 return;
 
-            this.GetComponent<TargetableObject>().GetComponent<NumericComponent>()[numericType] = this.BaptismData(
+            this.GetComponent<Pet>().GetComponent<NumericComponent>()[numericType] = this.BaptismData(
                 modifierName,
-                this.GetComponent<TargetableObject>().GetComponent<NumericComponent>().GetOriNum()[(int)numericType]);
+                this.GetComponent<Pet>().GetComponent<NumericComponent>().GetOriNum()[(int)numericType]);
         }
 
 
@@ -66,9 +66,9 @@ namespace Suture
                 {
                     if (numericType == NumericType.Min)
                         return;
-                    this.GetComponent<TargetableObject>().GetComponent<NumericComponent>()[numericType] =
+                    this.GetComponent<Pet>().GetComponent<NumericComponent>()[numericType] =
                         this.BaptismData(modifierName,
-                            this.GetComponent<TargetableObject>().GetComponent<NumericComponent>().GetOriNum()[
+                            this.GetComponent<Pet>().GetComponent<NumericComponent>().GetOriNum()[
                                 (int)numericType]);
                     return;
                 }

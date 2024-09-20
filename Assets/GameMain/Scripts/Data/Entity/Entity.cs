@@ -8,9 +8,9 @@ namespace Suture
 {
     public class Entity : EntityLogic
     {
-        [SerializeField]
+      //  [SerializeField]
         private EntityData m_EntityData = null;
-
+        
         public int Id
         {
             get

@@ -17,7 +17,7 @@ namespace Suture
         public NP_BlackBoardRelationData NPBalckBoardRelationData = new NP_BlackBoardRelationData()
             { WriteOrCompareToBB = true };
 
-        public override Decorator CreateDecoratorNode(TargetableObject unit, NP_RuntimeTree runtimeTree, Node node)
+        public override Decorator CreateDecoratorNode(Pet unit, NP_RuntimeTree runtimeTree, Node node)
         {
             this.m_BlackboardConditionNode = new BlackboardCondition(this.NPBalckBoardRelationData.BBkey,
                 this.Ope,

@@ -27,29 +27,29 @@ namespace Suture
             return state;
         }
 
-        protected override void OnInit(IFsm<TargetableObject> fsm)
+        protected override void OnInit(IFsm<Pet> fsm)
         {
             base.OnInit(fsm);
         }
 
-        protected override void OnEnter(IFsm<TargetableObject> fsm)
+        protected override void OnEnter(IFsm<Pet> fsm)
         {
             base.OnEnter(fsm);
             
             PlayAnimation(  this.StateName );
         }
 
-        protected override void OnUpdate(IFsm<TargetableObject> fsm, float elapseSeconds, float realElapseSeconds)
+        protected override void OnUpdate(IFsm<Pet> fsm, float elapseSeconds, float realElapseSeconds)
         {
             base.OnUpdate(fsm, elapseSeconds, realElapseSeconds);          
         }
 
-        protected override void OnLeave(IFsm<TargetableObject> fsm, bool isShutdown)
+        protected override void OnLeave(IFsm<Pet> fsm, bool isShutdown)
         {
             base.OnLeave(fsm, isShutdown);
         }
 
-        protected override void OnDestroy(IFsm<TargetableObject> fsm)
+        protected override void OnDestroy(IFsm<Pet> fsm)
         {
             base.OnDestroy(fsm);
         }

@@ -3,6 +3,7 @@ using Sirenix.OdinInspector;
 
 namespace Suture
 {
+    
     [Title("给自己添加一个Buff", TitleAlignment = TitleAlignments.Centered)]
     public class NP_AddBuffAction : NP_ClassForStoreAction
     {

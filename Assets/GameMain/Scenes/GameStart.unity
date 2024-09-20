@@ -220,12 +220,16 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8944336655422409496, guid: f6d148d888ffbf54b9afe9936dfaec1f, type: 3}
+      propertyPath: field of view
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 8944336655422409496, guid: f6d148d888ffbf54b9afe9936dfaec1f, type: 3}
       propertyPath: far clip plane
-      value: 5000
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 8944336655422409496, guid: f6d148d888ffbf54b9afe9936dfaec1f, type: 3}
       propertyPath: near clip plane
-      value: 0.1
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 8944336655422409497, guid: f6d148d888ffbf54b9afe9936dfaec1f, type: 3}
       propertyPath: m_Enabled
@@ -237,23 +241,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 1.375
       objectReference: {fileID: 0}
     - target: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -4
       objectReference: {fileID: 0}
     - target: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.99946564
       objectReference: {fileID: 0}
     - target: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: 0.032687563
       objectReference: {fileID: 0}
     - target: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f, type: 3}
       propertyPath: m_LocalRotation.y
@@ -273,6 +277,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9078993845375825671, guid: f6d148d888ffbf54b9afe9936dfaec1f, type: 3}
+      propertyPath: m_UpdateMethod
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9078993845375825671, guid: f6d148d888ffbf54b9afe9936dfaec1f, type: 3}
+      propertyPath: m_ShowDebugText
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9078993845375825671, guid: f6d148d888ffbf54b9afe9936dfaec1f, type: 3}
+      propertyPath: m_BlendUpdateMethod
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9078993845375825671, guid: f6d148d888ffbf54b9afe9936dfaec1f, type: 3}
+      propertyPath: m_DefaultBlend.m_Style
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1029,6 +1049,11 @@ MonoBehaviour:
   m_CustomEntityGroupHelper: {fileID: 0}
   m_EntityGroups:
   - m_Name: Pet
+    m_InstanceAutoReleaseInterval: 60
+    m_InstanceCapacity: 16
+    m_InstanceExpireTime: 60
+    m_InstancePriority: 0
+  - m_Name: SkillMushroom
     m_InstanceAutoReleaseInterval: 60
     m_InstanceCapacity: 16
     m_InstanceExpireTime: 60

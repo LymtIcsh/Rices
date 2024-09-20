@@ -12,7 +12,7 @@ namespace Suture
         /// <summary>
         /// 归属的UnitID
         /// </summary>
-        [HideInEditorMode] public TargetableObject BelongToUnit;
+        [HideInEditorMode] public Pet BelongToUnit;
 
         /// <summary>
         /// 归属的运行时行为树实例

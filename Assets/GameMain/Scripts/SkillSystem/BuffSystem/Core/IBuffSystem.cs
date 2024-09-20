@@ -35,14 +35,14 @@
         /// <summary>
         /// 来自哪个Unit
         /// </summary>
-        TargetableObject TheUnitFrom { get; set; }
+        Pet TheUnitFrom { get; set; }
 
         /// <summary>
         /// 寄生于哪个Unit，并不代表当前Buff实际寄居者，需要通过GetBuffTarget来获取，因为它赋值于Buff链起源的地方，具体值取决于那个起源Buff
         /// </summary>
-        TargetableObject TheUnitBelongto { get; set; }
+        Pet TheUnitBelongto { get; set; }
         
-        void Init(BuffDataBase buffDataBase, TargetableObject theUnitFrom, TargetableObject theUnitBelongto, uint currentFrame);
+        void Init(BuffDataBase buffDataBase, Pet theUnitFrom, Pet theUnitBelongto, uint currentFrame);
         
 
         

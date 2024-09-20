@@ -21,8 +21,11 @@ namespace Suture
         "Entity",
         "Equip",
         "Wave",
-        "WaveElement"
+        "WaveElement",
+        "SkillSummonObject"
         };
+        
+
 
         /// <summary>
         /// 用来标记是否已经加载
@@ -86,13 +89,16 @@ namespace Suture
             //预加载配置
             LoadConfig("DefaultConfig");
 
+            
+
             //预加载数据表
             foreach (string dataTableName in DataTableNames)
             {
                 LoadDataTable(dataTableName);
             }
 
-
+            //技能配置
+            GameEntry.NP_TreeDataRepository.OnInit();
         }
 
         /// <summary>
@@ -113,6 +119,8 @@ namespace Suture
             GameEntry.Config.ReadData(configAssetName, this);
         }
 
+
+        
         private void OnLoadConfigSuccess(object sender, GameEventArgs e)
         {
             LoadConfigSuccessEventArgs args = (LoadConfigSuccessEventArgs)e;

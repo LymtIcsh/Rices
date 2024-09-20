@@ -4,6 +4,9 @@ using GameFramework;
 using GameFramework.Event;
 using UnityEngine;
 
+/// <summary>
+/// 刷出敌人事件参数
+/// </summary>
 public class SpawnEnemyEventArgs : GameEventArgs
 {
     public static readonly int EventId = typeof(SpawnEnemyEventArgs).GetHashCode();

@@ -20,7 +20,7 @@ namespace Suture
         private CampType m_OwnerCamp = CampType.Unknown;
 
         protected AccessoryObjectData(int entityId, int typeId, int ownerId, CampType ownerCamp)
-            : base(entityId, typeId)
+            : base()
         {
             m_OwnerId = ownerId;
             m_OwnerCamp = ownerCamp;

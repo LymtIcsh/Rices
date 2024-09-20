@@ -21,7 +21,7 @@ namespace Suture
 
         public void ChangeUnitProperty()
         {
-            TargetableObject unit = BelongToUnit;
+            Pet unit = BelongToUnit;
             //   UnitAttributesDataComponent unitAttributesDataComponent = unit.GetComponent<UnitAttributesDataComponent>();
             DataModifierComponent dataModifierComponent = unit.GetComponent<DataModifierComponent>();
             float oriValue, finalValue, result;

@@ -14,8 +14,8 @@ namespace Suture
         public uint MaxLimitFrame { get; set; }
         public BuffDataBase BuffData { get; set; }
         public long BuffNodeId { get; set; }
-        public TargetableObject TheUnitFrom { get; set; }
-        public TargetableObject TheUnitBelongto { get; set; }
+        public Pet TheUnitFrom { get; set; }
+        public Pet TheUnitBelongto { get; set; }
         
         /// <summary>
         /// 获取自身的BuffData数据，自动转型为T
@@ -23,7 +23,7 @@ namespace Suture
         public T GetBuffDataWithTType => BuffData as T;
         
 
-        public void Init(BuffDataBase buffData, TargetableObject theUnitFrom, TargetableObject theUnitBelongto, uint currentFrame)
+        public void Init(BuffDataBase buffData, Pet theUnitFrom, Pet theUnitBelongto, uint currentFrame)
         {
             //设置Buff来源Unit和归属Unit
             this.TheUnitFrom = theUnitFrom;
@@ -103,7 +103,7 @@ namespace Suture
         /// <param name="buffData">Buff数据</param>
         /// <param name="theUnitFrom">来自哪个Unit</param>
         /// <param name="theUnitBelongto">寄生于哪个Unit</param>
-        public virtual void OnInit(BuffDataBase buffData, TargetableObject theUnitFrom, TargetableObject theUnitBelongto, uint currentFrame)
+        public virtual void OnInit(BuffDataBase buffData, Pet theUnitFrom, Pet theUnitBelongto, uint currentFrame)
         {
         }
 

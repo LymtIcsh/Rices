@@ -402,16 +402,16 @@ MonoBehaviour:
       Data: UnityEngine.Rect, UnityEngine.CoreModule
     - Name: 
       Entry: 4
-      Data: 200
+      Data: 195
     - Name: 
       Entry: 4
       Data: 681
     - Name: 
       Entry: 4
-      Data: 0
+      Data: 127
     - Name: 
       Entry: 4
-      Data: 0
+      Data: 76
     - Name: 
       Entry: 8
       Data: 
@@ -3192,7 +3192,7 @@ MonoBehaviour:
       Data: 
     - Name: expanded
       Entry: 5
-      Data: false
+      Data: true
     - Name: debug
       Entry: 5
       Data: false
@@ -3213,10 +3213,10 @@ MonoBehaviour:
       Data: Suture.VTD_Id, Assembly-CSharp
     - Name: IdKey
       Entry: 1
-      Data: ListenTeleportLayers_Buff
+      Data: ListenTeleportCast_Buff
     - Name: Value
       Entry: 3
-      Data: 10006
+      Data: 10004
     - Name: 
       Entry: 8
       Data: 
@@ -9587,8 +9587,8 @@ MonoBehaviour:
   exposedParameters: []
   serializedParameterList: []
   stickyNotes: []
-  position: {x: -74, y: -776, z: 0}
-  scale: {x: 1.3225, y: 1.3225, z: 1}
+  position: {x: 324, y: -1072, z: 0}
+  scale: {x: 1, y: 1, z: 1}
   Name: E_Teleport
   IdInConfig: 10001
   SavePathClient: Assets/GameMain/Configs/SkillConfig
