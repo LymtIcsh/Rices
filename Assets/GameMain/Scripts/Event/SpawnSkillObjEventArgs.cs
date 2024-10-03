@@ -19,7 +19,7 @@ namespace Suture
 
         public override int Id => EventID;
         
-        public Action<Entity> ShowSuccess
+        public Action<EntityBase> ShowSuccess
         {
             get;
             private set;
@@ -44,7 +44,7 @@ namespace Suture
         }
 
 
-        public static SpawnSkillObjEventArgs Create(Action<Entity> showSuccess, SkillObjDataBase skillObjDataData, object userData = null)
+        public static SpawnSkillObjEventArgs Create(Action<EntityBase> showSuccess, SkillObjDataBase skillObjDataData, object userData = null)
         {
             SpawnSkillObjEventArgs ne = ReferencePool.Acquire<SpawnSkillObjEventArgs>();
             ne.ShowSuccess = showSuccess;

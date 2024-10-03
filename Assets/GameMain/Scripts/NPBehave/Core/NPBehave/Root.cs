@@ -72,7 +72,7 @@ namespace NPBehave
         {
             if (!IsStopRequested)
             {
-                // wait one tick, to prevent endless recursions
+                //为了防止无穷无尽的递归 wait one tick, to prevent endless recursions
                 this.TimerId = this.clock.AddTimer(1,this.m_MainNodeStartActionCache);
             }
             else

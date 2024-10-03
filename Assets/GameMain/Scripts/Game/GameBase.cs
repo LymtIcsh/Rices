@@ -47,13 +47,14 @@ namespace Suture
 
         public virtual void Update(float elapseSeconds, float realElapseSeconds)
         {
+            TimeInfo.Instance.Update();
+            
             if (m_myPet != null && m_myPet.IsDead)
             {
                 GameOver = true;
                 return;
             }
 
-            TimeInfo.Instance.Update();
         }
 
         public virtual void Shutdown()
@@ -70,7 +71,7 @@ namespace Suture
         {
             SpawnSkillObjEventArgs ne = (SpawnSkillObjEventArgs)e;
 
-            GameEntry.Entity.ShowSkillSummonObject<SkillMushroom>("SkillMushroom", ne.SkillObjData.AssetName,
+            GameEntry.Entity.ShowSkillSummonObject<SkillMushroom>("SkillMushroom", /*ne.SkillObjData.AssetName,*/
                 Constant.AssetPriority.ArmorAsset,ne.SkillObjData);
         }
 
@@ -89,66 +90,45 @@ namespace Suture
                 m_myPet = (MyPet)ne.Entity.Logic;
 
 
-                //当前房间
-                m_myPet.BelongToRoom = GameEntry.RoomManager.BattleRoom;
-                m_myPet.BelongToRoom.RoomHolderPlayerId = m_myPet._petData.TypeId;
-                m_myPet.BelongToRoom.RoomName = m_myPet.Name;
-                m_myPet.BelongToRoom.PlayerCount++;
-
-                UnitComponent unitComponent = m_myPet.BelongToRoom.GetComponent<UnitComponent>();
-                unitComponent .MyUnit = m_myPet;
-                unitComponent.idUnits.Add(m_myPet._petData.TypeId,m_myPet);
-                
-
-                PlayerAssetsInputs _playerAssetsInputs = m_myPet.GetComponent<PlayerAssetsInputs>();
-                _playerAssetsInputs.cursorLocked = true;
-                _playerAssetsInputs.cursorInputForLook = true;
-
-
-                CinemachineVirtualCamera cinemachineFreeLook = GameObject.FindGameObjectWithTag("PlayerFollowCamera")
-                    .GetComponent<CinemachineVirtualCamera>();
-                cinemachineFreeLook.Follow =
-                    m_myPet.Entity.transform.Find("PlayerCameraRoot").transform;
-                cinemachineFreeLook.LookAt = m_myPet.Entity.transform.Find("LookAt").transform;
-
-                m_myPet.AddComponent<DataModifierComponent>();
-                m_myPet.AddComponent<NP_SyncComponent>();
-                m_myPet.AddComponent<NumericComponent>();
-
-
-                //增加Buff管理组件
-                m_myPet.AddComponent<BuffManagerComponent>();
-                m_myPet.AddComponent<SkillCanvasManagerComponent>();
-
-                m_myPet.AddComponent<NP_RuntimeTreeManager>();
-                m_myPet.AddComponent<UnitAttributesDataComponent>();
-
-                m_myPet.GetComponent<PlayerThirdPersonController>().MoveSpeed = m_myPet
-                    .GetComponent<UnitAttributesDataComponent>().GetAttribute(NumericType.Speed) / 100;
-
-
-                NP_RuntimeTreeFactory.CreateSkillNpRuntimeTree(m_myPet, 10003, 10003).Start();
-                //  NP_RuntimeTreeFactory.CreateSkillNpRuntimeTree(m_myPet, 10002, 10002).Start();
-
-
-                // CDComponent.Instance.AddCDData(m_myPet.Id, "E", 0, info =>
-                // {
-                //     if (info.Result) //cd 冷却好了
-                //     {
-                //         // self.FuiUIPanelBattle.m_SkillE_CDInfo.visible = false;
-                //         // self.FuiUIPanelBattle.m_SkillE_Bar.Visible = false;
-                //         return;
-                //     }
-                //
-                //     Log.Info(((int)Math.Ceiling((double)(info.RemainCDLength) / 1000))
-                //         .ToString());
-                //     // self.FuiUIPanelBattle.m_SkillE_CDInfo.visible = true;
-                //     // self.FuiUIPanelBattle.m_SkillE_Bar.self.value = 100 * (info.RemainCDLength / info.Interval);
-                //     // self.FuiUIPanelBattle.m_SkillE_Bar.Visible = true;
-                // });
-
-
-                NumericComponent NumericComponent = m_myPet.GetComponent<NumericComponent>();
+            //     //当前房间
+            //     m_myPet.BelongToRoom = GameEntry.RoomManager.BattleRoom;
+            //     m_myPet.BelongToRoom.RoomHolderPlayerId = m_myPet._petData.TypeId;
+            //     m_myPet.BelongToRoom.RoomName = m_myPet.Name;
+            //     m_myPet.BelongToRoom.PlayerCount++;
+            //
+            //     UnitComponent unitComponent = m_myPet.BelongToRoom.GetComponent<UnitComponent>();
+            //     unitComponent .MyUnit = m_myPet;
+            //     unitComponent.idUnits.Add(m_myPet._petData.TypeId,m_myPet);
+            //     
+            //
+            //     PlayerAssetsInputs _playerAssetsInputs = m_myPet.GetComponent<PlayerAssetsInputs>();
+            //     _playerAssetsInputs.cursorLocked = true;
+            //     _playerAssetsInputs.cursorInputForLook = true;
+            //
+            //
+            //     CinemachineVirtualCamera cinemachineFreeLook = GameObject.FindGameObjectWithTag("PlayerFollowCamera")
+            //         .GetComponent<CinemachineVirtualCamera>();
+            //     cinemachineFreeLook.Follow =
+            //         m_myPet.Entity.transform.Find("PlayerCameraRoot").transform;
+            //     cinemachineFreeLook.LookAt = m_myPet.Entity.transform.Find("LookAt").transform;
+            //
+            //     m_myPet.AddComponent<DataModifierComponent>();
+            //     m_myPet.AddComponent<NP_SyncComponent>();
+            //     m_myPet.AddComponent<NumericComponent>();
+            //
+            //
+            //     //增加Buff管理组件
+            //     m_myPet.AddComponent<BuffManagerComponent>();
+            //     m_myPet.AddComponent<SkillCanvasManagerComponent>();
+            //
+            //     m_myPet.AddComponent<NP_RuntimeTreeManager>();
+            //     m_myPet.AddComponent<UnitAttributesDataComponent>();
+            //
+            //     m_myPet.GetComponent<PlayerThirdPersonController>().MoveSpeed = m_myPet
+            //         .GetComponent<UnitAttributesDataComponent>().GetAttribute(NumericType.Speed) / 100;
+            //     
+            //
+            //     NumericComponent NumericComponent = m_myPet.GetComponent<NumericComponent>();
             }
         }
     }

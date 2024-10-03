@@ -26,7 +26,7 @@ namespace Suture
 
         public void CreateObj()
         {
-            Pet unit = BelongToUnit;
+            TargetableObject unit = BelongToUnit;
 
             int id = _BoardRelationID.GetBlackBoardValue<int>(this.BelongtoRuntimeTree.GetBlackboard());
 

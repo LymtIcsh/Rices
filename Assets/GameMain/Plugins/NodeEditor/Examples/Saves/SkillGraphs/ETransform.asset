@@ -87,7 +87,7 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 3
-      Data: -7233598969488539614
+      Data: -7223209787196899111
     - Name: 
       Entry: 13
       Data: 
@@ -159,7 +159,7 @@ MonoBehaviour:
       Data: 5|Suture.NP_ParallelNodeData, Assembly-CSharp
     - Name: id
       Entry: 3
-      Data: -7233598969488539614
+      Data: -7223209787196899111
     - Name: LinkedIds
       Entry: 7
       Data: 6|System.Collections.Generic.List`1[[System.Int64, mscorlib]], mscorlib
@@ -168,10 +168,10 @@ MonoBehaviour:
       Data: 2
     - Name: 
       Entry: 3
-      Data: -7233598969488539615
+      Data: -7223209787196899112
     - Name: 
       Entry: 3
-      Data: -7233598969488539616
+      Data: -7223209787196899113
     - Name: 
       Entry: 13
       Data: 
@@ -246,7 +246,7 @@ MonoBehaviour:
       Data: 8|Suture.NP_BlackboardConditionNodeData, Assembly-CSharp
     - Name: id
       Entry: 3
-      Data: -7233598969488539615
+      Data: -7223209787196899112
     - Name: LinkedIds
       Entry: 7
       Data: 9|System.Collections.Generic.List`1[[System.Int64, mscorlib]], mscorlib
@@ -255,7 +255,7 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 3
-      Data: -7233598969488539618
+      Data: -7223209787196899115
     - Name: 
       Entry: 13
       Data: 
@@ -354,7 +354,7 @@ MonoBehaviour:
       Data: 13|Suture.NP_SequenceNodeData, Assembly-CSharp
     - Name: id
       Entry: 3
-      Data: -7233598969488539618
+      Data: -7223209787196899115
     - Name: LinkedIds
       Entry: 7
       Data: 14|System.Collections.Generic.List`1[[System.Int64, mscorlib]], mscorlib
@@ -363,13 +363,13 @@ MonoBehaviour:
       Data: 3
     - Name: 
       Entry: 3
-      Data: -7233598969488539624
+      Data: -7223209787196899121
     - Name: 
       Entry: 3
-      Data: -7233598969488539623
+      Data: -7223209787196899120
     - Name: 
       Entry: 3
-      Data: -7233598969488539625
+      Data: -7223209787196899122
     - Name: 
       Entry: 13
       Data: 
@@ -435,7 +435,7 @@ MonoBehaviour:
       Data: 16|Suture.NP_ActionNodeData, Assembly-CSharp
     - Name: id
       Entry: 3
-      Data: -7233598969488539623
+      Data: -7223209787196899120
     - Name: LinkedIds
       Entry: 7
       Data: 17|System.Collections.Generic.List`1[[System.Int64, mscorlib]], mscorlib
@@ -552,7 +552,7 @@ MonoBehaviour:
       Data: 22|Suture.NP_ActionNodeData, Assembly-CSharp
     - Name: id
       Entry: 3
-      Data: -7233598969488539624
+      Data: -7223209787196899121
     - Name: LinkedIds
       Entry: 7
       Data: 23|System.Collections.Generic.List`1[[System.Int64, mscorlib]], mscorlib
@@ -675,7 +675,7 @@ MonoBehaviour:
       Data: 27|Suture.NP_ActionNodeData, Assembly-CSharp
     - Name: id
       Entry: 3
-      Data: -7233598969488539625
+      Data: -7223209787196899122
     - Name: LinkedIds
       Entry: 7
       Data: 28|System.Collections.Generic.List`1[[System.Int64, mscorlib]], mscorlib
@@ -774,7 +774,7 @@ MonoBehaviour:
       Data: 31|Suture.NP_SelectorNodeData, Assembly-CSharp
     - Name: id
       Entry: 3
-      Data: -7233598969488539616
+      Data: -7223209787196899113
     - Name: LinkedIds
       Entry: 7
       Data: 32|System.Collections.Generic.List`1[[System.Int64, mscorlib]], mscorlib
@@ -783,13 +783,13 @@ MonoBehaviour:
       Data: 3
     - Name: 
       Entry: 3
-      Data: -7233598969488539619
+      Data: -7223209787196899116
     - Name: 
       Entry: 3
-      Data: -7233598969488539620
+      Data: -7223209787196899117
     - Name: 
       Entry: 3
-      Data: -7233598969488539617
+      Data: -7223209787196899114
     - Name: 
       Entry: 13
       Data: 
@@ -858,7 +858,7 @@ MonoBehaviour:
       Data: 34|Suture.NP_BlackboardConditionNodeData, Assembly-CSharp
     - Name: id
       Entry: 3
-      Data: -7233598969488539619
+      Data: -7223209787196899116
     - Name: LinkedIds
       Entry: 7
       Data: 35|System.Collections.Generic.List`1[[System.Int64, mscorlib]], mscorlib
@@ -867,7 +867,7 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 3
-      Data: -7233598969488539622
+      Data: -7223209787196899119
     - Name: 
       Entry: 13
       Data: 
@@ -966,7 +966,7 @@ MonoBehaviour:
       Data: 39|Suture.NP_SequenceNodeData, Assembly-CSharp
     - Name: id
       Entry: 3
-      Data: -7233598969488539622
+      Data: -7223209787196899119
     - Name: LinkedIds
       Entry: 7
       Data: 40|System.Collections.Generic.List`1[[System.Int64, mscorlib]], mscorlib
@@ -975,19 +975,19 @@ MonoBehaviour:
       Data: 5
     - Name: 
       Entry: 3
-      Data: -7233598969488539638
+      Data: -7223209787196899135
     - Name: 
       Entry: 3
-      Data: -7233598969488539635
+      Data: -7223209787196899132
     - Name: 
       Entry: 3
-      Data: -7233598969488539639
+      Data: -7223209787196899136
     - Name: 
       Entry: 3
-      Data: -7233598969488539637
+      Data: -7223209787196899134
     - Name: 
       Entry: 3
-      Data: -7233598969488539636
+      Data: -7223209787196899133
     - Name: 
       Entry: 13
       Data: 
@@ -1053,7 +1053,7 @@ MonoBehaviour:
       Data: 42|Suture.NP_ActionNodeData, Assembly-CSharp
     - Name: id
       Entry: 3
-      Data: -7233598969488539635
+      Data: -7223209787196899132
     - Name: LinkedIds
       Entry: 7
       Data: 43|System.Collections.Generic.List`1[[System.Int64, mscorlib]], mscorlib
@@ -1170,7 +1170,7 @@ MonoBehaviour:
       Data: 48|Suture.NP_ActionNodeData, Assembly-CSharp
     - Name: id
       Entry: 3
-      Data: -7233598969488539639
+      Data: -7223209787196899136
     - Name: LinkedIds
       Entry: 7
       Data: 49|System.Collections.Generic.List`1[[System.Int64, mscorlib]], mscorlib
@@ -1287,7 +1287,7 @@ MonoBehaviour:
       Data: 54|Suture.NP_ActionNodeData, Assembly-CSharp
     - Name: id
       Entry: 3
-      Data: -7233598969488539636
+      Data: -7223209787196899133
     - Name: LinkedIds
       Entry: 7
       Data: 55|System.Collections.Generic.List`1[[System.Int64, mscorlib]], mscorlib
@@ -1383,7 +1383,7 @@ MonoBehaviour:
       Data: 58|Suture.NP_ActionNodeData, Assembly-CSharp
     - Name: id
       Entry: 3
-      Data: -7233598969488539637
+      Data: -7223209787196899134
     - Name: LinkedIds
       Entry: 7
       Data: 59|System.Collections.Generic.List`1[[System.Int64, mscorlib]], mscorlib
@@ -1500,7 +1500,7 @@ MonoBehaviour:
       Data: 64|Suture.NP_ActionNodeData, Assembly-CSharp
     - Name: id
       Entry: 3
-      Data: -7233598969488539638
+      Data: -7223209787196899135
     - Name: LinkedIds
       Entry: 7
       Data: 65|System.Collections.Generic.List`1[[System.Int64, mscorlib]], mscorlib
@@ -1644,7 +1644,7 @@ MonoBehaviour:
       Data: 70|Suture.NP_SelectorNodeData, Assembly-CSharp
     - Name: id
       Entry: 3
-      Data: -7233598969488539626
+      Data: -7223209787196899123
     - Name: LinkedIds
       Entry: 7
       Data: 71|System.Collections.Generic.List`1[[System.Int64, mscorlib]], mscorlib
@@ -1653,10 +1653,10 @@ MonoBehaviour:
       Data: 2
     - Name: 
       Entry: 3
-      Data: -7233598969488539627
+      Data: -7223209787196899124
     - Name: 
       Entry: 3
-      Data: -7233598969488539628
+      Data: -7223209787196899125
     - Name: 
       Entry: 13
       Data: 
@@ -1725,7 +1725,7 @@ MonoBehaviour:
       Data: 73|Suture.NP_SequenceNodeData, Assembly-CSharp
     - Name: id
       Entry: 3
-      Data: -7233598969488539627
+      Data: -7223209787196899124
     - Name: LinkedIds
       Entry: 7
       Data: 74|System.Collections.Generic.List`1[[System.Int64, mscorlib]], mscorlib
@@ -1734,16 +1734,16 @@ MonoBehaviour:
       Data: 4
     - Name: 
       Entry: 3
-      Data: -7233598969488539641
+      Data: -7223209787196899138
     - Name: 
       Entry: 3
-      Data: -7233598969488539642
+      Data: -7223209787196899139
     - Name: 
       Entry: 3
-      Data: -7233598969488539643
+      Data: -7223209787196899140
     - Name: 
       Entry: 3
-      Data: -7233598969488539640
+      Data: -7223209787196899137
     - Name: 
       Entry: 13
       Data: 
@@ -1809,7 +1809,7 @@ MonoBehaviour:
       Data: 76|Suture.NP_ActionNodeData, Assembly-CSharp
     - Name: id
       Entry: 3
-      Data: -7233598969488539628
+      Data: -7223209787196899125
     - Name: LinkedIds
       Entry: 7
       Data: 77|System.Collections.Generic.List`1[[System.Int64, mscorlib]], mscorlib
@@ -1926,7 +1926,7 @@ MonoBehaviour:
       Data: 82|Suture.NP_ActionNodeData, Assembly-CSharp
     - Name: id
       Entry: 3
-      Data: -7233598969488539641
+      Data: -7223209787196899138
     - Name: LinkedIds
       Entry: 7
       Data: 83|System.Collections.Generic.List`1[[System.Int64, mscorlib]], mscorlib
@@ -2049,7 +2049,7 @@ MonoBehaviour:
       Data: 86|Suture.NP_ActionNodeData, Assembly-CSharp
     - Name: id
       Entry: 3
-      Data: -7233598969488539642
+      Data: -7223209787196899139
     - Name: LinkedIds
       Entry: 7
       Data: 87|System.Collections.Generic.List`1[[System.Int64, mscorlib]], mscorlib
@@ -2166,7 +2166,7 @@ MonoBehaviour:
       Data: 92|Suture.NP_ActionNodeData, Assembly-CSharp
     - Name: id
       Entry: 3
-      Data: -7233598969488539643
+      Data: -7223209787196899140
     - Name: LinkedIds
       Entry: 7
       Data: 93|System.Collections.Generic.List`1[[System.Int64, mscorlib]], mscorlib
@@ -2283,7 +2283,7 @@ MonoBehaviour:
       Data: 98|Suture.NP_ActionNodeData, Assembly-CSharp
     - Name: id
       Entry: 3
-      Data: -7233598969488539640
+      Data: -7223209787196899137
     - Name: LinkedIds
       Entry: 7
       Data: 99|System.Collections.Generic.List`1[[System.Int64, mscorlib]], mscorlib
@@ -2382,7 +2382,7 @@ MonoBehaviour:
       Data: 102|Suture.NP_BlackboardConditionNodeData, Assembly-CSharp
     - Name: id
       Entry: 3
-      Data: -7233598969488539617
+      Data: -7223209787196899114
     - Name: LinkedIds
       Entry: 7
       Data: 103|System.Collections.Generic.List`1[[System.Int64, mscorlib]], mscorlib
@@ -2391,7 +2391,7 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 3
-      Data: -7233598969488539621
+      Data: -7223209787196899118
     - Name: 
       Entry: 13
       Data: 
@@ -2490,7 +2490,7 @@ MonoBehaviour:
       Data: 107|Suture.NP_SequenceNodeData, Assembly-CSharp
     - Name: id
       Entry: 3
-      Data: -7233598969488539621
+      Data: -7223209787196899118
     - Name: LinkedIds
       Entry: 7
       Data: 108|System.Collections.Generic.List`1[[System.Int64, mscorlib]], mscorlib
@@ -2499,22 +2499,22 @@ MonoBehaviour:
       Data: 6
     - Name: 
       Entry: 3
-      Data: -7233598969488539633
+      Data: -7223209787196899130
     - Name: 
       Entry: 3
-      Data: -7233598969488539629
+      Data: -7223209787196899126
     - Name: 
       Entry: 3
-      Data: -7233598969488539634
+      Data: -7223209787196899131
     - Name: 
       Entry: 3
-      Data: -7233598969488539632
+      Data: -7223209787196899129
     - Name: 
       Entry: 3
-      Data: -7233598969488539631
+      Data: -7223209787196899128
     - Name: 
       Entry: 3
-      Data: -7233598969488539630
+      Data: -7223209787196899127
     - Name: 
       Entry: 13
       Data: 
@@ -2580,7 +2580,7 @@ MonoBehaviour:
       Data: 110|Suture.NP_ActionNodeData, Assembly-CSharp
     - Name: id
       Entry: 3
-      Data: -7233598969488539634
+      Data: -7223209787196899131
     - Name: LinkedIds
       Entry: 7
       Data: 111|System.Collections.Generic.List`1[[System.Int64, mscorlib]], mscorlib
@@ -2721,7 +2721,7 @@ MonoBehaviour:
       Data: 117|Suture.NP_ActionNodeData, Assembly-CSharp
     - Name: id
       Entry: 3
-      Data: -7233598969488539632
+      Data: -7223209787196899129
     - Name: LinkedIds
       Entry: 7
       Data: 118|System.Collections.Generic.List`1[[System.Int64, mscorlib]], mscorlib
@@ -2838,7 +2838,7 @@ MonoBehaviour:
       Data: 123|Suture.NP_ActionNodeData, Assembly-CSharp
     - Name: id
       Entry: 3
-      Data: -7233598969488539631
+      Data: -7223209787196899128
     - Name: LinkedIds
       Entry: 7
       Data: 124|System.Collections.Generic.List`1[[System.Int64, mscorlib]], mscorlib
@@ -2955,7 +2955,7 @@ MonoBehaviour:
       Data: 129|Suture.NP_ActionNodeData, Assembly-CSharp
     - Name: id
       Entry: 3
-      Data: -7233598969488539630
+      Data: -7223209787196899127
     - Name: LinkedIds
       Entry: 7
       Data: 130|System.Collections.Generic.List`1[[System.Int64, mscorlib]], mscorlib
@@ -3177,10 +3177,10 @@ MonoBehaviour:
       Data: UnityEngine.Rect, UnityEngine.CoreModule
     - Name: 
       Entry: 4
-      Data: 155.869568
+      Data: 156
     - Name: 
       Entry: 4
-      Data: 1597
+      Data: 1597.86951
     - Name: 
       Entry: 4
       Data: 180
@@ -3213,10 +3213,10 @@ MonoBehaviour:
       Data: Suture.VTD_Id, Assembly-CSharp
     - Name: IdKey
       Entry: 1
-      Data: ListenTeleportCast_Buff
+      Data: ListenTeleportLayers_Buff
     - Name: Value
       Entry: 3
-      Data: 10004
+      Data: 10006
     - Name: 
       Entry: 8
       Data: 
@@ -4134,7 +4134,7 @@ MonoBehaviour:
       Data: 172|Suture.NP_WaitNodeData, Assembly-CSharp
     - Name: id
       Entry: 3
-      Data: -7233598969488539629
+      Data: -7223209787196899126
     - Name: LinkedIds
       Entry: 7
       Data: 173|System.Collections.Generic.List`1[[System.Int64, mscorlib]], mscorlib
@@ -4482,7 +4482,7 @@ MonoBehaviour:
       Data: 188|Suture.NP_ActionNodeData, Assembly-CSharp
     - Name: id
       Entry: 3
-      Data: -7233598969488539633
+      Data: -7223209787196899130
     - Name: LinkedIds
       Entry: 7
       Data: 189|System.Collections.Generic.List`1[[System.Int64, mscorlib]], mscorlib
@@ -4608,7 +4608,7 @@ MonoBehaviour:
       Data: 193|Suture.NP_BlackboardMultipleConditionsNodeData, Assembly-CSharp
     - Name: id
       Entry: 3
-      Data: -7233598969488539620
+      Data: -7223209787196899117
     - Name: LinkedIds
       Entry: 7
       Data: 194|System.Collections.Generic.List`1[[System.Int64, mscorlib]], mscorlib
@@ -4617,7 +4617,7 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 3
-      Data: -7233598969488539626
+      Data: -7223209787196899123
     - Name: 
       Entry: 13
       Data: 
@@ -4762,7 +4762,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 3
-      Data: -7233598969488539643
+      Data: -7223209787196899140
     - Name: $v
       Entry: 9
       Data: 92
@@ -4774,7 +4774,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 3
-      Data: -7233598969488539642
+      Data: -7223209787196899139
     - Name: $v
       Entry: 9
       Data: 86
@@ -4786,7 +4786,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 3
-      Data: -7233598969488539641
+      Data: -7223209787196899138
     - Name: $v
       Entry: 9
       Data: 82
@@ -4798,7 +4798,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 3
-      Data: -7233598969488539640
+      Data: -7223209787196899137
     - Name: $v
       Entry: 9
       Data: 98
@@ -4810,7 +4810,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 3
-      Data: -7233598969488539639
+      Data: -7223209787196899136
     - Name: $v
       Entry: 9
       Data: 48
@@ -4822,7 +4822,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 3
-      Data: -7233598969488539638
+      Data: -7223209787196899135
     - Name: $v
       Entry: 9
       Data: 64
@@ -4834,7 +4834,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 3
-      Data: -7233598969488539637
+      Data: -7223209787196899134
     - Name: $v
       Entry: 9
       Data: 58
@@ -4846,7 +4846,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 3
-      Data: -7233598969488539636
+      Data: -7223209787196899133
     - Name: $v
       Entry: 9
       Data: 54
@@ -4858,7 +4858,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 3
-      Data: -7233598969488539635
+      Data: -7223209787196899132
     - Name: $v
       Entry: 9
       Data: 42
@@ -4870,7 +4870,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 3
-      Data: -7233598969488539634
+      Data: -7223209787196899131
     - Name: $v
       Entry: 9
       Data: 110
@@ -4882,7 +4882,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 3
-      Data: -7233598969488539633
+      Data: -7223209787196899130
     - Name: $v
       Entry: 9
       Data: 188
@@ -4894,7 +4894,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 3
-      Data: -7233598969488539632
+      Data: -7223209787196899129
     - Name: $v
       Entry: 9
       Data: 117
@@ -4906,7 +4906,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 3
-      Data: -7233598969488539631
+      Data: -7223209787196899128
     - Name: $v
       Entry: 9
       Data: 123
@@ -4918,7 +4918,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 3
-      Data: -7233598969488539630
+      Data: -7223209787196899127
     - Name: $v
       Entry: 9
       Data: 129
@@ -4930,7 +4930,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 3
-      Data: -7233598969488539629
+      Data: -7223209787196899126
     - Name: $v
       Entry: 9
       Data: 172
@@ -4942,7 +4942,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 3
-      Data: -7233598969488539628
+      Data: -7223209787196899125
     - Name: $v
       Entry: 9
       Data: 76
@@ -4954,7 +4954,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 3
-      Data: -7233598969488539627
+      Data: -7223209787196899124
     - Name: $v
       Entry: 9
       Data: 73
@@ -4966,7 +4966,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 3
-      Data: -7233598969488539626
+      Data: -7223209787196899123
     - Name: $v
       Entry: 9
       Data: 70
@@ -4978,7 +4978,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 3
-      Data: -7233598969488539625
+      Data: -7223209787196899122
     - Name: $v
       Entry: 9
       Data: 27
@@ -4990,7 +4990,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 3
-      Data: -7233598969488539624
+      Data: -7223209787196899121
     - Name: $v
       Entry: 9
       Data: 22
@@ -5002,7 +5002,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 3
-      Data: -7233598969488539623
+      Data: -7223209787196899120
     - Name: $v
       Entry: 9
       Data: 16
@@ -5014,7 +5014,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 3
-      Data: -7233598969488539622
+      Data: -7223209787196899119
     - Name: $v
       Entry: 9
       Data: 39
@@ -5026,7 +5026,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 3
-      Data: -7233598969488539621
+      Data: -7223209787196899118
     - Name: $v
       Entry: 9
       Data: 107
@@ -5038,7 +5038,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 3
-      Data: -7233598969488539620
+      Data: -7223209787196899117
     - Name: $v
       Entry: 9
       Data: 193
@@ -5050,7 +5050,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 3
-      Data: -7233598969488539619
+      Data: -7223209787196899116
     - Name: $v
       Entry: 9
       Data: 34
@@ -5062,7 +5062,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 3
-      Data: -7233598969488539618
+      Data: -7223209787196899115
     - Name: $v
       Entry: 9
       Data: 13
@@ -5074,7 +5074,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 3
-      Data: -7233598969488539617
+      Data: -7223209787196899114
     - Name: $v
       Entry: 9
       Data: 102
@@ -5086,7 +5086,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 3
-      Data: -7233598969488539616
+      Data: -7223209787196899113
     - Name: $v
       Entry: 9
       Data: 31
@@ -5098,7 +5098,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 3
-      Data: -7233598969488539615
+      Data: -7223209787196899112
     - Name: $v
       Entry: 9
       Data: 8
@@ -5110,7 +5110,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 3
-      Data: -7233598969488539614
+      Data: -7223209787196899111
     - Name: $v
       Entry: 9
       Data: 5
@@ -5178,7 +5178,7 @@ MonoBehaviour:
       Data: 209|Suture.NP_BBValue_Float, Assembly-CSharp
     - Name: Value
       Entry: 4
-      Data: 1
+      Data: 1000
     - Name: 
       Entry: 8
       Data: 
@@ -9587,7 +9587,7 @@ MonoBehaviour:
   exposedParameters: []
   serializedParameterList: []
   stickyNotes: []
-  position: {x: 324, y: -1072, z: 0}
+  position: {x: -1352, y: -460, z: 0}
   scale: {x: 1, y: 1, z: 1}
   Name: E_Teleport
   IdInConfig: 10001

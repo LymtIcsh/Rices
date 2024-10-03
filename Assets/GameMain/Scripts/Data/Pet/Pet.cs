@@ -13,22 +13,7 @@ namespace Suture
 
         [SerializeField] protected List<Equip> _armors = new List<Equip>();
         
-        /// <summary>
-        /// 当前持有的状态，用于外部获取对比，减少遍历次数
-        /// Key为状态类型，V为具体状态类
-        /// </summary>
-        protected List<FsmState<Pet>>
-            m_States = new List<FsmState<Pet>>();
-
-
-        /// <summary>
-        /// 互斥的状态，如果当前身上有这些状态，将无法切换至此状态
-        /// </summary>
-        [LabelText("互斥的状态")] protected StateTypes ConflictState =
-            StateTypes.RePluse | StateTypes.Dizziness | StateTypes.Striketofly | StateTypes.Sneer | StateTypes.Fear;
-
-
-        protected IFsm<Pet> m_fsm;
+      
         
 
         /// <summary>
@@ -116,7 +101,7 @@ namespace Suture
             }
         }
         
-        public void ApplyDamage(Entity attacker, int damageHP)
+        public void ApplyDamage(EntityBase attacker, int damageHP)
         {
             float fromHPRatio = _petData.HPRatio;
             _petData.m_unitAttributesNodeDataBase.OriHP -= damageHP;
@@ -132,7 +117,7 @@ namespace Suture
             }
         }
 
-        protected override void OnDead(Entity attacker)
+        protected override void OnDead(EntityBase attacker)
         {
             base.OnDead(attacker);
             
@@ -146,64 +131,7 @@ namespace Suture
             return new ImpactData(_petData.Camp/*, _petData.HP, _petData.ASK, _petData.Defense*/);
         }
      
-
-
-        #region Fsm
-
-        /// <summary>
-        /// 是否会发生状态互斥，只要包含了conflictStateTypes的子集，就返回true
-        /// </summary>
-        /// <param name="conflictStateTypes">互斥的状态</param>
-        /// <returns></returns>
-        public bool CheckConflictState(StateTypes conflictStateTypes)
-        {
-            //TODO  判断特定的枚举值是否在选中的枚举值中   
-            //应该 当前状态 是否 排斥状态中 
-            if (conflictStateTypes.HasFlag(((AFsmStateBase)m_fsm.CurrentState).StateTypes))
-            {
-                return true;
-            }
-
-            return false;
-        }
-
-        #region 移除状态
         
-
-        #endregion
-
-
-  
-
- 
-
-
-        #region 添加状态
-
-        private void CreateFsm()
-        {
-            AddFsmState();
-
-            m_fsm = GameEntry.Fsm.CreateFsm<Pet>(gameObject.name, this, m_States);
-            StartFsm();
-        }
-
-
-        protected virtual void StartFsm()
-        {
-            // m_fsm.Start<IdleState>();
-        }
-
-        protected virtual void AddFsmState()
-        {
-            // m_States.Add( IdleState.Create());
-            // m_States.Add( RunState.Create());
-            // m_States.Add( RunEndState.Create());
-        }
-
-        #endregion
-
-        #endregion
     }
     
 }

@@ -12,7 +12,7 @@ namespace Suture
     /// <summary>
     /// 装甲类
     /// </summary>
-    public class Equip :Entity
+    public class Equip :EntityBase
     {
         private const string AttachPoint = "Equip Point";
 

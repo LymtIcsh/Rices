@@ -3,21 +3,32 @@ using UnityEngine.Assertions;
 using System.Collections;
 
 
-
 namespace NPBehave
 {
+    /// <summary>
+    /// 随机打乱子节点的执行顺序，其他同Selector完全相同
+    /// </summary>
     public class RandomSelector : Composite
     {
+        /// <summary>
+        /// 初始伪随机数
+        /// </summary>
         static System.Random rng = new System.Random();
 
 #if UNITY_EDITOR
-        static public void DebugSetSeed( int seed )
+        static public void DebugSetSeed(int seed)
         {
-            rng = new System.Random( seed );
+            rng = new System.Random(seed);
         }
 #endif
-
+        /// <summary>
+        /// 当前启动的子节点索引
+        /// </summary>
         private int currentIndex = -1;
+
+        /// <summary>
+        /// 被打乱顺序的子节点索引
+        /// </summary>
         private int[] randomizedOrder;
 
         public RandomSelector(params Node[] children) : base("Random Selector", children)
@@ -44,14 +55,11 @@ namespace NPBehave
             while (n > 1)
             {
                 int k = rng.Next(n--);
-                int temp = randomizedOrder[n];
-                randomizedOrder[n] = randomizedOrder[k];
-                randomizedOrder[k] = temp;
+                (randomizedOrder[n], randomizedOrder[k]) = (randomizedOrder[k], randomizedOrder[n]);
             }
 
             ProcessChildren();
         }
-
 
 
         protected override void DoStop()
@@ -114,6 +122,7 @@ namespace NPBehave
                     {
                         currentIndex = Children.Length;
                     }
+
                     currentChild.CancelWithoutReturnResult();
                     break;
                 }

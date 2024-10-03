@@ -42,7 +42,7 @@ namespace NPBehave
 
             return frameAction.Id;
         }
-
+ 
         private void AddTimer(FrameAction frameAction)
         {
             if (!isInUpdate)

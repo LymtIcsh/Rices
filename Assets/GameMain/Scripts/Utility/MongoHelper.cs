@@ -109,6 +109,8 @@ namespace Suture
 
             BsonSerializer.RegisterSerializer(typeof(System.Numerics.Vector2),
                 new StructBsonSerialize<System.Numerics.Vector2>());
+            BsonSerializer.RegisterSerializer(typeof(System.Numerics.Vector3),
+                new StructBsonSerialize<System.Numerics.Vector3>());
 
             BsonSerializer.RegisterSerializer(typeof(Vector2), new StructBsonSerialize<Vector2>());
             BsonSerializer.RegisterSerializer(typeof(Vector3), new StructBsonSerialize<Vector3>());

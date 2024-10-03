@@ -10,7 +10,7 @@ namespace Suture
     /// <summary>
     /// 技能行为树管理器
     /// </summary>
-    public class SkillCanvasManagerComponent : Entity
+    public class SkillCanvasManagerComponent : EntityBase
     {
         /// <summary>
         /// 技能Id与其对应行为树映射,因为一个技能可能由多个行为树组成，所以value使用了List的形式

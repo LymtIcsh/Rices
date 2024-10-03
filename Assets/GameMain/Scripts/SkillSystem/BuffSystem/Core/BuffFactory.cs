@@ -65,8 +65,8 @@ namespace Suture
         /// <param name="theUnitBelongTo">Buff寄生者</param>
         /// <param name="theSkillCanvasBelongTo"></param>
         /// <returns></returns>
-        public static IBuffSystem AcquireBuff(long dataId, long buffNodeId, Pet theUnitFrom,
-            Pet theUnitBelongTo,
+        public static IBuffSystem AcquireBuff(long dataId, long buffNodeId, TargetableObject theUnitFrom,
+            TargetableObject theUnitBelongTo,
             NP_RuntimeTree theSkillCanvasBelongTo)
         {
             return AcquireBuff(
@@ -84,8 +84,8 @@ namespace Suture
         /// <param name="theUnitBelongTo">Buff寄生者</param>
         /// <returns></returns>
         public static IBuffSystem AcquireBuff(NP_DataSupportor npDataSupportor, long buffNodeId,
-            Pet theUnitFrom,
-            Pet theUnitBelongTo,
+            TargetableObject theUnitFrom,
+            TargetableObject theUnitBelongTo,
             NP_RuntimeTree theSkillCanvasBelongTo)
         {
             return AcquireBuff((npDataSupportor.BuffNodeDataDic[buffNodeId] as NormalBuffNodeData)?.BuffData,
@@ -103,8 +103,8 @@ namespace Suture
         /// <param name="theUnitBelongTo">Buff寄生者</param>
         /// <param name="theSkillCanvasBelongTo"></param>
         /// <returns></returns>
-        public static IBuffSystem AcquireBuff(BuffDataBase buffDataBase, long buffNodeId, Pet theUnitFrom,
-            Pet theUnitBelongTo,
+        public static IBuffSystem AcquireBuff(BuffDataBase buffDataBase, long buffNodeId, TargetableObject theUnitFrom,
+            TargetableObject theUnitBelongTo,
             NP_RuntimeTree theSkillCanvasBelongTo)
         {
             //LSF_Component lsfComponent = theUnitFrom.BelongToRoom.GetComponent<LSF_Component>();

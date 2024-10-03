@@ -5,8 +5,23 @@ using Sirenix.OdinInspector;
 
 namespace NPBehave
 {
+    /// <summary>
+    /// 并行执行所有子节点，根据成功原则和失败原则，决定节点停用时机
+    /// | 成功原则 | 失败原则 |
+    ///   | One | One |
+    ///   第一个子节点停用返回true(false)后，关闭所有子节点，停用当前节点返回true(false)
+    ///    | One | ALL |
+    ///  当有一个子节点停用返回true后，关闭所有子节点，停用当前节点返回true，否则返回false
+    ///  | ALL | One |
+    ///  所有子节点停用返回true后，当前节点停用返回true，否则返回false
+    ///   | ALL | ALL |
+    ///   所有子节点停用返回true后，当前节点停用返回true，否则返回false
+    /// </summary>
     public class Parallel : Composite
     {
+        /// <summary>
+        /// 原则
+        /// </summary>
         public enum Policy
         {
             [LabelText("一个XX就返回XX")]
@@ -24,14 +39,41 @@ namespace NPBehave
         // }
 
         // private Wait waitForPendingChildrenRule;
+        /// <summary>
+        /// 失败原则
+        /// </summary>
         private Policy failurePolicy;
+        /// <summary>
+        /// 成功原则
+        /// </summary>
         private Policy successPolicy;
+        /// <summary>
+        /// 子节点数量
+        /// </summary>
         private int childrenCount = 0;
+        /// <summary>
+        /// 当前处于启用状态的子节点数量
+        /// </summary>
         private int runningCount = 0;
+        /// <summary>
+        /// 子节点停用返回true数量
+        /// </summary>
         private int succeededCount = 0;
+        /// <summary>
+        /// 子节点停用返回false数量
+        /// </summary>
         private int failedCount = 0;
+        /// <summary>
+        /// 子节点→返回结果 字典
+        /// </summary>
         private Dictionary<Node, bool> childrenResults;
+        /// <summary>
+        /// 返回结果
+        /// </summary>
         private bool successState;
+        /// <summary>
+        /// 锁定successState无法被覆盖
+        /// </summary>
         private bool childrenAborted;
 
         public Parallel(Policy successPolicy, Policy failurePolicy, /*Wait waitForPendingChildrenRule,*/ params Node[] children) : base("Parallel", children)
@@ -142,7 +184,12 @@ namespace NPBehave
                 }
             }
         }
-
+/// <summary>
+/// 
+/// </summary>
+/// <param name="abortForChild"></param>
+/// <param name="immediateRestart">true：重新启用当前子节点  ;false：报错</param>
+/// <exception cref="Exception"></exception>
         public override void StopLowerPriorityChildrenForChild(Node abortForChild, bool immediateRestart)
         {
             if (immediateRestart)

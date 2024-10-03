@@ -11,7 +11,7 @@ namespace Suture
 
         public NP_BlackBoardRelationData NPBalckBoardRelationData = new NP_BlackBoardRelationData();
 
-        public override Task CreateTask(Pet unit, NP_RuntimeTree runtimeTree)
+        public override Task CreateTask(TargetableObject unit, NP_RuntimeTree runtimeTree)
         {
             this.m_WaitNode = new Wait(this.NPBalckBoardRelationData.BBkey);
             return this.m_WaitNode;

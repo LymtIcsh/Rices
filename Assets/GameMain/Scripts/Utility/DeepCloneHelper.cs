@@ -12,6 +12,12 @@ namespace Suture
     /// </summary>
     public static class DeepCloneHelper
     {
+        /// <summary>
+        /// 深拷贝
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="obj"></param>
+        /// <returns></returns>
         public static T DeepCopy<T>(this T obj) where T : class
         {
             try

@@ -7,7 +7,7 @@ namespace Suture
     {
         public string AssetName;
         
-        public Pet belongPet;
+        public TargetableObject belongPet;
 
         public static  SkillObjDataBase Create(int entityId, int typeId,string AssetName,Vector3 position,Pet belongPet,object userData = null)
         {

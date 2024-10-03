@@ -6,7 +6,7 @@ namespace Suture
 {
     public class SkillMushroomData:SkillObjDataBase
     {
-        public static  SkillObjDataBase Create(int entityId, int typeId,string AssetName,Vector3 position,Pet belongPet,object userData = null)
+        public static  SkillMushroomData Create(int entityId, int typeId,string AssetName,Vector3 position,TargetableObject belongPet,object userData = null)
         {
             SkillMushroomData entityData = ReferencePool.Acquire<SkillMushroomData>();
             entityData.Id = entityId;

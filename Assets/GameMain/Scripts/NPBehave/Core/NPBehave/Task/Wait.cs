@@ -34,7 +34,7 @@ namespace NPBehave
                 seconds = 0;
             }
 
-            TimerId = Clock.AddTimer((uint)TimeAndFrameConverter.Frame_Float2Frame(seconds), onTimer);
+            TimerId = Clock.AddTimer( (uint)TimeAndFrameConverter.Frame_Float2Frame(seconds), onTimer);
         }
 
         protected override void DoStop()

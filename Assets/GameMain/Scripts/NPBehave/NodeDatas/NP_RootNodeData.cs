@@ -8,7 +8,7 @@ namespace Suture
     {
         [HideInEditorMode] public Root m_Root;
 
-        public override Decorator CreateDecoratorNode(Pet unit, NP_RuntimeTree runtimeTree, Node node)
+        public override Decorator CreateDecoratorNode(TargetableObject unit, NP_RuntimeTree runtimeTree, Node node)
         {
             //这里 GetClock 用通过 SyncContext.GetClock(); 烟雨大佬是 NpSyncComponent.SyncContext.GetClock();
             this.m_Root = new Root(node, runtimeTree.GetClock());

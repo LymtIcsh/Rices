@@ -12,7 +12,7 @@ namespace Suture
     /// <summary>
     /// 英雄数据组件，负责管理英雄数据
     /// </summary>
-    public class UnitAttributesDataComponent : Entity
+    public class UnitAttributesDataComponent : EntityBase
     {
         public UnitAttributesNodeDataBase UnitAttributesNodeDataBase;
 

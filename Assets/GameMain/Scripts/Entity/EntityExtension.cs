@@ -24,7 +24,7 @@ namespace Suture
         /// <param name="entityComponent"></param>
         /// <param name="entityId">实体Id</param>
         /// <returns></returns>
-        public static Entity GetGameEntity(this EntityComponent entityComponent, int entityId)
+        public static EntityBase GetGameEntity(this EntityComponent entityComponent, int entityId)
         {
             UnityGameFramework.Runtime.Entity entity = entityComponent.GetEntity(entityId);
             if (entity == null)
@@ -32,19 +32,21 @@ namespace Suture
                 return null;
             }
 
-            return (Entity)entity.Logic;
+            return (EntityBase)entity.Logic;
         }
 
         /// <summary>
         /// 隐藏实体
         /// </summary>
         /// <param name="entityComponent"></param>
-        /// <param name="entity"></param>
-        public static void HideEntity(this EntityComponent entityComponent, Entity entity)
+        /// <param name="entityBase"></param>
+        public static void HideEntity(this EntityComponent entityComponent, EntityBase entityBase)
         {
-            entityComponent.HideEntity(entity.Entity);
+            entityComponent.HideEntity(entityBase.Entity);
         }
+        
 
+        
         private static void ShowEntity(this EntityComponent entityComponent, Type logicType, string entityGroup,
             int priority, EntityData data)
         {
@@ -92,12 +94,11 @@ namespace Suture
         /// </summary>
         /// <param name="entityComponent"></param>
         /// <param name="entityGroup">实体组名称</param>
-        /// <param name="entityAssetName"></param>
         /// <param name="ArmorAsset">加载实体资源的优先级。 【从 Constant.AssetPriority.ArmorAsset 】 </param>
         /// <param name="entityData">用户自定义实体数据。</param>
         /// <typeparam name="T">实体逻辑类型。</typeparam>
         public static void ShowEntity<T>(this EntityComponent entityComponent, string entityGroup,
-            string entityAssetName, int ArmorAsset, EntityData entityData) where T: TargetableObject
+             int ArmorAsset, EntityData entityData) where T: EntityLogic
         {
             entityComponent.ShowEntity(typeof(T), entityGroup, ArmorAsset, entityData);
         }
@@ -107,12 +108,11 @@ namespace Suture
         /// </summary>
         /// <param name="entityComponent"></param>
         /// <param name="entityGroup">实体组名称</param>
-        /// <param name="entityAssetName"></param>
         /// <param name="ArmorAsset">加载实体资源的优先级。 【从 Constant.AssetPriority.ArmorAsset 】 </param>
         /// <param name="entityData">用户自定义实体数据。</param>
         /// <typeparam name="T">实体逻辑类型。</typeparam>
         public static void ShowSkillSummonObject<T>(this EntityComponent entityComponent, string entityGroup,
-            string entityAssetName, int ArmorAsset, EntityData entityData) where T: TargetableObject
+            int ArmorAsset, EntityData entityData) where T: EntityLogic
         {
             entityComponent.ShowSkillSummonObject(typeof(T), entityGroup, ArmorAsset, entityData);
         }
@@ -136,7 +136,7 @@ namespace Suture
         /// <param name="entityGroupName">实体所属的实体组。</param>
         /// <param name="userData">用户自定义数据。</param>
         /// <returns>实体。</returns>
-        public static T CreateEntity<T>(this EntityComponent entityComponent,string entityName, string entityGroupName, object userData) where T : Entity
+        public static T CreateEntity<T>(this EntityComponent entityComponent,string entityName, string entityGroupName, object userData) where T : EntityLogic
         {
             GameObject gameObject = new GameObject();
             if (gameObject == null)

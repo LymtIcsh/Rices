@@ -24,7 +24,7 @@ namespace Suture
 
         public void SetCDInfoAction()
         {
-            Pet unit = BelongToUnit;
+            TargetableObject unit = BelongToUnit;
             
             CDComponent cdComponent = unit.BelongToRoom.GetComponent<CDComponent>();
             

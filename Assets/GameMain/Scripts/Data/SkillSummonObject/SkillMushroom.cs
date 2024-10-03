@@ -45,7 +45,22 @@ namespace Suture
 
             // Log.Info(this.GetComponentInChildren<SphereCollider>().gameObject.name);
 
-            NavigationAIEnter(this.gameObject, "Enemy", 1.0f).Forget();
+          GameEntry.RangeCheck.NavigationAIEnter(this.gameObject, "Enemy", 1.0f, async (curretCollider) =>
+          {
+              var position =  curretCollider.transform.position;
+              _navMeshAgent.SetDestination(position);
+
+              distanc = Vector3.SqrMagnitude(position - transform.position);
+              
+              await UniTask.Yield();
+              
+              if (distanc <= 10)
+              {
+                  _navMeshAgent.isStopped = false;
+
+                  Dead(0).Forget();
+              }
+          }).Forget();
         }
 
         protected override void OnUpdate(float elapseSeconds, float realElapseSeconds)
@@ -59,7 +74,7 @@ namespace Suture
         }
 
 
-        protected override void OnDead(Entity attacker)
+        protected override void OnDead(EntityBase attacker)
         {
             base.OnDead(attacker);
         }

@@ -6,7 +6,7 @@ namespace Suture
     /// <summary>
     /// NP运行时树管理器
     /// </summary>
-    public class NP_RuntimeTreeManager:Entity
+    public class NP_RuntimeTreeManager:EntityBase
     {
         public Dictionary<long, NP_RuntimeTree> RuntimeTrees = new Dictionary<long, NP_RuntimeTree>();
 

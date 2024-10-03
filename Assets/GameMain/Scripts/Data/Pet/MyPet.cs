@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using Cinemachine;
+using Unity.VisualScripting;
+using UnityEngine;
 using UnityGameFramework.Runtime;
 
 namespace Suture
@@ -35,6 +37,51 @@ namespace Suture
                     return;
             }
      
+            
+            //当前房间
+            this.BelongToRoom = GameEntry.RoomManager.BattleRoom;
+            this.BelongToRoom.RoomHolderPlayerId = this._petData.TypeId;
+            this.BelongToRoom.RoomName = this.Name;
+            this.BelongToRoom.PlayerCount++;
+
+            UnitComponent unitComponent = this.BelongToRoom.GetComponent<UnitComponent>();
+            unitComponent .MyUnit = this;
+            unitComponent.idUnits.Add(this._petData.TypeId,this);
+                
+
+            PlayerAssetsInputs _playerAssetsInputs = this.GetComponent<PlayerAssetsInputs>();
+            _playerAssetsInputs.cursorLocked = true;
+            _playerAssetsInputs.cursorInputForLook = true;
+
+
+            CinemachineVirtualCamera cinemachineFreeLook = GameObject.FindGameObjectWithTag("PlayerFollowCamera")
+                    .GetComponent<CinemachineVirtualCamera>();
+            cinemachineFreeLook.Follow =
+                    this.Entity.transform.Find("PlayerCameraRoot").transform;
+            cinemachineFreeLook.LookAt = this.Entity.transform.Find("LookAt").transform;
+
+            this.AddComponent<DataModifierComponent>();
+            this.AddComponent<NP_SyncComponent>();
+            this.AddComponent<NumericComponent>();
+
+
+            //增加Buff管理组件
+            this.AddComponent<BuffManagerComponent>();
+            this.AddComponent<SkillCanvasManagerComponent>();
+
+            this.AddComponent<NP_RuntimeTreeManager>();
+            this.AddComponent<UnitAttributesDataComponent>();
+
+            this.GetComponent<PlayerThirdPersonController>().MoveSpeed = this
+                    .GetComponent<UnitAttributesDataComponent>().GetAttribute(NumericType.Speed) / 100;
+               
+            NP_RuntimeTreeFactory.CreateSkillNpRuntimeTree(this, 10003, 10003).Start();
+            //  NP_RuntimeTreeFactory.CreateSkillNpRuntimeTree(m_myPet, 10002, 10002).Start();
+
+
+            NumericComponent NumericComponent = this.GetComponent<NumericComponent>();
+
+            
         }
         
 #if UNITY_2017_3_OR_NEWER

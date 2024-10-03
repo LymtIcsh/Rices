@@ -6,7 +6,7 @@ using UnityGameFramework.Runtime;
 
 namespace Suture
 {
-    public abstract class AFsmStateBase : FsmState<Pet>, IReference
+    public abstract class AFsmStateBase : FsmState<TargetableObject>, IReference
     {
         /// <summary>
         /// 互斥的状态，如果当前身上有这些状态，将无法切换至此状态
@@ -48,7 +48,7 @@ namespace Suture
         }
 
 
-        protected override void OnInit(IFsm<Pet> fsm)
+        protected override void OnInit(IFsm<TargetableObject> fsm)
         {
             base.OnInit(fsm);
 
@@ -57,12 +57,12 @@ namespace Suture
             _PlayerThirdPersonController = fsm.Owner.GetComponent<PlayerThirdPersonController>();
         }
 
-        protected override void OnEnter(IFsm<Pet> fsm)
+        protected override void OnEnter(IFsm<TargetableObject> fsm)
         {
             base.OnEnter(fsm);
         }
 
-        protected override void OnUpdate(IFsm<Pet> fsm, float elapseSeconds, float realElapseSeconds)
+        protected override void OnUpdate(IFsm<TargetableObject> fsm, float elapseSeconds, float realElapseSeconds)
         {
             
             base.OnUpdate(fsm, elapseSeconds, realElapseSeconds);
@@ -70,12 +70,12 @@ namespace Suture
             _animatorStateInfo = _animator.GetCurrentAnimatorStateInfo(0);
         }
 
-        protected override void OnLeave(IFsm<Pet> fsm, bool isShutdown)
+        protected override void OnLeave(IFsm<TargetableObject> fsm, bool isShutdown)
         {
             base.OnLeave(fsm, isShutdown);
         }
 
-        protected override void OnDestroy(IFsm<Pet> fsm)
+        protected override void OnDestroy(IFsm<TargetableObject> fsm)
         {
             base.OnDestroy(fsm);
         }

@@ -17,11 +17,13 @@ namespace Suture
             { typeof(NP_ParallelNodeData), NodeType.Composite },
             { typeof(NP_SelectorNodeData), NodeType.Composite },
             { typeof(NP_SequenceNodeData), NodeType.Composite },
+            {typeof(NP_RandomSequenceNodeData),NodeType.Composite},
+            {typeof(NP_RandomSelectorNodeData),NodeType.Composite},
 
             { typeof(NP_BlackboardConditionNodeData), NodeType.Decorator },
             { typeof(NP_BlackboardMultipleConditionsNodeData), NodeType.Decorator },
             { typeof(NP_RepeaterNodeData), NodeType.Decorator },
-            //   {typeof(NP_ServiceNodeData), NodeType.Decorator},
+            {typeof(NP_ServiceNodeData), NodeType.Decorator},
 
             { typeof(NP_ActionNodeData), NodeType.Task },
             { typeof(NP_WaitNodeData), NodeType.Task },
@@ -34,7 +36,7 @@ namespace Suture
         /// <param name="unit">行为树所归属unit</param>
         /// <param name="nPDataId">行为树数据id</param>
         /// <returns></returns>
-        public static NP_RuntimeTree CreateNpRuntimeTree(Pet unit, long nPDataId)
+        public static NP_RuntimeTree CreateNpRuntimeTree(TargetableObject unit, long nPDataId)
         {
             NP_DataSupportor npDataSupportor = GameEntry.NP_TreeDataRepository
                 .GetNP_TreeData_DeepCopyBBValuesOnly(nPDataId);
@@ -132,7 +134,7 @@ namespace Suture
         /// <param name="nPDataId">行为树数据id</param>
         /// <param name="belongToSkillId">归属的SkillId,一般来说需要从excel表中读取</param>
         /// <returns></returns>
-        public static NP_RuntimeTree CreateSkillNpRuntimeTree(Pet unit, long nPDataId,
+        public static NP_RuntimeTree CreateSkillNpRuntimeTree(TargetableObject unit, long nPDataId,
             long belongToSkillId)
         {
             NP_RuntimeTree result = CreateNpRuntimeTree(unit, nPDataId);

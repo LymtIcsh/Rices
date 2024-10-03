@@ -60,7 +60,7 @@ namespace Suture
         }
     }
 
-    public class CDComponent : Entity
+    public class CDComponent : EntityBase
     {
         #region 私有成员
 

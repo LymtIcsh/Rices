@@ -4,7 +4,6 @@ using Vector3 = System.Numerics.Vector3;
 #if UNITY_EDITOR
 using System.Collections.Generic;
 using UnityEditor;
-using UnityEngine;
 
 #endif
 
@@ -17,7 +16,7 @@ namespace Suture
     [HideLabel]
     public class NP_BlackBoardRelationData
     {
-        [LabelText("字典键")] [ValueDropdown("GetBBKeys")][OnValueChanged("OnBBKeySelected")]
+        [LabelText("字典键")] [ValueDropdown("GetBBKeys")] [OnValueChanged("OnBBKeySelected")]
         public string BBkey;
 
         [LabelText("指定的值类型")] [ReadOnly] public string NP_BBValueType;
@@ -43,12 +42,13 @@ namespace Suture
         /// </summary>
         private void OnBBKeySelected()
         {
-            if (NP_BlackBoardDataManager.CurrentEditedNP_BlackBoardDataManager!=null)
+            if (NP_BlackBoardDataManager.CurrentEditedNP_BlackBoardDataManager != null)
             {
                 foreach (var bbValues in NP_BlackBoardDataManager.CurrentEditedNP_BlackBoardDataManager.BBValues)
                 {
-                    if (bbValues.Key==this.BBkey)
+                    if (bbValues.Key == this.BBkey)
                     {
+                        //TODO 报空需要在 MongoHelper 注册    例如：BsonSerializer.RegisterSerializer(typeof(System.Numerics.Vector3),new StructBsonSerialize<System.Numerics.Vector3>());
                         NP_BBValue = bbValues.Value.DeepCopy();
                         NP_BBValueType = this.NP_BBValue.NP_BBValueType.ToString();
                     }
@@ -83,7 +83,7 @@ namespace Suture
         /// <param name="blackboard">要修改的黑板</param>
         public void SetBlackBoardValue(Blackboard blackboard)
         {
-            NP_BBValueHelper.SetTargetBlackboardUseANP_BBValue(this.NP_BBValue,blackboard,BBkey);
+            NP_BBValueHelper.SetTargetBlackboardUseANP_BBValue(this.NP_BBValue, blackboard, BBkey);
         }
 
         /// <summary>
@@ -93,7 +93,7 @@ namespace Suture
         /// <param name="value">值</param>
         public void SetBlackBoardValue<T>(Blackboard blackboard, T value)
         {
-            blackboard.Set(this.BBkey,value);
+            blackboard.Set(this.BBkey, value);
         }
 
         /// <summary>
@@ -103,7 +103,7 @@ namespace Suture
         /// <param name="desBB">目标黑板</param>
         public void SetBBValueFromThisBBValue(Blackboard oriBB, Blackboard desBB)
         {
-            NP_BBValueHelper.SetTargetBlackboardUseANP_BBValue(oriBB.Get(BBkey),desBB,BBkey);
+            NP_BBValueHelper.SetTargetBlackboardUseANP_BBValue(oriBB.Get(BBkey), desBB, BBkey);
         }
     }
 }

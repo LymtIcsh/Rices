@@ -43,7 +43,7 @@ namespace Suture
         public void ChangeTargetSkillBBValue()
         {
             //Log.Info($"修改黑板键{m_NPBalckBoardRelationData.DicKey} 黑板值类型 {m_NPBalckBoardRelationData.NP_BBValueType}  黑板值:Bool：{m_NPBalckBoardRelationData.BoolValue.GetValue()}\n");
-            Pet targetUnit = null;
+            TargetableObject targetUnit = null;
 
             if (this.TargetUnitIsSelf)
             {

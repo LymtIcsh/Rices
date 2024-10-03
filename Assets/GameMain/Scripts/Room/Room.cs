@@ -5,7 +5,7 @@ namespace Suture
     /// <summary>
     /// 代表一个房间
     /// </summary>
-    public class Room : Entity
+    public class Room : EntityBase
     {
         /// <summary>
         /// 房主Id

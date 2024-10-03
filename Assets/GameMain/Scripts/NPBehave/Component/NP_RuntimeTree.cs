@@ -39,7 +39,7 @@ namespace Suture
         /// <summary>
         /// 所归属的Unit
         /// </summary>
-        public Entity BelongToUnit;
+        public EntityBase BelongToUnit;
         
         public NP_SyncComponent NpSyncComponent;
         
@@ -85,7 +85,7 @@ namespace Suture
             return this.m_RootNode.Blackboard;
         }
 
-        public void AddChildWithId(NP_DataSupportor belongNP_DataSupportor, Entity belongToUnit)
+        public void AddChildWithId(NP_DataSupportor belongNP_DataSupportor, EntityBase belongToUnit)
         {
             BelongToUnit = belongToUnit;
             BelongNP_DataSupportor = belongNP_DataSupportor;

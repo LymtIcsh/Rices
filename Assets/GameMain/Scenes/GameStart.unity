@@ -201,6 +201,7 @@ Transform:
   - {fileID: 1080891258}
   - {fileID: 1265664697}
   - {fileID: 95659380}
+  - {fileID: 2033575194}
   m_Father: {fileID: 1197884132}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &384735236
@@ -705,6 +706,54 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41d16a2cf57746b3a0f30909e860575a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &2033575193
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2033575194}
+  - component: {fileID: 2033575195}
+  m_Layer: 0
+  m_Name: RangeCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2033575194
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2033575193}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 351597156}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2033575195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2033575193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfaf150c682c409185648f4dca70a5a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currType: 0
+  mPlayer: {fileID: 0}
+  mTarget: {fileID: 0}
+  mCheckOpen: 1
 --- !u!114 &4444810110281022019
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1049,6 +1098,11 @@ MonoBehaviour:
   m_CustomEntityGroupHelper: {fileID: 0}
   m_EntityGroups:
   - m_Name: Pet
+    m_InstanceAutoReleaseInterval: 60
+    m_InstanceCapacity: 16
+    m_InstanceExpireTime: 60
+    m_InstancePriority: 0
+  - m_Name: Boss
     m_InstanceAutoReleaseInterval: 60
     m_InstanceCapacity: 16
     m_InstanceExpireTime: 60

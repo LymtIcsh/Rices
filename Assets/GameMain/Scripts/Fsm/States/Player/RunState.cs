@@ -23,19 +23,19 @@ namespace Suture
             return state;
         }
 
-        protected override void OnInit(IFsm<Pet> fsm)
+        protected override void OnInit(IFsm<TargetableObject> fsm)
         {
             base.OnInit(fsm);
         }
 
-        protected override void OnEnter(IFsm<Pet> fsm)
+        protected override void OnEnter(IFsm<TargetableObject> fsm)
         {
             base.OnEnter(fsm);
 
             PlayAnimation(this.StateName);
         }
 
-        protected override void OnUpdate(IFsm<Pet> fsm, float elapseSeconds, float realElapseSeconds)
+        protected override void OnUpdate(IFsm<TargetableObject> fsm, float elapseSeconds, float realElapseSeconds)
         {
             base.OnUpdate(fsm, elapseSeconds, realElapseSeconds);
 
@@ -46,7 +46,7 @@ namespace Suture
             
             if (_PlayerAssetsInputs.evade)
             {
-                fsm.Owner._evadeEnum = EvadeEnum.Evade_Front;
+                (fsm.Owner as Pet)._evadeEnum = EvadeEnum.Evade_Front;
                 ChangeState<EvadeState>(fsm);
             }
 
@@ -75,12 +75,12 @@ namespace Suture
             }
         }
 
-        protected override void OnLeave(IFsm<Pet> fsm, bool isShutdown)
+        protected override void OnLeave(IFsm<TargetableObject> fsm, bool isShutdown)
         {
             base.OnLeave(fsm, isShutdown);
         }
 
-        protected override void OnDestroy(IFsm<Pet> fsm)
+        protected override void OnDestroy(IFsm<TargetableObject> fsm)
         {
             base.OnDestroy(fsm);
         }

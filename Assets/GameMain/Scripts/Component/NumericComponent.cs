@@ -8,7 +8,7 @@ namespace Suture
     /// <summary>
     /// 数值组件
     /// </summary>
-    public class NumericComponent : Entity
+    public class NumericComponent : EntityBase
     {
 #if SERVER
         /// <summary>

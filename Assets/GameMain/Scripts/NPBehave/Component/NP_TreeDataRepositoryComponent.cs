@@ -19,7 +19,8 @@ namespace Suture
         {
             "ETreatment",
             "EMushroom",
-            "E_Teleport"
+            "E_Teleport",
+            "BossAI"
         };
 
         /// <summary>

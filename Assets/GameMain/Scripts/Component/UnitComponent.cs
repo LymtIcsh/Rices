@@ -52,7 +52,7 @@ namespace Suture
             
         }
     }
-    public class UnitComponent : Entity
+    public class UnitComponent : EntityBase
     {
         public Dictionary<long, Pet> idUnits = new Dictionary<long, Pet>();
 

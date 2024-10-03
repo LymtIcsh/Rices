@@ -24,7 +24,7 @@ namespace Suture
         [LabelText("终止条件")]
         public Stops Stop = Stops.IMMEDIATE_RESTART;
 
-        public override Decorator CreateDecoratorNode(Pet unit, NP_RuntimeTree runtimeTree, Node node)
+        public override Decorator CreateDecoratorNode(TargetableObject unit, NP_RuntimeTree runtimeTree, Node node)
         {
             this.m_BlackboardMultipleConditions =
                 new BlackboardMultipleConditions(this.MatchInfos, this.MatchType, this.Stop, node);

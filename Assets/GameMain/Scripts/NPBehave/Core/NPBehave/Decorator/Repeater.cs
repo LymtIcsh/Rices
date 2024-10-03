@@ -9,14 +9,14 @@
         private int currentLoop;
         private long TimerId;
 
-        /// <param name="loopCount">number of times to execute the decoratee. Set to -1 to repeat forever, be careful with endless loops!</param>
-        /// <param name="decoratee">Decorated Node</param>
+        /// <param name="loopCount">执行装饰物的次数。设置为-1将永远重复，小心无尽的循环!  number of times to execute the decoratee. Set to -1 to repeat forever, be careful with endless loops!</param>
+        /// <param name="decoratee">装饰节点</param>
         public Repeater(int loopCount, Node decoratee) : base("Repeater", decoratee)
         {
             this.loopCount = loopCount;
         }
         
-        /// <param name="decoratee">Decorated Node, repeated forever</param>
+        /// <param name="decoratee">装饰节点，永远重复 Decorated Node, repeated forever</param>
         public Repeater(Node decoratee) : base("Repeater", decoratee)
         {
         }

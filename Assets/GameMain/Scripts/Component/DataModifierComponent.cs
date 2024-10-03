@@ -9,7 +9,7 @@ namespace Suture
     /// <summary>
     /// 数据修改器组件
     /// </summary>
-    public class DataModifierComponent : Entity
+    public class DataModifierComponent : EntityBase
     {
         #region 私有成员
 

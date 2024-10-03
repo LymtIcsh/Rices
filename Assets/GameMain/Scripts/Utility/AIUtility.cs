@@ -114,10 +114,10 @@ namespace Suture
         /// 获取实体间的距离。
         /// </summary>
         /// <returns>实体间的距离。</returns>
-        public static float GetDistance(Entity fromEntity, Entity toEntity)
+        public static float GetDistance(EntityBase fromEntityBase, EntityBase toEntityBase)
         {
-            Transform fromTransform = fromEntity.CachedTransform;
-            Transform toTransform = toEntity.CachedTransform;
+            Transform fromTransform = fromEntityBase.CachedTransform;
+            Transform toTransform = toEntityBase.CachedTransform;
             return (toTransform.position - fromTransform.position).magnitude;
         }
 

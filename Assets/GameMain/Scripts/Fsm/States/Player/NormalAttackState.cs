@@ -29,14 +29,14 @@ namespace Suture
             return state;
         }
 
-        protected override void OnInit(IFsm<Pet> fsm)
+        protected override void OnInit(IFsm<TargetableObject> fsm)
         {
             base.OnInit(fsm);
 
-            _HeroAttributesNodeData = fsm.Owner._petData.m_unitAttributesNodeDataBase;
+            _HeroAttributesNodeData =(fsm.Owner as Pet)._petData.m_unitAttributesNodeDataBase;
         }
 
-        protected override void OnEnter(IFsm<Pet> fsm)
+        protected override void OnEnter(IFsm<TargetableObject> fsm)
         {
             base.OnEnter(fsm);
             _PlayerAssetsInputs.attack = false;
@@ -44,7 +44,7 @@ namespace Suture
             PlayAnimation(this.StateName + _HeroAttributesNodeData.CurrentNormalAttackIndex);
         }
 
-        protected override void OnUpdate(IFsm<Pet> fsm, float elapseSeconds, float realElapseSeconds)
+        protected override void OnUpdate(IFsm<TargetableObject> fsm, float elapseSeconds, float realElapseSeconds)
         {
             base.OnUpdate(fsm, elapseSeconds, realElapseSeconds);
 
@@ -54,12 +54,12 @@ namespace Suture
             }
         }
 
-        protected override void OnLeave(IFsm<Pet> fsm, bool isShutdown)
+        protected override void OnLeave(IFsm<TargetableObject> fsm, bool isShutdown)
         {
             base.OnLeave(fsm, isShutdown);
         }
 
-        protected override void OnDestroy(IFsm<Pet> fsm)
+        protected override void OnDestroy(IFsm<TargetableObject> fsm)
         {
             base.OnDestroy(fsm);
         }

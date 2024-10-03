@@ -8,7 +8,7 @@ namespace Suture
     [HideReferenceObjectPicker]
     public class NP_BBValue_Vector3:NP_BBValueBase<Vector3>,IEquatable<NP_BBValue_Vector3>
     {
-         public override Type NP_BBValueType => typeof(float);
+         public override Type NP_BBValueType => typeof(Vector3);
 
         #region 对比函数
 

@@ -5,457 +5,95 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="842b7725-6adb-41b7-92ba-1e022023bc23" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Component/RangeCheckComponent.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Component/RangeCheckComponent.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Data/SkillSummonObject.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Data/SkillSummonObject/SkillMushroom.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Data/SkillSummonObject/SkillMushroom.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Data/SkillSummonObject/SkillMushroomData.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Data/SkillSummonObject/SkillMushroomData.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Data/SkillSummonObject/SkillObjBase.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Data/SkillSummonObject/SkillObjBase.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Data/SkillSummonObject/SkillObjDataBase.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Data/SkillSummonObject/SkillObjDataBase.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Fsm/States/Enemy.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Fsm/States/Player.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Component/StackAnimationComponent.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Component/StackAnimationComponent.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Data/Enemy.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Data/Enemy/BossData.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Data/Enemy/BossData.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Data/Enemy/BossObject.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Data/Enemy/BossObject.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Data/Enemy/EnemyData.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Data/Enemy/EnemyData.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Data/Enemy/EnemyObject.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Data/Enemy/EnemyObject.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Entity/EntityLoader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Entity/EntityLoader.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/NodeDatas/Composite/NP_RandomSelectorNodeData.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/NodeDatas/Composite/NP_RandomSelectorNodeData.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/NodeDatas/Composite/NP_RandomSequenceNodeData.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/NodeDatas/Composite/NP_RandomSequenceNodeData.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/NodeDatas/Decorator/NP_ServiceNodeData.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/NodeDatas/Decorator/NP_ServiceNodeData.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/TheDataContainsAction/ClientSpecial.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/TheDataContainsAction/NP_TriggerStayAction.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/SkillSystem/Others/AnimationCore.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/SkillSystem/Others/AnimationCore/PlayAnimInfo.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/SkillSystem/Others/AnimationCore/PlayAnimInfo.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Rices/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Rices/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Editor/GenerateCodeEditor/FSMStateTemplate.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/GenerateCodeEditor/FSMStateTemplate.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Runtime/Entity/EntityLogic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFramework/Scripts/Runtime/Entity/EntityLogic.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Configs/SkillConfig/ETest.bytes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Configs/SkillConfig/ETest.bytes.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Configs/SkillConfig/S.bytes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Configs/SkillConfig/S.bytes.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Configs/SkillConfig/EMushroom.bytes" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Configs/SkillConfig/EMushroom.bytes" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Configs/SkillConfig/E_Teleport.bytes" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Configs/SkillConfig/E_Teleport.bytes" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GameMain/Configs/UnitAttributesDatas/AllHeroAttributesData.bytes" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Configs/UnitAttributesDatas/AllHeroAttributesData.bytes" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/DataTables/Entity.bytes" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/DataTables/Entity.bytes" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/DataTables/Entity.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/DataTables/Entity.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Entities/Jian.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Entities/Jian.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Entities/PlayerFollowCamera.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Entities/PlayerFollowCamera.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Entities/安比.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Entities/安比.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Entities/怪兽.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Entities/怪兽.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/ActionEditor/Editor/GUIS/Customized/GroupAndTrackListGUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/ActionEditor/Editor/GUIS/Customized/GroupAndTrackListGUI.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/ActionEditor/Editor/Menus.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/ActionEditor/Editor/Menus.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/ActionEditor/Editor/NBC.ActionEditor.Editor.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/ActionEditor/Editor/NBC.ActionEditor.Editor.asmdef" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/NPBehaveGraph/Nodes/Task/DetectionSkillHitActionNode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/NPBehaveGraph/Nodes/Task/NP_TriggerStayActionNode.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/NPBehaveGraph/Nodes/Task/DetectionSkillHitActionNode.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/NPBehaveGraph/Nodes/Task/NP_TriggerStayActionNode.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Saves/SkillGraphs/EMushroom.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Saves/SkillGraphs/EMushroom.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Saves/SkillGraphs/ETest.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Saves/SkillGraphs/ETest.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Saves/SkillGraphs/ETransform.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Saves/SkillGraphs/ETransform.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Saves/SkillGraphs/SkillGraph.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Saves/SkillGraphs/SkillGraph.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Saves/UnitAttributesDataGraph/AllHeroAttributesData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Saves/UnitAttributesDataGraph/AllHeroAttributesData.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/NewInputSystem/PlayerAssets.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Res/NewInputSystem/PlayerAssets.inputactions" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/AnimatorController/安比.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/AnimatorController/安比.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/丘丘人.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/丘丘人/Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/丘丘人/Materials/衣服.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/丘丘人/Materials/衣服.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/丘丘人/Texture.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/丘丘人/Texture/mc3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/丘丘人/Texture/mc3.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/丘丘人/Texture/toon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/丘丘人/Texture/toon.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/丘丘人/Texture/衣服.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/丘丘人/Texture/衣服.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/丘丘人/qiuqiuren.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/丘丘人/qiuqiuren.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/丽莎.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/丽莎/Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/丽莎/Materials/头发.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/丽莎/Materials/头发.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/丽莎/Materials/脸.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/丽莎/Materials/脸.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/丽莎/Materials/衣服.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/丽莎/Materials/衣服.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/丽莎/Materials/表情.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/丽莎/Materials/表情.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/丽莎/Texture.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/丽莎/Texture/mc3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/丽莎/Texture/mc3.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/丽莎/Texture/toon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/丽莎/Texture/toon.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/丽莎/Texture/头发.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/丽莎/Texture/头发.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/丽莎/Texture/脸.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/丽莎/Texture/脸.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/丽莎/Texture/衣服.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/丽莎/Texture/衣服.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/丽莎/Texture/表情.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/丽莎/Texture/表情.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/丽莎/lisha.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/丽莎/lisha.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/凝光.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/凝光/Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/凝光/Materials/头发.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/凝光/Materials/头发.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/凝光/Materials/脸.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/凝光/Materials/脸.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/凝光/Materials/衣服.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/凝光/Materials/衣服.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/凝光/Materials/表情.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/凝光/Materials/表情.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/凝光/Texture.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/凝光/Texture/3BSC~%C68Z]1K5HB8B[K%]E.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/凝光/Texture/3BSC~%C68Z]1K5HB8B[K%]E.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/凝光/Texture/mc3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/凝光/Texture/mc3.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/凝光/Texture/头发.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/凝光/Texture/头发.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/凝光/Texture/脸.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/凝光/Texture/脸.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/凝光/Texture/衣服.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/凝光/Texture/衣服.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/凝光/Texture/表情.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/凝光/Texture/表情.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/凝光/ningguang.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/凝光/ningguang.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/凯亚.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/凯亚/Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/凯亚/Materials/头发.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/凯亚/Materials/头发.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/凯亚/Materials/脸.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/凯亚/Materials/脸.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/凯亚/Materials/衣服.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/凯亚/Materials/衣服.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/凯亚/Materials/表情.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/凯亚/Materials/表情.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/凯亚/Texture.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/凯亚/Texture/mc3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/凯亚/Texture/mc3.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/凯亚/Texture/toon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/凯亚/Texture/toon.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/凯亚/Texture/头发.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/凯亚/Texture/头发.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/凯亚/Texture/脸.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/凯亚/Texture/脸.jpg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/凯亚/Texture/衣服.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/凯亚/Texture/衣服.jpg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/凯亚/Texture/表情.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/凯亚/Texture/表情.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/凯亚/kaiya.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/凯亚/kaiya.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/安柏.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/安柏/Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/安柏/Materials/头发.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/安柏/Materials/头发.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/安柏/Materials/脸.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/安柏/Materials/脸.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/安柏/Materials/衣服.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/安柏/Materials/衣服.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/安柏/Materials/表情.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/安柏/Materials/表情.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/安柏/Texture.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/安柏/Texture/mc3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/安柏/Texture/mc3.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/安柏/Texture/toon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/安柏/Texture/toon.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/安柏/Texture/头发.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/安柏/Texture/头发.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/安柏/Texture/脸.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/安柏/Texture/脸.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/安柏/Texture/衣服.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/安柏/Texture/衣服.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/安柏/Texture/表情.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/安柏/Texture/表情.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/安柏/anbo.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/安柏/anbo.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/派蒙.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/派蒙/Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/派蒙/Materials/头发.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/派蒙/Materials/头发.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/派蒙/Materials/披风2.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/派蒙/Materials/披风2.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/派蒙/Materials/脸.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/派蒙/Materials/脸.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/派蒙/Materials/衣服.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/派蒙/Materials/衣服.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/派蒙/Materials/表情.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/派蒙/Materials/表情.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/派蒙/Texture.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/派蒙/Texture/mc3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/派蒙/Texture/mc3.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/派蒙/Texture/toon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/派蒙/Texture/toon.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/派蒙/Texture/头发.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/派蒙/Texture/头发.jpg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/派蒙/Texture/披风.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/派蒙/Texture/披风.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/派蒙/Texture/披风2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/派蒙/Texture/披风2.jpg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/派蒙/Texture/脸.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/派蒙/Texture/脸.jpg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/派蒙/Texture/衣服.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/派蒙/Texture/衣服.jpg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/派蒙/Texture/表情.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/派蒙/Texture/表情.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/派蒙/paimeng.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/派蒙/paimeng.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/温迪.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/温迪/Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/温迪/Materials/头发.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/温迪/Materials/头发.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/温迪/Materials/脸.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/温迪/Materials/脸.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/温迪/Materials/衣服.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/温迪/Materials/衣服.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/温迪/Materials/表情.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/温迪/Materials/表情.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/温迪/Texture.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/温迪/Texture/mc3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/温迪/Texture/mc3.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/温迪/Texture/toon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/温迪/Texture/toon.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/温迪/Texture/头发.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/温迪/Texture/头发.jpg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/温迪/Texture/脸.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/温迪/Texture/脸.jpg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/温迪/Texture/衣服.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/温迪/Texture/衣服.jpg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/温迪/Texture/表情.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/温迪/Texture/表情.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/温迪/wendi.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/温迪/wendi.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/琴.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/琴/Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/琴/Materials/头发.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/琴/Materials/头发.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/琴/Materials/脸.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/琴/Materials/脸.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/琴/Materials/衣服.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/琴/Materials/衣服.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/琴/Materials/表情.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/琴/Materials/表情.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/琴/Texture.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/琴/Texture/mc3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/琴/Texture/mc3.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/琴/Texture/toon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/琴/Texture/toon.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/琴/Texture/头发.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/琴/Texture/头发.jpg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/琴/Texture/脸.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/琴/Texture/脸.jpg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/琴/Texture/衣服.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/琴/Texture/衣服.jpg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/琴/Texture/表情.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/琴/Texture/表情.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/琴/qin.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/琴/qin.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/空.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/空/Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/空/Materials/发.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/空/Materials/发.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/空/Materials/服.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/空/Materials/服.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/空/Materials/表情.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/空/Materials/表情.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/空/Materials/面.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/空/Materials/面.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/空/hair.bmp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/空/hair.bmp.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/空/kong.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/空/kong.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/空/skin.bmp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/空/skin.bmp.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/空/tex.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/空/tex/发.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/空/tex/发.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/空/tex/服.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/空/tex/服.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/空/tex/表情.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/空/tex/表情.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/空/tex/面.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/空/tex/面.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/空/toon_defo.bmp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/空/toon_defo.bmp.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/绝区零/安比/安比攻击.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/绝区零/安比/安比攻击.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/绝区零/安比/安比移动.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/绝区零/安比/安比移动.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/绝区零/敌人/怪兽/Tex/Materials/Eff_MA_Glitch_01.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/绝区零/敌人/怪兽/Tex/Materials/Eff_MA_Glitch_01.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/绝区零/敌人/怪兽/Tex/Materials/Eff_Noise_19.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/绝区零/敌人/怪兽/Tex/Materials/Eff_Noise_19.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/绝区零/敌人/怪兽/Tex/Materials/Monster_Goblin_D.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/绝区零/敌人/怪兽/Tex/Materials/Monster_Goblin_D.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/绝区零/敌人/怪兽/Tex/Materials/Monster_Goblin_N.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/绝区零/敌人/怪兽/Tex/Materials/Monster_Goblin_N.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/绝区零/敌人/怪兽/Tex/Materials/Monster_Metro_Goblin_Weapon_D.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/绝区零/敌人/怪兽/Tex/Materials/Monster_Metro_Goblin_Weapon_D.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/绝区零/敌人/怪兽/Tex/Materials/Monster_Metro_Goblin_Weapon_M.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/绝区零/敌人/怪兽/Tex/Materials/Monster_Metro_Goblin_Weapon_M.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/绝区零/敌人/怪兽/Tex/Materials/test_fire_matcap.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/绝区零/敌人/怪兽/Tex/Materials/test_fire_matcap.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/AnimatorController/怪兽.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/AnimatorController/怪兽.controller" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/绝区零/敌人/怪兽/怪兽.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/绝区零/敌人/怪兽/怪兽.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/芭芭拉.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/芭芭拉/Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/芭芭拉/Materials/发.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/芭芭拉/Materials/发.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/芭芭拉/Materials/服.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/芭芭拉/Materials/服.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/芭芭拉/Materials/表情.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/芭芭拉/Materials/表情.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/芭芭拉/Materials/面.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/芭芭拉/Materials/面.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/芭芭拉/Thumbs.db" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/芭芭拉/Thumbs.db.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/芭芭拉/babala.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/芭芭拉/babala.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/芭芭拉/hair.bmp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/芭芭拉/hair.bmp.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/芭芭拉/skin.bmp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/芭芭拉/skin.bmp.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/芭芭拉/tex.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/芭芭拉/tex/Thumbs.db" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/芭芭拉/tex/Thumbs.db.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/芭芭拉/tex/发.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/芭芭拉/tex/发.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/芭芭拉/tex/服.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/芭芭拉/tex/服.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/芭芭拉/tex/肌.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/芭芭拉/tex/肌.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/芭芭拉/tex/表情.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/芭芭拉/tex/表情.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/芭芭拉/tex/面.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/芭芭拉/tex/面.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/芭芭拉/toon_defo.bmp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/芭芭拉/toon_defo.bmp.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/荧.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/荧/Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/荧/Materials/头发.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/荧/Materials/头发.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/荧/Materials/脸.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/荧/Materials/脸.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/荧/Materials/衣服.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/荧/Materials/衣服.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/荧/Materials/表情.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/荧/Materials/表情.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/荧/Texture.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/荧/Texture/mc3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/荧/Texture/mc3.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/荧/Texture/toon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/荧/Texture/toon.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/荧/Texture/头发.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/荧/Texture/头发.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/荧/Texture/脸.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/荧/Texture/脸.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/荧/Texture/衣服.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/荧/Texture/衣服.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/荧/Texture/表情.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/荧/Texture/表情.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/荧/Ying.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/荧/Ying.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/菲谢尔.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/菲谢尔/Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/菲谢尔/hair.bmp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/菲谢尔/hair.bmp.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/菲谢尔/skin.bmp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/菲谢尔/skin.bmp.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/菲谢尔/tex.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/菲谢尔/tex/发.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/菲谢尔/tex/发.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/菲谢尔/tex/服.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/菲谢尔/tex/服.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/菲谢尔/tex/肌.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/菲谢尔/tex/肌.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/菲谢尔/tex/表情.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/菲谢尔/tex/表情.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/菲谢尔/tex/面.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/菲谢尔/tex/面.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/菲谢尔/toon_defo.bmp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/菲谢尔/toon_defo.bmp.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/迪卢克.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/迪卢克/Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/迪卢克/Materials/头发.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/迪卢克/Materials/头发.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/迪卢克/Materials/脸.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/迪卢克/Materials/脸.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/迪卢克/Materials/衣服.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/迪卢克/Materials/衣服.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/迪卢克/Materials/表情.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/迪卢克/Materials/表情.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/迪卢克/Texture.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/迪卢克/Texture/mc3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/迪卢克/Texture/mc3.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/迪卢克/Texture/toon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/迪卢克/Texture/toon.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/迪卢克/Texture/头发.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/迪卢克/Texture/头发.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/迪卢克/Texture/脸.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/迪卢克/Texture/脸.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/迪卢克/Texture/衣服.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/迪卢克/Texture/衣服.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/迪卢克/Texture/表情.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/迪卢克/Texture/表情.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/迪卢克/diluke.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/迪卢克/diluke.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/香菱.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/香菱/skin.bmp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/香菱/skin.bmp.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/香菱/tex.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/香菱/tex/发.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/香菱/tex/发.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/香菱/tex/服.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/香菱/tex/服.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/香菱/tex/肌.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/香菱/tex/肌.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/香菱/tex/表情.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/香菱/tex/表情.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/香菱/tex/面.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/香菱/tex/面.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/香菱/toon_defo.bmp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/Models/香菱/toon_defo.bmp.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/UI/teemo.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/UI/teemo/teemo_circle_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/UI/teemo/teemo_circle_0.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/UI/teemo/teemoloadscreen.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/UI/teemo/teemoloadscreen.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/UI/yasuo.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/UI/yasuo/yasuo_circle.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/UI/yasuo/yasuo_circle.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/UI/yasuo/yasuoloadscreen.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/SceneRes/UI/yasuo/yasuoloadscreen.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/StarterAssets/Readme.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Res/StarterAssets/Readme.asset.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scenes/GameStart.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scenes/GameStart.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scenes/Pve.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scenes/Pve.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Base/GameEntry.Custom.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Base/GameEntry.Custom.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Component/AnimationComponent.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Component/AnimationComponent.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Component/CDComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Component/CDComponent.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Component/DataModifierComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Component/DataModifierComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Component/NP_SyncComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Component/NP_SyncComponent.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Component/NumericComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Component/NumericComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Component/RangeCheckComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Component/RangeCheckComponent.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Component/UnitComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Component/UnitComponent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Data/AccessoryObjectData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Data/AccessoryObjectData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Data/Entity/Entity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Data/Entity/Entity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Data/Entity/EntityData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Data/Entity/EntityData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Data/Entity/Entity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Data/Entity/EntityBase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Data/Entity/Entity.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Data/Entity/EntityBase.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Data/Equip/Equip.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Data/Equip/Equip.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Data/Pet/MyPet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Data/Pet/MyPet.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Data/Pet/MyPetData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Data/Pet/MyPetData.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Data/Pet/Pet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Data/Pet/Pet.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Data/Pet/PetData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Data/Pet/PetData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Data/SkillSummonObject/SkillMushroom.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Data/SkillSummonObject/SkillMushroom.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Data/SkillSummonObject/SkillMushroomData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Data/SkillSummonObject/SkillMushroomData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Data/SkillSummonObject/SkillObjBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Data/SkillSummonObject/SkillObjBase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Data/SkillSummonObject/SkillObjDataBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Data/SkillSummonObject/SkillObjDataBase.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Data/TargetableObject/TargetableObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Data/TargetableObject/TargetableObject.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Data/TargetableObject/TargetableObjectData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Data/TargetableObject/TargetableObjectData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/DataTable/DREntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/DataTable/DREntity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/DataTable/DREquip.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/DataTable/DREquip.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/DataTable/DRPet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/DataTable/DRPet.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/DataTable/DRScene.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/DataTable/DRScene.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/DataTable/DRUIForm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/DataTable/DRUIForm.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/DataTable/DRWave.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/DataTable/DRWave.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/DataTable/DRWaveElement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/DataTable/DRWaveElement.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Entity/EntityExtension.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Entity/EntityExtension.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Event/SpawnEnemyEventArgs.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Event/SpawnEnemyEventArgs.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Event/SpawnSkillObjEventArgs.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Event/SpawnSkillObjEventArgs.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Event/UnitEventArgs.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Event/UnitEventArgs.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Fsm/States/AFsmStateBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Fsm/States/AFsmStateBase.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Fsm/States/CustomState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Fsm/States/CustomState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Fsm/States/EvadeState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Fsm/States/Player/EvadeState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Fsm/States/EvadeState.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Fsm/States/Player/EvadeState.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Fsm/States/IFSMState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Fsm/States/Player/IFSMState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Fsm/States/IFSMState.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Fsm/States/Player/IFSMState.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Fsm/States/IdleState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Fsm/States/Player/IdleState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Fsm/States/IdleState.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Fsm/States/Player/IdleState.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Fsm/States/InAirState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Fsm/States/Player/InAirState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Fsm/States/InAirState.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Fsm/States/Player/InAirState.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Fsm/States/JumpLandState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Fsm/States/Player/JumpLandState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Fsm/States/JumpLandState.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Fsm/States/Player/JumpLandState.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Fsm/States/JumpStartState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Fsm/States/Player/JumpStartState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Fsm/States/JumpStartState.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Fsm/States/Player/JumpStartState.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Fsm/States/NormalAttackEndState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Fsm/States/Player/NormalAttackEndState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Fsm/States/NormalAttackEndState.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Fsm/States/Player/NormalAttackEndState.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Fsm/States/NormalAttackState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Fsm/States/Player/NormalAttackState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Fsm/States/NormalAttackState.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Fsm/States/Player/NormalAttackState.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Fsm/States/RunEndState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Fsm/States/Player/RunEndState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Fsm/States/RunEndState.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Fsm/States/Player/RunEndState.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Fsm/States/RunState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Fsm/States/Player/RunState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Fsm/States/RunState.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Fsm/States/Player/RunState.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Fsm/States/TurnBackState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Fsm/States/Player/TurnBackState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Fsm/States/TurnBackState.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Fsm/States/Player/TurnBackState.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Fsm/States/Player/EvadeState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Fsm/States/Player/EvadeState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Fsm/States/Player/IdleState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Fsm/States/Player/IdleState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Fsm/States/Player/NormalAttackEndState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Fsm/States/Player/NormalAttackEndState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Fsm/States/Player/NormalAttackState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Fsm/States/Player/NormalAttackState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Fsm/States/Player/RunEndState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Fsm/States/Player/RunEndState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Fsm/States/Player/RunState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Fsm/States/Player/RunState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Fsm/States/Player/TurnBackState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Fsm/States/Player/TurnBackState.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Game/GameBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Game/GameBase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Game/PveGame.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Game/PveGame.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/Component/NP_RuntimeTree.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/Component/NP_RuntimeTree.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/Component/NP_RuntimeTreeManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/Component/NP_RuntimeTreeManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/Component/NP_TreeDataRepositoryComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/Component/NP_TreeDataRepositoryComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/Core/NPBehave/Clock.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/Core/NPBehave/Clock.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/Core/NPBehave/Composite/Parallel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/Core/NPBehave/Composite/Parallel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/Core/NPBehave/Composite/RandomSelector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/Core/NPBehave/Composite/RandomSelector.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/Core/NPBehave/Composite/Selector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/Core/NPBehave/Composite/Selector.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/Core/NPBehave/Decorator/Repeater.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/Core/NPBehave/Decorator/Repeater.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/Core/NPBehave/Root.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/Core/NPBehave/Root.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/Core/NPBehave/Task/Wait.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/Core/NPBehave/Task/Wait.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/NP_RuntimeTreeFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/NP_RuntimeTreeFactory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/NodeDatas/BBValues/NP_BBValue_Vector3.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/NodeDatas/BBValues/NP_BBValue_Vector3.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/NodeDatas/Decorator/NP_BlackboardConditionNodeData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/NodeDatas/Decorator/NP_BlackboardConditionNodeData.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/NodeDatas/Decorator/NP_BlackboardMultipleConditionsNodeData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/NodeDatas/Decorator/NP_BlackboardMultipleConditionsNodeData.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/NodeDatas/Decorator/NP_RepeaterNodeData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/NodeDatas/Decorator/NP_RepeaterNodeData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/NodeDatas/NP_BlackBoardRelationData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/NodeDatas/NP_BlackBoardRelationData.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/NodeDatas/NP_ClassForStoreAction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/NodeDatas/NP_ClassForStoreAction.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/NodeDatas/NP_NodeDataBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/NodeDatas/NP_NodeDataBase.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/NodeDatas/NP_RootNodeData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/NodeDatas/NP_RootNodeData.cs" afterDir="false" />
@@ -463,32 +101,31 @@
       <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/NodeDatas/Task/NP_WaitNodeData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/NodeDatas/Task/NP_WaitNodeData.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/NodeDatas/Task/NP_WaitUntilStoppedData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/NodeDatas/Task/NP_WaitUntilStoppedData.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/TheDataContainsAction/BBValue/NP_ChangeTargetSkillBBValueAction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/TheDataContainsAction/BBValue/NP_ChangeTargetSkillBBValueAction.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/TheDataContainsAction/NP_AddBuffAction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/TheDataContainsAction/NP_AddBuffAction.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/TheDataContainsAction/DetectionSkillHitAction.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/TheDataContainsAction/DetectionSkillHitAction.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/TheDataContainsAction/NP_TriggerStayAction.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/TheDataContainsAction/NP_ChangeUnitPropertyAction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/TheDataContainsAction/NP_ChangeUnitPropertyAction.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/TheDataContainsAction/NP_CreateObjAction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/TheDataContainsAction/NP_CreateObjAction.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/TheDataContainsAction/NP_MacroAction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/TheDataContainsAction/NP_MacroAction.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/TheDataContainsAction/NP_SetCDInfoAction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/TheDataContainsAction/NP_SetCDInfoAction.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/TheDataContainsAction/NP_SetUnitTransformAction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/TheDataContainsAction/NP_SetUnitTransformAction.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/TheDataContainsAction/NP_WaitCDAction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/TheDataContainsAction/NP_WaitCDAction.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Player/PlayerThirdPersonController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Player/PlayerThirdPersonController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Procedure/ProcedurePreload.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Procedure/ProcedurePreload.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Room/Room.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Room/Room.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/SkillSystem/BuffSystem/Core/ABuffSystemBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/SkillSystem/BuffSystem/Core/ABuffSystemBase.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/SkillSystem/BuffSystem/Core/BuffFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/SkillSystem/BuffSystem/Core/BuffFactory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/SkillSystem/BuffSystem/Core/BuffManagerComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/SkillSystem/BuffSystem/Core/BuffManagerComponent.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/SkillSystem/BuffSystem/Core/BuffSystemUtility.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/SkillSystem/BuffSystem/Core/BuffSystemUtility.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/SkillSystem/BuffSystem/Core/IBuffSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/SkillSystem/BuffSystem/Core/IBuffSystem.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/SkillSystem/BuffSystem/VTD_BuffInfoExtension.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/SkillSystem/BuffSystem/VTD_BuffInfoExtension.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/SkillSystem/Others/SkillCanvasManagerComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/SkillSystem/Others/SkillCanvasManagerComponent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/UI/HeaderBar/UIHeadBarController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/UI/HeaderBar/UIHeadBarController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/UI/UIPatternSelectForm.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/UI/UIPatternSelectForm.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/UnitAttributeData/UnitAttributesDataComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/UnitAttributeData/UnitAttributesDataComponent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/UI/UIForms/UIPatternSelectForm.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/UI/UIForms/UIPatternSelectForm.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameMain/UI/UIForms/UIPetSelectForm.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/UI/UIForms/UIPetSelectForm.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Utility/AIUtility.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Utility/AIUtility.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Utility/DeepCloneHelper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Utility/DeepCloneHelper.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameMain/Scripts/Utility/MongoHelper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameMain/Scripts/Utility/MongoHelper.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/NavMeshAreas.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/NavMeshAreas.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Search.settings" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Search.settings" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -502,6 +139,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/ILViewer/f07eb00f18584bbda00d12c92d2ad54394f800/5e/c6c9fcc4/02000BFC.il" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1635ac259ea544e995e61edbd50c5666175800/31/7e79b2f5/IMGUIContainer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1635ac259ea544e995e61edbd50c5666175800/dc/868c1fa5/RenderChain.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/17b0dcdf91184e0d84a40dc9a75e00e2d200/ba/9fab33cc/NavMeshPathStatus.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/17b0dcdf91184e0d84a40dc9a75e00e2d200/f8/e1c7ce2a/NavMeshAgent.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4bcf7fea78174bc093803aefb9e9d8a05c800/02/5f5227fe/ReferencePoolInfo.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4bcf7fea78174bc093803aefb9e9d8a05c800/2f/bc8ca452/IFsm`1.cs" root0="SKIP_HIGHLIGHTING" />
@@ -530,6 +168,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/59/e546e01c/Activator.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/73/5cc54608/KeyValuePair`2.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/7c/9e1a7da6/StringComparison.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/83/81ea9ae8/Type.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/b4/393a8c0f/Action.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/c2/e27b8b26/List`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/eb/b4fe06d5/LinkedList`1.cs" root0="SKIP_HIGHLIGHTING" />
@@ -574,18 +213,22 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/cf872124b3f4465e87923725fbaf943219200/5c/a3d64c87/ListDrawerSettingsAttribute.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/cf872124b3f4465e87923725fbaf943219200/ea/8c628d3f/TitleAttribute.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f07eb00f18584bbda00d12c92d2ad54394f800/1c/7608adb8/PhysicsDebugDraw.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f07eb00f18584bbda00d12c92d2ad54394f800/3e/1d03a7d5/AnimatorState.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f07eb00f18584bbda00d12c92d2ad54394f800/5e/aa73c3d3/EditorWindow.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f07eb00f18584bbda00d12c92d2ad54394f800/5f/1d77ab8a/SerializedObject.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f07eb00f18584bbda00d12c92d2ad54394f800/81/552ea3be/ProjectWindowUtil.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f07eb00f18584bbda00d12c92d2ad54394f800/ae/0e5aa7f3/Selection.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f07eb00f18584bbda00d12c92d2ad54394f800/ca/ce191f95/SerializedProperty.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f07eb00f18584bbda00d12c92d2ad54394f800/e2/7d5b86d6/AssetDatabase.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f85b172f00cd4fd1b5f84fc81c6c373627800/2c/05c61bb7/AnimatorStateInfo.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f85b172f00cd4fd1b5f84fc81c6c373627800/d2/6f4f9ef6/Animator.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f85b172f00cd4fd1b5f84fc81c6c373627800/f1/4f10bcb9/AnimationState.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameMain/Plugins/ActionEditor/Editor/Menus.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/NPBehaveGraph/Nodes/Composite/NP_RandomSelectorNode.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/NPBehaveGraph/Nodes/Decorator/NP_ServiceNode.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/Examples/Editor/SkillGraph/Nodes/BuffNodes/TreatmentBuffNode.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameMain/Plugins/NodeEditor/NodeGraphProcessor/Editor/Views/ExposedParameterFieldFactory.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/GameMain/Scripts/Component/AnimationComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameMain/Scripts/CoreObject/IdGenerater.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/GameMain/Scripts/Fsm/States/TurnBackState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/Core/NPBehave/SyncContext.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/TheDataContainsAction/NP_CreateObjAction.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/GameMain/Scripts/NPBehave/TheDataContainsAction/NP_WaitCDAction.cs" root0="FORCE_HIGHLIGHTING" />
@@ -602,6 +245,7 @@
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.searcher@4.9.2/Samples~/Editor/SearcherExampleHostWindow.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.settings-manager@2.0.1/Samples~/PackageWithProjectAndUserSettings/SettingsExamples.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.shadergraph@14.0.9/Tests/Editor/TestNode.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://E:/Resources/Execl-unity/NPBehave-master/Scripts/Decorator/WaitForCondition.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -634,6 +278,7 @@
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
@@ -665,10 +310,10 @@
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <method v="2" />
     </configuration>
-    <configuration name="附加到 Unity 编辑器" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="22296">
+    <configuration name="附加到 Unity 编辑器" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="22296" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -787,6 +432,20 @@
       <workItem from="1726705010431" duration="27611000" />
       <workItem from="1726789929018" duration="12224000" />
       <workItem from="1726804456861" duration="13272000" />
+      <workItem from="1726877963198" duration="15178000" />
+      <workItem from="1726989978416" duration="15326000" />
+      <workItem from="1727049381469" duration="12959000" />
+      <workItem from="1727079686331" duration="20120000" />
+      <workItem from="1727137704463" duration="26863000" />
+      <workItem from="1727226754660" duration="12824000" />
+      <workItem from="1727242071322" duration="14916000" />
+      <workItem from="1727317237770" duration="16863000" />
+      <workItem from="1727399093264" duration="22301000" />
+      <workItem from="1727495660113" duration="6287000" />
+      <workItem from="1727571559017" duration="23793000" />
+      <workItem from="1727850182469" duration="8284000" />
+      <workItem from="1727919349324" duration="8168000" />
+      <workItem from="1727928248402" duration="1433000" />
     </task>
     <servers />
   </component>
@@ -819,16 +478,18 @@
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="Type#Suture.NP_BlackboardConditionNodeData" memberName="NPBalckBoardRelationData" />
-        <PinnedItemInfo parentTag="Type#Suture.NP_RuntimeTree" memberName="BelongToUnit" />
         <PinnedItemInfo parentTag="Type#System.Collections.Generic.LinkedListNode`1" memberName="List" />
-        <PinnedItemInfo parentTag="Type#System.Collections.Generic.KeyValuePair`2" memberName="Value" />
+        <PinnedItemInfo parentTag="Type#System.MulticastDelegate" memberName="delegates" />
         <PinnedItemInfo parentTag="Type#Suture.NP_DataSupportor" memberName="NpDataSupportorBase" />
-        <PinnedItemInfo parentTag="Type#GameFramework.FileSystem.FileSystemAccess" memberName="value__" />
         <PinnedItemInfo parentTag="Type#Suture.NP_ClassForStoreAction" memberName="BelongToUnit" />
-        <PinnedItemInfo parentTag="Type#UnityEngine.Component" memberName="transform" />
         <PinnedItemInfo parentTag="Type#Suture.NormalBuffNodeData" memberName="BuffData" />
-        <PinnedItemInfo parentTag="Type#UnityEngine.TextAsset" memberName="text" />
         <PinnedItemInfo parentTag="Type#Suture.BuffNodeDataBase" memberName="NodeId" />
+        <PinnedItemInfo parentTag="Type#Suture.NP_RuntimeTree" memberName="BelongToUnit" />
+        <PinnedItemInfo parentTag="Type#Suture.NP_ClassForStoreAction" memberName="BelongtoRuntimeTree" />
+        <PinnedItemInfo parentTag="Type#System.Collections.Generic.KeyValuePair`2" memberName="Value" />
+        <PinnedItemInfo parentTag="Type#GameFramework.FileSystem.FileSystemAccess" memberName="value__" />
+        <PinnedItemInfo parentTag="Type#UnityEngine.Component" memberName="transform" />
+        <PinnedItemInfo parentTag="Type#UnityEngine.TextAsset" memberName="text" />
       </pinned-members>
     </pin-to-top-manager>
   </component>

@@ -5,7 +5,7 @@ using UnityGameFramework.Runtime;
 
 namespace Suture
 {
-    public class BuffManagerComponent:Entity
+    public class BuffManagerComponent:EntityBase
     {
         /// <summary>
         /// Buff链表

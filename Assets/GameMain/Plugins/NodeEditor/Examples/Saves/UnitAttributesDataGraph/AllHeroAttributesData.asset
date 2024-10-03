@@ -108,7 +108,7 @@ MonoBehaviour:
       Data: 27
     - Name: OriMoveSpeed
       Entry: 4
-      Data: 50
+      Data: 0.2
     - Name: OriAttackPre
       Entry: 4
       Data: 0.3

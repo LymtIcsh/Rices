@@ -3,7 +3,7 @@ using NPBehave;
 
 namespace Suture
 {
-    public class NP_SyncComponent:Entity
+    public class NP_SyncComponent:EntityBase
     {
         public SyncContext SyncContext;
 

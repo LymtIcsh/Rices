@@ -28,7 +28,6 @@ namespace Suture
 
         public void DoMacro()
         {
-            Log.Info("准备执行初始化的行为操作");
             foreach (var classForStoreAction in NpClassForStoreActions)
             {
                 classForStoreAction.GetActionToBeDone().Invoke();

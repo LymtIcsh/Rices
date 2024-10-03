@@ -1,5 +1,6 @@
 ﻿using System;
 using Cysharp.Threading.Tasks;
+using Cysharp.Threading.Tasks.Triggers;
 using UnityEngine;
 using UnityGameFramework.Runtime;
 
@@ -55,6 +56,8 @@ namespace Suture
         public Transform mTarget;
         public bool mCheckOpen = true;
 
+        private Collider curretCollider;
+
         protected override void Awake()
         {
             base.Awake();
@@ -104,13 +107,77 @@ namespace Suture
         //         Log.Info("检测到目标");
         // }
 
+        #region 触发器，碰撞器
+
+        /// <summary>
+        /// 进入检测范围，开始寻路
+        /// </summary>
+        ///   <param name="tag">检测tag</param>
+        /// <param name="time">检测间隔</param>
+        public virtual async UniTaskVoid NavigationAIEnter(GameObject trigetObj, string tag, float time,
+            Func<Collider,UniTaskVoid> collback)
+        {
+            do
+            {
+                curretCollider = await trigetObj.GetAsyncTriggerEnterTrigger().OnTriggerEnterAsync();
+                Log.Info(curretCollider.name);
+            } while (!curretCollider.CompareTag(tag));
+
+
+            NavigationAIStay(trigetObj, tag, time, collback).Forget();
+            NavigationAIExit(trigetObj, tag, time, collback).Forget();
+
+            Log.Info("进入检测");
+        }
+
+        /// <summary>
+        /// 一直在检测范围中，开始寻路
+        /// </summary>
+        /// <param name="time">检测间隔</param>
+        public virtual async UniTaskVoid NavigationAIStay(GameObject trigetObj, string tag, float time,
+            Func<Collider,UniTaskVoid> collback)
+        {
+            do
+            {
+                curretCollider = await trigetObj.GetAsyncTriggerStayTrigger().OnTriggerStayAsync();
+            } while (!curretCollider.CompareTag(tag));
+
+            // if (curretCollider.CompareTag(tag))
+            // {
+            collback?.Invoke(curretCollider).Forget();
+            // }
+
+
+            await UniTask.WaitForSeconds(time);
+            NavigationAIStay(trigetObj, tag, time, collback).Forget();
+
+            Log.Info("持续检测");
+        }
+
+        /// <summary>
+        /// 离开检测范围
+        /// </summary>
+        /// <param name="time">检测间隔</param>
+        public virtual async UniTaskVoid NavigationAIExit(GameObject trigetObj, string tag, float time,
+            Func<Collider,UniTaskVoid> collback)
+        {
+            await trigetObj.GetAsyncTriggerExitTrigger().OnTriggerExitAsync();
+            curretCollider = null;
+
+            NavigationAIEnter(trigetObj, tag, time, collback).Forget();
+
+            Log.Info("离开检测");
+        }
+
+        #endregion
+
         #region 物理检测
-        
+
         /// <summary>
         /// 圆形范围检测
         /// </summary>
         /// <returns></returns>
-        public bool CircleCheck(Vector3 position, float radius,ref Collider[] colliders, string layerName)
+        public bool CircleCheck(Vector3 position, float radius, ref Collider[] colliders, string layerName)
         {
             return Physics.OverlapSphereNonAlloc(position, radius, colliders,
                 1 << LayerMask.NameToLayer(layerName)) != 0;
@@ -571,5 +638,7 @@ namespace Suture
         }
 
         #endregion
+
+
     }
 }
